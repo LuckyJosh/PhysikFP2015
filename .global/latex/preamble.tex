@@ -1,0 +1,274 @@
+%%%%%%%%%%%%%%%%%%%%%%% Grundeinstellungen %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 'Artikel' Dokumentenklasse und Standardschriftgröße  
+\documentclass[12pt]{scrartcl}
+
+% Setzt das Papierformat und den Rand auf 2.5cm                                                      
+\usepackage[paper=a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}  
+
+% Setzt die Einrückung von Absätzen auf gegebenen Abstand
+\setlength{\parindent}{0mm}
+
+% Legt Zeilenabstand fest                                                         
+\usepackage[onehalfspacing]{setspace}                                               
+
+% Legt FontKodierung fest
+\usepackage[T1]{fontenc}
+
+% Legt Zeichenkodierung fest                                                            
+\usepackage[utf8]{inputenc}                                                         
+
+% Neue Deutsche Rechtschreibung
+\usepackage[ngerman]{babel}  
+
+% Versieht Referenzen mit Bezeichnung des Objektes                                                      
+%\usepackage[ngerman]{varioref}   
+
+% Empfohlener T1-Font für deutsche Texte                                               
+\usepackage{lmodern} 
+
+% Deutsche Zitate mit \enqoute{},\enqoute*{} 
+\usepackage[babel,german=quotes]{csquotes}
+
+%Einstellungen für Bibliographien mit "biber"                                                              
+\usepackage[backend=biber, style=numeric-verb]{biblatex}
+
+%%%%%%%%%%%%%%%%%%%% Seitenlayout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ermöglicht detailierte Bearbeitung der Kopf- und Fußzeile
+\usepackage{fancyhdr} 
+
+% Setzt Kopf und Fußzeile zurück                                                              
+\fancyhf{} 	     
+         
+% Höhe der Kopfzeile                                                          
+\setlength{\headheight}{28.0pt}   
+
+% Höhe der Fußzeile                                                  
+\setlength{\footskip}{18.0pt}                                                      
+
+% Dicke des Kopfzeilentrennstrichs
+\renewcommand{\headrulewidth}{.5 pt}     
+
+% Dicke des Fußzeilentrennstrichs                                     
+\renewcommand{\footrulewidth}{.5 pt}                                                 
+
+%Test ob Variable gesetzt ist oder nicht
+\ifdefined\ExperimentTitle% 
+	% Angabe Links-Oben
+	\lhead{\textbf{\ExperimentTitle}}
+\else%
+    \lhead{\textbf{\textcolor{red}{VERSUCHNAME!!!}}}
+\fi%      
+                                                            
+% Angabe Mitte-Oben
+%\chead{}  
+
+% Angabe Rechts-Oben                                                                         
+\rhead{\today}  
+
+% Angabe Links-Unten                                                                    
+%\lfoot{}        
+
+% Angabe Mitte-Unten                                                                   
+\cfoot{\textbf{\thepage\ von \pageref{LastPage}}}  
+
+% Angabe Rechts-Unten                                 
+\rfoot{}                                           
+
+% Anwenden des erweiterten Seitenlayouts
+\pagestyle{fancy}      
+%%%%%%%%%%%%%%%%%%%%%%% Referenzen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
+\usepackage{lastpage}
+
+% Ermöglicht Referenzen im Dokument                                                               
+\usepackage{hyperref}
+	%Keine Hervorhebung der Referenzen
+	\hypersetup{hidelinks}
+
+%Verbesserte Referenzen
+\usepackage[german]{cleveref}
+                                                              
+%%%%%%%%%%%%%%%%%%%%%%%% MINT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fügt mathematische Symbole hinzu, setzt Grenzen, Limiten und Indizes unter das Symbol und nicht dahinter
+\usepackage[sumlimits,intlimits,namelimits]{amsmath}  
+
+% Fügt Symbole wie z.B. Zahlenmengen wie $\mathbb{R}$ hinzu                             
+\usepackage{amssymb}    
+                                                             
+% Beweißumgebung
+\usepackage{amsthm}  
+
+% Font für Mathematikumgebung                                                              
+\usepackage{amsfonts}    
+                                                          
+% Verbesserte Gleichungsumgebung mit \begin{empheq}[<Aussehen>]{<Umgebungstyp>} ... \end{empheq}
+\usepackage{empheq}      
+
+% Ergänzungen für physikalische Arbeiten
+\usepackage{physics}
+
+% Chemische Struktur und Summenformeln mit \ce{<Summenformel>}                                                          
+%\usepackage[version=3]{mhchem}  
+
+% Chemische Valenzstrichformeln für ganze Moleküle mit\chemfig{<Molekül-Aufbau>}                                                   
+%\usepackage{chemfig}                                                               
+
+% Verbesserte Formatierung von größen mit Einheiten 
+\usepackage{siunitx}                                                               
+	% 'Mal'-Zeichen auf \cdot und Dezimaltrennzeichen auf ',' 
+	\sisetup{locale = DE,prefixes-as-symbols = true}                                   
+                                                                            
+	% Vereinfachtes eintragen von Unsicherheiten mit '42.6(4)' --> '42.6 +/- 0.4'          
+	\sisetup{separate-uncertainty = true}                                                                                                                    
+
+ 
+                                                            
+% Fügt verbesserte Vektorpfeile hinzu \vv{<Vektorname>} 
+\usepackage[b]{esvect}  
+
+% Brüche mit "/" im Text mit \sfrac{}                                                            
+\usepackage{xfrac}
+
+% Darstellung von 2D Feldern 
+\usepackage{array}
+
+% Differentialoperatoren,-quotienten und Klammern mit \od[]{}{}, \pd[]{}{}, \del{}, \sbr{}, \cbr{}
+\usepackage{commath}
+
+% Pseudocode-Umgebungen 																
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+% Einbinden von SourceCode Dateien (listing)
+\usepackage{listings}
+	% Auswählen der Programmiersprache
+	\lstset{language=Python}
+
+%%%%%%%%%%%%%%%%% Seiten- und Floateinstellungen %%%%%%%%%%%%%%%%%%%%%
+% Einbinden von Grafiken mit '\includeudegraphics[<Optionen>]{<Grafikpfad>}' und Veränderungen im Text, wie z.B. Schriftfarbe 
+\usepackage{graphicx} 
+
+% Fügt Möglichkeit für textumflossende Grafiken und Tabellen hinzu \begin{floating<figure/table>}[option]{width} ... \caption ... \end{floatingfigure}                                                              
+\usepackage{floatflt}        
+\usepackage{wrapfig}
+
+% Ermöglicht das Hinzufügen von Unterabbildung zu einer Abbildung                                                 
+%\usepackage{subfig} 
+
+% Verhindert das Wandern von "floating" Umgebungen über eine Bestimmte Grenze (hier: Sections) oder mit \FloatBarrier                                                             
+\usepackage[section]{placeins}
+
+% Ermöglicht Zeichnungen im Dokument \begin{tikzpicture} ... \end{tikzpicture}
+\usepackage{tikz}  
+	% Fügt zusätzlichen Pfeilspitzen hinzu                                                                 
+	\usetikzlibrary{arrows}                                                         
+	\usetikzlibrary{calc}    
+% Besseres Tabellenlayout                                                        
+\usepackage{booktabs}
+
+% Skalierbare Umgebung für Tabellen und Bilder
+\usepackage{adjustbox}
+
+% Bearbeiten von Bild-/Tabellenunterschriften
+\usepackage[font=small,labelfont=bf]{caption}
+
+% Seiten im Querformat mit \begin{landscape}...\end{landscape} 
+\usepackage{pdflscape}
+
+% Ermöglicht detailierte Einstellungen an Aufzählungssymbolen
+\usepackage{enumitem} 
+
+% Ermöglicht das Einfügen mehrerer Einträge in eine Tabellenzelle, getrennt von einem '\'
+% \backslashbox{<Eintrag unten-links>}{<Eintrag oben-rechts>} TIPP: Leerzeichen                                                          
+%\usepackage{slashbox}   
+
+%Einbinden von Textdateien
+\usepackage{fancyvrb}
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=1em, % separation between frame and text
+	rulecolor=\color{gray},
+	%
+	label=\fbox{\color{black} FILENAME},
+	labelposition=topline,
+	%
+	commandchars=\|\{\}, % escape character and argument delimiters for
+	% commands within the verbatim
+	commentchar=\#       % comment character
+	}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fügt verbesserte Unterschtreichungen hinzu, z.B. doppelt, gezackt, gewellt, etc. mit \uline{},\uuline{},
+\usepackage[normalem]{ulem}                                                                                                               
+
+%Verbesserte Verwendung von Daten
+\usepackage{scrdate}
+
+% Zusaätzliche Symbole
+\usepackage{pifont}
+
+% Fügt extra Symbole hinzu 
+\usepackage{textcomp}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{} 
+\author{} 
+% Literaturfile
+%\addbibresource{../globales/latex/Literatur.bib}
+%%%%%%%%%%%%%%%%%%%%Aänderungen & Eigene Befehle%%%%%%%%%%%%%%%%%%%%%%                                                     
+% Abstand zwischen Text und Fußnoten
+\setlength{\skip\footins}{2cm}  
+
+% Abstand zwischen Fußnoten                                                    
+%\setlength{\footnotesep}{2cm}
+
+% Abstand zwischen \items 
+%\setlength{\itemsep}{7.5pt}
+
+% Änderung der Fußnotenmarkierungen (hier: Zahlen in Kreisen)																    % Fußnoten mit Zahlen in Kreisen
+\renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
+
+
+\renewcommand{\i}{\ensuremath{\textsl{i}}}
+\newcommand{\e}{\ensuremath{\textsl{e}}}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\Re}{\mathrm{Re}\,}
+
+
+% Funktionsmakros mit größenvariablen Klammern benötigt \usepackage{commath}
+\newcommand{\E}[1]{\e^{#1}}
+\newcommand{\Exp}[1]{\exp\!\del{#1}}
+\newcommand{\Ln}[1]{\ln\!\del{#1}}
+\newcommand{\Log}[2][10]{\log_{#1}\!\del{#2}}
+\newcommand{\Sin}[2][]{\sin^{#1}\!\del{#2}}
+\newcommand{\Cos}[2][]{\cos^{#1}\!\del{#2}}
+\newcommand{\Tan}[2][]{\tan^{#1}\!\del{#2}}
+\newcommand{\Sinh}[1]{\sinh\!\del{#1}}
+\newcommand{\Cosh}[1]{\cosh\!\del{#1}}
+\newcommand{\Tanh}[1]{\tanh\!\del{#1}}
+\newcommand{\Arcsin}[1]{\arcsin\!\del{#1}}
+\newcommand{\Arccos}[1]{\arccos\!\del{#1}}
+\newcommand{\Arctan}[1]{\arctan\!\del{#1}}
+\newcommand{\Arsinh}[1]{\arsinh\!\del{#1}}
+\newcommand{\Arcosh}[1]{\arcosh\!\del{#1}}
+\newcommand{\Artanh}[1]{\artanh\!\del{#1}}
+
+\newcommand{\Cov}[2]{\text{cov}\!\del{#1,#2}}
+\newcommand{\Erw}{\mathrm{E}}
+
+
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\mean}{\langle}{\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
