@@ -1,3 +1,21 @@
+protocol:	Latex/*.tex ../../globales/latex/Literatur.bib Plots/*.pdf
+		cd Latex/;\
+		pdflatex Protokoll.tex
+		cd Latex/;\
+		biber Protokoll
+		cd Latex/;\
+		pdflatex Protokoll.tex
+		cd Latex/;\
+		pdflatex Protokoll.tex
+		cp Latex/Protokoll.pdf Protokoll.pdf
+
+Plots/*.pdf:	Python/*.py Messdaten/*.txt
+		python Python/*.py
+
+Messdaten/*.txt: 
+
+../../globales/latex/Literatur.bib:
+
 clean:  
 	rm -f Latex/*.aux
 	rm -f *.aux
@@ -20,4 +38,8 @@ clean:
 	rm -f Latex/*.toc	
 	rm -f *.toc	
 	rm -f Latex/*.tmp	
-	rm -f *.tmp	
+	rm -f *.tmp
+	rm -f Latex/*.bcf	
+	rm -f *.bcf
+	rm -f Latex/*.bbl
+	rm -f *.bbl
