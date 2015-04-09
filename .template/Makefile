@@ -1,3 +1,7 @@
+all:	protocol clean
+	
+
+
 protocol:	Latex/*.tex ../../globales/latex/Literatur.bib Plots/*.pdf
 		cd Latex/;\
 		pdflatex Protokoll.tex
