@@ -11,7 +11,7 @@ protocol:	Latex/*.tex ../../globales/latex/Literatur.bib Plots/*.pdf
 		pdflatex Protokoll.tex
 		cd Latex/;\
 		pdflatex Protokoll.tex
-		cp Latex/Protokoll.pdf Protokoll.pdf
+		mv Latex/Protokoll.pdf Protokoll.pdf
 
 Plots/*.pdf:	Python/*.py Messdaten/*.txt
 		python Python/*.py
