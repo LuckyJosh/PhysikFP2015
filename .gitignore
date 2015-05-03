@@ -3,7 +3,7 @@
 
 
 ##PDF files
-*.pdf
+Protokoll.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
