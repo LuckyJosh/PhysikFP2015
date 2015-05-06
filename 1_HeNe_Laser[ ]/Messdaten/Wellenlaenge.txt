@@ -1,0 +1,7 @@
+#Wellenlänge
+#Abstand Maximum-Hauptmaximum [cm]	#Abstand Hauptmaximum-Gitter [cm]	# Nummer des Maximums
+7.0									108.5							# 1	
+14.0								NaN								# 2
+21.0								NaN								# 3
+28.4								NaN								# 4
+36.4								NaN	 							# 5

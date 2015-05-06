@@ -1,0 +1,11 @@
+#Messung zur Stabilitätsbedingung 1400/1400
+#Länge des Resonators[cm]	#Photostrom[10µA]
+65							8.10
+70							7.00
+75							6.20
+80							5.50
+85							4.40
+90							8.43
+95							2.40
+100							1.70
+105							0.0
