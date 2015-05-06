@@ -20,6 +20,9 @@ Messdaten/*.txt:
 
 ../../globales/latex/Literatur.bib:
 
+pdf2tex:
+	python ../.global/python/pdf2tex.py
+
 clean:  
 	rm -f Latex/*.aux
 	rm -f *.aux

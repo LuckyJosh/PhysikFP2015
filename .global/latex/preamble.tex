@@ -53,12 +53,12 @@
 \renewcommand{\footrulewidth}{.5 pt}                                                 
 
 %Test ob Variable gesetzt ist oder nicht
-\ifdefined\ExperimentTitle% 
+%\ifdefined\EN% 
 	% Angabe Links-Oben
-	\lhead{\textbf{\ExperimentTitle}}
-\else%
-    \lhead{\textbf{\textcolor{red}{VERSUCHNAME!!!}}}
-\fi%      
+\lhead{\textbf{\EN}}
+%\else%
+%    \lhead{\textbf{\textcolor{red}{VERSUCHNAME!!!}}}
+%\fi%      
                                                             
 % Angabe Mitte-Oben
 %\chead{}  
@@ -121,7 +121,7 @@
 	\sisetup{locale = DE,prefixes-as-symbols = true}                                   
                                                                             
 	% Vereinfachtes eintragen von Unsicherheiten mit '42.6(4)' --> '42.6 +/- 0.4'          
-	\sisetup{separate-uncertainty = true}                                                                                                                    
+	\sisetup{separate-uncertainty=true}                                                                                                                    
 
  
                                                             
