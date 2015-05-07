@@ -2,7 +2,7 @@ all:	protocol clean
 	
 
 
-protocol:	Latex/*.tex ../../globales/latex/Literatur.bib Plots/*.pdf
+protocol:	Latex/*.tex ../../.global/latex/literatur.bib 
 		cd Latex/;\
 		pdflatex Protokoll.tex
 		cd Latex/;\
@@ -13,12 +13,10 @@ protocol:	Latex/*.tex ../../globales/latex/Literatur.bib Plots/*.pdf
 		pdflatex Protokoll.tex
 		mv Latex/Protokoll.pdf Protokoll.pdf
 
-Plots/*.pdf:	Python/*.py Messdaten/*.txt
-		python Python/*.py
-
 Messdaten/*.txt: 
 
-../../globales/latex/Literatur.bib:
+../../.global/latex/literatur.bib:
+
 
 pdf2tex:
 	python ../.global/python/pdf2tex.py
