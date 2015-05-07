@@ -39,7 +39,8 @@ erfüllt, dabei ist $g_i=1-L/r_i$ und $L$ die Resonatorlänge und $r_i$ der Krü
 \begin{figure}
 \centering
 \includegraphics[scale=1]{../Grafiken/Stabilitaetsparameter.pdf}
-\caption{Ein Plot der Stabilitätsbedingung für zwei der zur Verfügung stehenden Spiegeln, siehe Tabelle \ref{Eigenschaften}}.
+\caption{Ein Plot der Stabilitätsbedingung für zwei der zur Verfügung stehenden Spiegeln, siehe Tabelle \ref{Eigenschaften}}
+\label{fig:Stabilitaet}
 \end{figure}
 \subsection{$\mathbf{TEM}$-Moden}
 Innerhalb des Resonators befinden sich $q$ Wellenlängen die sich longitudinal ausbreiten, weil die Resonatorlänge $L$ um einiges größer ist als die Wellenlänge $\lambda$, $q$ wird auch die longitudinale Mode genannt. Aufgrund von Unebenheiten oder Verkippung des Spiegels entstehen auch transversale Moden $l$ und $q$ die für die $x-$ und $y-$Richtungne stehen. Daraus ergibt sich $\mathrm{TEM}_{lpq}$-Moden (transverse electromagnetic Mode), die als Anlehnung an den Hohlleiter verwendet wird. Die Modenzahl $q$ kann meistens Weggelassen werden weil sie von keiner Bedeutung ist. In den meisten Resonatoren werden nur wenige Moden isoliert und verstärkt.\\
@@ -56,7 +57,7 @@ Hier ist $I_0$ die Maximalintensität, $r$ der Abstand zur optischen Achse und $
 beschreiben, dabei ist $\omega_0$ der minimale Strahltaille und $z$ der Abstand und $\theta$ die Strahlendivergenz, wie durch die Gaußsche 
 Strahlenoptik beschrieben.
 Unter der Annahme die verwendeten Spiegel seien sphärisch, erhält man für die erste transversale Mode $\mathrm{TEM}_{10}$ 
-die Intensitätsverteilung durch Multiplikation der Grundmodenverteilung mit dem Quadrat des ersten Hermiteschen Polynom\footnotemark $H_1\qty(\sqrt{2}\frac{-r}{\omega})$\cite{Demtroeder07}
+die Intensitätsverteilung durch Multiplikation der Grundmodenverteilung mit dem Quadrat des ersten Hermiteschen Polynom\footnotemark $H_1\qty(\sqrt{2}\frac{r}{\omega})$\cite{Demtroeder07}
 zu
 \begin{align}
 I(r)=I_0\frac{8r^2}{\omega^2}\exp\left(\frac{-2r^2}{\omega^2}\right).
