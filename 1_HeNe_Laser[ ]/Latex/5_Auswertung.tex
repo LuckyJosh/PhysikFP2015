@@ -1,17 +1,91 @@
 % !TeX root = Protokoll.tex
-\subsection{Intensitätverteilung der $\mathbf{TEM_{00}}$\\}
+\subsection{Intensitätverteilung der $\mathbf{TEM_{00}}$}\label{sec:TEM00}
+	Für die Bestimmung der Intensitätsverteilung in Abhängigkeit des Abstands zur optischen
+	Achse wurde der Strom an der Photodiode in dieser Abhängigkeit aufgenommen.
+	Dies so erhaltenen Messwerte sind in der \cref{tab:TEM00} eingetragen.
 	\input{../Tabellen/Tabelle_TEM00.tex}
-	\input{../Grafiken/fig_TEM_00.tex}
+	\FloatBarrier
 	
-\subsection{Intensitätverteilung der $\mathbf{TEM_{10}}$\\}
-	\input{../Tabellen/Tabelle_TEM10.tex}
-	\input{../Grafiken/fig_TEM_10.tex}
+	Die aufgenommenen Messwerte sind in \cref{fig:tem_00} grafische gegeneinander aufgetragen.
+	Außerdem wurden eine Regressionskurve in der Form von \eqref{eq:tem00} erstellt und 
+	ebenfalls in \cref{fig:tem_00} eingetragen.	
+	\input{../Grafiken/fig_TEM_00.tex}
+	\FloatBarrier	
+    Für die Regressionsparameter, Maximalintensität $I_0$ und Stahlbreite $\omega$ ergaben sich 
+    dabei die folgenden Werte.
+    %Maximalintensität I_0  3.17836425029e-05 +/- 3.51838588946e-08
+    %Strahlbreite w         0.0145329570585 +/- 2.21455314836e-05
+    \begin{empheq}{align*}
+	    I_0 &= \SI{31.78(4)}{\micro\ampere}\\
+	    \omega &= \SI{1.453(2)}{\milli\meter}
+    \end{empheq}
 
-\subsection{Polarisation des Laserlichts}
+	
+\subsection{Intensitätverteilung der $\mathbf{TEM_{10}}$}\label{sec:TEM10}
+	Wie schon bei der vorherigen Messung, wurde auch bei der Vermessung der ersten transversalen Mode der Strom 
+	an Photodiode in Abhängigkeit des Abstands von der optischen Achse gemessen.
+	Die Werte dieser Messung befinden sich in \cref{tab:TEM10}. 
+	\input{../Tabellen/Tabelle_TEM10.tex}
+	\FloatBarrier
+	Die grafische Darstellung dieser Daten ist zusammen mit einer Regressionskurve der Form \eqref{eq:tem10}
+	in \cref{fig:tem_10} aufgetragen.
+	\input{../Grafiken/fig_TEM_10.tex}
+	\FloatBarrier
+	Hierbei ergaben sich die Regressionsparameter:
+	%Maximalintensität I_0  6.98533023857e-06 +/- 7.91583310554e-08
+	%Strahlbreite w         -0.01281502869 +/- 0.000101158988474
+	\begin{empheq}{align*}
+		 I_0 &= \SI{6.99(8)}{\micro\ampere}\\
+		 \omega &= \SI{-1.282(1)}{\milli\meter}
+	\end{empheq}
+\subsection{Polarisation des Laserlichts}\label{sec:Polarisation}
+	Für die Bestimmung der Polarisation des Laserlichts $\phi_{\mathrm{p}}$ wurde der Strom der Photodiode und somit
+	die Intensität der $\mathrm{TEM}_{00}$ in Abhängigkeit des Polarisatorwinkels $\phi$ gemessen. Die dabei aufgenommenen
+	Messwerte befinden sich in \cref{tab:Polarisation}. 
 	\input{../Tabellen/Tabelle_Polarisation.tex}
+	\FloatBarrier
+	Durch Auftragen der Messwerte ergab sich der in \cref{fig:polarisation} gezeigte Grafik.
+	Eine Regressionskurve der Form von \eqref{eq:polarisation} wurde zu den Messwerten erzeugt und
+	ebenfalls in \cref{fig:polarisation} eingetragen.
 	\input{../Grafiken/fig_Polarisation.tex}
-\subsection{Wellenlänge des Laserlichts}
+	\FloatBarrier
+	Für die Maximalintensität $I_0$ und den Phasenwinke $\phi_0$ ergab die Regression die Werte
+	
+	%Maximalintensität I_0  1.56217702188e-05 +/- 3.84900177443e-08
+	%Phase phi_0            2.42987521953 +/- 0.00213377505421
+	
+	\begin{empheq}{align*}
+		I_0 &= \SI{15.62(4)}{\micro\ampere}\\
+		\phi_0 &= \SI{2.430(2)}{rad}\\
+			   &= \SI{139.2(1)}{\degree}
+	\end{empheq}
+	
+%	Aus dem Phasenwinkel $\phi_0$ konnte der Polarisationswinkel des Laserlichts, unter Zuhilfenahme von \eqref{eq:polarisation_laser}, zu
+%	\begin{empheq}{align*}
+%			\phi_{\mathrm{p}} &= \SI{0.859(2)}{rad}\\
+%							  &= \SI{49.2(1)}{\degree}
+%	\end{empheq}
+%	berechnet werden.	
+
+\subsection{Wellenlänge des Laserlichts}\label{sec:Wellenlaenge}
+	Die zur Bestimmung der Wellenlänge aufgenommenen Daten befinden sich in \cref{tab:Wellenlaengen}. Für Umrechnung
+	der gemessenen Abstände zum Hauptmaximum $d$ in die nötigen Beugungswinkel $\theta$ wurde noch der Abstand vom 
+	Gitter zum Hauptmaximum $l = \SI{1.085(1)}{m}$ gemessen. Die in \cref{tab:Wellenlaengen}  eingetragenen Wellenlängen 
+	berechneten sich aus den Winkel und er Gitterkonstante des verwendeten Gitters nach \eqref{eq:gitter}.
 	\input{../Tabellen/Tabelle_Wellenlaengen.tex}
-\subsection{Prüfung der Stabilitätsbedingung}
+	\FloatBarrier
+	Als Mittelwert der Wellenlänge ergab sich in dieser Messung:
+	\begin{empheq}{equation*}
+		\mean{\lambda} = \SI[parse-numbers=false]{637 \pm 2(sys) \pm 2(stat)}{nm}
+	\end{empheq} 
+	
+\subsection{Prüfung der Stabilitätsbedingung}\label{sec:Stabilitaetsbedingung}
+	Die für die Überprüfung der Stabilitätsbedingung aufgenommenen Messwerte, für Resonatorlänge und Photostrom
+	sind in \cref{tab:Stabilitaet} zu finden\footnote{Einer der Messwerte wurde dabei ausgelassen, da dieser im Vergleich zu den anderen Messwerten ein so starker  Abweichung nach oben aufwies, dass eine Verwendung keinen Nutzen gehabt hätte}. Der skalierte Photostrom berechnet sich durch Normierung der Messwerte
+	mit dem Maximalwert $I_0 = \SI{81(1)}{\micro\ampere}$ und durch Multiplikation mit dem Wert $c = \num{0.1875}$ der Theoriekurve 
+	bei der Resonatorlänge $L = \SI{0.65}{\meter}$. Diese Skalierung wurde vorgenommen um die aufgenommenen Messwerte 
+	und die, mit diesen in \cref{fig:stabilitaetsbedingung} eingetragene, Theoriekurve vergleichen zu können.
+	
 	\input{../Tabellen/Tabelle_Stabilitaet.tex}
 	\input{../Grafiken/fig_Stabilitaetsbedingung.tex}
+	\FloatBarrier
