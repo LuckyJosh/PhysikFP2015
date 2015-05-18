@@ -1,5 +1,5 @@
 % !TeX root = Protokoll.tex
-\subsection{Intensitätverteilung der $\mathbf{TEM_{00}}$}\label{sec:TEM00}
+\subsection[Intensitätverteilung der $\mathrm{TEM_{00}}$]{Intensitätverteilung der $\mathbf{TEM_{00}}$}\label{sec:TEM00}
 	Für die Bestimmung der Intensitätsverteilung in Abhängigkeit des Abstands zur optischen
 	Achse wurde der Strom an der Photodiode in dieser Abhängigkeit aufgenommen.
 	Dies so erhaltenen Messwerte sind in der \cref{tab:TEM00} eingetragen.
@@ -8,20 +8,22 @@
 	
 	Die aufgenommenen Messwerte sind in \cref{fig:tem_00} grafische gegeneinander aufgetragen.
 	Außerdem wurden eine Regressionskurve in der Form von \eqref{eq:tem00} erstellt und 
-	ebenfalls in \cref{fig:tem_00} eingetragen.	
+	ebenfalls in \cref{fig:tem_00} eingetragen.	Dabei sind die angegebenen Fehler
+	für den Photostrom zu gering, um in dieser erkennbar zu sein.
+	
 	\input{../Grafiken/fig_TEM_00.tex}
 	\FloatBarrier	
     Für die Regressionsparameter, Maximalintensität $I_0$ und Stahlbreite $\omega$ ergaben sich 
-    dabei die folgenden Werte.
+    dabei die folgenden Werte:
     %Maximalintensität I_0  3.17836425029e-05 +/- 3.51838588946e-08
     %Strahlbreite w         0.0145329570585 +/- 2.21455314836e-05
     \begin{empheq}{align*}
-	    I_0 &= \SI{31.78(4)}{\micro\ampere}\\
-	    \omega &= \SI{1.453(2)}{\milli\meter}
+	    I_0 &= \SI{31.78(4)}{\micro\ampere},\\
+	    \omega &= \SI{1.453(2)}{\milli\meter}.
     \end{empheq}
 
 	
-\subsection{Intensitätverteilung der $\mathbf{TEM_{10}}$}\label{sec:TEM10}
+\subsection[Intensitätverteilung der $\mathrm{TEM_{10}}$]{Intensitätverteilung der $\mathbf{TEM_{10}}$}\label{sec:TEM10}
 	Wie schon bei der vorherigen Messung, wurde auch bei der Vermessung der ersten transversalen Mode der Strom 
 	an Photodiode in Abhängigkeit des Abstands von der optischen Achse gemessen.
 	Die Werte dieser Messung befinden sich in \cref{tab:TEM10}. 
@@ -35,11 +37,11 @@
 	%Maximalintensität I_0  1.74633255993e-06 +/- 1.97895844321e-08
 	%Strahlbreite w         -0.01281502869 +/- 0.000101158988474
 	\begin{empheq}{align*}
-		 I_0 &= \SI{1.75(2)}{\micro\ampere}\\
-		 \omega &= \SI{-1.282(1)}{\milli\meter}
+		 I_0 &= \SI{1.75(2)}{\micro\ampere},\\
+		 \omega &= \SI{-1.282(1)}{\milli\meter}.
 	\end{empheq}
 \subsection{Polarisation des Laserlichts}\label{sec:Polarisation}
-	Für die Bestimmung der Polarisation des Laserlichts $\phi_{\mathrm{p}}$ wurde der Strom der Photodiode und somit
+	Für die Bestimmung der Polarisation des Laserlichts wurde der Strom der Photodiode und somit
 	die Intensität der $\mathrm{TEM}_{00}$ in Abhängigkeit des Polarisatorwinkels $\phi$ gemessen. Die dabei aufgenommenen
 	Messwerte befinden sich in \cref{tab:Polarisation}. 
 	\input{../Tabellen/Tabelle_Polarisation.tex}
@@ -49,15 +51,15 @@
 	ebenfalls in \cref{fig:polarisation} eingetragen.
 	\input{../Grafiken/fig_Polarisation.tex}
 	\FloatBarrier
-	Für die Maximalintensität $I_0$ und den Phasenwinke $\phi_0$ ergab die Regression die Werte
+	Für die Maximalintensität $I_0$ und den Phasenwinkel $\phi_0$ ergab die Regression die Werte
 	
 	%Maximalintensität I_0  1.56217702188e-05 +/- 3.84900177443e-08
 	%Phase phi_0            2.42987521953 +/- 0.00213377505421
 	
 	\begin{empheq}{align*}
-		I_0 &= \SI{15.62(4)}{\micro\ampere}\\
-		\phi_0 &= \SI{2.430(2)}{rad}\\
-			   &= \SI{139.2(1)}{\degree}
+		I_0 &= \SI{15.62(4)}{\micro\ampere},\\
+		\phi_0 &= \SI{2.430(2)}{rad},\\
+			   &= \SI{139.2(1)}{\degree}.
 	\end{empheq}
 	
 %	Aus dem Phasenwinkel $\phi_0$ konnte der Polarisationswinkel des Laserlichts, unter Zuhilfenahme von \eqref{eq:polarisation_laser}, zu
@@ -69,22 +71,46 @@
 
 \subsection{Wellenlänge des Laserlichts}\label{sec:Wellenlaenge}
 	Die zur Bestimmung der Wellenlänge aufgenommenen Daten befinden sich in \cref{tab:Wellenlaengen}. Für Umrechnung
-	der gemessenen Abstände zum Hauptmaximum $d$ in die nötigen Beugungswinkel $\theta$ wurde noch der Abstand vom 
-	Gitter zum Hauptmaximum $l = \SI{1.085(1)}{m}$ gemessen. Die in \cref{tab:Wellenlaengen}  eingetragenen Wellenlängen 
-	berechneten sich aus den Winkel und er Gitterkonstante des verwendeten Gitters nach \eqref{eq:gitter}.
+	der gemessenen Abstände zum Hauptmaximum $d$ in die nötigen Beugungswinkel $\theta$, mittels \eqref{eq:gitter_winkel}, 
+	wurde noch der Abstand vom Gitter zum Hauptmaximum $l = \SI{1.085(1)}{m}$ gemessen. Die in \cref{tab:Wellenlaengen}  eingetragenen Wellenlängen 
+	berechneten sich aus den Winkel und der Gitterkonstante des verwendeten Gitters, $g = \SI{0.01}{mm}$, nach \eqref{eq:gitter}.
 	\input{../Tabellen/Tabelle_Wellenlaengen.tex}
 	\FloatBarrier
 	Als Mittelwert der Wellenlänge ergab sich in dieser Messung:
 	\begin{empheq}{equation*}
 		\mean{\lambda} = \SI[parse-numbers=false]{637 \pm 2(sys) \pm 2(stat)}{nm}
 	\end{empheq} 
+	Dabei berechnet sich der systematische Fehler aus den Fehlern der einzelnen Messungen durch gaußsche Fehlerfortpflanzung
+	\eqref{eq:Fehlerforpflanzung}, wohingegen der statistische Fehler die Standardabweichung vom Mittelwert nach \eqref{eq:Mittelwert_Std}
+	darstellt.
+	
 	
 \subsection{Prüfung der Stabilitätsbedingung}\label{sec:Stabilitaetsbedingung}
 	Die für die Überprüfung der Stabilitätsbedingung aufgenommenen Messwerte, für Resonatorlänge und Photostrom
-	sind in \cref{tab:Stabilitaet} zu finden\footnote{Einer der Messwerte wurde dabei ausgelassen, da dieser im Vergleich zu den anderen Messwerten ein so starker  Abweichung nach oben aufwies, dass eine Verwendung keinen Nutzen gehabt hätte}. Der skalierte Photostrom berechnet sich durch Normierung der Messwerte
+	sind in \cref{tab:Stabilität} zu finden\footnote{Einer der Messwerte wurde dabei ausgelassen, da dieser im Vergleich zu den anderen Messwerten eine so starke Abweichung nach oben aufwies, dass eine Verwendung keinen Nutzen gehabt hätte}. Der skalierte Photostrom berechnet sich durch Normierung der Messwerte
 	mit dem Maximalwert $I_0 = \SI{81(1)}{\micro\ampere}$ und durch Multiplikation mit dem Wert $c = \num{0.1875}$ der Theoriekurve 
 	bei der Resonatorlänge $L = \SI{0.65}{\meter}$. Diese Skalierung wurde vorgenommen um die aufgenommenen Messwerte 
 	und die, mit diesen in \cref{fig:stabilitaetsbedingung} eingetragene, Theoriekurve vergleichen zu können.
+	Neben den Messwerten und der Theoriekurve ist in
+	\cref{fig:stabilitaetsbedingung} eine Regressionskurve der Form
+	\begin{empheq}{equation}
+		g_1g_2(L) = a \cdot L^2 + b \cdot L + c,
+	\end{empheq}
+	eingetragen. Für die Regressionsparameter $a$,$b$ und $c$ ergaben sich dabei 
+	folgende Werte:
+	%a  -0.217389075608 +/- 0.0562268753365
+	%b  -0.0773822497148 +/- 0.0960797432059
+	%c  0.326194436181 +/- 0.0401763378603
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align}
+			a &= \SI{-0.22(6)}{\per\square\meter},\\
+			b &= \SI{-0.1(1)}{\per\meter},\\
+			c &= \SI{0.33(4)}{}.
+		\end{empheq}
+	\end{subequations}
+
+	
 	
 	\input{../Tabellen/Tabelle_Stabilitaet.tex}
 	\input{../Grafiken/fig_Stabilitaetsbedingung.tex}

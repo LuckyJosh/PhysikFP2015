@@ -2,19 +2,59 @@
 Im Folgenden werden die in der Auswertung erhaltenen Ergebnisse noch einmal abschließend zusammengefasst 
 und auf ihre Plausibilität hin überprüft.\\
 
-Wie der Vergleich mit der Regressionskurve zeigt spiegeln die in \cref{sec:TEM00} und \cref{sec:TEM10} aufgenommenen Werte 
-die theoretische Intensitätsverteilung gut wider. Dieses trifft auch auf die Messung zur Polarisation in \cref{sec:Polarisation}
-zu. Die aufgenommenen Messwerte werden auch hier gut durch die theoretische Verteilung beschreiben. In allen drei Messungen 
+Die Auswertung der Messungen, der Intensitätsverteilung der beiden Moden in \cref{sec:TEM00} und \cref{sec:TEM10}
+lieferte folgende Ergebnisse.\\
+Für die Grundmode $\mathrm{TEM_{00}}$:\\
+\begin{empheq}{align*}
+I_0 &= \SI{31.78(4)}{\micro\ampere},\\
+\omega &= \SI{1.453(2)}{\milli\meter}.
+\end{empheq}
+
+Und für die erste transversale Mode $\mathrm{TEM_{10}}$:
+\begin{empheq}{align*}
+I_0 &= \SI{1.75(2)}{\micro\ampere},\\
+\omega &= \SI{-1.282(1)}{\milli\meter}.
+\end{empheq}
+
+Wie der Vergleich mit den Regressionskurven zeigt spiegeln die, in dieser Messung, aufgenommenen Werte die theoretische Intensitätsverteilung 
+gut wider. 
+Dieses trifft auch auf die Messung zur Polarisation in \cref{sec:Polarisation}
+zu. Hier ergaben sich die folgenden Werte:
+	\begin{empheq}{align*}
+	I_0 &= \SI{15.62(4)}{\micro\ampere},\\
+	\phi_0 &= \SI{2.430(2)}{rad},\\
+	&= \SI{139.2(1)}{\degree}.
+	\end{empheq}
+
+Die aufgenommenen Messwerte werden auch hier gut durch die theoretische Verteilung beschreiben. In allen drei Messungen 
 sind jedoch auch Abweichungen von der Theorie zu erkennen, diese sind vor allem durch die Empfindlichkeit der Photodiode 
 zu erklären, da die Messung der Intensität stark von deren Ausrichtung abhing. Hinzu kommt vor allem für die 
 Überprüfung der Stabilitätsbedingung in \cref{sec:Stabilitaetsbedingung}, dass nicht immer die höchstmögliche Intensität am Laser 
-eingestellt werden konnte. Die für die Prüfung der Stabilitätsbedingung aufgenommenen Messwerte folgen zwar dem durch die Theorie
-beschriebenen Trend konnten aber nicht mit einer quadratischen Funktion in der Form der Theoriekurve ausgeglichen werden.
+eingestellt werden konnte. \\
+Die für die Prüfung der Stabilitätsbedingung aufgenommenen Messwerte folgen zwar dem durch die Theorie
+beschriebenen Trend, jedoch zweigt die berechnete Ausgleichskurve der Form
+	\begin{empheq}{equation*}
+	g_1g_2(L) = a \cdot L^2 + b \cdot L + c,
+	\end{empheq}
+mit den Parametern,
+	\addtocounter{equation}{-1}
+	\begin{subequations}
+		\begin{empheq}{align*}
+		a &= \SI{-0.22(6)}{\per\square\meter},\\
+		b &= \SI{-0.1(1)}{\per\meter},\\
+		c &= \SI{0.33(4)}{}
+		\end{empheq}
+	\end{subequations}
+erhebliche Abweichungen von der Theoriekurve.\\
+
 Somit ergibt sich aus den Messwerten nur eine Bestätigung der Tatsache, dass der Laser im Bereich $L > \SI{1}{m}$ außerhalb seines
 Stabilitätsbereiches ist.
-Die Bestimmung der Wellenlänge zeigt mit einer relativen Abweichung zum Theoriewert $\lambda = \SI{632.8}{\nm}$ 
-von ungefähr $\Delta_{\mathrm{rel}}\lambda = \SI{0.7}{\percent}$  einer sehr hohe Genauigkeit und ist damit als plausibel und genau zu bewerten.
 
-Im Allgemeinen lässt sich demnach sagen, dass die in diesem Versuch erhaltenen Messwerte Qualitativ ihrer Theorie entsprechen.
-Quantitativ gut ist vor allem die Wellenlängenbestimmung, welche eine sehr geringe Abweichung von der Theorie aufweist.
-Vorallem jedoch die Überpfrüfung der Stabilitätsbedingung liefert Quantitativ nur sehr dürftig Ergebnisse. 
+Die Wellenlänge konnte als Ergebnis der entsprechenden Messreihe zu 
+	\begin{empheq}{equation*}
+	\mean{\lambda} = \SI[parse-numbers=false]{637 \pm 2(sys) \pm 2(stat)}{nm},
+	\end{empheq} 
+berechnet werden.
+Die mit \eqref{eq:Fehler_relativ} berechnete relative Abweichung $\Delta_{\mathrm{rel}}\lambda = \SI{0.7}{\percent}$ vom Theoriewert $\lambda = 
+\SI{632.8}{\nm}$~\cite{V61} zeigt eine sehr hohe Genauigkeit der Messung.
+

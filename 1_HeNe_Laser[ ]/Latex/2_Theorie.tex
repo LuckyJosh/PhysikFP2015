@@ -38,11 +38,11 @@ Sind die Verstärkung durch die induzierte Emission größer als die Verluste du
 erfüllt, dabei ist $g_i=1-L/r_i$ und $L$ die Resonatorlänge und $r_i$ der Krümmungsradius des jeweiligen Spiegels. Die Stabilität ist somit nicht nur von dem Typ des Resonators sondern auch von dem Krümmungsradius der Spiegel abhängig.
 \begin{figure}
 \centering
-\includegraphics[scale=1]{../Grafiken/Stabilitaetsparameter.pdf}
+\includegraphics[scale=0.75]{../Grafiken/Stabilitaetsparameter.pdf}
 \caption{Ein Plot der Stabilitätsbedingung für zwei der zur Verfügung stehenden Spiegeln, siehe Tabelle \ref{Eigenschaften}}
 \label{fig:Stabilitaet}
 \end{figure}
-\subsection{$\mathbf{TEM}$-Moden}
+\subsection[TEM-Moden]{$\mathbf{TEM}$-Moden}
 Innerhalb des Resonators befinden sich $q$ Wellenlängen die sich longitudinal ausbreiten, weil die Resonatorlänge $L$ um einiges größer ist als die Wellenlänge $\lambda$, $q$ wird auch die longitudinale Mode genannt. Aufgrund von Unebenheiten oder Verkippung des Spiegels entstehen auch transversale Moden $l$ und $q$ die für die $x-$ und $y-$Richtungne stehen. Daraus ergibt sich $\mathrm{TEM}_{lpq}$-Moden (transverse electromagnetic Mode), die als Anlehnung an den Hohlleiter verwendet wird. Die Modenzahl $q$ kann meistens Weggelassen werden weil sie von keiner Bedeutung ist. In den meisten Resonatoren werden nur wenige Moden isoliert und verstärkt.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%Wenn Verteilung hier Einfügen%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Die Grundmode $\mathrm{TEM}_{00}$ ist die Mode mit der höchsten Symmetrie und den wenigsten Verlusten. Die Intensität von der Mode wird durch die Gaußverteilung beschrieben.
@@ -72,11 +72,13 @@ beschrieben.
 Die Wellenlänge des Laserlichts lässt sich mit Hilfe von Beugung am Gitter und der Gleichung
 \begin{align}
 \lambda=\frac{g}{n}\sin\left(  \theta \right)
+\label{eq:gitter}
 \end{align}
 berechnen, dabei ist $g$ der Gitterabstand, $n$ die Nummer des Maxima und $\theta$ der Winkel zwischen der optischen Achse und dem Maxima. Dieser Winkel wird bestimmt durch den Abstand vom Gitter zum Hauptmaximum $l$ und dem Abstand vom  Hauptmaximum zum Nebenmaximum $d$ durch
-\begin{align*}
+\begin{align}
 \frac{d}{l}=\tan\left( \theta \right).
-\end{align*}
+\label{eq:gitter_winkel}
+\end{align}
 
 
 \footnotetext{Das erste Hermitesche Polynom ist $H_1(x) = 2x$.}
