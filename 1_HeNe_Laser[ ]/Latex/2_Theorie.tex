@@ -56,20 +56,27 @@ Hier ist $I_0$ die Maximalintensität, $r$ der Abstand zur optischen Achse und $
 beschreiben, dabei ist $\omega_0$ der minimale Strahltaille, $z$ der Abstand auf der optischen Achse und $\theta$ die Strahlendivergenz, wie durch die Gaußsche 
 Strahlenoptik beschrieben.
 Unter der Annahme die verwendeten Spiegel seien sphärisch, erhält man für die erste transversale Mode $\mathrm{TEM}_{10}$ 
-die Intensitätsverteilung durch Multiplikation der Grundmodenverteilung mit dem Quadrat des ersten Hermiteschen Polynom\footnotemark $H_1\qty(\sqrt{2}\frac{r}{\omega})$\cite{Demtroeder07}
+die Intensitätsverteilung durch Multiplikation der Grundmodenverteilung mit dem Quadrat des ersten Hermiteschen Polynom\footnote{Das erste Hermitesche Polynom ist $H_1(x) = 2x$} $H_1\qty(\sqrt{2}\frac{r}{\omega})$\cite{Demtroeder07}
 zu
 \begin{align}
 I(r)=I_0\frac{8r^2}{\omega^2}\exp\left(\frac{-2r^2}{\omega^2}\right).
 \label{eq:tem10}
 \end{align}
-Folgend werden weitere Formel diskutiert die für die Auswertung benötigt werden.
-Die Abhängigkeit der Laserintensität von dem Winkel $\phi$, der am Polarisator eingestellt wurde, ist durch
+
+%Folgend werden weitere Formel diskutiert die für die Auswertung benötigt werden.
+\subsubsection{Bestimmung der Polarisation und Wellenlänge des Laserlichts}
+Die Messungen zur Bestimmung von Polarisation wurden an der Grundmode TEM$_{00}$ durchgeführt.
+Für das elektrische Feld $E_{p}$ einer polarisierten elektromagnetischen Welle gilt die 
+Proportionalität $E_{p} \propto E_{0}\cdot \sin(\phi-\phi_{0})$, wobei $E_{0}$ die Maximalintensität
+und $\phi$ der am Polarisator eingestellte Winkel ist. Da für die Intensität einer EM-Welle nun 
+die Beziehung $I \propto E^{2}$ gilt ergibt sich für die zu beobachtende Intensitätsverteilung:  
+
 \begin{align}
-I(\phi)=I_0\sin[2](\phi - \phi_0)
+I(\phi)=I_0\sin[2](\phi - \phi_0).
 \label{eq:polarisation}
 \end{align}
-beschrieben. 
-Die Wellenlänge des Laserlichts lässt sich mit Hilfe von Beugung am Gitter und der Gleichung
+
+Die Wellenlänge von EM-Wellen lässt sich mit Hilfe von Beugung am Gitter und der Gleichung
 \begin{align}
 \lambda=\frac{g}{n}\sin\left(  \theta \right)
 \label{eq:gitter}
@@ -81,7 +88,7 @@ berechnen, dabei ist $g$ der Gitterabstand, $n$ die Nummer des Maxima und $\thet
 \end{align}
 
 
-\footnotetext{Das erste Hermitesche Polynom ist $H_1(x) = 2x$.}
+
 
 \subsection{Der HeNe-Laser}
 Der HeNe-Laser gehört zu den Gaslasern und das Gemisch aus Helium und Neon hat ein Verhältnis von 5 zu 1. Innerhalb der Laserrohrs befindet sich ein Druck von 1 Torr.Dabei fungiert Helium als Pumpquelle und Neon als Lasermedium. Durch elektrische Entladung wird das Helium in den angeregten Zustand versetzt und gibt die Anregungsenergie durch Stöße zweiter Ordnung an das Neon ab, dadurch wird Besetzungsinversion erzeugt. Der Laser besitzt die intensivste Wellenlänge bei $\lambda=$632,8 nm.
