@@ -1,0 +1,3 @@
+#Druck		#Zeit
+# r/%   	# t/s
+30			1
