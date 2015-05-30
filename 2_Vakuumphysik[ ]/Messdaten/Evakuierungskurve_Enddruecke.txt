@@ -1,0 +1,5 @@
+#Drehschieber	#Turbo
+#Enddruck		#Enddruck
+# P/mbar		# P/mbar
+0.02			1.6e-05
+		
