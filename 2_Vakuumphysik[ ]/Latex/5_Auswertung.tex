@@ -22,7 +22,7 @@ sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solche
 \eqref{eq:Evakuierungskurve} hergeleitet, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
 In dieser Darstellung lassen sich drei Druckbereiche ausmachen,
 in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
-Ausgleichesgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_drehschieber_log_0} 
+Ausgleichsgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_drehschieber_log_0} 
 bis \ref{fig:evakuierungskurve_drehschieber_log_2} dargestellt.\\
 
 
@@ -41,7 +41,7 @@ bis \ref{fig:evakuierungskurve_drehschieber_log_2} dargestellt.\\
 
 Die durchgeführte Ausgleichsrechnung für eine lineare Funktion der Form 
 \begin{empheq}{equation}
-P_{i}(t) = a_{i} \cdot t + b_{i}
+P_{\mathrm{dreh}i}(t) = a_{i} \cdot t + b_{i}
 \end{empheq}
 ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $a_{i}$ und $b_{i}$:
 {%Kopierte Fit Ergebnisse
@@ -73,19 +73,19 @@ ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $a_{i}$ und $b_{
 
 Aus den Steigungen $a_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
 in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} berechnen.
-Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,dreh}} = \SI{10.2(7)}{\l}$ ergibt sich 
+Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,turbo}} = \SI{10.0(7)}{\l}$ ergibt sich 
 damit für das Saugvermögen:
 {%Kopierte Ergebnisse
-%S0 =  0.600429548171 +/- 0.0792494597197
-%S1 =  0.779927918028 +/- 0.0696560633085
-%S2 =  0.141773186222 +/- 0.0233708675414
+%S0 =  2.33570884392 +/- 0.16984232966
+%S1 =  0.92074919903 +/- 0.0613046451535
+%S2 =  0.427279487281 +/- 0.0492966509324
 }
 
 \begin{subequations}
 	\begin{empheq}{align}
-	S_{1} &=\SI{0.60(8)}{\l\per\s}\\ 
-	S_{2} &=\SI{0.78(7)}{\l\per\s}\\ 
-	S_{3} &=\SI{0.14(2)}{\l\per\s}
+	S_{1} &=\SI{2.3(2)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.92(6)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.43(5)}{\l\per\s}
 	\end{empheq}	
 \end{subequations}
 
@@ -115,7 +115,7 @@ bis \ref{fig:leckrate_drehschieber_3} jeweils zusammen mit einer durch lineare A
 
 Die durchgeführte lineare Ausgleichsrechnung für jede Messreihe ergab, für eine Gerade der Form
 \begin{empheq}{equation}
-p_{i}(t) = c_{i} \cdot t + d_{i},
+p_{\mathrm{dreh,}i}(t) = c_{i} \cdot t + d_{i},
 \end{empheq}
 die jeweiligen Fit-Parameter:
 
@@ -219,9 +219,26 @@ zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen 
 Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 
 \subsubsection{Evakuierungskurve}
-
+Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
+im Rezipienten sind in \cref{tab:Evakuierungskurve_Turbo} auch als logarithmierte
+Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{8(1)e-07}{\bar} $
+und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{16(2)}{\nano\bar}$ verwendet.
+Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{Hefter} mit \SI{10}{\percent} angenommen.
+Neben den Messwerten für den Druck sind auch die, über die sieben beziehungsweise zwei Messungen\footnote{
+Messung im Druckbereich von \SI{90}{\nano\bar} bis \SI{30}{\nano\bar} wurden nur zweifach durchgeführt,
+da sich die Messung mit Änderung des Messbereichs als schwierig herausstellten.}, 
+gemittelten Messwerte der Zeit angegeben. Der Messfehler der Zeit ist dabei für jeder der Messungen mit
+$\sigma_{t} = \SI{1}{\s}$ als systematischer Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.
 %Tabelle der Messwerte
 \input{../Tabellen/Evakuierungskurve_Turbo}
+
+In \cref{fig:evakuierungskurve_turbo_exp} sind die Messwerte für den Druck gegen die der Zeit aufgetragen,
+sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solcher Verlauf, wie in 
+\eqref{eq:Evakuierungskurve} hergeleitet, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
+Auch für die Turbopumpe lassen sich in dieser Darstellung drei Druckbereiche ausmachen,
+in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
+Ausgleichsgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_turbo_log_0} 
+bis \ref{fig:evakuierungskurve_turbo_log_2} dargestellt.\\
 
 {%Exponential-Darstellung der Messdaten
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_exp}
@@ -235,10 +252,70 @@ Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_2}
 \FloatBarrier}
 
+Die durchgeführte Ausgleichsrechnung für eine lineare Funktion der Form 
+\begin{empheq}{equation}
+P_{\mathrm{turbo},i}(t) = e_{i} \cdot t + f_{i}
+\end{empheq}
+ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $e_{i}$ und $f_{i}$:
+{%Kopierte Fit Ergebnisse
+%Fit im 1.Bereich
+%a =  -0.232658127904 +/- 0.00766229475417
+%b =  1.31202567844 +/- 0.0643904309961
+%Fit im 2.Bereich
+%a =  -0.0917151063038 +/- 0.00139136386064
+%b =  -0.661277825589 +/- 0.0285758068287
+%Fit im 3.Bereich
+%a =  -0.0425609749525 +/- 0.00406186059955
+%b =  -1.96203941847 +/- 0.15545848225
+}
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{align}
+	e_{1} &=\SI{-0.233(8)}{\per\s}\\ 
+	f_{1} &=\SI{1.31(6)}{} \notag
+	\end{empheq}	                                                                                  
+	\begin{empheq}{align}
+	e_{2} &=\SI{-0.092(1)}{\per\s}\\ 
+	f_{2} &=\SI{-0.66(3)}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	e_{3} &=\SI{-0.043(4)}{\per\s}\\ 
+	f_{3} &=\SI{-2.0(2)}{} \notag
+	\end{empheq}	
+\end{subequations}\\
+
+Aus den Steigungen $e_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
+in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} berechnen.
+Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,dreh}} = \SI{10.2(7)}{\l}$ ergibt sich 
+damit für das Saugvermögen:
+{%Kopierte Ergebnisse
+%	S0 =  2.33570884392 +/- 0.16984232966
+%	S1 =  0.92074919903 +/- 0.0613046451535
+%	S2 =  0.427279487281 +/- 0.0492966509324
+}
+
+\begin{subequations}
+	\begin{empheq}{align}
+	S_{1} &=\SI{2.3(2)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.92(6)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.43(5)}{\l\per\s}
+	\end{empheq}	
+\end{subequations}
+
+
 \subsubsection{Leckratenmessung}
+Die Messwerte die in den vier Messreihen der Leckraten Messung aufgenommen wurden,
+sind in \cref{tab:Leckratenmessung_Turbo} dargestellt. Wiederum sind
+für den Messfehler des Drucks die Herstellerangabe \cite{Hefter} von \SI{10}{\percent} verwendet worden.
+Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
+angegeben. Die erste Messung der zweiten Messreihe wurde für die Auswertung nicht berücksichtigt, da der
+Mittelwert mit \SI{0,84}{\s} unter dem angenommenen systematischen Fehler lag.
+
+
 % Tabelle der Lecktratenmessung
 \input{../Tabellen/Leckrate_Turbo}
-
+Die grafische Darstellung der jeweiligen Messreihe befindet sich in den Abbildungen \ref{fig:leckrate_turbo_0} 
+bis \ref{fig:leckrate_turbo_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. 
 {%Grafiken der Leckratenmessung
 \input{../Grafiken/fig_Leckrate_Turbo_0}
 \FloatBarrier
@@ -250,7 +327,96 @@ Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 \input{../Grafiken/fig_Leckrate_Turbo_3}
 \FloatBarrier}
 
+Die durchgeführte lineare Ausgleichsrechnung für jede Messreihe ergab, für eine Gerade der Form
+\begin{empheq}{equation}
+p_{\mathrm{turbo,}i}(t) = g_{i} \cdot t + h_{i},
+\end{empheq}
+die jeweiligen Fit-Parameter:
+
+
+{% Kopierte Ergebnisse
+%	a =  3.40588066088e-05 +/- 6.58811930066e-07
+%	b =  1.80309243975e-05 +/- 5.67821603704e-06
+%	Saugvermögen 8.5+/-1.0
+%	a =  5.25922439955e-05 +/- 1.43830165392e-06
+%	b =  0.000163334902019 +/- 6.84644683494e-06
+%	Saugvermögen 8.8+/-1.1
+%a =  6.34043095788e-05 +/- 9.9131259871e-06
+%b =  0.000232364707371 +/- 3.8067562092e-05
+%Saugvermögen 7.9+/-1.6
+%a =  0.000108108108257 +/- 7.99158131946e-06
+%b =  0.000190630630135 +/- 2.78080079405e-05
+%Saugvermögen 10.8+/-1.5
+	
+}
+\addtocounter{equation}{-1}
+
+{%Mit Minipages 2x2
+	%\begin{subequations}
+	%	\begin{minipage}[]{0.5\textwidth}
+	%		\begin{empheq}{align}
+	%		c_{1} &=\SI{0.0034(2)}{\milli\bar\per\s}\\ 
+	%		d_{1} &=\SI{0.16(2)}{} 
+	%		\end{empheq}	                                                                                  
+	%		\begin{empheq}{align}
+	%		c_{2} &=\SI{0.0073(2)}{\milli\bar\per\s}\\ 
+	%		d_{2} &=\SI{0.267(8)}{} 
+	%		\end{empheq}
+	%	\end{minipage}
+	%	\begin{minipage}[c]{0.5\textwidth}
+	%		\begin{empheq}{align}
+	%		c_{3} &=\SI{0.011(3)}{\milli\bar\per\s}\\ 
+	%		d_{3} &=\SI{0.53(8)}{} 
+	%		\end{empheq}
+	%		\begin{empheq}{align}
+	%		c_{4} &=\SI{0.0938(7)}{\milli\bar\per\s}\\ 
+	%		d_{4} &=\SI{0.79(3)}{} 
+	%		\end{empheq}
+	%	\end{minipage}	
+	%\end{subequations}\\
+}
+
+\begin{subequations}
+	\begin{empheq}{align}
+	g_{1} &=\SI{34.1(7)}{\nano\bar\per\s}\\ 
+	h_{1} &=\SI{18(6)e-06}{} \notag
+	\end{empheq}		                                                                                  
+	\begin{empheq}{align}
+	g_{2} &=\SI{53(1)}{\nano\bar\per\s}\\ 
+	h_{2} &=\SI{163(7)e-06}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	g_{3} &=\SI{6(1)e-05}{\milli\bar\per\s}\\ 
+	h_{3} &=\SI{23(4)e-05}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	g_{4} &=\SI{108(8)}{\nano\bar\per\s}\\ 
+	h_{4} &=\SI{19(3)e-05}{} \notag
+	\end{empheq}	
+\end{subequations}\\
+
+Aus den berechneten Steigungen $g_{i}$ der Ausgleichsgeraden kann mit \eqref{eq:Saugvermoegen_Leckrate}
+das Saugvermögen der Drehschieberpumpe bestimmt werden. Das dafür notwendige Volumen wurde aus
+den Einzelvolumen der Bauteile zu $V_{\mathrm{Leck,turbo}} = \SI{10.2(7)}{\l}$ bestimmt und 
+die jeweiligen Gleichgewichtsdrücke sind in den Grafiken in \cref{tab:Saugvermoegen_Turbo}
+angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
+
+\begin{subequations}
+	\begin{empheq}{align}
+	S_{1} &=\SI{9(1)}{\l\per\s}\\ 
+	S_{2} &=\SI{9(1)}{\l\per\s}\\ 
+	S_{3} &=\SI{8(2)}{\l\per\s}\\
+	S_{3} &=\SI{11(2)}{\l\per\s}
+	\end{empheq}	
+\end{subequations}
+
+
+
 \subsubsection{Saugvermögen}
+
+Die in den vorherigen Messungen bestimmten Werte für das Saugvermögen der Drehschieberpumpe
+sind zusammen mit dem jeweiligen Druck in \cref{tab:Saugvermoegen_Turbo} eingetragen
+und in \cref{fig:saugvermögen_turbo} grafisch dargestellt.
 %Tabelle zum Saugvermögen
 \input{../Tabellen/Saugvermoegen_Turbo}
 
