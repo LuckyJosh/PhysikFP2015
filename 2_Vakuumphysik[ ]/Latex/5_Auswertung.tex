@@ -5,14 +5,33 @@ zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen 
 Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 
 \subsubsection{Evakuierungskurve}
+Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
+im Rezipienten sind in \cref{tab:Evakuierungskurve_Drehschieber} auch als logarithmierte
+Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{100(30)}{\milli\bar} $
+und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{20(6)}{\micro\bar}$ verwendet.
+Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{Pfeifer} mit \SI{30}{\percent} angenommen.
+Neben den Messwerten für den Druck sind auch die, über die fünf Messungen, gemittelten Messwerte der Zeit 
+angegeben. Der Messfehler der Zeit ist dabei für jeder der fünf Messungen mit $\sigma_{t} = \SI{1}{\s}$ als systematischer
+Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.
 
 %Tabelle der Messwerte
 \input{../Tabellen/Evakuierungskurve_Drehschieber}
 
-%Exponential-Darstellung der Messdaten
-{\input{../Grafiken/fig_Evakuierungskurve_Drehschieber_exp}
-\FloatBarrier
-%Logarithmische-Darstellung der Messdaten mit Fits
+In \cref{fig:evakuierungskurve_drehschieber_exp} sind die Messwerte für den Druck gegen die der Zeit aufgetragen,
+sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solcher Verlauf, wie in 
+\eqref{eq:Evakuierungskurve} hergeleitet, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
+In dieser Darstellung lassen sich drei Druckbereiche ausmachen,
+in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
+Ausgleichesgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_drehschieber_log_0} 
+bis \ref{fig:evakuierungskurve_drehschieber_log_2} dargestellt.\\
+
+
+
+{%Exponential-Darstellung der Messdaten
+\input{../Grafiken/fig_Evakuierungskurve_Drehschieber_exp}
+\FloatBarrier}
+
+{%Logarithmische-Darstellung der Messdaten mit Fits
 \input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_0}
 \FloatBarrier
 \input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_1}
@@ -20,24 +39,175 @@ Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 \input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_2}
 \FloatBarrier}
 
+Die durchgeführte Ausgleichsrechnung für eine lineare Funktion der Form 
+\begin{empheq}{equation}
+P_{i}(t) = a_{i} \cdot t + b_{i}
+\end{empheq}
+ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $a_{i}$ und $b_{i}$:
+{%Kopierte Fit Ergebnisse
+	%Fit im 1.Bereich
+	%a =  -0.0590110020632 +/- 0.0068114313639
+	%b =  0.92041914012 +/- 0.20517721592
+	%Fit im 2.Bereich
+	%a =  -0.0766523368479 +/- 0.00477396323738
+	%b =  1.23548186669 +/- 0.343789112221
+	%Fit im 3.Bereich
+	%a =  -0.0139336543482 +/- 0.00211667511312
+	%b =  -5.57400774906 +/- 0.335411241849
+}
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{align}
+	a_{1} &=\SI{-0.059(7)}{\per\s}\\ 
+	b_{1} &=\SI{0.9(2)}{} \notag
+	\end{empheq}	                                                                                  
+	\begin{empheq}{align}
+	a_{2} &=\SI{-0.077(5)}{\per\s}\\ 
+	b_{2} &=\SI{1.2(3)}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	a_{3} &=\SI{-0.014(2)}{\per\s}\\ 
+	b_{3} &=\SI{-5.6(3)}{} \notag
+	\end{empheq}	
+\end{subequations}\\
+
+Aus den Steigungen $a_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
+in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} berechnen.
+Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,dreh}} = \SI{10.2(7)}{\l}$ ergibt sich 
+damit für das Saugvermögen:
+{%Kopierte Ergebnisse
+%S0 =  0.600429548171 +/- 0.0792494597197
+%S1 =  0.779927918028 +/- 0.0696560633085
+%S2 =  0.141773186222 +/- 0.0233708675414
+}
+
+\begin{subequations}
+	\begin{empheq}{align}
+	S_{1} &=\SI{0.60(8)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.78(7)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.14(2)}{\l\per\s}
+	\end{empheq}	
+\end{subequations}
+
 \subsubsection{Leckratenmessung}
+
+Die Messwerte die in den vier Messreihen der Leckraten Messung aufgenommen wurden,
+sind in \cref{tab:Leckratenmessung_Drehschieber_0} dargestellt. Wiederum sind
+für den Messfehler des Drucks die Herstellerangabe \cite{Pfeifer} von \SI{30}{\percent} verwendet worden.
+Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
+angegeben.  
 
 %Tabelle zur Leckratenmessung
 \input{../Tabellen/Leckrate_Drehschieber}
+\FloatBarrier
+Die grafische Darstellung der jeweiligen Messreihe befindet sich in den Abbildungen \ref{fig:leckrate_drehschieber_0} 
+bis \ref{fig:leckrate_drehschieber_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. 
 
-%Grafiken der Leckratenmessung
+{%Grafiken der Leckratenmessung
 \input{../Grafiken/fig_Leckrate_Drehschieber_0}
 \FloatBarrier
-%Logarithmische-Darstellung der Messdaten mit Fits
 \input{../Grafiken/fig_Leckrate_Drehschieber_1}
 \FloatBarrier
 \input{../Grafiken/fig_Leckrate_Drehschieber_2}
 \FloatBarrier
 \input{../Grafiken/fig_Leckrate_Drehschieber_3}
-\FloatBarrier
+\FloatBarrier}
+
+Die durchgeführte lineare Ausgleichsrechnung für jede Messreihe ergab, für eine Gerade der Form
+\begin{empheq}{equation}
+p_{i}(t) = c_{i} \cdot t + d_{i},
+\end{empheq}
+die jeweiligen Fit-Parameter:
+
+
+{% Kopierte Ergebnisse
+% a =  0.00343320969805 +/- 0.000232609369483
+% b =  0.16437881839 +/- 0.0194087844156
+%Saugvermögen 0.35+/-0.05
+
+%a =  0.00734136153034 +/- 0.000159807738651
+%b =  0.267199767693 +/- 0.00806919876938
+%Saugvermögen 0.37+/-0.05
+
+%a =  0.0112064202218 +/- 0.00283513818665
+%b =  0.534856097298 +/- 0.0781266429063
+%Saugvermögen 0.29+/-0.08
+
+%a =  0.0938182823124 +/- 0.000686074570844
+%b =  0.786723830802 +/- 0.0263582331142
+%Saugvermögen 1.19+/-0.14
+}
+\addtocounter{equation}{-1}
+
+{%Mit Minipages 2x2
+%\begin{subequations}
+%	\begin{minipage}[]{0.5\textwidth}
+%		\begin{empheq}{align}
+%		c_{1} &=\SI{0.0034(2)}{\milli\bar\per\s}\\ 
+%		d_{1} &=\SI{0.16(2)}{} 
+%		\end{empheq}	                                                                                  
+%		\begin{empheq}{align}
+%		c_{2} &=\SI{0.0073(2)}{\milli\bar\per\s}\\ 
+%		d_{2} &=\SI{0.267(8)}{} 
+%		\end{empheq}
+%	\end{minipage}
+%	\begin{minipage}[c]{0.5\textwidth}
+%		\begin{empheq}{align}
+%		c_{3} &=\SI{0.011(3)}{\milli\bar\per\s}\\ 
+%		d_{3} &=\SI{0.53(8)}{} 
+%		\end{empheq}
+%		\begin{empheq}{align}
+%		c_{4} &=\SI{0.0938(7)}{\milli\bar\per\s}\\ 
+%		d_{4} &=\SI{0.79(3)}{} 
+%		\end{empheq}
+%	\end{minipage}	
+%\end{subequations}\\
+}
+
+\begin{subequations}
+	\begin{empheq}{align}
+	c_{1} &=\SI{0.0034(2)}{\milli\bar\per\s}\\ 
+	d_{1} &=\SI{0.16(2)}{} \notag
+	\end{empheq}	                                                                                  
+	\begin{empheq}{align}
+	c_{2} &=\SI{0.0073(2)}{\milli\bar\per\s}\\ 
+	d_{2} &=\SI{0.267(8)}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	c_{3} &=\SI{0.011(3)}{\milli\bar\per\s}\\ 
+	d_{3} &=\SI{0.53(8)}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	c_{4} &=\SI{0.0938(7)}{\milli\bar\per\s}\\ 
+	d_{4} &=\SI{0.79(3)}{} \notag
+	\end{empheq}	
+\end{subequations}\\
+
+Aus den berechneten Steigungen $c_{i}$ der Ausgleichsgeraden kann mit \eqref{eq:Saugvermoegen_Leckrate}
+das Saugvermögen der Drehschieberpumpe bestimmt werden. Das dafür notwendige Volumen wurde aus
+den Einzelvolumen der Bauteile zu $V_{\mathrm{Leck,dreh}} = \SI{10.2(7)}{\l}$ bestimmt und 
+die jeweiligen Gleichgewichtsdrücke sind in den Grafiken in \cref{tab:Saugvermoegen_Drehschieber}
+angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
+
+\begin{subequations}
+	\begin{empheq}{align}
+	S_{1} &=\SI{0.35(5)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.37(5)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.29(8)}{\l\per\s}\\
+	S_{3} &=\SI{1.2(1)}{\l\per\s}
+	\end{empheq}	
+\end{subequations}
+
+
 \subsubsection{Saugvermögen}
+
+Die in den vorherigen Messungen bestimmten Werte für das Saugvermögen der Drehschieberpumpe
+sind zusammen mit dem jeweiligen Druck in \cref{tab:Saugvermoegen_Drehschieber} eingetragen
+und in \cref{fig:saugvermögen_drehschieber} grafisch dargestellt.
+
 %Tabelle zum Saugvermögen
 \input{../Tabellen/Saugvermoegen_Drehschieber}
+
 
 %Grafik des Saugvermögens
 \input{../Grafiken/fig_Saugvermoegen_Drehschieber}
@@ -53,22 +223,23 @@ Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 %Tabelle der Messwerte
 \input{../Tabellen/Evakuierungskurve_Turbo}
 
-%Exponential-Darstellung der Messdaten
+{%Exponential-Darstellung der Messdaten
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_exp}
-\FloatBarrier
-%Logarithmische-Darstellung der Messdaten mit Fits
+\FloatBarrier}
+
+{%Logarithmische-Darstellung der Messdaten mit Fits
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_0}
 \FloatBarrier
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_1}
 \FloatBarrier
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_2}
-\FloatBarrier
+\FloatBarrier}
 
 \subsubsection{Leckratenmessung}
 % Tabelle der Lecktratenmessung
 \input{../Tabellen/Leckrate_Turbo}
 
-%Grafiken der Leckratenmessung
+{%Grafiken der Leckratenmessung
 \input{../Grafiken/fig_Leckrate_Turbo_0}
 \FloatBarrier
 
@@ -77,7 +248,7 @@ Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 \input{../Grafiken/fig_Leckrate_Turbo_2}
 \FloatBarrier
 \input{../Grafiken/fig_Leckrate_Turbo_3}
-\FloatBarrier
+\FloatBarrier}
 
 \subsubsection{Saugvermögen}
 %Tabelle zum Saugvermögen
