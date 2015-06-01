@@ -1,1 +1,43 @@
 % !TeX root = Protokoll.tex
+\subsection{Definition des Vakuums}
+Ein Vakuum wird allgemein definiert, als Abwesenheit von Materie.
+Dies bezieht sich auf Gase oder Flüssigkeiten. Um die Größe eines Vakuums zu messen, wird der Druck verwendet. Umso geringer der Druck umso besser das Vakuum.\\
+Ein Vakuum beginnt bei \SI{300}{\milli\bar}, dass wird Grobvakuum genannt.\\
+In einem Druckbereich von \SI{1}{\milli\bar} bis zu \SI{e-3}{\milli\bar} liegt ein Feinvakuum vor.\\
+Das Hochvakuum beginnt bei \SI{e-3}{\milli\bar} und reicht bis zu bis zu \SI{e-7}{\milli\bar}. Alle Drücke die da drunter liegen, beschreiben ein Ultrahochvakuum.\\
+Eine weitere Größe, die behilflich bei dem Verständnis eines Vakuums ist, ist die mittlere freie Weglänge
+\begin{align}
+\Lambda = \frac{1}{\sqrt{2}\pi D^2n},
+\end{align}
+dabei ist $n$ die Teilchenzahldichte und $D$ der Durchmesser der Gasmoleküle. Mithilfe der Teilchenzahldichte 
+\begin{align}
+n=\frac{N}{V}
+\end{align}
+und der idealen Gasgleichung
+\begin{align}
+p\cdot V = N k_B T \label{eq:IdealGas}
+\end{align}
+für einen Druck $p$, ein Volumen $V$, einer Teilchenzahl $N$ und einer Temperatur $T$, wobei $k_B$ die Boltzmann-Konstante ist.
+Kann die mittlere freie Weglänge als
+\begin{align}
+\Lambda = \frac{k_BT}{\sqrt{2}\pi D^2p}
+\end{align} 
+Diese Größe Beschreibt die durchschnittliche Strecke die ein Molekül zurücklegt, bis es mit einem anderen Zusammen stößt. Bei geringer werdendem Druck, wächst die mittlere freie Weglänge.
+
+\subsection{Herleitung der $p(t)$-Kurve}
+Unter Annahme der idealen Gasgleichung (\ref{eq:IdealGas})
+kann eine Näherung für den Zeitlichen Druckverlauf gemacht werden, für einer konstante Temperatur.
+Durch ableiten nach der Zeit wird die Gleichung zu
+\begin{align}
+\frac{d\left(p\cdot V \right)}{dt}=p\frac{dV}{dt}+V\frac{dp}{dt}=0
+\end{align}
+Durch umstellen, Integration und Einführung des Saugvermögens $S=\frac{dV}{dt}$, wird die Gleichung zu
+\begin{align}
+p(t) = p_0 \exp\left(-\frac{S}{V_0}t\right).
+\end{align}
+Da der Druck allerdings gegen einen Enddruck $p_E$ läuft, wird folgende Lösung verwendet.
+\begin{align}
+p(t) = \left( p_0-p_E \right) \exp\left(-\frac{S}{V_0}t\right) + p_E
+\end{align}
+
+\subsection{Strömungen}
