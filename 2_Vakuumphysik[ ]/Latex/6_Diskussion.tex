@@ -1,1 +1,63 @@
 % !TeX root = Protokoll.tex
+Im Folgenden werden die in der Auswertung gewonnenen Ergebnisse noch einmal 
+zusammen gefasst und abschließend diskutiert, um eine Aussage über deren Plausibilität 
+treffen zu können.\\
+
+Für die Messung der Evakuierungskurve der Drehschieberpumpe ergibt sich zunächst ein 
+Verlauf der einer exponentiell abfallenden Kurve ähnlich sieht. Durch die Logarithmierung
+des Druckes erhält man jedoch nicht nur eine lineare Funktion sondern mehrere Druckereiche
+in denen ein linearer Verlauf zu erkennen ist. Dies entspricht der theoretischen Beschreibung,
+da das Saugvermögen der Pumpen über den gesamten Druckbereich nicht konstant ist.\\
+Die Leckratenmessung der Drehschieberpumpe ergibt, wie von der Theorie vorhergesagt, für jeden
+Gleichgewichtsdruck und damit jede Messreihe eine lineare Funktion.\\
+Aus beiden Messungen kann durch lineare Ausgleichsrechnung die Steigungen der jeweiligen 
+Geraden ermittelt und damit das Saugvermögen bei dem herrschenden Druck bestimmt werden.
+Die gegen den Druck aufgetragenen Werte für das Saugvermögen zeigen zunächst den in der 
+Literatur \cite{Pfeifer} angegebenen Verlauf. Dieser beschreibt einen erst flachen und dann
+steilen Anstieg und eine Annäherung an einen Sättigungswert. Die in diesem Versuch berechneten 
+Werte steigen auch zunächst bis zu einem Maximum an und fallen nach diesem wieder ab.
+Das Abfallen im niedrigen Druckbereich ist durch den Versuchsaufbau zu erklären, da bei 
+hohen Drücken der Desorptionsstrom der Gasteilchen von den Innenflächen des Rezipienten überwiegt
+und die Pumpe in diesem Druckberich gegen diesen arbeiten muss. Vergleichbares gilt für den 
+Bereich sehr geringer Drücke, in diesen ist die Innenfläche des Rezipienten so sauber, 
+dass diese selbst als Pumpe wirkt und somit das Saugvermögen der Drehschieberpumpe reduziert.\\
+Die Herstellerangabe \cite{Plakette} zum Saugvermögen der Drehschieberpumpe liegt bei 
+\begin{empheq}{align}
+	S_{\mathrm{soll,dreh}} &=\SI{4}{\m\cubed\per\hour}\\
+	 &\approx \SI{1.11}{\l\per\s}.\notag
+\end{empheq}
+Das Maximum der in diesem Versuch bestimmten Werte ergab sich zu\\
+$S_{\mathrm{max,dreh}} = \SI{1.2(1)}{\l\per\s}$, sodass der theoretische Wert
+im Rahmen des Fehler liegt.\\
+
+In den Messungen mit der Turbopumpe lassen sich Grundsätzliche die gleichen 
+Beobachtungen machen wie bei der Durchführung mit der Drehschieberpumpe.
+Auch hier ergeben sich bei der logarithmierten Evakuierungskurve Druckbereiche mit linearem 
+Verlauf. Und auch die Leckratenmessung führt zu Messwerten, die für jeden eingestellten 
+Gleichgewichtsdruck einen linearen Verlauf zeigen.\\
+Der Unterschied zu der Messung mit der Drehschieberpumpe wird jedoch in der Darstellung des 
+Saugvermögens in Abhängigkeit des Druckes sichtbar. In dieser zeigt sich, dass 
+die Werte die aus der Evakuierungskurve gewonnen wurden sehr stark von denen aus der
+Leckratenmessung abweichen. Eine mögliche Erklärung dieser Diskrepanz ist, die bereits erwähnte
+Pumpwirkung der Innenfläche des Rezipienten. Da die Turbopumpe in einem Druckbereich betrieben 
+wurden, der zwei bis drei Größenordnungen geringer ist als bei der Drehschieberpumpe ist 
+dieser Effekt noch viel stärker zu erwarten.\\
+Im Gegensatz dazu ist bei der Messung der Leckrate, bei der Luft eingelassen wird, diese Pumpwirkung
+des Rezipienten der Turbopumpe nicht entgegengesetzt, sodass in diesem Versuch die Summe der 
+beiden Saugvermögen (von Turbopumpe und Rezipient) bestimmt wird.\\
+Beim Vergleich der Messwerte mit der Herstellerangabe \cite{Hefter} von
+\begin{empheq}{equation}
+	S_{\mathrm{soll,turbo}} = \SI{77}{\l\per\s},
+\end{empheq}
+zeigt sich ein weiterer großer Unterschied. Dieser ist wiederum durch den Aufbau zu erklären, 
+da direkt am Ansaugstutzen der Turbopumpe ein Flansch angebracht war, der aufgrund seines 
+geringeren Durchmessers und damit geringeren Leitwertes $L_{\mathrm{flansch}}$ das Saugvermögen der Turbopumpe,
+wie durch \eqref{eq:Leitwert_Reihenschaltung} beschrieben, stark verringert.
+Geht man von einer Verringerung um den Faktor $10$ aus, so erhält man das effektive Saugvermögen
+\begin{empheq}{equation}
+S_{\mathrm{eff,turbo}} = \SI{7.7}{\l\per\s}.
+\end{empheq}
+Betrachtet man nun die Messwerte aus der Leckratenmessung zeigt sich, dass der Effektivwert im Fehlerbereich
+von drei der vier Messwerte liegt.
+
+
