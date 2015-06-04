@@ -31,7 +31,10 @@ Durch ableiten nach der Zeit wird die Gleichung zu
 \begin{align}
 \frac{d\left(p\cdot V \right)}{dt}=p\frac{dV}{dt}+V\frac{dp}{dt}=0
 \end{align}
-Durch umstellen, Integration und Einführung des Saugvermögens $S=\frac{dV}{dt}$, wird die Gleichung zu
+Durch umstellen, Integration und Einführung des Saugvermögens 
+\begin{align}
+S=\frac{dV}{dt}
+\end{align} , wird die Gleichung zu
 \begin{align}
 p(t) = p_0 \exp\left(-\frac{S}{V_0}t\right).
 \end{align}
@@ -39,7 +42,6 @@ Da der Druck allerdings gegen einen Enddruck $p_E$ läuft, wird folgende Lösung
 \begin{align}
 p(t) = \left( p_0-p_E \right) \exp\left(-\frac{S}{V_0}t\right) + p_E
 \end{align}
-
 \subsection{Pumpvorgang}
 Ein Gefäß, in dem ein Vakuum erzeugt werden soll, wird Rezipient genannt. Das Gas was abgepumpt wird strömt in Form von Viskose Strömungen aus dem Rezipient, wenn der Druck dem Grobvakuum zugehörig ist. Bei einem Hochvakuum oder Ultrahochvakuum geschieht dies über molekulare Strömungen.
 \subsubsection{Viskose Strömungen}
@@ -60,6 +62,19 @@ Dabei ist $q_{pV}$ der Strom des Volumens und $\Delta p$ die Druckdifferenz an d
  \begin{align}
  \frac{1}{L_\text{ges}}=\frac{1}{L_1}+\frac{1}{L_2}+...+\frac{1}{L_N}
  \end{align}
+Ist in einem Vakuumsystem ein Leck, dann kann der Effiziente Leitwert beschrieben werden durch
+\begin{align}
+L_\text{eff}=\left(\frac{1}{L} + \frac{1}{S}  \right)^{-1}
+\end{align}
+Dabei ist $L$ der Leitwert der Pumpe und $S$ das Saugvermögen des Lecks. Das Saugvermögen des Lecks bei einem Ausgleichdruck $p_g$ kann durch 
+\begin{align}
+S=\frac{Q}{p_g}
+\end{align}
+bestimmt werden. Dabei ist $Q$ die Leckrate, die mithilfe von 
+\begin{align}
+Q = V_0 \frac{\Delta p}{\Delta t}
+\end{align}
+bestimmt werden kann.
  
 \subsection{Pumpen}
 Ein Vakuum in einem Rezipienten wird mithilfe von Pumpen verwirklicht. Je nach gewünschtem Vakuum werden unterschiedliche Pumpen benötigt. Für Grob- oder Feinvakuen wird zum Beispiel eine Drehschiebepumpe verwendet und für Hochvakuen werden Turbomolekularpumpen verwendet.
