@@ -1,4 +1,13 @@
 % !TeX root = Protokoll.tex
+
+\subsection{Volumenbestimmung des Rezipienten}
+Für die Volumenbestimmung des Rezipienten während der durchgeführten Messreihen wurden die in 
+\cref{tab:Bauteile_Abmessungen} aufgelisteten Maße für die verwendeten Bauteile aufgenommen.
+Für die Berechnung der jeweiligen Volumina wurde die Zylindersymmetrie der Bauteile angenommen.
+
+\input{../Tabellen/Bauteil_Abmessungen}
+
+
 \subsection{Drehschieberpumpe}
 In den Folgenden Abschnitten werden die, unter Verwendung der Drehschieberpumpe, aufgenommenen Messreihen 
 zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen aus diesen, folgt im letzten Teil dieses 
@@ -9,10 +18,10 @@ Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
 im Rezipienten sind in \cref{tab:Evakuierungskurve_Drehschieber} auch als logarithmierte
 Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{100(30)}{\milli\bar} $
 und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{20(6)}{\micro\bar}$ verwendet.
-Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{Pfeifer} mit \SI{30}{\percent} angenommen.
+Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{DatenblattV70} mit \SI{30}{\percent} angenommen.
 Neben den Messwerten für den Druck sind auch die, über die fünf Messungen, gemittelten Messwerte der Zeit 
 angegeben. Der Messfehler der Zeit ist dabei für jeder der fünf Messungen mit $\sigma_{t} = \SI{1}{\s}$ als systematischer
-Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.
+Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.                  
 
 %Tabelle der Messwerte
 \input{../Tabellen/Evakuierungskurve_Drehschieber}
@@ -93,7 +102,7 @@ damit für das Saugvermögen:
 
 Die Messwerte die in den vier Messreihen der Leckraten Messung aufgenommen wurden,
 sind in \cref{tab:Leckratenmessung_Drehschieber_0} dargestellt. Wiederum sind
-für den Messfehler des Drucks die Herstellerangabe \cite{Pfeifer} von \SI{30}{\percent} verwendet worden.
+für den Messfehler des Drucks die Herstellerangabe \cite{DatenblattV70} von \SI{30}{\percent} verwendet worden.
 Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
 angegeben.  
 
@@ -223,7 +232,7 @@ Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
 im Rezipienten sind in \cref{tab:Evakuierungskurve_Turbo} auch als logarithmierte
 Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{8(1)e-07}{\bar} $
 und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{16(2)}{\nano\bar}$ verwendet.
-Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{Hefter} mit \SI{10}{\percent} angenommen.
+Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{DatenblattV70} mit \SI{10}{\percent} angenommen.
 Neben den Messwerten für den Druck sind auch die, über die sieben beziehungsweise zwei Messungen\footnote{
 Messung im Druckbereich von \SI{90}{\nano\bar} bis \SI{30}{\nano\bar} wurden nur zweifach durchgeführt,
 da sich die Messung mit Änderung des Messbereichs als schwierig herausstellten.}, 
@@ -306,7 +315,7 @@ damit für das Saugvermögen:
 \subsubsection{Leckratenmessung}
 Die Messwerte die in den vier Messreihen der Leckraten Messung aufgenommen wurden,
 sind in \cref{tab:Leckratenmessung_Turbo} dargestellt. Wiederum sind
-für den Messfehler des Drucks die Herstellerangabe \cite{Hefter} von \SI{10}{\percent} verwendet worden.
+für den Messfehler des Drucks die Herstellerangabe \cite{DatenblattV70} von \SI{10}{\percent} verwendet worden.
 Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
 angegeben. Die erste Messung der zweiten Messreihe wurde für die Auswertung nicht berücksichtigt, da der
 Mittelwert mit \SI{0,84}{\s} unter dem angenommenen systematischen Fehler lag.
@@ -423,6 +432,8 @@ und in \cref{fig:saugvermögen_turbo} grafisch dargestellt.
 %Grafik des Saugvermögens
 \input{../Grafiken/fig_Saugvermoegen_Turbo}
 \FloatBarrier
+
+
 
 
 
