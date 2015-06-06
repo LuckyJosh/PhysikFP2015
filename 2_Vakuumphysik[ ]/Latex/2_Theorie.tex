@@ -31,16 +31,20 @@ Durch ableiten nach der Zeit wird die Gleichung zu
 \begin{align}
 \frac{d\left(p\cdot V \right)}{dt}=p\frac{dV}{dt}+V\frac{dp}{dt}=0
 \end{align}
-Durch umstellen, Integration und Einführung des Saugvermögens 
+Durch umstellen,Integration und Einführung des Saugvermögens 
 \begin{align}
 S=\frac{dV}{dt}
 \end{align} , wird die Gleichung zu
 \begin{align}
 p(t) = p_0 \exp\left(-\frac{S}{V_0}t\right).
 \end{align}
-Da der Druck allerdings gegen einen Enddruck $p_E$ läuft, wird folgende Lösung verwendet.
+Da der Druck allerdings gegen einen Enddruck $p_E$ läuft, wird folgende Lösung verwendet
 \begin{align}
-p(t) = \left( p_0-p_E \right) \exp\left(-\frac{S}{V_0}t\right) + p_E
+p(t) = \left( p_0-p_E \right) \exp\left(-\frac{S}{V_0}t\right) + p_E.
+\end{align}
+Hier raus folgt dann die Form für das Saugvermögen als
+\begin{align}
+S=-V_0\frac{d}{dt}\ln \left( \frac{p-p_E}{p_0-p_E} \right).
 \end{align}
 \subsection{Pumpvorgang}
 Ein Gefäß, in dem ein Vakuum erzeugt werden soll, wird Rezipient genannt. Das Gas was abgepumpt wird, strömt in Form von viskose Strömungen aus dem Rezipient, wenn der Druck dem Grobvakuum zugehörig ist. Bei einem Hochvakuum oder Ultrahochvakuum geschieht dies über molekulare Strömungen.
