@@ -12,6 +12,15 @@ waren. In \cref{fig:Bauteile_Abmessungen} ist ein Foto des Aufbaus mit den numme
 
 \input{../Grafiken/Bauteile}
 
+Aus der Addition der Volumina der jeweilig verwendeten Bauteile 
+ergeben sich die Gesamtvolumina des Rezipienten für die durch geführten 
+Messungen zu:
+
+\begin{empheq}{alignat=2}
+	V_{\mathrm{dreh,evak}} = V_{\mathrm{dreh,leck}} = \SI{10.2(7)}{\l}\\
+	V_{\mathrm{turbo,evak}} = V_{\mathrm{turbo,leck}} =	 \SI{10.0(7)}{\l}
+\end{empheq}
+
 
 \subsection{Drehschieberpumpe}
 In den Folgenden Abschnitten werden die, unter Verwendung der Drehschieberpumpe, aufgenommenen Messreihen 
@@ -33,7 +42,7 @@ Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.
 
 In \cref{fig:evakuierungskurve_drehschieber_exp} sind die Messwerte für den Druck gegen die der Zeit aufgetragen,
 sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solcher Verlauf, wie in 
-\eqref{eq:Evakuierungskurve} hergeleitet, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
+\eqref{eq:Evakuierungskurve}, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
 In dieser Darstellung lassen sich drei Druckbereiche ausmachen,
 in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
 Ausgleichsgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_drehschieber_log_0} 
@@ -87,7 +96,7 @@ ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $a_{i}$ und $b_{
 
 Aus den Steigungen $a_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
 in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} berechnen.
-Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,turbo}} = \SI{10.0(7)}{\l}$ ergibt sich 
+Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{dreh,evak}} = \SI{10.2(7)}{\l}$ ergibt sich 
 damit für das Saugvermögen:
 {%Kopierte Ergebnisse
 %S0 =  2.33570884392 +/- 0.16984232966
@@ -199,7 +208,7 @@ die jeweiligen Fit-Parameter:
 
 Aus den berechneten Steigungen $c_{i}$ der Ausgleichsgeraden kann mit \eqref{eq:Saugvermoegen_Leckrate}
 das Saugvermögen der Drehschieberpumpe bestimmt werden. Das dafür notwendige Volumen wurde aus
-den Einzelvolumen der Bauteile zu $V_{\mathrm{Leck,dreh}} = \SI{10.2(7)}{\l}$ bestimmt und 
+den Einzelvolumen der Bauteile zu $V_{\mathrm{dreh,leck}} = \SI{10.2(7)}{\l}$ bestimmt und 
 die jeweiligen Gleichgewichtsdrücke sind in den Grafiken in \cref{tab:Saugvermoegen_Drehschieber}
 angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
 
@@ -300,7 +309,7 @@ ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $e_{i}$ und $f_{
 
 Aus den Steigungen $e_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
 in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} berechnen.
-Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{evak,dreh}} = \SI{10.2(7)}{\l}$ ergibt sich 
+Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{turbo,evak}} = \SI{10.0(7)}{\l}$ ergibt sich 
 damit für das Saugvermögen:
 {%Kopierte Ergebnisse
 %	S0 =  2.33570884392 +/- 0.16984232966
@@ -323,7 +332,7 @@ sind in \cref{tab:Leckratenmessung_Turbo} dargestellt. Wiederum sind
 für den Messfehler des Drucks die Herstellerangabe \cite{DatenblattV70} von \SI{10}{\percent} verwendet worden.
 Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
 angegeben. Die erste Messung der zweiten Messreihe wurde für die Auswertung nicht berücksichtigt, da der
-Mittelwert mit \SI{0,84}{\s} unter dem angenommenen systematischen Fehler lag.
+Mittelwert mit $\bar{t} = \SI{0,84}{\s}$ unter dem angenommenen systematischen Fehler lag.
 
 
 % Tabelle der Lecktratenmessung
@@ -409,9 +418,9 @@ die jeweiligen Fit-Parameter:
 	\end{empheq}	
 \end{subequations}\\
 
-Aus den berechneten Steigungen $g_{i}$ der Ausgleichsgeraden kann mit \eqref{eq:Saugvermoegen_Leckrate}
+Aus den berechneten Steigungen $g_{i}$ der Ausgleichsgeraden kann mit \eqref{eq:Saugvermoegen_Leckrate} und \eqref{eq:Leckrate}
 das Saugvermögen der Drehschieberpumpe bestimmt werden. Das dafür notwendige Volumen wurde aus
-den Einzelvolumen der Bauteile zu $V_{\mathrm{Leck,turbo}} = \SI{10.2(7)}{\l}$ bestimmt und 
+den Einzelvolumen der Bauteile zu $V_{\mathrm{turbo,leck}} = \SI{10.0(7)}{\l}$ bestimmt und 
 die jeweiligen Gleichgewichtsdrücke sind in den Grafiken in \cref{tab:Saugvermoegen_Turbo}
 angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
 
