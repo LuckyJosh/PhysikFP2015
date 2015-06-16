@@ -1,0 +1,8 @@
+# SWR-Meter Ausschlag [dB] #Mikrometereinstellungen [mm]	#Daempfung aus Eichkurve
+SWR,d,D
+0,0.43,1
+2,1.97,8
+4,2.23,10
+6,2.55,12
+8,2.72,14
+10,2.92,16
