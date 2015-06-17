@@ -1,12 +1,82 @@
 % !TeX root = Protokoll.tex
 \subsection{Vermessung der Moden}
-
+Die zur Untersuchung der drei Moden aufgenommenen Reflektorspannungen für die rechten und linken Nullstellen 
+sowie das Maximum der Amplitude sind in \cref{tab:Moden} eingetragen. Die Frequenz der jeweiligen Mode 
+ist ebenfalls angegeben.
 \FloatBarrier
-\input{\TablesPath Moden.tex}
+\input{../Tabellen/Moden.tex}
 \FloatBarrier
+Die grafische Darstellung dieser Messwerte ist in \cref{fig:modenkurven} zusammen mit den angedeuteten 
+Modenkurven gegeben.
+\FloatBarrier
+\input{../Grafiken/fig_Modenkurven.tex}
+\FloatBarrier
+Die aufgenommenen Frequenzen und Reflektorspannungen bei denen die zu beobachtende Einsattelung im Maximum 
+und dem linken und rechten Halbwert des Maximums lag, sind in \cref{tab:Elektrische Abstimmung} angegeben.
+\FloatBarrier
+\input{../Tabellen/Elektronische_Abstimmung.tex}
+\FloatBarrier
+Aus diesen lässt sich die elektrische Bandbreite $\Delta f_{\mathrm{E}}$, nach \eqref{eq:Bandbreite}, zu 
+\begin{empheq}{equation}
+	\Delta f_{\mathrm{E}} = \SI{72(1)}{MHz}
+\end{empheq}
+bestimmen. Aus dieser ergibt sich der Wert der Abstimmempfindlichkeit $E$ mit \eqref{eq:Abstimmempfindlichkeit} zu
+\begin{empheq}{equation}
+E = \SI{5(2)}{\MHz\per\volt}.
+\end{empheq}
+\subsection{Bestimmung der Frequenz und Dämpfung}\label{sec:Frequenz_Daempfung}
+Die beiden Positionen der Minima und die am Frequenzmesser eingestellte Frequenz sind in \cref{tab:Frequenzmessung}
+angegeben.
+\FloatBarrier
+\input{../Tabellen/Frequenzmessung.tex}
+\FloatBarrier
+Der doppelte Abstand der Minima entspricht der Wellenlänge im Hohlleiter $\lambda_g$. Diese ergibt sich 
+mit den Messdaten zu 
+\begin{empheq}{equation}
+	\lambda_g = \SI{48.0(3)}{mm}.
+\end{empheq}
+Mit Hilfe von \eqref{eq:Hohlleiter_Frequenz} und der gemessenen Breite des Hohlleiters $a = \SI{22.70(5)}{mm}$
+erhält man die Frequenz im Hohlleiter zu 
+\begin{empheq}{equation}
+f = \SI{909(3)e7}{Hz}.
+\end{empheq}
 
-\subsection{Bestimmung der Frequenz und Dämpfung}
-
-
-
+Die aufgenommenen Messwerte für die Dämpfung am SWR-Meter und die Einstellung des Mikrometers sind
+in \cref{tab:Daempfung} zusammen mit den entsprechenden Dämpfungen aus der Eichkurve des Dämpfungsglieds eingetragen.
+\FloatBarrier
+\input{../Tabellen/Daempfung.tex}
+\FloatBarrier
+Die Messwerte der Dämpfung am SWR-Meters sowie die der Eichkurve sind in \cref{fig:daempfung} grafisch dargestellt.  
+\FloatBarrier
+\input{../Grafiken/fig_Daempfung.tex}
+\FloatBarrier
 \subsection{Bestimmung des Stehwellenverhältnisses}
+In \cref{tab:SWR_Meter} sind die mit dem SWR-Meter gemessenen Werte des Stehwellenverhältnisses in Abhängigkeit der
+Sondentiefe am Gleitschraubentransformator angegeben. 
+\FloatBarrier
+\input{../Tabellen/SWR_Meter.tex}
+\FloatBarrier
+Die 3dB-Punkte um ein Minimum der Mikrowelle, die zur Bestimmung des Stehwellenverhältnisses gemessen wurden sind 
+in \cref{tab:SWR_3dB_Methode} zusammen mit den Positionen zweier aufeinander folgender Minima angegeben. 
+\FloatBarrier
+\input{../Tabellen/SWR_3dB_Methode.tex}
+\FloatBarrier
+Aus den Positionen der Minima lässt sich wie in \cref{sec:Frequenz_Daempfung} die Wellenlänge im Hohlleiter
+als der doppelte Abstand der beiden Minima bestimmen.
+Diese ergibt sich zu:
+\begin{empheq}{equation}
+\lambda_g = \SI{40.0(3)}{mm}	
+\end{empheq} 
+Mit dieser und den 3dB-Punkten kann nun das Stehwellenverhältnis nach \eqref{eq:SWR_3dB} bzw. näherungsweise nach 
+\eqref{eq:SWR_3dB_approx} bestimmt werden. Man erhält die entsprechenden Stehwellenverhältnisse:
+\begin{empheq}{align}
+S &= \num{ 14.2(2)}\\	
+S &\approx \num{11.5(2)}
+\end{empheq} 
+
+Bei der Messung des Stehwellenverhältnisses mit der Abschwächer-Methode wurden die Dämpfungseinstellungen
+$A1 = \SI{20}{dB}$ und $A2 = \SI{5}{dB}$ gemessen. Aus Gleichung \eqref{eq:SWR_Abschwaecher} berechnet sich 
+das Stehwellenverhältnis $S$ zu:
+\begin{empheq}{equation}
+	S = \num{ 7.5(7)}	
+\end{empheq} 

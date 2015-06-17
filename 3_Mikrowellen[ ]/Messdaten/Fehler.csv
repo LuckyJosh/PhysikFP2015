@@ -1,0 +1,4 @@
+# Refelektorspannung[V] #Dämpfung Mikrometer[mm] #Dämpfung Eichkurve[dB] #Breite des Hohlleiters[mm] #Frequenz[MHz]
+# Amplitude[Teilstrich] # Schienenstellung der Antenne[mm] 
+U,d1,d2,D,a,f,A,l
+5, 0.01, 0.1,1, 0.05, 1,0.2,1
