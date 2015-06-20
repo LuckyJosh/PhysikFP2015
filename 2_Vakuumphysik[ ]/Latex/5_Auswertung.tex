@@ -3,8 +3,8 @@
 \subsection{Volumenbestimmung des Rezipienten}
 Für die Volumenbestimmung des Rezipienten während der durchgeführten Messreihen wurden die in 
 \cref{tab:Bauteile_Abmessungen} aufgelisteten Maße für die verwendeten Bauteile aufgenommen.
-Für die Berechnung der jeweiligen Volumina wurde die Zylindersymmetrie der 
-Bauteile angenommen. Die Volumina der verwendeten Messinstrumente wurde 
+Für die Berechnung der jeweiligen Volumina wurden die Bauteile
+aus Zylindern zusammengesetzt. Die Volumina der verwendeten Messinstrumente wurde 
 vernachlässigt, da diese im Vergleich zu den restlichen Bauteilen sehr klein 
 waren. Die angegebenen Messfehler wurden abhängig von dem verwendeten Messgerät
 (Schieblehre oder Zentimetermaß) und den jeweiligen Formen des Bauteils bestimmt. 
@@ -26,14 +26,14 @@ Messungen zu:
 
 
 \subsection{Drehschieberpumpe}
-In den Folgenden Abschnitten werden die, unter Verwendung der Drehschieberpumpe, aufgenommenen Messreihen 
-zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen aus diesen, folgt im letzten Teil dieses 
+In den folgenden Abschnitten werden die unter Verwendung der Drehschieberpumpe aufgenommenen Messreihen 
+zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen aus diesen folgt im letzten Teil dieses 
 Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
 
 \subsubsection{Evakuierungskurve}
 Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
 im Rezipienten sind in \cref{tab:Evakuierungskurve_Drehschieber} auch als logarithmierte
-Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{100(30)}{\milli\bar} $
+Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{1000(100)}{\milli\bar} $
 und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{20(6)}{\micro\bar}$ verwendet.
 Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{DatenblattV70} mit \SI{30}{\percent} angenommen.
 Neben den Messwerten für den Druck sind auch die, über die fünf Messungen, gemittelten Messwerte der Zeit 
@@ -46,10 +46,10 @@ Fehler angenommen, sodass sich dieser durch die Mittlung nicht verringert.
 In \cref{fig:evakuierungskurve_drehschieber_exp} sind die Messwerte für den Druck gegen die der Zeit aufgetragen,
 sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solcher Verlauf, wie in 
 \eqref{eq:Evakuierungskurve}, jedoch nur für ein konstantes Saugvermögen gilt, werden für dessen Bestimmung die logarithmierten Werte der Drücke gegen die Zeit aufgetragen.
-In dieser Darstellung lassen sich drei Druckbereiche ausmachen,
-in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
+In dieser Darstellung lassen sich vier Druckbereiche ausmachen,
+in denen die Messwerte einen annähernd linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
 Ausgleichsgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_drehschieber_log_0} 
-bis \ref{fig:evakuierungskurve_drehschieber_log_2} dargestellt.\\
+bis \ref{fig:evakuierungskurve_drehschieber_log_3} dargestellt.\\
 
 
 
@@ -63,37 +63,46 @@ bis \ref{fig:evakuierungskurve_drehschieber_log_2} dargestellt.\\
 \input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_1}
 \FloatBarrier
 \input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_2}
+\FloatBarrier
+\input{../Grafiken/fig_Evakuierungskurve_Drehschieber_log_3}
 \FloatBarrier}
 
 Die durchgeführte Ausgleichsrechnung für eine lineare Funktion der Form 
 \begin{empheq}{equation}
 P_{\mathrm{dreh}i}(t) = a_{i} \cdot t + b_{i}
 \end{empheq}
-ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $a_{i}$ und $b_{i}$:
+ergab für die drei Druckbereiche $i \in [1,2,3,4]$ die Parameter $a_{i}$ und $b_{i}$:
 {%Kopierte Fit Ergebnisse
-	%Fit im 1.Bereich
-	%a =  -0.0590110020632 +/- 0.0068114313639
-	%b =  0.92041914012 +/- 0.20517721592
-	%Fit im 2.Bereich
-	%a =  -0.0766523368479 +/- 0.00477396323738
-	%b =  1.23548186669 +/- 0.343789112221
-	%Fit im 3.Bereich
-	%a =  -0.0139336543482 +/- 0.00211667511312
-	%b =  -5.57400774906 +/- 0.335411241849
+%Fit im 1.Bereich
+%a =  -0.0488800674078 +/- 0.00426958070751
+%b =  -1.59294755452 +/- 0.10858537849
+%Fit im 2.Bereich
+%a =  -0.0953774387124 +/- 0.000871646279166
+%b =  0.0474022197339 +/- 0.0519784941981
+%Fit im 3.Bereich
+%a =  -0.0484176536689 +/- 0.0016193045557
+%b =  -3.58117630331 +/- 0.148116781286
+%Fit im 4.Bereich
+%a =  -0.0139336542028 +/- 0.00211667518581
+%b =  -7.87677288413 +/- 0.335411255328
 }
 \addtocounter{equation}{-1}
 \begin{subequations}
 	\begin{empheq}{align}
-	a_{1} &=\SI{-0.059(7)}{\per\s}\\ 
-	b_{1} &=\SI{0.9(2)}{} \notag
+	a_{1} &=\SI{-0.049(4)}{\per\s}\\ 
+	b_{1} &=\SI{-1.6(1)}{} \notag
 	\end{empheq}	                                                                                  
 	\begin{empheq}{align}
-	a_{2} &=\SI{-0.077(5)}{\per\s}\\ 
-	b_{2} &=\SI{1.2(3)}{} \notag
+	a_{2} &=\SI{-0.095(2)}{\per\s}\\ 
+	b_{2} &=\SI{-3.6(2)}{} \notag
 	\end{empheq}
 	\begin{empheq}{align}
-	a_{3} &=\SI{-0.014(2)}{\per\s}\\ 
-	b_{3} &=\SI{-5.6(3)}{} \notag
+	a_{3} &=\SI{-0.048(2)}{\per\s}\\ 
+	b_{3} &=\SI{-3.6(2)}{} \notag
+	\end{empheq}
+	\begin{empheq}{align}
+	a_{4} &=\SI{-0.014(2)}{\per\s}\\ 
+	b_{4} &=\SI{-7.9(3)}{} \notag
 	\end{empheq}	
 \end{subequations}\\
 
@@ -102,16 +111,18 @@ in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} b
 Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{dreh,evak}} = \SI{10.2(7)}{\l}$ ergibt sich 
 damit für das Saugvermögen:
 {%Kopierte Ergebnisse
-%S0 =  2.33570884392 +/- 0.16984232966
-%S1 =  0.92074919903 +/- 0.0613046451535
-%S2 =  0.427279487281 +/- 0.0492966509324
+%S0 =  0.497348558101 +/- 0.0538590535989
+%S1 =  0.970453482056 +/- 0.0627506619262
+%S2 =  0.492643556278 +/- 0.0355799262657
+%S3 =  0.141773184743 +/- 0.0233708681861
 }
 
 \begin{subequations}
 	\begin{empheq}{align}
-	S_{1} &=\SI{2.3(2)}{\l\per\s}\\ 
-	S_{2} &=\SI{0.92(6)}{\l\per\s}\\ 
-	S_{3} &=\SI{0.43(5)}{\l\per\s}
+	S_{1} &=\SI{0.50(5)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.97(6)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.49(4)}{\l\per\s}\\
+	S_{4} &=\SI{0.14(2)}{\l\per\s}
 	\end{empheq}	
 \end{subequations}
 
@@ -147,21 +158,25 @@ die jeweiligen Fit-Parameter:
 
 
 {% Kopierte Ergebnisse
-% a =  0.00343320969805 +/- 0.000232609369483
-% b =  0.16437881839 +/- 0.0194087844156
-%Saugvermögen 0.35+/-0.05
-
+%a =  0.00343320969805 +/- 0.000232609369483
+%b =  0.16437881839 +/- 0.0194087844156
+%
+%Saugvermögen 0.35+/-0.11
+%
 %a =  0.00734136153034 +/- 0.000159807738651
 %b =  0.267199767693 +/- 0.00806919876938
-%Saugvermögen 0.37+/-0.05
-
+%
+%Saugvermögen     0.3735+/-    0.1149
+%
 %a =  0.0112064202218 +/- 0.00283513818665
 %b =  0.534856097298 +/- 0.0781266429063
-%Saugvermögen 0.29+/-0.08
-
+%
+%Saugvermögen   0.2851+/-  0.1133
+%
 %a =  0.0938182823124 +/- 0.000686074570844
 %b =  0.786723830802 +/- 0.0263582331142
-%Saugvermögen 1.19+/-0.14
+%
+%Saugvermögen     1.1932+/-    0.3661
 }
 \addtocounter{equation}{-1}
 
@@ -217,12 +232,13 @@ angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
 
 \begin{subequations}
 	\begin{empheq}{align}
-	S_{1} &=\SI{0.35(5)}{\l\per\s}\\ 
-	S_{2} &=\SI{0.37(5)}{\l\per\s}\\ 
-	S_{3} &=\SI{0.29(8)}{\l\per\s}\\
-	S_{3} &=\SI{1.2(1)}{\l\per\s}
+	S_{1} &=\SI{0.4(1)}{\l\per\s}\\ 
+	S_{2} &=\SI{0.4(1)}{\l\per\s} \\ 
+	S_{3} &=\SI{0.3(1)}{\l\per\s}\\
+	S_{4} &=\SI{1.2(4)}{\l\per\s}
 	\end{empheq}	
 \end{subequations}
+Die relativen Fehler der beiden Ergebnisse $S_1$ und $S_2$ sind aufgrund der Rundung auf die erste signifikante Stelle, kleiner als die zu erwartenden \SI{30}{\percent}. Auf die ersten zwei Stellen gerundet ergeben sich die Werte $S_{1} =\SI{0.35(11)}{\l\per\s}$ und 	$S_{2} =\SI{0.37(12)}{\l\per\s}$ .
 
 
 \subsubsection{Saugvermögen}
@@ -242,14 +258,14 @@ und in \cref{fig:saugvermögen_drehschieber} grafisch dargestellt.
 \subsection{Turbopumpe}
 In den Folgenden Abschnitten werden die, unter Verwendung der Turbopumpe, aufgenommenen Messreihen 
 zur Evakuierungskurve und der Leckratenmessung ausgewertet. Mit den Ergebnissen aus diesen, folgt im letzten Teil dieses 
-Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes.
+Abschnitts die Betrachtung des Saugvermögens in Abhängigkeit des Druckes für die Turbopumpe.
 
 \subsubsection{Evakuierungskurve}
 Die zur Bestimmung der Evakuierungskurve aufgenommenen Messwerte für den Druck
 im Rezipienten sind in \cref{tab:Evakuierungskurve_Turbo} auch als logarithmierte
-Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{8(1)e-07}{\bar} $
+Werte zu finden. Für die Logarithmierung wurden der Maximaldruck $p_{0} =\SI{5.0(5)e-03}{\bar} $
 und der in dieser Messreihe festgestellte Enddruck $p_{\mathrm{e}} =\SI{16(2)}{\nano\bar}$ verwendet.
-Der Messfehler der Druckwerte wurde aufgrund der Herstellerangabe \cite{DatenblattV70} mit \SI{10}{\percent} angenommen.
+Die Messfehler der Druckwerte wurden aufgrund der Herstellerangabe \cite{DatenblattV70} mit \SI{10}{\percent} angenommen.
 Neben den Messwerten für den Druck sind auch die, über die sieben beziehungsweise zwei Messungen\footnote{
 Messung im Druckbereich von \SI{90}{\nano\bar} bis \SI{30}{\nano\bar} wurden nur zweifach durchgeführt,
 da sich die Messung mit Änderung des Messbereichs als schwierig herausstellten.}, 
@@ -264,7 +280,7 @@ sodass ich ein exponentieller Verlauf der Evakuierungskurve zeigt. Da ein solche
 Auch für die Turbopumpe lassen sich in dieser Darstellung drei Druckbereiche ausmachen,
 in denen die Messwerte einen linearen Verlauf zeigen. Die grafische Darstellung der Messwerte und die 
 Ausgleichsgeraden für den jeweiligen Druckbereich sind in den Abbildungen \ref{fig:evakuierungskurve_turbo_log_0} 
-bis \ref{fig:evakuierungskurve_turbo_log_2} dargestellt.\\
+bis \ref{fig:evakuierungskurve_turbo_log_3} dargestellt.\\
 
 {%Exponential-Darstellung der Messdaten
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_exp}
@@ -276,38 +292,47 @@ bis \ref{fig:evakuierungskurve_turbo_log_2} dargestellt.\\
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_1}
 \FloatBarrier
 \input{../Grafiken/fig_Evakuierungskurve_Turbo_log_2}
+\FloatBarrier
+\input{../Grafiken/fig_Evakuierungskurve_Turbo_log_3}
 \FloatBarrier}
 
 Die durchgeführte Ausgleichsrechnung für eine lineare Funktion der Form 
 \begin{empheq}{equation}
 P_{\mathrm{turbo},i}(t) = e_{i} \cdot t + f_{i}
 \end{empheq}
-ergab für die drei Druckbereiche $i \in [1,2,3]$ die Parameter $e_{i}$ und $f_{i}$:
+ergab für die drei Druckbereiche $i \in [1,2,3,4]$ die Parameter $e_{i}$ und $f_{i}$:
 {%Kopierte Fit Ergebnisse
 %Fit im 1.Bereich
-%a =  -0.232658127904 +/- 0.00766229475417
-%b =  1.31202567844 +/- 0.0643904309961
+%a =  -0.272808601309 +/- 0.00446651728158
+%b =  -0.261547012897 +/- 0.0284201084891
 %Fit im 2.Bereich
-%a =  -0.0917151063038 +/- 0.00139136386064
-%b =  -0.661277825589 +/- 0.0285758068287
+%a =  -0.213196878004 +/- 0.00628650851542
+%b =  -0.738392371396 +/- 0.0606962687934
 %Fit im 3.Bereich
-%a =  -0.0425609749525 +/- 0.00406186059955
-%b =  -1.96203941847 +/- 0.15545848225
+%a =  -0.0917151061518 +/- 0.00139136392007
+%b =  -2.51085686885 +/- 0.0285758080253
+%Fit im 4.Bereich
+%a =  -0.0425609751799 +/- 0.00406186095527
+%b =  -3.81161844994 +/- 0.155458494971
 }
 \addtocounter{equation}{-1}
 \begin{subequations}
 	\begin{empheq}{align}
-	e_{1} &=\SI{-0.233(8)}{\per\s}\\ 
-	f_{1} &=\SI{1.31(6)}{} \notag
+	e_{1} &=\SI{-0.273(4)}{\per\s}\\ 
+	f_{1} &=\SI{-0.26(3)}{} \notag
 	\end{empheq}	                                                                                  
 	\begin{empheq}{align}
-	e_{2} &=\SI{-0.092(1)}{\per\s}\\ 
-	f_{2} &=\SI{-0.66(3)}{} \notag
+	e_{2} &=\SI{-0.213(6)}{\per\s}\\ 
+	f_{2} &=\SI{-0.74(6)}{} \notag
 	\end{empheq}
 	\begin{empheq}{align}
-	e_{3} &=\SI{-0.043(4)}{\per\s}\\ 
+	e_{3} &=\SI{-0.091(1)}{\per\s}\\ 
 	f_{3} &=\SI{-2.0(2)}{} \notag
 	\end{empheq}	
+	\begin{empheq}{align}
+	e_{4} &=\SI{-0.043(4)}{\per\s}\\ 
+	f_{4} &=\SI{-3.8(2)}{} \notag
+	\end{empheq}		
 \end{subequations}\\
 
 Aus den Steigungen $e_{i}$ der Ausgleichsgeraden lässt sich nun das Saugvermögen der Drehschieberpumpe
@@ -315,16 +340,18 @@ in dem jeweiligen Druckbereich nach \eqref{eq:Saugvermoegen_Evakuierungskurve} b
 Mit dem Volumen des Rezipienten in dieser Versuchsreihe $V_{\mathrm{turbo,evak}} = \SI{10.0(7)}{\l}$ ergibt sich 
 damit für das Saugvermögen:
 {%Kopierte Ergebnisse
-%	S0 =  2.33570884392 +/- 0.16984232966
-%	S1 =  0.92074919903 +/- 0.0613046451535
-%	S2 =  0.427279487281 +/- 0.0492966509324
+%S0 =  2.73878874775 +/- 0.183130055655
+%S1 =  2.14033284776 +/- 0.152436124036
+%S2 =  0.920749197504 +/- 0.0613046451931
+%S3 =  0.427279489564 +/- 0.0492966539696
 }
 
 \begin{subequations}
 	\begin{empheq}{align}
-	S_{1} &=\SI{2.3(2)}{\l\per\s}\\ 
-	S_{2} &=\SI{0.92(6)}{\l\per\s}\\ 
-	S_{3} &=\SI{0.43(5)}{\l\per\s}
+	S_{1} &=\SI{2.7(2)}{\l\per\s}\\ 
+	S_{2} &=\SI{2.1(2)}{\l\per\s}\\ 
+	S_{3} &=\SI{0.92(6)}{\l\per\s}\\
+	S_{4} &=\SI{0.43(5)}{\l\per\s}
 	\end{empheq}	
 \end{subequations}
 
@@ -334,8 +361,8 @@ Die Messwerte die in den vier Messreihen der Leckraten Messung aufgenommen wurde
 sind in \cref{tab:Leckratenmessung_Turbo} dargestellt. Wiederum sind
 für den Messfehler des Drucks die Herstellerangabe \cite{DatenblattV70} von \SI{10}{\percent} verwendet worden.
 Als Zeiten sind die Mittelwerte der dreifach ausgeführten Messungen zusammen mit dem systematischen Fehler
-angegeben. Die erste Messung der zweiten Messreihe wurde für die Auswertung nicht berücksichtigt, da der
-Mittelwert mit $\bar{t} = \SI{0,84}{\s}$ unter dem angenommenen systematischen Fehler lag.
+angegeben. %Die erste Messung der zweiten Messreihe wurde für die Auswertung nicht berücksichtigt, da der
+%Mittelwert mit $\bar{t} = \SI{0,84}{\s}$ unter dem angenommenen systematischen Fehler lag.
 
 
 % Tabelle der Lecktratenmessung
@@ -345,7 +372,6 @@ bis \ref{fig:leckrate_turbo_3} jeweils zusammen mit einer durch lineare Ausgleic
 {%Grafiken der Leckratenmessung
 \input{../Grafiken/fig_Leckrate_Turbo_0}
 \FloatBarrier
-
 \input{../Grafiken/fig_Leckrate_Turbo_1}
 \FloatBarrier
 \input{../Grafiken/fig_Leckrate_Turbo_2}
@@ -432,7 +458,7 @@ angegeben. Die Werte für das Saugvermögen ergeben sich damit zu:
 	S_{1} &=\SI{9(1)}{\l\per\s}\\ 
 	S_{2} &=\SI{9(1)}{\l\per\s}\\ 
 	S_{3} &=\SI{8(2)}{\l\per\s}\\
-	S_{3} &=\SI{11(2)}{\l\per\s}
+	S_{4} &=\SI{11(2)}{\l\per\s}
 	\end{empheq}	
 \end{subequations}
 

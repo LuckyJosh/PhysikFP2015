@@ -1,3 +1,4 @@
+\subsection{Fehlerrechnung}
 Im folgenden Abschnitt werden die, für die Auswertung der aufgenommenen Daten
 verwendeten Gleichungen aufgezeigt und erläutert.\\
 Der Mittelwert aus mehreren Ergebnissen einer Messung 
@@ -21,8 +22,10 @@ Damit berechnet sich der Fehler $\sigma_y$ einer Größe $y = y(\va{x})$, mit de
 \label{eq:Fehlerforpflanzung}
 \end{empheq}
 
+Die in dieser Auswertung verwendeten Fehlergleichungen befinden sich im folgenden \cref{sec:Fehlergleichungen}.
+
 Die relative Abweichung eines Messergebnisses $x$ vom gegebenen Theoriewert 
-$x_{\mathrm{theo}}$ wurd mit folgender Gleichung berechnet:
+$x_{\mathrm{theo}}$ wurde mit folgender Gleichung berechnet:
 \begin{empheq}{equation}
 \Delta_{\mathrm{rel}}x = \frac{\envert{x - x_{\mathrm{theo}}}}{x_{\mathrm{theo}}}.
 \label{eq:Fehler_relativ}
@@ -31,5 +34,19 @@ $x_{\mathrm{theo}}$ wurd mit folgender Gleichung berechnet:
 Die in der Auswertung angefertigten Regressionskurven wurden mit Hilfe der \emph{Python}-Bibliothek \emph{scipy} \cite{SciPy}
 durchgeführt.
 
+\newpage
+\subsection{Fehlerfortpflanzung}\label{sec:Fehlergleichungen}
+
+Für die Berechnung des Fehlers der logarithmierten Druckmesswerte der Form $P = \ln(\frac{p - p_e}{p_0 - p_e})$
+wurde mit der folgenden Gleichung berechnet.
+\begin{empheq}{equation}
+	\sigma_{P}=\sqrt{\frac{\sigma_{p}^{2}}{\left(p - p_{e}\right)^{2}} + \frac{\sigma_{p_{0}}^{2}}{\left(p_{0} - p_{e}\right)^{2}} + \frac{\sigma_{p_{e}}^{2} \left(p_{0} - p_{e}\right)^{2}}{\left(p - p_{e}\right)^{2}} \left(\frac{p - p_{e}}{\left(p_{0} - p_{e}\right)^{2}} - \frac{1}{p_{0} - p_{e}}\right)^{2}}
+\end{empheq}
+
+Der Fehler des Saugvermögens nach die Gleichung \eqref{eq:Saugvermoegen_Leckrate} ergibt sich mit der
+Steigung $a = \frac{\Delta p}{\Delta t}$  die Fehlergleichung:
+\begin{empheq}{equation}
+\sigma_{S}=\sqrt{\frac{V^{2} a^{2}}{p_{g}^{4}} \sigma_{p_{g}}^{2} + \frac{V^{2} \sigma_{a}^{2}}{p_{g}^{2}} + \frac{a^{2} \sigma_{V}^{2}}{p_{g}^{2}}}
+\end{empheq}
 
  
