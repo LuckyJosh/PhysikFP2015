@@ -1,11 +1,11 @@
 % !TeX root = Protokoll.tex
 \subsection{Definition des Vakuums}
 Ein Vakuum wird allgemein definiert, als Abwesenheit von Materie.
-Um die Größe eines Vakuums zu messen, wird der Druck verwendet. Umso geringer der Druck umso besser das Vakuum.\\
+Als Messgröße des Vakuums, wird der Druck verwendet. Umso geringer der Druck umso besser das Vakuum.\\
 Ein Vakuum beginnt bei \SI{300}{\milli\bar}, dass wird Grobvakuum genannt.\\
 In einem Druckbereich von \SI{1}{\milli\bar} bis zu \SI{e-3}{\milli\bar}, liegt ein Feinvakuum vor.\\
-Das Hochvakuum beginnt bei \SI{e-3}{\milli\bar} und reicht bis zu \SI{e-7}{\milli\bar}. Alle Drücke die da drunter liegen, beschreiben ein Ultrahochvakuum.\\
-Eine weitere Größe, die behilflich bei dem Verständnis eines Vakuums ist, ist die mittlere freie Weglänge
+Das Hochvakuum beginnt bei \SI{e-3}{\milli\bar} und reicht bis zu \SI{e-7}{\milli\bar}. Alle Drücke die da drunter liegen, werden als Ultrahochvakuum bezeichnet.\\
+Eine weitere Größe, die behilflich bei dem Verständnis eines Vakuums ist, ist die mittlere freie Weglänge der Gasatome
 \begin{align}
 \Lambda = \frac{1}{\sqrt{2}\pi D^2n},
 \end{align}
@@ -22,19 +22,20 @@ Kann die mittlere freie Weglänge als
 \begin{align}
 \Lambda = \frac{k_BT}{\sqrt{2}\pi D^2p}
 \end{align} 
-Diese Größe Beschreibt die durchschnittliche Strecke die ein Molekül zurücklegt, bis es mit einem anderen zusammen stößt. Bei geringer werdendem Druck, wächst die mittlere freie Weglänge.
+Diese Größe beschreibt die durchschnittliche Strecke die ein Molekül zurücklegt, bis es mit einem anderen zusammen stößt. Bei geringer werdendem Druck, wächst die mittlere freie Weglänge.
 
 \subsection[Herleitung der $p(t)$-Kurve]{Herleitung der $\mathbf{p(t)}$-Kurve}
 Unter Annahme der idealen Gasgleichung (\ref{eq:IdealGas})
-kann eine Näherung für den Zeitlichen Druckverlauf gemacht werden, für einer konstante Temperatur.
+kann eine Näherung für den zeitlichen Druckverlauf gemacht werden, für einer konstante Temperatur.
 Durch ableiten nach der Zeit wird die Gleichung zu
 \begin{align}
 \frac{d\left(p\cdot V \right)}{dt}=p\frac{dV}{dt}+V\frac{dp}{dt}=0
 \end{align}
 Durch umstellen,Integration und Einführung des Saugvermögens 
 \begin{align}
-S=\frac{dV}{dt}
-\end{align} , wird die Gleichung zu
+S=\frac{dV}{dt},
+\end{align}
+wird die Gleichung zu
 \begin{align}
 p(t) = p_0 \exp\left(-\frac{S}{V_0}t\right).
 \end{align}
@@ -43,13 +44,15 @@ Da der Druck allerdings gegen einen Enddruck $p_E$ läuft, wird folgende Lösung
 p(t) = \left( p_0-p_E \right) \exp\left(-\frac{S}{V_0}t\right) + p_E.
 \label{eq:Evakuierungskurve}
 \end{align}
-Hier raus folgt dann die Form für das Saugvermögen als
+Durch umstellen folgt hier raus, die Form für das Saugvermögen als
 \begin{align}
-S=-V_0\frac{d}{dt}\ln \left( \frac{p-p_E}{p_0-p_E} \right).
+S=-V_0\frac{1}{t}\ln \left( \frac{p-p_E}{p_0-p_E} \right).
 \label{eq:Saugvermoegen_Evakuierungskurve}
 \end{align}
 \subsection{Pumpvorgang}
-Ein Gefäß, in dem ein Vakuum erzeugt werden soll, wird Rezipient genannt. Das Gas was abgepumpt wird, strömt in Form von viskose Strömungen aus dem Rezipient, wenn der Druck dem Grobvakuum zugehörig ist. Bei einem Hochvakuum oder Ultrahochvakuum geschieht dies über molekulare Strömungen.
+Ein Gefäß, in dem ein Vakuum erzeugt werden soll, wird Rezipient genannt. Das Gas welches abgepumpt wird, strömt je nach Druckbereich in unterschiedlichen Formen aus dem Rezipienten. Bei einem Grobvakuum geschieht dies über viskose Strömungen.
+%strömt in Form von viskose Strömungen aus dem Rezipient, wenn der Druck dem Grobvakuum zugehörig ist. 
+Bei einem Hochvakuum oder Ultrahochvakuum geschieht dies über molekulare Strömungen.
 \subsubsection{Viskose Strömungen}
 Bei viskose Strömungen überwiegen die Stöße unter den Moleküle gegenüber den Stößen der Moleküle mit der Außenwand des Rezipienten.
 \begin{align}
@@ -88,17 +91,20 @@ bestimmt werden kann.
 \subsection{Pumpen}
 Ein Vakuum in einem Rezipienten, wird mithilfe von Pumpen verwirklicht. Je nach gewünschtem Vakuum werden unterschiedliche Pumpen benötigt. Für Grob- oder Feinvakuen wird zum Beispiel eine Drehschiebepumpe verwendet und für Hochvakuen werden Turbomolekularpumpen verwendet.
 \subsubsection{Drehschieberpumpe}
-Die Drehschiebepumpe besteht aus einem Hohlzylinder, mit einem Zulauf und einem Ablauf. Ein Roter befindet sich exzentrisch im inneren des Zylinders, an dem mehrere Schieber befestigt sind, die mithilfe von Federn, an die außen Wand gedrückt werden und dadurch das innere in mehrere Volumina aufteilen. Durch den Rotor verändern sich die Volumina. Bei dem Zulauf wird das Volumen größer wodurch es dem Rezipienten Gas entzieht. Das Volumen wird dann vom Zulauf getrennt und überschreitet das Maximum. Das Volumen verringert sich  und wird dem Ablauf zugefügt und das Gas wird somit aus der Pumpe her raus geführt.
+Die Drehschiebepumpe besteht aus einem Hohlzylinder, mit einem Einlass und einem Auslass. Ein Roter befindet sich exzentrisch im inneren des Zylinders, an dem mehrere Schieber befestigt sind, die mithilfe von Federn, an die außen Wand gedrückt werden und dadurch das innere in mehrere Volumina aufteilen. Durch den Rotor verändern sich die Volumina. Bei Eingang wird das Volumen größer wodurch es dem Rezipienten Gas abpumpt. Das Volumen wird dann vom Einlass getrennt und überschreitet das Maximum. Das Volumen verringert sich  und wird dem Ausgang zugefügt und das Gas wird somit aus der Pumpe her raus geführt.
 
 \subsubsection{Turbomolekularpumpe}
-Die Turbomolekularpumpe oder auch Turbopumpe, nutzt den Effekt der Adsorption aus. Wenn das Gas an einer Oberfläche haftet und sich diese bewegt, dann hat das Molekül bei der Desorption eine bevorzugte Austrittsrichtung. Dabei besitzt eine Turbomolekularpumpe eine Reihe von Rotoren und Statorschaufeln, um diesen Effekt zu verbessern. Die Geschwindigkeit der Rotoren muss dazu so groß sein wie die Geschwindigkeit der Gasmoleküle, sowie muss eine Molekulare Strömung vorliegen damit die Moleküle den Impuls behalten.
+Die Turbomolekularpumpe oder auch Turbopumpe, nutzt den Effekt der Adsorption aus. Wenn das Gas an einer Oberfläche haftet und sich diese bewegt, dann hat das Molekül bei der Desorption eine bevorzugte Austrittsrichtung. Dabei besitzt eine Turbomolekularpumpe eine Reihe von Rotoren und Statorschaufeln, um diesen Effekt zu verbessern. Die Geschwindigkeit der Rotoren muss dazu mindestens so groß sein wie die Geschwindigkeit der Gasmoleküle. Es muss eine molekulare Strömung vorliegen damit die Moleküle den Impuls behalten.
 \subsubsection{Virtuelle-Lecks}
-Ab einem bestimmten Druck fangen Gasteilchen an, aus der Oberfläche des Aufbaus aus zu treten. Dadurch ändert sich der Druck nicht mehr. Dabei handelt es sich um virtuelle Lecks. Anders herum kann die Oberfläche beim Belüften des Rezipienten als Pumpe agieren und das einströmende Gas auf den Oberflächen ablagern.
+Ab einem bestimmten Druck dominiert der austritt von Gasteilchen, aus der Oberfläche des Aufbaus. Dadurch ändert sich der Druck nicht mehr. Dabei handelt es sich um virtuelle Lecks, die dem Saugvermögen entgegen wirken. Anders herum kann die Oberfläche beim Belüften des Rezipienten als Pumpe agieren und das einströmende Gas auf den Oberflächen ablagern.
 \subsection{Messgeräte}
-Der Druck wird mit verschiedenen Messgeräten gemessen, weil die unterschiedlichen Vakuen anders vermessen werden müssen.
+Der Druck wird mit verschiedenen Messgeräten gemessen. Die Druckbereiche benötigen unterschiedlich feine Messgeräte. Bei zu großen drücken Verschmutzen die feinen Messgeräte oder gehen kaputt. Anders können die Messgeräte auch nicht das nötige Auflösungsvermögen besitzen für die gewünschten Drücke.
 \subsubsection{Pirani-Vakuummeter}
-Mithilfe der Wärmeleitfähigkeit von Gasen, kann der Druck bestimmt werden. Ein Draht innerhalb eines Hohlzylinders, wird auf eine Konstante Temperatur erhitzt. Das Gas ermöglicht einen Wärmestrom vom Draht zur Hülle. Der Wärmestrom ist Proportional zum Druck und wenn die Temperatur des Drahtes konstant ist, ist die Heizleistung Druckabhängig. Die Heizleistung und der Druck haben einen exponentiellen Zusammenhang, was in eine logarithmische Skala resultiert.
+Mithilfe der Wärmeleitfähigkeit von Gasen, kann der Druck bestimmt werden. Ein Draht innerhalb eines Hohlzylinders, wird auf eine konstante Temperatur erhitzt. Das Gas ermöglicht einen Wärmestrom vom Draht zur Hülle. Der Wärmestrom ist Proportional zum Druck und wenn die Temperatur des Drahtes konstant ist, ist die Heizleistung Druckabhängig. Die Heizleistung und der Druck haben einen exponentiellen Zusammenhang, was in eine logarithmische Skala resultiert\cite{Pfeifer13}.
 \subsubsection{Kaltkathoden-Vakuummeter}
-Wenn zwischen einer Anode und einer Kathode eine hoch Spannung anliegt,werden Elektronen von der Anode ausgelöst und fliegen durch das Gas zur Kathode. Die Gasteilchen werden dadurch ionisiert und es tritt Gasentladung auf. Den Strom der durch die Gasentladung gemessen wird ist Druckabhängig. Damit möglichst viele Gasteilchen ionisiert werden, ist die Kathode Spiralförmig um die Anode aufgebaut. Das resultierende Magnetfeld sorgt dafür das die Elektronen Spiralförmig zur Anode fliegen und der Weg durchs Gas sich erhöht. Dieses Messgerät besitzt ebenfalls eine logarithmische Skala.
+Wenn zwischen einer Anode und einer Kathode eine hoch Spannung anliegt,werden Elektronen von der Anode ausgelöst und fliegen durch das Gas zur Kathode. Die Gasteilchen werden dadurch ionisiert und es tritt Gasentladung auf. Den Strom der durch die Gasentladung gemessen wird ist Druckabhängig. 
+Um mehr Gasentladungen anzuregen, befindet sich der zwischen Raum, in einem Magnetfeld, dadurch bewegen sich die Elektronen auf Spiralbahnen zur Anode und der weg verlängert sich.
+%Damit möglichst viele Gasteilchen ionisiert werden, ist die Kathode Spiralförmig um die Anode aufgebaut. Das resultierende Magnetfeld sorgt dafür das die Elektronen Spiralförmig zur Anode fliegen und der Weg durchs Gas sich erhöht. 
+Dieses Messgerät besitzt ebenfalls eine logarithmische Skala\cite{Pfeifer13}.
 \subsubsection{Heißkathoden-Vakuummeter}
-Bei diesem Messgerät werden die Elektronen aus der Kathode gelöst, indem sie erhitzt wird. Mithilfe einer Spannung werden die Elektronen in Richtung der Anode beschleunigt. Die Anode befindet sich als Spule um eine weitere Kathode die negativer Geladen ist als die Heizkathode. Dies Sorgt dafür, dass die geladenen Gasteilchen zu dieser Kathode fliegen. Der Strom der an der Sammelkathode gemessen wird, ist druckabhängig. Dieses Messgerät besitzt eine lineare Skala.
+Bei diesem Messgerät werden die Elektronen aus der Kathode gelöst, indem sie erhitzt wird. Mithilfe einer Spannung werden die Elektronen in Richtung der Anode beschleunigt und ionisieren dabei das Restgas. Die Anode befindet sich als Spule um eine weitere Kathode die negativer Geladen ist als die Heizkathode. Dies Sorgt dafür, dass die geladenen Gasteilchen zu dieser Kathode fliegen. Der Strom der an der Sammelkathode gemessen wird, ist druckabhängig. Dieses Messgerät besitzt eine lineare Skala\cite{Pfeifer13}.
