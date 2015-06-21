@@ -37,14 +37,14 @@ durchgeführt.
 \newpage
 \subsection{Fehlerfortpflanzung}\label{sec:Fehlergleichungen}
 
-Für die Berechnung des Fehlers der logarithmierten Druckmesswerte der Form $P = \ln(\frac{p - p_e}{p_0 - p_e})$
-wurde mit der folgenden Gleichung berechnet.
+Für die Berechnung des Fehlers der logarithmierten Druckmesswerte der Form\\ $P = \ln(\frac{p - p_e}{p_0 - p_e})$
+wurde die folgenden Gleichung verwendet.
 \begin{empheq}{equation}
 	\sigma_{P}=\sqrt{\frac{\sigma_{p}^{2}}{\left(p - p_{e}\right)^{2}} + \frac{\sigma_{p_{0}}^{2}}{\left(p_{0} - p_{e}\right)^{2}} + \frac{\sigma_{p_{e}}^{2} \left(p_{0} - p_{e}\right)^{2}}{\left(p - p_{e}\right)^{2}} \left(\frac{p - p_{e}}{\left(p_{0} - p_{e}\right)^{2}} - \frac{1}{p_{0} - p_{e}}\right)^{2}}
 \end{empheq}
 
-Der Fehler des Saugvermögens nach die Gleichung \eqref{eq:Saugvermoegen_Leckrate} ergibt sich mit der
-Steigung $a = \frac{\Delta p}{\Delta t}$  die Fehlergleichung:
+Der Fehler des Saugvermögens nach  Gleichung \eqref{eq:Saugvermoegen_Leckrate} ergibt sich mit der
+Steigung $a = \frac{\Delta p}{\Delta t}$  aus der Fehlergleichung:
 \begin{empheq}{equation}
 \sigma_{S}=\sqrt{\frac{V^{2} a^{2}}{p_{g}^{4}} \sigma_{p_{g}}^{2} + \frac{V^{2} \sigma_{a}^{2}}{p_{g}^{2}} + \frac{a^{2} \sigma_{V}^{2}}{p_{g}^{2}}}
 \end{empheq}
