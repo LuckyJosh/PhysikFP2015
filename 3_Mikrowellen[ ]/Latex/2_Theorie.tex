@@ -9,6 +9,22 @@ Hohlleiter sind Rohre, die meistens Rechteckig geformt sind, diese können auch 
 	\caption{Schematischer Aufbau eines Reflexklystrons.\cite{V53}}\label{fig:RefKlystron}
 \end{figure}
 Unter einem Klystron versteht sich eine Mikrowellenröhre, die durch Geschwindigkeitsmodulation von Elektronen Mikrowellenenergie erzeugt. In \cref{fig:RefKlystron} wird der schematische Aufbau eines Reflexklystrons dargestellt. Aus der Kathode lösen sich Elektronen und werden vom Positiven Resonator beschleunigt und durch laufen diesen. Der Reflektor hat ein negatives Potential und reflektiert die Elektronen. Deshalb durchlaufen sie erneut den Resonator. Wenn das Feld zwischen den Resonatorgittern oszilliert, entsteht ein Hohlleiter Feld im Resonator. Die Elektronen werden dadurch zu Bündeln gepackt. Wenn ein Bündel zu einer Zeit im Resonator ist, wo sie gebremst werden, wird dem Resonator geben sie Energie an den Resonator ab und es entstehen Mikrowellen. Andernfalls wird dem Resonator Energie entzogen und es entstehen somit keine Mikrowellen. Dies resultiert darin, das unterschiedliche Moden auftreten. Die Schwingung des Klystrons ist durch den Innenraum des Klystrons bestimmt und durch die Resonatorspannung. Das Klystron kann demnach mechanisch und elektrisch abgestimmt werden.
+Für die beschreibung der elektrischen Abstimmung lassen sich die Größen der 
+elektrischen Bandbreite $\Delta f_E$ und die Abstimmempfindlichkeit $E$
+bestimmen. Mit der elektrischen Bandbreite 
+\begin{empheq}{equation}
+	\Delta f_E = f^{\prime\prime} - f^{\prime},
+	\label{eq:Bandbreite}
+\end{empheq}
+ergibt sich die Abstimmempfindlichkeit zu
+\begin{empheq}{equation}
+E = \dfrac{\Delta f_E }{V^{\prime\prime}-V^{\prime}}.
+\label{eq:Abstimmempfindlichkeit}
+\end{empheq}
+Dabei sind die einmal gestrichenen Größen jeweils die Werte für 
+Reflektorspannung $U$ und Modenfrequenz $f$ die am 3dB-Punkt links vom 
+Miniumum gemessen wurden. Die zweifach gestrichenen Werte wurden entsprechend am 3dB-Punkt rechts vom Minimum gemessen.
+
 
 \subsection{Frequenzen und Wellenlängen}
 Im freien Raum gilt als Zusammenhang zwischen Wellenlänge $\lambda_0$ und Frequenz $f$
@@ -18,6 +34,7 @@ Im freien Raum gilt als Zusammenhang zwischen Wellenlänge $\lambda_0$ und Frequ
 dabei ist $c$ die Ausbreitungsgeschwindigkeit im freien Raum. Für einen Luft befüllten Hohlleiter gilt für die Wellenlänge kann unter der Annahme das die Welle sich nur in eine Richtung ausbreitet die Frequenz geschrieben werden als 
 \begin{align}
 	f=	\frac{c}{\lambda}=c \sqrt{ \left( \frac{1}{\lambda_g} \right)^2 + \left( \frac{1}{2a} \right) ^2 },
+	\label{eq:Hohlleiter_Frequenz}
 \end{align}
 dabei ist $\lambda_g$ die Wellenlänge im Gas und $a$ die Länge längeren Kante. Bei der cut-off-Frequenz wird die Wellenlänge $\lambda_g$ unendlich groß.
 \subsection{Dämpfung}
