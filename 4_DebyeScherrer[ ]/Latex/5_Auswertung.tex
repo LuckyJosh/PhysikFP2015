@@ -1,1 +1,108 @@
 % !TeX root = Protokoll.tex
+\subsection{Bestimmung der Kristallstrukturen}
+Für die Bestimmung der Kristallstrukturen müssen die auf die Filmstreifen aufgenommenen Reflexe
+mit den nicht verschwindenden Reflexen von kubischen Kristallstrukturen verglichen werden.
+Aus der Bragg-Bedingung \eqref{eq:bragg} und der Gleichung \eqref{eq:netzebenen_d} erhält man 
+durch Elimination des Netzebenenabstands $d$ und für Reflexe erster Ordnung $n = 1$ die Gleichung
+für die Gitterkonstante $a$,
+\begin{empheq}{align}
+	a &= \frac{\lambda}{2\sin(\theta)}\sqrt{h^2+k^2+l^2}\\
+	  \label{eq:gitterkonstante}
+	  &= d_{\mathrm{bragg}} \cdot m.
+\end{empheq} 
+Aus der Konstanz der Gitterkonstante folgt nun, dass für allgemeine Netzebenenabstände $d_{\mathrm{bragg},i}$  und Faktoren $m_i$ 
+aus den jeweiligen Millerschen Indizes
+\begin{empheq}{equation}
+d_{\mathrm{bragg},1} \cdot m_1= d_{\mathrm{bragg},i} \cdot m_i,
+\end{empheq} 
+folgt. Dabei ist $m_1$ der Faktor für die erste Netzebene mit nicht verschwindenden Reflexen und $d_{\mathrm{bragg},1}$ der 
+entsprechende Netzebenenabstand. Daraus ergibt sich die Bedingung, die den Vergleich der aufgenommenen Messwerte mit 
+bekannter Kristallstrukturen ermöglicht zu
+\begin{empheq}{equation}
+  \dfrac{d_{\mathrm{bragg},1}}{d_{\mathrm{bragg},i}}= \dfrac{ m_i}{m_1}.
+  \label{eq:bedingung_vergleich}
+\end{empheq}
+
+Die Millerschen Indizes der Netzebenen nicht verschwindender Reflexe und der für den Vergleich mit den Messwerten 
+benötigte Faktor $\sfrac{m_i}{m_1}$, sind in den Tabellen \ref{tab:reflexe_1_atom} und \ref{tab:reflexe_2_atom} angegeben.
+\input{../Tabellen/Reflexe_1Atom}
+\input{../Tabellen/Reflexe_2Atom}
+
+Zur Bestimmung der Durchmesser der Beugungsringe auf den Filmstreifen, wurden die Abstände $x_1$ und $x_2$ der Reflexe zum 
+jeweilig näheren Rand gemessen (siehe \cref{fig:messwerte}). Der Rand auf der Seite der Strahleintritts wird dabei als links und 
+die Seite des -austritts als rechts bezeichnet. Aus den aufgenommenen Messwerten lässt sich mittels $D = x_2 - x_1$ der
+Durchmesser der Beugungsringe bestimmen. Mit dem Abstand von des Strahleintritts und -austritts $D_{\pi} = \SI{180}{\mm}$
+lässt sich über $4\theta = D \cdot D_{\pi}$ der vierfache Beugungswinkel berechnen. Für die Abstände die vom linken Rand des 
+Streifens gemessen wurden ergibt diese Rechnung $4\phi$, den Komplementwinkel zu $4\theta$, sodass man  $4\theta = 2\pi -4\phi$
+erhält. \\
+Die so errechneten Messwerte für die Probe sind in den Tabellen \ref{tab:probe_links} und \ref{tab:probe_rechts} dargestellt.
+Die auf die gleiche Weise gemessenen Werte des untersuchten Salzes sind in den Tabellen \ref{tab:salz_links} und \ref{tab:salz_rechts}
+zu finden.
+
+\FloatBarrier
+\input{../Grafiken/filmstreifen.tex}
+\FloatBarrier
+
+\input{../Tabellen/messwerte_probe_eintritt}
+\FloatBarrier
+\input{../Tabellen/messwerte_probe_austritt}
+\FloatBarrier
+\input{../Tabellen/messwerte_salz_eintritt}
+\FloatBarrier
+\input{../Tabellen/messwerte_salz_austritt}
+\FloatBarrier
+
+Aus den berechneten Beugungswinkeln kann nun der Netzebenenabstand nach der Bragg-Bedingung \eqref{eq:bragg} bestimmt
+werden. In \cref{tab:probe_braggabstand} ist zur Überprüfung der Bedingung \eqref{eq:bedingung_vergleich} auch jeweils der relative
+Bragg-Abstand  $\tfrac{d_{\mathrm{bragg},1}}{d_{\mathrm{bragg},i}}$ angegeben. Die entsprechenden Werte für
+das untersuchte Salz sind in \cref{tab:salz_braggabstand} dargestellt.
+
+\input{../Tabellen/braggabstand_probe}
+\FloatBarrier
+\input{../Tabellen/braggabstand_salz}
+\FloatBarrier
+
+Wie in \cref{tab:probe_braggabstand} gezeigt erfüllen die Werte $\sfrac{m_i}{m_1}$ des
+flächenzentrierten Gitters die Bedingung \eqref{eq:bedingung_vergleich} mit nur geringen Abweichungen, die im 
+Bereich der Fehler liegen.
+
+Für das untersuchte Salz erfüllt die \textcolor{red}{Cäsiumchlorid-Struktur} die Bedingung \eqref{eq:bedingung_vergleich} 
+am besten, wenn auch mit größeren Abweichungen als bei der untersuchten Probe.
+
+\subsection{Bestimmung der Gitterkonstanten}
+
+Mit den im vorherigen Abschnitt bestimmten Strukturen kann nun über \eqref{eq:gitterkonstante} die Gitterkonstante 
+der untersuchten Substanzen bestimmte werden. Die für jeden Winkel erhaltenen Gitterkonstanten für die Probe sind
+in \cref{tab:probe_gitterkonstante} und die des Salzes in \cref{tab:salz_gitterkonstante} zu finden.
+
+\input{../Tabellen/gitterkonstante_probe}
+\FloatBarrier
+\input{../Tabellen/gitterkonstante_salz}
+\FloatBarrier
+
+Die Gitterkonstanten für Probe und Salz sind in \cref{fig:gitterkonstante_probe} beziehungsweise \cref{fig:gitterkonstante_salz} grafisch dargestellt. Mittels linearer Regression mit dem Ansatz 
+\begin{empheq}{equation}
+	a(x) =  \alpha \cdot x + a_0,
+\end{empheq} 
+erhält man die ebenfalls abgebildeten Geraden mit den Parametern,
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{align}
+		\alpha_{\mathrm{Probe}} = \SI{-0.048(2)}{\angstrom},\\
+		a_{0,\mathrm{Probe}} = \SI{3.620(8)}{\angstrom},
+	\end{empheq}	
+	\begin{empheq}{align}
+		\alpha_{\mathrm{Salz}} = \SI{0.4(2)}{\angstrom},\\
+		a_{0,\mathrm{Salz}} = \SI{3.1(1)}{\angstrom}.
+	\end{empheq}
+\end{subequations}
+
+Damit ergibt sich für die Probe eine Gitterkonstante von $a_{\mathrm{Probe}} = \SI{3.620(8)}{\angstrom}$
+und für das Salz die Gitterkonstante $a_{\mathrm{Salz}} = \SI{3.1(1)}{\angstrom}$.
+
+
+\input{../Grafiken/fig_Gitterkonstante_Probe}
+\FloatBarrier
+
+\input{../Grafiken/fig_Gitterkonstante_Salz}
+\FloatBarrier
