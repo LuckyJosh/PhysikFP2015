@@ -66,14 +66,15 @@ ist, darin sind $a$, $b$ und $c$ die Längen der Vektoren wie aus Gleichung \eqr
 \subsection{Beugung von Röntgenstrahl}
 Die Röntgenstrahlen regen die Geladen Teilchen innerhalb der Atome an und sie emittieren, dann ebenfalls elektromagnetische Wellen. Die Wellen sind aufgrund der Periodizität des Kristalls Interferenz fähig. Das Atom kann als ein Hertzischer-Dipol aufgefasst werden, weil es einem unpolarisiertem elektrischem Wechselfeld unterliegt. Die emittierte Intensität ist demzufolge
 \begin{align}
-	I_e(r,\theta)=I_0\left(\frac{\mu_0q^2}{4\pi m}\right)^2\frac{1+\cos^22\theta}{2r^2}. \label{eq:HertzDipol}
+	I_e(r,\theta)=I_0\left(\frac{\mu_0q^2}{4\pi m}\right)^2\frac{1+\cos^22\theta}{2r^2}. \label{eq:HertzDipol},
 \end{align}
+darin ist $I_0$ die Intensität vor der Streuung, $\mu_0$ die magnetische Feldkonstante, $q$ die Ladung, $m$ die Masse des Streumediums, $2\theta$ der Winkel zwischen dem einfallendem und dem gebeugtem Strahl und $r$ der Abstand vom Streumedium und Aufprallpunkt.
 Weil die Masse im Nenner steht, kann die Streuung am Atomkern vernachlässigt werden und es muss nur die Streuung mit den Elektronen in der Atomhülle berücksichtigt werden. Wenn die Elektronen isoliert wären könnte die Gleichung \eqref{eq:HertzDipol} als
 \begin{align}
 	I\left(r,\theta,z\right)=I_0\left(\frac{\mu_0(ze_0)^2}{4\pi zm_e}\right)^2\frac{1+\cos^22\theta}{2r^2}=z^2I_e\left(r,\theta\right)\label{eq:IntensitätZ}
 \end{align}
-geschrieben werden. Dies beschreibt den Streuprozess, aber nicht vollkommen. Die Elektronenhüllen besitzen eine nicht vernachlässigbare aus Dehnung. Elektronen die später Angeregt werden, schwingen nicht in Phase mit den zuvor angeregten Elektronen. Dies heißt sie sind nicht zwangsläufig Interferenz fähig. Das Resultiert darin das die in \eqref{eq:IntensitätZ} bestimmte Intensität höher ist als die wirkliche. Um dies besser beschreiben zu können wird nun der Atomformfaktor $f$ definiert als
+geschrieben werden, wobei $z$ die Anzahl an Elektronen und $e_0$ die Elementarladung und $m_e$ die Masse des Elektrons. Dies beschreibt den Streuprozess, aber nicht vollkommen. Die Elektronenhüllen besitzen eine nicht vernachlässigbare aus Dehnung. Elektronen die später Angeregt werden, schwingen nicht in Phase mit den zuvor angeregten Elektronen. Dies heißt sie sind nicht zwangsläufig Interferenz fähig. Das Resultiert darin das die in \eqref{eq:IntensitätZ} bestimmte Intensität höher ist als die wirkliche. Um dies besser beschreiben zu können wird nun der Atomformfaktor $f$ definiert als
 \begin{align}
 	f^2\left(z,\lambda,\theta\right)=\frac{I_a}{I_e},
 \end{align}
-dabei ist $I_a$ die am Atom gestreute Intensität und $I_e$ die am Elektron und $\lambda$ die Wellenlänge des Röntgenlichts.
+dabei ist $I_a$ die am Atom gestreute Intensität, $I_e$ die am Elektron und $\lambda$ die Wellenlänge des Röntgenlichts. In dem Grenzfall für große Wellenlängen und kleine Streuwinkel nährt sich $f$ dem Wert $z$ an. Für eine allgemeinere Lösung für $f$ muss über die Dichteverteilung $\rho (\vec{r})$ der Elektronen integriert werden.
