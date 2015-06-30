@@ -8,9 +8,9 @@ Der größte Anteil aller Festkörper, besitzt einen kristallinen Aufbau. Dies b
 	\label{fig:BeispielGitter}
 \end{figure}
 Ein Kristall kann als dreidimensionales Gitter beschrieben werden. Die Eckpunkte sind die Basis und beschreiben die Positionen der Atome oder von Atomgruppen.
-Aufgrund der Periodizität des Kristalls, lässt er sich vollständig durch drei Vektoren $\vec{a}$, $\vec{b}$ und $\vec{c}\ $ beschreiben. Wie schon in \ref{fig:BeispielGitter} zu sehen ist die Wahl der Vektoren nicht eindeutig. Alle Gitterpunkte werden durch den Vektor 
+Aufgrund der Periodizität des Kristalls, lässt er sich vollständig durch drei Vektoren $\vec{a}$, $\vec{b}$ und $\vec{c}\ $ beschreiben. Wie schon in \cref{fig:BeispielGitter} zu sehen ist die Wahl der Vektoren nicht eindeutig. Alle Gitterpunkte werden durch den Vektor 
 \begin{align}
-	\vec{t}= n_1\cdot \vec{a}+n_2\cdot\vec{b}+n_3\cdot\vec{c}
+	\vec{t}= n_1\cdot \vec{a} + n_2 \cdot \vec{b} + n_3 \cdot \vec{c} \label{eq:GitterVektor}
 \end{align}
 erreicht, dabei ist $n_i$ ganzzahlig. Das Gitter kann um den Vektor $\vec{t}$ verschoben werden und das Gitter wird in sich selbst überführt, dies wird als Translationssymmetrie bezeichnet. Die Elementarzelle ist die kleinste Einheit, die die Kristallstruktur beinhaltet. Sind in der Elementarzelle nur die Atome auf den acht Eckpunkten, dann liegt eine primitive Elementarzelle vor.\\
 Nach den bisherigen Annahmen für einen Kristall gibt es unendlich viele verschiedene, weil es keine Bedingung für die Länge der Vektoren gibt und den Winkeln zwischen ihnen. Durch Betrachtung von Symmetrien können dir Anzahl an Gitter Eingeschränkt werden. Dazu wird Spiegelung, Inversion oder Rotationen betrachtet. Dadurch bleiben nur noch die 14 Bravis-Gitter übrig, die sich in 7 Gittersysteme einteilen lassen, aufgrund der verschiedenen Elementarzellen.
@@ -39,10 +39,42 @@ Die Basis kann geschrieben werden als
 \begin{align}
 	\left( 0, 0, 0\right),\ \left( \frac{1}{2},\frac{1}{2},0\right),\ \left(\frac{1}{2}, 0 , \frac{1}{2}\right)\ \text{und}\ \left(0,\frac{1}{2},\frac{1}{2}\right).
 \end{align}
-
-
-
-
-
+Dies sind die Strukturen die am häufigsten in der Natur vorkommen. Als nächstes werden zusammengesetzte Strukturen betrachtet.
+Die Diamantstruktur besteht aus zwei fcc-Gittern die um eine viertel Raumdiagonalen versetzt sind. Die Basis ist somit neben der Basis des fcc-Gitters die Terme
+\begin{align}
+ \left(\frac{1}{4},\frac{1}{4},\frac{1}{4}\right),\ \left(\frac{3}{4},\frac{3}{4},\frac{1}{4}\right),\ \left(\frac{3}{4},\frac{1}{4},\frac{3}{4}\right)\text{ und } \left(\frac{1}{4},\frac{3}{4},\frac{3}{4}\right).
+\end{align}
+Diamantstrukturen kommen bei Atomen vor die vier freie Elektronen besitzen.\\
+Ähnlich ist die Zinkblenden-Struktur. Der Unterschied ist das die zusätzliche Basis aus anderen Atomen besteht.\\
+Die Steinsalz-Struktur besteht ebenfalls aus zwei in einander versetzen flächenzentrierten Gittern wie bei der Zinkblenden-Struktur nur das sie um $\frac{1}{2}$ versetzt sind.\\
+Die Cäsiumchlorid-Struktur besteht aus zwei verschieden besetzten sc-Gittern, die um eine halbe Raumdiagonalen versetzt sind. Die Basis besteht somit aus 
+\begin{align}
+	\left(0,0,0\right)\text{ und }\left(\frac{1}{2},\frac{1}{2},\frac{1}{2}\right).
+\end{align}
+Die vorletzte Struktur ist die Fluorit-Struktur. Sie besteht aus drei fcc-Gittern die um $\frac{1}{4}$ und $\frac{3}{4}$ versetzt sind, wobei die beiden nach innen versetzten ein anderes Atom ist.
 
 \subsection{Netzebenen}
+Netzebenen sind Ebenen die durch die Schwerpunkte der Atome gehen. Alle parallelen Netzebenen werden als Netzebenenschar bezeichnet. Diese Ebenen werden durch die Indizes $(hkl)$ bezeichnet, sie sind das Inverse des Abstandes auf den Koordinatenachsen zur Netzebene in Einheiten der Vektorlänge, wobei das Koordinatensystem durch die Vektoren $\vec{a}$, $\vec{b}$ und $\vec{c}$ aufgespannt wird. Die Indizes können dabei durch Multiplikation auf ganze Zahlen gerechnet werden, da dies wieder eine Netzebene ist. Eine Konvention ist, dass bei $(\bar{h}kl)$, $\bar{h}$ eine negative Zahl darstellt. Wenn eine der drei Zahlen Null ist, gilt das die entsprechende Achse im unendlichen geschnitten wird.\\
+Der Abstand von zwei Netzebenen kann durch die Netzebene, die durch den Ursprung und der Nächsten dazu bestimmt werden. Es kann gezeigt werden das der Abstand 
+\begin{align}
+	d_{hkl}=\frac{1}{\sqrt{\frac{h^2}{a^2}+\frac{k^2}{b^2}+\frac{l^2}{c^2}}}
+\end{align}
+ist, darin sind $a$, $b$ und $c$ die Längen der Vektoren wie aus Gleichung \eqref{eq:GitterVektor} bekannt. Für ein kubisches-Gitter gilt, demzufolge 
+\begin{align}
+	d_{hkl}=\frac{a}{\sqrt{h^2+k^2+l^2}}.
+\end{align}
+\subsection{Beugung von Röntgenstrahl}
+Die Röntgenstrahlen regen die Geladen Teilchen innerhalb der Atome an und sie emittieren, dann ebenfalls elektromagnetische Wellen. Die Wellen sind aufgrund der Periodizität des Kristalls Interferenz fähig. Das Atom kann als ein Hertzischer-Dipol aufgefasst werden, weil es einem unpolarisiertem elektrischem Wechselfeld unterliegt. Die emittierte Intensität ist demzufolge
+\begin{align}
+	I_e(r,\theta)=I_0\left(\frac{\mu_0q^2}{4\pi m}\right)^2\frac{1+\cos^22\theta}{2r^2}. \label{eq:HertzDipol},
+\end{align}
+darin ist $I_0$ die Intensität vor der Streuung, $\mu_0$ die magnetische Feldkonstante, $q$ die Ladung, $m$ die Masse des Streumediums, $2\theta$ der Winkel zwischen dem einfallendem und dem gebeugtem Strahl und $r$ der Abstand vom Streumedium und Aufprallpunkt.
+Weil die Masse im Nenner steht, kann die Streuung am Atomkern vernachlässigt werden und es muss nur die Streuung mit den Elektronen in der Atomhülle berücksichtigt werden. Wenn die Elektronen isoliert wären könnte die Gleichung \eqref{eq:HertzDipol} als
+\begin{align}
+	I\left(r,\theta,z\right)=I_0\left(\frac{\mu_0(ze_0)^2}{4\pi zm_e}\right)^2\frac{1+\cos^22\theta}{2r^2}=z^2I_e\left(r,\theta\right)\label{eq:IntensitätZ}
+\end{align}
+geschrieben werden, wobei $z$ die Anzahl an Elektronen und $e_0$ die Elementarladung und $m_e$ die Masse des Elektrons. Dies beschreibt den Streuprozess, aber nicht vollkommen. Die Elektronenhüllen besitzen eine nicht vernachlässigbare aus Dehnung. Elektronen die später Angeregt werden, schwingen nicht in Phase mit den zuvor angeregten Elektronen. Dies heißt sie sind nicht zwangsläufig Interferenz fähig. Das Resultiert darin das die in \eqref{eq:IntensitätZ} bestimmte Intensität höher ist als die wirkliche. Um dies besser beschreiben zu können wird nun der Atomformfaktor $f$ definiert als
+\begin{align}
+	f^2\left(z,\lambda,\theta\right)=\frac{I_a}{I_e},
+\end{align}
+dabei ist $I_a$ die am Atom gestreute Intensität, $I_e$ die am Elektron und $\lambda$ die Wellenlänge des Röntgenlichts. In dem Grenzfall für große Wellenlängen und kleine Streuwinkel nährt sich $f$ dem Wert $z$ an. Für eine allgemeinere Lösung für $f$ muss über die Dichteverteilung $\rho (\vec{r})$ der Elektronen integriert werden.
