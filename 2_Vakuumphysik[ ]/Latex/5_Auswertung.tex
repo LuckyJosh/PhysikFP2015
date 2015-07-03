@@ -138,8 +138,10 @@ angegeben.
 \input{../Tabellen/Leckrate_Drehschieber}
 \FloatBarrier
 Die grafische Darstellung der jeweiligen Messreihe befindet sich in den Abbildungen \ref{fig:leckrate_drehschieber_0} 
-bis \ref{fig:leckrate_drehschieber_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. Für die Berechnung dieser Geraden, wurden die grau dargestellten Gleichgewichtsdrücke $P_g$ für $t=0$ nicht verwendet, da beim schließen des Ventils 
-ein plötzlicher Anstieg des Druckes zu bemerken war.
+bis \ref{fig:leckrate_drehschieber_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. Für die Berechnung dieser Geraden, wurden die grau dargestellten Gleichgewichtsdrücke $P_g$ für $t=0$ nicht verwendet, da beim Schließen des Ventils zur Pumpe
+ein plötzlicher Anstieg des Druckes zu bemerken war. 
+Der bei offenem Ventil gemessene Gleichgewichtsdruck ist damit nicht gleich dem bei geschlossenem Ventil und kann
+daher nicht als Messwert für $t=0$ verwendet werden.
 
 
 {%Grafiken der Leckratenmessung
@@ -370,8 +372,9 @@ angegeben. %Die erste Messung der zweiten Messreihe wurde für die Auswertung ni
 % Tabelle der Lecktratenmessung
 \input{../Tabellen/Leckrate_Turbo}
 Die grafische Darstellung der jeweiligen Messreihe befindet sich in den Abbildungen \ref{fig:leckrate_turbo_0} 
-bis \ref{fig:leckrate_turbo_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. Für die Berechnung dieser Geraden, wurden die grau dargestellten Gleichgewichtsdrücke $P_g$ für $t=0$ nicht verwendet, da beim schließen des Ventils ein plötzlicher
- Anstieg des Druckes zu bemerken war. 
+bis \ref{fig:leckrate_turbo_3} jeweils zusammen mit einer durch lineare Ausgleichsrechnung bestimmten Geraden. Für die Berechnung dieser Geraden, wurden die grau dargestellten Gleichgewichtsdrücke $P_g$ für $t=0$ nicht verwendet, da beim Schließen des Ventils zur Pumpe ein plötzlicher
+ Anstieg des Druckes zu bemerken war. Der bei offenem Ventil gemessene Gleichgewichtsdruck ist damit nicht gleich dem bei geschlossenem Ventil und kann
+ daher nicht als Messwert für $t=0$ verwendet werden.
 {%Grafiken der Leckratenmessung
 \input{../Grafiken/fig_Leckrate_Turbo_0}
 \FloatBarrier
@@ -381,6 +384,8 @@ bis \ref{fig:leckrate_turbo_3} jeweils zusammen mit einer durch lineare Ausgleic
 \FloatBarrier
 \input{../Grafiken/fig_Leckrate_Turbo_3}
 \FloatBarrier}
+%TODO NewPage
+\newpage
 
 Die durchgeführte lineare Ausgleichsrechnung für jede Messreihe ergab, für eine Gerade der Form
 \begin{empheq}{equation}
