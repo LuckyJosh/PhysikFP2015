@@ -3,7 +3,7 @@ Der größte Anteil aller Festkörper, besitzt einen kristallinen Aufbau. Dies b
 \subsection{Kristallstrukturen}
 \begin{figure}[h!]
 	\centering
-	%\includegraphics[scale = 0.4]{../Grafiken/Gitter.pdf}
+	\includegraphics[scale = 0.4]{../Grafiken/Gitter.pdf}
 	\caption{Eine Veranschaulichung für ein Kristallgitter.\cite{V41}}
 	\label{fig:BeispielGitter}
 \end{figure}
@@ -77,4 +77,71 @@ geschrieben werden, wobei $z$ die Anzahl an Elektronen und $e_0$ die Elementarla
 \begin{align}
 	f^2\left(z,\lambda,\theta\right)=\frac{I_a}{I_e},
 \end{align}
-dabei ist $I_a$ die am Atom gestreute Intensität, $I_e$ die am Elektron und $\lambda$ die Wellenlänge des Röntgenlichts. In dem Grenzfall für große Wellenlängen und kleine Streuwinkel nährt sich $f$ dem Wert $z$ an. Für eine allgemeinere Lösung für $f$ muss über die Dichteverteilung $\rho (\vec{r})$ der Elektronen integriert werden.
+dabei ist $I_a$ die am Atom gestreute Intensität, $I_e$ die am Elektron und $\lambda$ die Wellenlänge des Röntgenlichts. In dem Grenzfall für große Wellenlängen und kleine Streuwinkel nährt sich $f$ dem Wert $z$ an. Für eine allgemeinere Lösung für $f$ muss über die Dichteverteilung $\rho (\vec{r})$ der Elektronen integriert werden. Weil nur elastische Streuungen betrachtet werden gilt 
+\begin{align}
+	|\vec{k_0}|=|\vec{k}|=\frac{1}{\lambda}
+\end{align}
+Dabei ist $\vec{k_0}$ der Wellenvektor vor der Streuung und $\vec{k}$ der Wellenvektor nach der Streuung und $\lambda$ die Wellenlänge der Röntgenstrahlen.
+Mit dem Gangunterschied
+\begin{align}
+	\Delta s = s_1 + s_2= \vec{r}\cdot\left( \frac{\vec{k}}{k}-\frac{\vec{k_0}}{k_0}\right)=\lambda\cdot\vec{r}\cdot\left(\vec{k}-\vec{k_0}\right)
+\end{align}
+und dem Phasenunterschied
+\begin{align}
+	\Delta \phi = 2\pi \frac{\Delta s}{\lambda}=2\pi\cdot\vec{r}\cdot\left(\vec{k}-\vec{k_0}\right)
+\end{align}
+\begin{figure}
+	\centering
+	\includegraphics[scale = 1]{../Grafiken/StreuungUnterschied.pdf}
+	\caption{Die Streuung zweier Wellen, mit der der Gangunterschied verdeutlicht wird.}\label{fig:Gangunterschied}
+\end{figure}
+Das Integral um den Atomformfaktor zu bestimmen, kann demnach geschrieben werden als
+\begin{align}
+	f=\int_{\text{Hülle}}\exp(-i\Delta \phi)\rho(\vec{r})d^3r=\int_{\text{Hülle}}\exp(-i2\pi\cdot\vec{r}\cdot\left(\vec{k}-\vec{k_0}\right))\rho(\vec{r})d^3r
+\end{align}
+Es gilt das $|\vec{k}-\vec{k_0}| =\frac{2}{\lambda}\sin\theta$ ist, zusammen mit der Normierung $\int \rho d^3r = zr_0$ kann die Intensität geschrieben werden als
+\begin{align}
+	I_a=f^2\left(z, \frac{\sin\theta}{\lambda} \right).
+\end{align}
+Als nächstes wird die Streuung am Kristallgitter betrachtet. Der Phasenunterschiede für Streuung an verschiedenen Atomen im Gitter $\Delta \phi_j$ kann geschrieben werden als 
+\begin{align}
+	\Delta \phi_j = 2\pi \vec{r_j}\cdot\left(\vec{k}-\vec{k_0}\right),
+\end{align}
+dabei ist $\vec{r_j}$ die Position des Atoms im Gitter an dem gnm,bestreut wird. Die Streuamplitude $A$ kann als Summe über die einzelnen Streuungen verstanden werden.
+\begin{align}
+	A = \sum_j f_j \exp(-i2\pi\vec{r_j}\left(\vec{k}-\vec{k_0}\right))I_e
+\end{align}
+Hier kann $\vec{r}$ durch die Basisvektoren ($\vec{a}$, $\vec{b}$ und $\vec{c}$) ausgedrückt werden.
+\begin{align}
+	S:= \sum_j f_j \exp(-i2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(\vec{k}-\vec{k_0}\right))I_e
+\end{align}
+Dadurch wird die Strukturamplitude hergeleitet. Bis jetzt gibt es keine Einschränkung für Streurichtung. Nach dem Huygenschen Prinzip gilt das einfallende und ausfallende Welle symmetrisch zur Netzebenennormalen liegen. Dadurch das an sehr vielen Ebenen gestreut wird tritt Interferenz auf.\\
+Treffen nun Ebenewellen auf einer Netzebene, werden sie gestreut sind aber nur Interferenzfähig mit Wellen, di an Benachbarten Netzebenen gestreut wurden, wenn der Gangunterschied ein Natürliches vielfaches der Wellenlänge ist. Daraus lässt sich zeigen das gilt
+\begin{align}
+	n\lambda = 2d\sin\theta,\label{eq:Bragg}
+\end{align}
+dabei ist $d$ der Abstand der Netzebnen und $n$ eine natürliche Zahl. Diese Gleichung ist die Bragg Bedingung, unter der Interferenz auftritt. Diese Gleichung kann auch durch einen Vektor $\vec{d}$ mit Länge des Netzebenenabstands und der Parallel zur Netztebenennormalen ist, als
+\begin{align}
+	n=\vec{d}\left(\vec{k}-\vec{k_0}\right)
+\end{align}
+geschrieben werden. Als nächstes werden die reziproken Gittervektoren $\vec{g}$ eingeführt.
+Für sie gilt, dass die Länge $n/|\vec{d}|$ ist und der Vektor ist Senkrecht zu $\vec{d}$ stehen. Daraus wird die Bragg Bedingung zu 
+\begin{align}
+	\vec{g}=\vec{k}-\vec{k_0}.
+\end{align}
+Die reziproken Gittervektoren können mithilfe von 
+\begin{align*}
+	\vec{A}=\frac{1}{V}\vec{b}\times\vec{c}\\
+	\vec{B}=\frac{1}{V}\vec{c}\times\vec{a}\\
+	\vec{C}=\frac{1}{V}\vec{a}\times\vec{b}
+\end{align*}
+als
+\begin{align}
+	\vec{g}(hkl)=h\vec{A}+k\vec{B}+l\vec{C}
+\end{align}
+geschrieben werden. Hier sind $(hkl)$ die Millerschen Indices und $V=\vec{a}\cdot(\vec{b}\times\vec{c})$ das Volumen.\\
+Der Strukturfaktor $S$ kann dann als
+\begin{align}
+	S = \sum_j f_j\exp(-2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(h\vec{A}+k\vec{B}+l\vec{C}\right) )=\sum_jf_j\exp(-2\pi\left(x_jh+y_jk+z_jl\right))
+\end{align}
+geschrieben werden. Für ein fcc-Gitter kann gezegt werden das für die Netzebene (221) der Strukturfaktor verschwindet. Daraus kann geschlossen werden, das es zu manchen Bragg Bedingungen keine Messbaren Reflexe gibt.
