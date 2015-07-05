@@ -1,5 +1,5 @@
 % !TeX root = Protokoll.tex
-Der größte Anteil aller Festkörper, besitzt einen kristallinen Aufbau. Dies bedeutet die Atome sind räumlich periodisch angeordnet. Um die Kristalleigenschaften zu diskutieren wird ein einzelner Kristall oder auch Einkristall betrachtet, weil sich die anisotropen Eigenschaften in Kristallen die sich im polykristallinem Zustand befinden heraus Mitteln. Um Kristalle Vermessen zu können, werden Strahlen benötigt deren Wellenlänge sich in der Größenordnung des Atomabstands befinden. Bei der Dybe-Scherrer-Methode werden dafür Röntgenstrahlen verwendet.
+Der größte Anteil aller Festkörper, besitzt einen kristallinen Aufbau. Dies bedeutet die Atome sind räumlich periodisch angeordnet. Um die Kristalleigenschaften zu diskutieren wird ein einzelner Kristall oder auch Einkristall betrachtet, weil sich die anisotropen Eigenschaften in Kristallen die sich im polykristallinem Zustand befinden heraus Mitteln. Um Kristalle Vermessen zu können, werden Strahlen benötigt deren Wellenlänge sich in der Größenordnung des Atomabstands befinden. Bei der Debye-Scherrer-Methode werden dafür Röntgenstrahlen verwendet.
 \subsection{Kristallstrukturen}
 \begin{figure}[h!]
 	\centering
@@ -62,6 +62,7 @@ Der Abstand von zwei Netzebenen kann durch die Netzebene, die durch den Ursprung
 ist, darin sind $a$, $b$ und $c$ die Längen der Vektoren wie aus Gleichung \eqref{eq:GitterVektor} bekannt. Für ein kubisches-Gitter gilt, demzufolge 
 \begin{align}
 	d_{hkl}=\frac{a}{\sqrt{h^2+k^2+l^2}}.
+	\label{eq:netzebenen_d}
 \end{align}
 \subsection{Beugung von Röntgenstrahl}
 Die Röntgenstrahlen regen die Geladen Teilchen innerhalb der Atome an und sie emittieren, dann ebenfalls elektromagnetische Wellen. Die Wellen sind aufgrund der Periodizität des Kristalls Interferenz fähig. Das Atom kann als ein Hertzischer-Dipol aufgefasst werden, weil es einem unpolarisiertem elektrischem Wechselfeld unterliegt. Die emittierte Intensität ist demzufolge
@@ -107,18 +108,18 @@ Als nächstes wird die Streuung am Kristallgitter betrachtet. Der Phasenuntersch
 \begin{align}
 	\Delta \phi_j = 2\pi \vec{r_j}\cdot\left(\vec{k}-\vec{k_0}\right),
 \end{align}
-dabei ist $\vec{r_j}$ die Position des Atoms im Gitter an dem gnm,bestreut wird. Die Streuamplitude $A$ kann als Summe über die einzelnen Streuungen verstanden werden.
+dabei ist $\vec{r_j}$ die Position des Atoms im Gitter an dem, bestreut wird. Die Streuamplitude $A$ kann als Summe über die einzelnen Streuungen verstanden werden.
 \begin{align}
 	A = \sum_j f_j \exp(-i2\pi\vec{r_j}\left(\vec{k}-\vec{k_0}\right))I_e
 \end{align}
 Hier kann $\vec{r}$ durch die Basisvektoren ($\vec{a}$, $\vec{b}$ und $\vec{c}$) ausgedrückt werden.
 \begin{align}
-	S:= \sum_j f_j \exp(-i2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(\vec{k}-\vec{k_0}\right))I_e
+	S:= \sum_j f_j \exp(-i2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(\vec{k}-\vec{k_0}\right))
 \end{align}
 Dadurch wird die Strukturamplitude hergeleitet. Bis jetzt gibt es keine Einschränkung für Streurichtung. Nach dem Huygenschen Prinzip gilt das einfallende und ausfallende Welle symmetrisch zur Netzebenennormalen liegen. Dadurch das an sehr vielen Ebenen gestreut wird tritt Interferenz auf.\\
-Treffen nun Ebenewellen auf einer Netzebene, werden sie gestreut sind aber nur Interferenzfähig mit Wellen, di an Benachbarten Netzebenen gestreut wurden, wenn der Gangunterschied ein Natürliches vielfaches der Wellenlänge ist. Daraus lässt sich zeigen das gilt
+Treffen nun ebene Wellen auf einer Netzebene, werden sie gestreut sind aber nur interferenzfähig mit Wellen, die an benachbarten Netzebenen gestreut wurden, wenn der Gangunterschied ein natürliches vielfaches der Wellenlänge ist. Daraus lässt sich zeigen das gilt
 \begin{align}
-	n\lambda = 2d\sin\theta,\label{eq:Bragg}
+	n\lambda = 2d\sin\theta,\label{eq:bragg}
 \end{align}
 dabei ist $d$ der Abstand der Netzebnen und $n$ eine natürliche Zahl. Diese Gleichung ist die Bragg Bedingung, unter der Interferenz auftritt. Diese Gleichung kann auch durch einen Vektor $\vec{d}$ mit Länge des Netzebenenabstands und der Parallel zur Netztebenennormalen ist, als
 \begin{align}
@@ -142,6 +143,7 @@ als
 geschrieben werden. Hier sind $(hkl)$ die Millerschen Indices und $V=\vec{a}\cdot(\vec{b}\times\vec{c})$ das Volumen.\\
 Der Strukturfaktor $S$ kann dann als
 \begin{align}
-	S = \sum_j f_j\exp(-2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(h\vec{A}+k\vec{B}+l\vec{C}\right) )=\sum_jf_j\exp(-2\pi\left(x_jh+y_jk+z_jl\right))
+	S &= \sum_j f_j\exp(-2\pi\left(x_j\cdot\vec{a}+y_j\cdot\vec{b}+z_j\cdot\vec{c}\right)\left(h\vec{A}+k\vec{B}+l\vec{C}\right) )\\
+	&=\sum_jf_j\exp(-2\pi\left(x_jh+y_jk+z_jl\right))
 \end{align}
-geschrieben werden. Für ein fcc-Gitter kann gezegt werden das für die Netzebene (221) der Strukturfaktor verschwindet. Daraus kann geschlossen werden, das es zu manchen Bragg Bedingungen keine Messbaren Reflexe gibt.
+geschrieben werden. Für ein fcc-Gitter kann gezeigt werden das für die Netzebene (221) der Strukturfaktor verschwindet. Daraus kann geschlossen werden, das es zu manchen Bragg Bedingungen keine Messbaren Reflexe gibt.
