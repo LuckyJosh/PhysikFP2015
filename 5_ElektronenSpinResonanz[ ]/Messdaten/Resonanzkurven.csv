@@ -1,0 +1,9 @@
+#Spulenfrequenz[MHz],Oszillatorfrequenz[MHz],
+#Stromminumum[mA] Negative/Positive Richtung,Strommaximum[mA] Negative/Positive Richtung,
+#Maximalposition[mm] Negative/Positive Richtung
+#Resonanzposition[mm] Negative/Positive Richtung
+f_e,f_os,I_min_P,I_max_P,I_min_N,I_max_N,X_d_P,X_d_N,X_res_P,X_res_N
+10.602,10,61,464,-447,59,87,88,31,35
+15.912,15.35,46,679,-724,-94,137,140,66,61
+20.555,20,262,853,-827,-361,129,105,42,62
+24.994,24.44,316,817,-906,-348,115,119,50,50
