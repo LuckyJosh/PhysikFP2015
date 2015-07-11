@@ -10,22 +10,30 @@ wurde der Betrag der Differenz jeweils für beide Orientierungen berechnet.
 \input{../Tabellen/Messwerte_I.tex}
 \FloatBarrier
   
+\FloatBarrier
+\input{../Grafiken/fig_Resonanzkurve_20555+_cut.tex}
+\FloatBarrier
+
 
 Zur Bestimmung der Magnetfeldstärke der Helmholtz-Spulen im Resonanzfall wurden die 
 aufgenommenen Resonanzkurven vermessen. Dabei wurden in Relation zum linken Anfangspunkt 
-der Kurve die Distanzen zum rechten Endpunkt und zur Resonanzstelle vermessen \cref{fig:}.
+der Kurve $x_A$ die Distanzen zum rechten Endpunkt $x_E$ und zur Resonanzstelle $x_R$ vermessen,
+dargestellt in \cref{fig:resonanzkurve_20555+_cut}.
 Diese Messwerte befinden sich in \cref{tab:messwerte_X}.
 
 \FloatBarrier
 \input{../Tabellen/Abstand.tex}
 \FloatBarrier
 
+
+
+
 Aus den Abständen zu den rechten Endpunkten der Resonanzkurven und den zuvor berechneten 
 Differenzen des maximalen und des minimalen Spulenstroms kann die Änderung des Stroms
-mit der Distanz auf dem Millimeterpapier $\tfrac{\Delta I}{X_d} $ bestimmt werden.
+mit der Distanz auf dem Millimeterpapier $\tfrac{\Delta I}{d} $ bestimmt werden.
 Hieraus kann nun mit 
 \begin{empheq}{equation}
-	I_{\mathrm{res}} = I_{\mathrm{min}} + \dfrac{\Delta I}{X_d} \cdot X_{\mathrm{res}}
+	I_{\mathrm{res}} = I_{\mathrm{min}} + \dfrac{\Delta I}{d} \cdot d_{\mathrm{res}}
 \end{empheq}
 die Stromstärke an der Resonanzstelle bestimmt werden. die entsprechenden Werte sind in 
 \cref{tab:messwerte_d} zu finden.
@@ -45,7 +53,7 @@ Magnetfeldstärken
 	 B_{\mathrm{para}} &= B_{\mathrm{H}} + B_{\mathrm{E}}\\
 	 \label{eq:banti}
 	 B_{\mathrm{anti}} &= B_{\mathrm{H}} - B_{\mathrm{E}}.
-\end{empheq}
+\end{empheq}\\
 
 Durch die Bestimmung des Erdmagnetfelds nach
 \begin{empheq}{equation}
@@ -56,6 +64,11 @@ lassen sich die Magnetfeldstärken der Helmholtz-Spule bestimmen.
 
 
 Die aus dem Messwerten berechneten Werte sind in \cref{tab:messwerte_B} eingetragen.
+Aus diesen Werten lässt sich aufgrund des Größenverhältnisses 
+$B_{\mathrm{H,+}}$ < $B_{\mathrm{H,-}}$ schließen, dass der Index \enquote{+}
+die antiparallele und \enquote{-} die parallele Ausrichtung zum Erdmagnetfeld
+symbolisiert.
+
 
 \FloatBarrier
 \input{../Tabellen/Magnetfeld.tex}
@@ -78,7 +91,7 @@ Zur Bestimmung des Landé-Faktors des Elektrons werden die HF-Generator Frequenz
 
 Die durchgeführte lineare Regression mit einer Funktion der Form
 \begin{empheq}{equation}
-	f(B) = a*B + b
+	f(B) = a\cdot B + b
 \end{empheq}
 lieferte die Regressionsparameter 
 %a [MHz/T]  27170.5569932 +/- 2031.35133291
@@ -98,11 +111,11 @@ sich für die bestimmte Steigung
 	 a &= g \dfrac{\mu_{\mathrm{B}}}{h}\\ 
 	 &= \dfrac{g}{2} \dfrac{e}{m_0} \dfrac{\hbar}{h}.
 \end{empheq}
-Dadurch erhält man den Wert für den Landé-Faktor des Elektrons durch 
+Dadurch erhält man den Betrag des Landé-Faktor des Elektrons durch 
 \begin{empheq}{equation}
-g = 4\pi\dfrac{m_0}{e} \cdot a
+g = 4\pi\dfrac{m_0}{e} \cdot a.
 \end{empheq}
-Mit der bestimmten Steigung  \eqref{eq:fit_a} ergibt sich für den Landé-Faktor der Wert
+Mit der bestimmten Steigung  \eqref{eq:fit_a} ergibt sich für den Landé-Faktor der Betrag
 \begin{empheq}{equation}
 g = \num{1.9(2)}.
 \end{empheq}

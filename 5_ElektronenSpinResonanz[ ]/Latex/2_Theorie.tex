@@ -36,6 +36,15 @@ Wenn allerdings ein Elektron ohne einen Bahndrehimpuls sich in einem Magnetfeld 
 	\mu_{s_z}=-g\frac{1}{2}\mu_B
 \end{align}
 Dabei ist $g$ der Landé-Faktor oder auch gyromagnetisches  Moment genannt und wird eingeführt weil der Zusammenhang zwischen Spin und magnetischem Moment anders sein kann als beim Bahndrehimpuls.
+Das, in diesem Versuch verwendete, homogene äußere Magnetfeld wurde durch ein Helmholtz-Spulenpaar erzeugt.
+Die magnetische Feldstärke ergibt sich dabei aus dem Strom $I$ durch die Spule, der Windungszahl $N$ und
+dem Spulenradius $R$ nach,
+\begin{empheq}{equation}
+	B(I) = \dfrac{8\cdot \mu_0}{\sqrt{125}} \cdot \dfrac{I\cdot N}{R}
+	\label{eq:helmholtz}
+\end{empheq}
+  
+
 \subsection{Elektronenspinresonanz}
 In diesem Versuch wird zur Bestimmung der gyromagnetischen Verhältnisses das Verfahren der Hochfrequenz Spektroskopie verwendet.\\
 Es wird eine Substanz die freie Elektronen enthält, hier Diphenylpikrylhydrazyl, in ein homogenes Magnetfeld und teilt damit das Energieniveau in zwei auf. Die Differenz der beiden Niveaus ist dabei 
@@ -45,5 +54,19 @@ Es wird eine Substanz die freie Elektronen enthält, hier Diphenylpikrylhydrazyl
 Aus der Maxwell-Boltzmann-Statistik ist bekannt, dass das obere Energieniveau schwächer besetzt ist als das untere. Werden dem System jetzt Lichtquanten hinzugefügt, die die Energie 
 \begin{align}
 	\Delta E = g\ \mu_B \ B = h\nu=2\pi\hbar\nu
+	\label{eq:energie}
 \end{align}
-wechseln die Elektronen das Energieniveau in ein höheres und klappen ihren Spin um. Damit die Photonen diese Energie besitzen, müssen sie eine Frequenz $\nu$ in Größenordnung von \SI{140}{\mega\hertz} besitzen. Die Elektronen geben ihre Energie durch Wechselwirkungsprozesse wieder ab. Dieser Prozess wird Elektronenspinresonanz genannt.
+wechseln die Elektronen das Energieniveau in das höhere und klappen ihren Spin um, dieser Prozess wird Elektronenspinresonanz genannt.
+Die bei diesem Vorgang aufgenommene Energie geben die Elektronen durch Wechselwirkungsprozesse wieder ab. 
+
+{ %TODO: Alte Version
+%wechseln die Elektronen das Energieniveau in ein höheres und klappen ihren Spin um.
+
+% Anmerkung: Das stimmt nicht, wir haben nur 10 - 30 MHz und es hat trotzdem funktioniert.
+%Damit die Photonen diese Energie besitzen, müssen sie eine Frequenz $\nu$ in Größenordnung von 
+%\SI{140}{\mega\hertz} besitzen.
+% Anmerkung: Die Aufnahme der Energie und das Unklappen ist die SpinResonanz nicht die Abgabe der Energie.
+%Die Elektronen geben ihre Energie durch Wechselwirkungsprozesse wieder ab. Dieser Prozess wird Elektronenspinresonanz genannt.	
+}
+
+
