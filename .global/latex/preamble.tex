@@ -77,18 +77,7 @@
 
 % Anwenden des erweiterten Seitenlayouts
 \pagestyle{fancy}      
-%%%%%%%%%%%%%%%%%%%%%%% Referenzen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
-\usepackage{lastpage}
-
-% Ermöglicht Referenzen im Dokument                                                               
-\usepackage{hyperref}
-	%Keine Hervorhebung der Referenzen
-	\hypersetup{hidelinks}
-
-%Verbesserte Referenzen
-\usepackage[german]{cleveref}
                                                               
 %%%%%%%%%%%%%%%%%%%%%%%% MINT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fügt mathematische Symbole hinzu, setzt Grenzen, Limiten und Indizes unter das Symbol und nicht dahinter
@@ -275,5 +264,17 @@
 \usepackage{etoolbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% Referenzen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Macht die letzte Seitenzahl referenzierbar mit \pageref{Lastpage}
+\usepackage{lastpage}
+
+% Ermöglicht Referenzen im Dokument                                                               
+\usepackage{hyperref}
+%Keine Hervorhebung der Referenzen
+\hypersetup{hidelinks}
+
+%Verbesserte Referenzen
+\usepackage[german,noabbrev]{cleveref}
 
 

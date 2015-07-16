@@ -1,10 +1,10 @@
 % !TeX root = Protokoll.tex
 \subsection{Bearbeitung der Resonanzkurven}
 
-Die während der Aufnahme der Resonanzkurven notierten maximal und minimal Werte
-der Stromstärke an der Helmholtz-Spule für beide Orientierungen (parallel und antiparallel)
-zum Erdmagnetfeld, sind in \cref{tab:messwerte_I} eingetragen. Für die weitere Auswertung 
-wurde der Betrag der Differenz jeweils für beide Orientierungen berechnet.
+Für die Kalibrierung der aufgenommenen Resonanzkurve mussten die minimale $I_{min}$ und 
+die maximale Stromstärke $I_{max}$ durch die Helmholtz-Spule notiert werden. Diese Messwerte
+sind für die acht aufgenommenen Resonanzkurven in \cref{tab:messwerte_I} eingetragen.
+Für die weitere Auswertung wurde der Betrag der Differenz jeweils für beide Orientierungen berechnet.
 
 \FloatBarrier
 \input{../Tabellen/Messwerte_I.tex}
@@ -16,9 +16,9 @@ wurde der Betrag der Differenz jeweils für beide Orientierungen berechnet.
 
 
 Zur Bestimmung der Magnetfeldstärke der Helmholtz-Spulen im Resonanzfall wurden die 
-aufgenommenen Resonanzkurven vermessen. Dabei wurden in Relation zum linken Anfangspunkt 
-der Kurve $x_A$ die Distanzen zum rechten Endpunkt $x_E$ und zur Resonanzstelle $x_R$ vermessen,
-dargestellt in \cref{fig:resonanzkurve_20555+_cut}.
+aufgenommenen Resonanzkurven vermessen. Dabei wurden in Relation zum Anfangspunkt 
+der Kurve bei $I_{min}$ die Distanzen $d$ und $d_{res}$ zum Endpunkt $I_{max}$ und zur 
+Resonanzstelle $I_{res}$ vermessen, dargestellt in \cref{fig:resonanzkurve_20555+_cut}.
 Diese Messwerte befinden sich in \cref{tab:messwerte_X}.
 
 \FloatBarrier
@@ -44,13 +44,13 @@ die Stromstärke an der Resonanzstelle bestimmt werden. die entsprechenden Werte
     
 \subsection{Bestimmung der Stärke des Erdmagentfeldes}
 
-Aus den berechneten Resonanzstromstärken lässt sich über \eqref{eq:helmholtz} das entsprechende Magnetfeld
-an der Resonanzstelle berechnen. Dieses ist jedoch zusammengesetzt aus dem Magnetfeld der Helmholtz-Spule $B_{\mathrm{H}}$ und
-dem Erdmagnetfeld $B_{\mathrm{E}}$. Für parallele und antiparallele Ausrichtung der Spulenachse ergeben sich die 
+Aus den berechneten Resonanzstromstärken lässt sich über \cref{eq:helmholtz} das entsprechende Magnetfeld
+an der Resonanzstelle berechnen. Dieses setzt aus dem Magnetfeld der Helmholtz-Spule $B_{\mathrm{H}}$ und
+dem Erdmagnetfeld $B_{\mathrm{E}}$ zusammen. Für parallele und antiparallele Ausrichtung dieser Magnetfelder ergeben sich die 
 Magnetfeldstärken
 \begin{empheq}{align}
 	\label{eq:bpara}
-	 B_{\mathrm{para}} &= B_{\mathrm{H}} + B_{\mathrm{E}}\\
+	 B_{\mathrm{para}} &= B_{\mathrm{H}} + B_{\mathrm{E}},\\
 	 \label{eq:banti}
 	 B_{\mathrm{anti}} &= B_{\mathrm{H}} - B_{\mathrm{E}}.
 \end{empheq}\\
@@ -65,8 +65,8 @@ lassen sich die Magnetfeldstärken der Helmholtz-Spule bestimmen.
 
 Die aus dem Messwerten berechneten Werte sind in \cref{tab:messwerte_B} eingetragen.
 Aus diesen Werten lässt sich aufgrund des Größenverhältnisses 
-$B_{\mathrm{H,+}}$ < $B_{\mathrm{H,-}}$ schließen, dass der Index \enquote{+}
-die antiparallele und \enquote{-} die parallele Ausrichtung zum Erdmagnetfeld
+$B_{\mathrm{H,+}}$ < $B_{\mathrm{H,-}}$ schließen, dass der Index \enquote{-}
+die antiparallele und \enquote{+} die parallele Ausrichtung zum Erdmagnetfeld
 symbolisiert.
 
 
@@ -77,45 +77,52 @@ symbolisiert.
 Aus den aufgenommenen Messwerten ergibt sich für die Stärke des Erdmagnetfeldes
 \begin{empheq}{equation}
 %(6.6+/-1.2)e-05
-\mean{B_{\mathrm{E}}} = \SI{70(10)}{\micro\tesla},
+B_{\mathrm{E}} = \SI{70(10)}{\micro\tesla}.
 \end{empheq}
-wobei der Fehler, wegen der großen Schwankungen in den Ergebnissen, die Abweichung vom Mittelwert darstellt. 
+Der angegebene Fehler stellt dabei die Standardabweichung vom Mittelwert dar.
 
 \subsection{Bestimmung des Landé-Faktors des Elektrons}
 
-Zur Bestimmung des Landé-Faktors des Elektrons werden die HF-Generator Frequenzen $f_e$ gegen die, vom Erdmagentfeld bereinigten, Magnetfeldstärken an den Resonanzstellen $B_{\mathrm{H}}$  aufgetragen. Diese Darstellung ist in \cref{fig:magnetfeld} zu finden.
+Zur Bestimmung des Landé-Faktors des Elektrons werden die HF-Generator Frequenzen $f_e$ in \cref{fig:magnetfeld} gegen die Magnetfeldstärken
+an den Resonanzstellen $B_{\mathrm{H}}$ aufgetragen. Dabei wurden die korrigierten Magnetfeldstärken verwendet aus denen das Erdmagnetfeld
+herausgerechnet wurde. 
+Diese Darstellung wird verwendet werden, da die beiden Größen $f_e$ und $B_{\mathrm{H}}$ einem linearen Zusammenhang nach
+\cref{eq:energie} folgen. Aus dieser Gleichung ergibt sich, dass sich der Landé-Faktor des Elektrons mit der Steigung 
+$a = g \dfrac{\mu_{\mathrm{B}}}{h}$ dieser Geraden 
+zu
+\begin{empheq}{equation}
+g = 4\pi\dfrac{m_0}{e}a
+\label{eq:lande}
+\end{empheq}
+ergibt.  
+
 
 \FloatBarrier
 \input{../Grafiken/fig_Magnetfeld.tex}
 \FloatBarrier
 
-Die durchgeführte lineare Regression mit einer Funktion der Form
-\begin{empheq}{equation}
-	f(B) = a\cdot B + b
-\end{empheq}
-lieferte die Regressionsparameter 
+Die durchgeführte lineare Regression lieferte die Steigung 
 %a [MHz/T]  27170.5569932 +/- 2031.35133291
 %b [MHz]    1.52051720938 +/- 1.29581585756
 \addtocounter{equation}{-1}
-\begin{subequations}
-	\begin{empheq}{align}
-	\label{eq:fit_a}
-		a &= \SI{27(2)}{\giga\hertz\per\tesla} \\
-		b &=  \SI{2(1)}{\mega\hertz}
-	\end{empheq}
-\end{subequations}
 
-Da die Ausgleichsgerade in \cref{fig:magnetfeld} der Form nach \eqref{eq:energie} entspricht ergibt 
-sich für die bestimmte Steigung
-\begin{empheq}{align*}
-	 a &= g \dfrac{\mu_{\mathrm{B}}}{h}\\ 
-	 &= \dfrac{g}{2} \dfrac{e}{m_0} \dfrac{\hbar}{h}.
-\end{empheq}
-Dadurch erhält man den Betrag des Landé-Faktor des Elektrons durch 
-\begin{empheq}{equation}
-g = 4\pi\dfrac{m_0}{e} \cdot a.
-\end{empheq}
-Mit der bestimmten Steigung  \eqref{eq:fit_a} ergibt sich für den Landé-Faktor der Betrag
+	\begin{empheq}{equation}
+	\label{eq:fit_a}
+		a = \SI{27(2)}{\giga\hertz\per\tesla}.
+	\end{empheq}
+
+
+%Da die Ausgleichsgerade in \cref{fig:magnetfeld} der Form nach \eqref{eq:energie} entspricht ergibt 
+%sich für die bestimmte Steigung
+%\begin{empheq}{align*}
+%	 a &= g \dfrac{\mu_{\mathrm{B}}}{h}\\ 
+%	 &= \dfrac{g}{2} \dfrac{e}{m_0} \dfrac{\hbar}{h}.
+%\end{empheq}
+%Dadurch erhält man den Betrag des Landé-Faktor des Elektrons durch 
+%\begin{empheq}{equation}
+%g = 4\pi\dfrac{m_0}{e} \cdot a.
+%\end{empheq}
+Mit der bestimmten Steigung  \eqref{eq:fit_a} ergibt sich nach \cref{eq:lande} für den Landé-Faktor der Betrag
 \begin{empheq}{equation}
 g = \num{1.9(2)}.
 \end{empheq}
