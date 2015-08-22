@@ -36,13 +36,13 @@ Die Energie eines magnetischen Feldes $E_\text{mag}$ lässt sich mithilfe des ma
 	E_\text{mag}=\vec{M}\cdot\vec{B}=\mu_zB=m_l\ \mu_B\ B\label{eq:Emag}
 \end{align}
 beschrieben werden. 
-Daraus folgt das die Energie $E_0$ in $2l+1$ Niveaus aufspaltet.\\
+Daraus folgt das die Energie $E_0$ in $2l+1$ Niveaus aufspaltet.
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[width=\textwidth/4]{../Grafiken/SpinElektron.pdf}
+	\caption{Die Ausrichtung des Elektronen Spins bei angeschaltetem Magnetfeld.\cite{V28}}\label{fig:ResonanzTheo}
+\end{wrapfigure}
 Wenn allerdings ein Elektron ohne einen Bahndrehimpuls sich in einem Magnetfeld befindet, wird eine Aufspaltung in zwei Energieniveaus beobachtet, daraus lässt sich schließen das die Elektronen einen Spin besitzen und das dieser $\frac{1}{2}$ beträgt, eine Veranschaulichung ist in \cref{fig:ResonanzTheo} dargestellt.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth/4]{../Grafiken/SpinElektron.pdf}
-\caption{Die Ausrichtung des Elektronen Spins bei angeschaltetem Magnetfeld.\cite{V28}}\label{fig:ResonanzTheo}
-\end{figure}
 Interessant ist das magnetische Moment $\mu_{s_z}$ das durch den Spin hervorgerufen wird zu beschreiben.
 \begin{align}
 	\mu_{s_z}=-g\frac{1}{2}\mu_B\label{eq:musz}
@@ -50,25 +50,28 @@ Interessant ist das magnetische Moment $\mu_{s_z}$ das durch den Spin hervorgeru
 Dabei ist $g$ der Landé-Faktor oder auch gyromagnetisches  Verhältnis genannt und wird eingeführt weil der Zusammenhang zwischen Spin und magnetischem Moment anders sein kann als beim Bahndrehimpuls.
 
 \subsection{Elektronenspinresonanz}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{../Grafiken/EnergieAufspaltung.pdf}
-\caption{Darstellung der Energieaufspaltung der Energie eines Elektrons durch ein externes Magnetfeld.\cite{V28}}\label{fig:Resonanz}
-\end{figure}
-In diesem Versuch wird zur Bestimmung des gyromagnetischen Verhältnis das Verfahren der Hochfrequenz Spektroskopie verwendet.\\
+
+In diesem Versuch wird zur Bestimmung des gyromagnetischen Verhältnis das Verfahren der Hochfrequenz Spektroskopie verwendet.
 Es wird eine Substanz, hier Diphenylpikrylhydrazyl, die praktisch freie Elektronen enthält in ein homogenes Magnetfeld und teilt damit das Energieniveau in zwei auf.
+%TODO Neue Seite
+\newpage
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.5\textwidth]{../Grafiken/EnergieAufspaltung.pdf}
+	\caption{Darstellung der Energieaufspaltung der Energie eines Elektrons durch ein externes Magnetfeld.\cite{V28}}\label{fig:Aufspaltung}
+\end{wrapfigure}
 Die Differenz der beiden Niveaus ist dabei 
 \begin{align}
 	\Delta E = g\ \mu_B \ B.
 \end{align}
-Dies Folgt aus Gleichung \eqref{eq:Emag} und \eqref{eq:musz} dies ist in \cref{fig:Resonanz} veranschaulicht.
+Dies folgt aus Gleichung \eqref{eq:Emag} und \eqref{eq:musz} dies ist in \cref{fig:Aufspaltung} veranschaulicht.
 Aus der Maxwell-Boltzmann-Statistik folgt, dass das obere Energieniveau schwächer besetzt ist als das untere.
-Werden dem System jetzt Photonen hinzugefügt, die die Energie 
+Werden dem System jetzt Photonen mit der Energie
 \begin{align}
 	\Delta E = h\nu
 	\label{eq:energie}
 \end{align}
-wechseln die Elektronen das Energieniveau in das höhere und klappen ihren Spin um.
+zugeführt, wechseln die Elektronen in das höhere Energieniveau und klappen ihren Spin um.
 Dieser Prozess wird Elektronenspinresonanz genannt.
 Die bei diesem Vorgang aufgenommene Energie geben die Elektronen durch Wechselwirkungsprozesse wieder ab. 
 
