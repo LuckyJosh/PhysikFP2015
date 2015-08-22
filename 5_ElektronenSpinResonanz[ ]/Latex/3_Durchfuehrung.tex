@@ -1,23 +1,34 @@
 % !TeX root = Protokoll.tex
 \subsection{Versuchsaufbau}
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[width=\textwidth]{../Grafiken/Aufbau.jpg}
-%\caption{Der Verwendete Versuchsaufbau bei der Durchführung}\label{fig:Aufbau}
-%\end{figure}
 \input{../Grafiken/fig_aufbau}
-In \cref{fig:Aufbau} ist der Versuchsaufbau dargestellt. Oben links ist die Probe (1) zusehen die sich innerhalb einer Helmholtz-Spule befindet(2), dabei wurde die Helmholtz-Spule so ausgerichtet das sie parallel beziehungsweise anti parallel zum Erdmagnetfeld ist. Um die Probe ist noch eine kleinere Spule die an eine Brückenschaltung (3) angeschlossen ist, diese Spule wird durch einen Hochfrequenz-Generator betrieben (9), in der Brückenschaltung ist noch ein Empfänger eingebaut mithilfe das Signal von Störungen getrennt werden kann. Rechts neben der Brückenschaltung ist ein Multimeter (5) mit dem die Spannung der Brückenschaltung gemessen werden kann. Rechts davon ist der Rampengenerator (7) zusehen mit dem die Helmholtz-Spule betrieben wird. Im Vordergrund ist ein XY-Schreiber (6) zu sehen wo die Spannung der Brückenschaltung und des Rampengenerator angelegt werden. Die Stromstärke an der Helmhotz-Spule kann mit einem Ampere Meter gemessen werden (4).
+In \cref{fig:Aufbau} ist der Versuchsaufbau dargestellt.
+Oben links ist die Probe (1) zusehen die sich innerhalb einer Helmholtz-Spule befindet (2), dabei wurde die Helmholtz-Spule so ausgerichtet das sie parallel beziehungsweise anti parallel zum Erdmagnetfeld ist. 
+Um die Probe ist noch eine kleinere Spule die an eine Brückenschaltung (3) angeschlossen ist, diese Spule wird durch einen Hochfrequenz-Generator betrieben (9), in der Brückenschaltung ist noch ein Empfänger eingebaut mithilfe das Signal von Störungen getrennt werden kann.
+Rechts neben der Brückenschaltung ist ein Multimeter (5) mit dem die Spannung der Brückenschaltung gemessen werden kann.
+Rechts davon ist der Rampengenerator (7) zusehen mit dem die Helmholtz-Spule betrieben wird.
+Im Vordergrund ist ein XY-Schreiber (6) zu sehen wo die Spannung der Brückenschaltung und des Rampengenerator angelegt werden.
+Die Stromstärke an der Helmhotz-Spule kann mit einem Ampere Meter gemessen werden (4).
 \subsection{Messverfahren}
 An der Brückenschaltung können die Frequenzen $\nu_\text{Osz}$ und $\nu_\text{ZF}$ eingestellt werden, mit diesen beiden Frequenzen kann das Störsignal verringert werden und das Signal der Elektronen $\nu_e$ ausgefiltert werden. Dabei gilt
 \begin{align}
 	\nu_e=\nu_\text{ZF}+\nu_\text{Osz},
 \end{align}
-dies ist die Frequenz die am Hochfrequenz-Generator eingestellt werden sollte. Bei abgestellten Magnetfeld der Helmholtz-Spule wird eine die minimale Brückenspannung eingestellt, indem der Kondensator $C$ und der Wiederstand $R$, der Brückenschaltung verstellt werden, dann wird das Signal mithilfe des Verstärkers auf ein Maximum verstärkt.\\
-Nun wird der mithilfe des Rampengenerators eine Sägezahnspannung an die Helmholtz-Spule angelegt. Im Spannungsverlauf der Brückenschaltung sollte ein globales Maximum oder ein globales Minimum zu sehen sein (\cref{fig:Resonanz}). 
-Kann sowohl ein Maxima als auch ein Minimum zu erkennt werden, liegt eine Überlagerung der beiden Kurven vor. Dies Geschieht dadurch das $C$ an der Brückenschaltung verstimmt ist.  Dies kann durch feines verstellen der Brücke ausgeglichen werden.
+dies ist die Frequenz die am Hochfrequenz-Generator eingestellt werden sollte.
+Bei abgestellten Magnetfeld der Helmholtz-Spule wird eine die minimale Brückenspannung eingestellt, indem der Kondensator $C$ und der Wiederstand $R$, der Brückenschaltung verstellt werden, dann wird das Signal mithilfe des Verstärkers auf ein Maximum verstärkt.\\
+Nun wird der mithilfe des Rampengenerators eine Sägezahnspannung an die Helmholtz-Spule angelegt.
+Im Spannungsverlauf der Brückenschaltung sollte ein globales Maximum oder ein globales Minimum zu sehen sein (\cref{fig:Resonanz}). 
+Kann sowohl ein Maxima als auch ein Minimum zu erkennt werden, liegt eine Überlagerung der beiden Kurven vor.
+Dies Geschieht dadurch das $C$ an der Brückenschaltung verstimmt ist.
+ Dies kann durch feines verstellen der Brücke ausgeglichen werden.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{../Grafiken/Resonanz.pdf}
 \caption{Darstellung der des Bildes, dass auf dem XY-Schreiber zu sehen sein sollte.\cite{V28}}\label{fig:Resonanz}
 \end{figure}
-Um das Bild des XY-Schreibers auswerten zu können wird die Größe der Stromstärke in einem bestimmten Bereich benötigt. Es wurde dafür die Stromstärke der beiden Umkehr Punkte gemessen, damit die Stromstärke des Maximas bekannt ist. Daraus lässt sich die stärke des dazugehörigen Magnetfeldes bestimmen nach \eqref{eq:helmholtz} bestimmen.
+Um das Bild des XY-Schreibers auswerten zu können wird die Größe der Stromstärke in einem bestimmten Bereich benötigt.
+Die magnetische Feldstärke der Helmholtz-Spule ergibt sich dabei aus dem Strom $I$ durch die Spule, der Windungszahl $N$ und
+dem Spulenradius $R$ nach,
+\begin{empheq}{equation}
+	B(I) = \dfrac{8\cdot \mu_0}{\sqrt{125}} \cdot \dfrac{I\cdot N}{R}.
+	\label{eq:helmholtz}
+\end{empheq}
