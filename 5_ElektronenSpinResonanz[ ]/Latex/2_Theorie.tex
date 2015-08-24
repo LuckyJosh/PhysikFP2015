@@ -1,36 +1,37 @@
 % !TeX root = Protokoll.tex
 \subsection{Quantenzahlen des Wasserstoffs}
-Ein Atom mit einem Elektron, wird durch die Quantenzahlen, die Hauptquantenzal $n$, die Drehimpulsquantenzahl $l$, die Magnetquantenzahl $m$ sowie der Spin $s$ beschrieben.\\
-Der Bahndrehimpuls ruft ein magnetisches Moment hervor, allerdings lässt sich auch bei Systemen mit verschwindendem Bahndrehimpuls ein magnetisches Moment nachweisen. 
-Dies kann so interpretiert werden, dass das Elektron einen eigenen Drehimpuls besitzt. 
-Dieser wird als Spin $s$ bezeichnet.\\
+Ein Atom mit einem Elektron, wird durch die Quantenzahlen, die Hauptquantenzal $n$, die Drehimpulsquantenzahl $l$, die Magnetquantenzahl $m$ sowie den Spin $s$ beschrieben.\\
+Der Bahndrehimpuls des Elektrons ruft ein magnetisches Moment hervor, allerdings lässt sich auch bei Systemen mit verschwindendem Bahndrehimpuls ein magnetisches Moment nachweisen. 
+Dies kann so interpretiert werden, dass das Elektron einen Eigenendrehimpuls besitzt, 
+der als Spin $s$ bezeichnet wird.\\
 Mithilfe der Wahrscheinlichkeitsstromdichte $j$ der Wellenfunktion eines Wasserstoffatoms lässt sich
 \begin{align}
-	\mu_z=-e_0\int j df=-\frac{1}{2}e_0\frac{\hbar}{m_0}\int\limits_{0}^{\pi}\int\limits_{0}^{\infty} R^2(r)\Theta^2(\theta)r^2\sin\theta drd\theta
+	\mu_z=-e_0\int j df=-\frac{1}{2}\frac{e_0}{m_0}\hbar m \int\limits_{0}^{\pi}\int\limits_{0}^{\infty} R^2(r)\Theta^2(\theta)r^2\sin\theta drd\theta
 \end{align}
 bestimmen. 
 Dabei ist $\mu_z$ das magnetische Moment in $z$-Richtung, $df$ die Flächenstück in Kugelkoordinaten, $e_0$ die Elementarladung, $R(r)$ ist der Radialanteil der Wellenfunktion und $\Theta(\theta)$ der Breitenkreisanteil der Wellenfunktion.
 Nach ausgeführter Integration ergibt sich unter Berücksichtigung der Normierung von $R(r)$ und $\Theta(\theta)$  
-\begin{align}
-	\mu_z=-\frac{1}{2}\frac{e_o}{m_0}m\hbar.
-\end{align}
+\begin{equation}
+	\mu_z=-\frac{1}{2}\frac{e_o}{m_0}\hbar m.
+\end{equation}
 Darin ist $m_0$ die Masse eines Elektrons und $\hbar$ das Planksche Wirkungsquantum und $m$ die zuvor erwähnte Quantenzahl. 
 Das magnetische Moment kann in Einheiten des Bohrschen Magnetons $\mu_B$ angegeben werden.
 \begin{align}
 	\mu_z &= \mu_B m\\
 	\mu_B:&=-\frac{1}{2}\frac{e_0}{m_0}\hbar
 \end{align}
-\subsection{Energieaufspaltung durch ein Externen Magnetfeld}
+\subsection{Energieaufspaltung durch ein externes Magnetfeld}
 Befindet sich das System in einem Magnetfeld so richtet sich der Drehimpuls aus.
 Das Magnetfeld soll entlang der $z$-Achse herrschen, dann gilt für die $z$ Komponente des Drehimpulses
 \begin{align}
 	l_z=m_l\hbar.
 \end{align}
-Eine einzelne Komponente eines Vektors kann nur kleiner gleich des Betrages des Vektors sein, ergibt sich für die Ausrichtung
+Eine einzelne Komponente eines Vektors kann nur kleiner gleich dem Betrag des Vektors sein, daher ergeben sich für die Orientierungsquantenzahl
+$m_l$ die möglichen Werte 
 \begin{align}
-	m_l = l,\ l-1,\ ...,\ 1,\ 0,\ -1,\ ... ,\ -l+1,\ -l,
+	m_l = l,\ l-1,\ ...,\ 1,\ 0,\ -1,\ ... ,\ -l+1,\ -l.
 \end{align}
-also $2l+1 $ Möglichkeiten den Bahndrehimpuls auszurichten.
+Entsprechend gibt es $2l+1$ Möglichkeiten den Bahndrehimpuls relative zu dem anliegenden Feld auszurichten.
 Die Energie eines magnetischen Feldes $E_\text{mag}$ lässt sich mithilfe des magnetischen Momentes des Atoms $\vec{M}$ und der magnetischen Feldstärke eines homogenen externen Magnetfeldes $\vec{B}$ kann durch 
 \begin{align}
 	E_\text{mag}=\vec{M}\cdot\vec{B}=\mu_zB=m_l\ \mu_B\ B\label{eq:Emag}
@@ -47,12 +48,14 @@ Interessant ist das magnetische Moment $\mu_{s_z}$ das durch den Spin hervorgeru
 \begin{align}
 	\mu_{s_z}=-g\frac{1}{2}\mu_B\label{eq:musz}
 \end{align}
-Dabei ist $g$ der Landé-Faktor oder auch gyromagnetisches  Verhältnis genannt und wird eingeführt weil der Zusammenhang zwischen Spin und magnetischem Moment anders sein kann als beim Bahndrehimpuls.
+Dabei ist $g$ der Landé-Faktor oder auch gyromagnetisches  Verhältnis genannt und wird eingeführt weil der Zusammenhang zwischen Spin und magnetischem Moment anders sein kann als beim Bahndrehimpuls. Der Wert dieses Faktors $g$ soll in diesem Versuch bestimmt werden.
 
 \subsection{Elektronenspinresonanz}
 
-In diesem Versuch wird zur Bestimmung des gyromagnetischen Verhältnis das Verfahren der Hochfrequenz Spektroskopie verwendet.
-Es wird eine Substanz, hier Diphenylpikrylhydrazyl, die praktisch freie Elektronen enthält in ein homogenes Magnetfeld und teilt damit das Energieniveau in zwei auf.
+In diesem Versuch wird zur Bestimmung des gyromagnetischen Verhältnis das Verfahren der Hochfrequenz-Spektroskopie verwendet.
+Es wird eine Substanz, hier Diphenylpikrylhydrazyl, die praktisch freie Elektronen enthält in ein homogenes Magnetfeld eingebracht. Dieses 
+spaltet das Energieniveau des Elektrons auf. Aufgrund des Spins $s = \tfrac{1}{2}$ des Elektrons entstehen so zwei Energieniveaus.%, wie in 
+%\cref{fig:Aufspaltung} gezeigt.
 %TODO Neue Seite
 \newpage
 \begin{wrapfigure}{r}{0.5\textwidth}
