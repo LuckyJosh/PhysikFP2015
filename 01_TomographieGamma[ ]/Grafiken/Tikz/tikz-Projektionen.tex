@@ -153,15 +153,15 @@ autolang=hyphen, % load hyphenation rules for if language of bibentry is not
 %		\node[opacity=0.5,gray] at(2.5,1.5) {$\mu_8$};
 %		\node[opacity=0.5,gray] at(3.5,1.5) {$\mu_9$};
 		
-				\node[gray] at(1.25,3.25) {$\mu_1$};
-				\node[gray] at(2.25,3.25) {$\mu_2$};
-				\node[gray] at(3.25,3.25) {$\mu_3$};
-				\node[gray] at(1.25,2.25) {$\mu_4$};
-				\node[gray] at(2.25,2.25) {$\mu_5$};
-				\node[gray] at(3.25,2.25) {$\mu_6$};
-				\node[gray] at(1.25,1.25) {$\mu_7$};
-				\node[gray] at(2.25,1.25) {$\mu_8$};
-				\node[gray] at(3.25,1.25) {$\mu_9$};
+				%\node[red!60!white] at(1.25,3.25) {$\mu_1$};
+				%\node[gray] at(2.25,3.25) {$\mu_2$};
+				%\node[gray] at(3.25,3.25) {$\mu_3$};
+				%\node[gray] at(1.25,2.25) {$\mu_4$};
+				%\node[gray] at(2.25,2.25) {$\mu_5$};
+				%\node[gray] at(3.25,2.25) {$\mu_6$};
+				%\node[gray] at(1.25,1.25) {$\mu_7$};
+				%\node[gray] at(2.25,1.25) {$\mu_8$};
+				%\node[gray] at(3.25,1.25) {$\mu_9$};
 		
 		\draw[->,>=stealth,thick,color=blue!75!black,opacity=0.65] (0.75,0.75) --(4.25,4.25) node[right] {\tiny$I_2$};
 		\draw[->,>=stealth,thick,color=blue!75!black,opacity=0.65] (1.25,0.25) --(4.75,3.75) node[right] {\tiny$I_1$};
@@ -197,6 +197,17 @@ autolang=hyphen, % load hyphenation rules for if language of bibentry is not
 %		\fill[color=red!50!black] (10.7,2.34) circle (1mm);
 %		\draw[color=red!50!black] (10.7,1.65) -- (10.7,3.03);
 		%\draw[very thick] (1.8,1.65) rectangle (11.22,2.34);
+
+		\newcommand{\mucolor}{gray!80!black}
+				\node[\mucolor] at(1.25,3.25) {\Large$\mu_1$};
+				\node[\mucolor] at(2.25,3.25) {\Large$\mu_2$};
+				\node[\mucolor] at(3.25,3.25) {\Large$\mu_3$};
+				\node[\mucolor] at(1.25,2.25) {\Large$\mu_4$};
+				\node[\mucolor] at(2.25,2.25) {\Large$\mu_5$};
+				\node[\mucolor] at(3.25,2.25) {\Large$\mu_6$};
+				\node[\mucolor] at(1.25,1.25) {\Large$\mu_7$};
+				\node[\mucolor] at(2.25,1.25) {\Large$\mu_8$};
+				\node[\mucolor] at(3.25,1.25) {\LARGE$\mu_9$};
 		\end{tikzpicture}
 	\endpgfgraphicnamed
 	
