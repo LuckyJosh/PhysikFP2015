@@ -1,0 +1,48 @@
+# Temperatur 298 K, [Dichte] = g/cm³
+Aluminium, Eisen, Blei (20°C), Messing, Delrin, Luft		
+2,70, 7.874, 11.342, 8.4, 1.42, 0.001
+
+#Aluminium
+cm²/g
+Photon    Coherent Photoel. Tot. w/  
+Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 3.279E-04 6.565E-05 7.467E-02 
+1.173E+00 1.045E-04 1.872E-05 5.675E-02 
+1.333E+00 8.102E-05 1.512E-05 5.320E-02 
+
+#Blei
+cm²/g
+Photon    Coherent Photoel. Tot. w/  
+Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 6.673E-03 4.337E-02 1.102E-01 
+1.173E+00 2.186E-03 1.320E-02 6.175E-02 
+1.333E+00 1.702E-03 1.035E-02 5.614E-02 
+
+#Eisen
+cm²/g
+Photon    Coherent Photoel. Tot. w/  
+Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 9.964E-04 8.723E-04 7.348E-02 
+1.173E+00 3.187E-04 2.523E-04 5.525E-02 
+1.333E+00 2.471E-04 2.013E-04 5.180E-02 
+
+#Messing
+cm²/g
+Photon    Coherent Photoel. Tot. w/  
+Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 1.218E-03 1.340E-03 7.284E-02 
+1.173E+00 3.898E-04 3.888E-04 5.447E-02 
+1.333E+00 3.024E-04 3.095E-04 5.106E-02 
+
+#Delrin
+cm²/g
+Photon    Coherent Photoel. Tot. w/  
+Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 1.122E-04 6.784E-06 8.233E-02 
+1.173E+00 3.574E-05 1.898E-06 6.270E-02 
+1.333E+00 2.770E-05 1.558E-06 5.874E-02 
