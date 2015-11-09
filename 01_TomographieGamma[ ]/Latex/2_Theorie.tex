@@ -1,10 +1,22 @@
 % !TeX root = Protokoll.tex
-\subsection{Absorption}
+\subsection{Absorption von $\gamma$-Strahlung}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.75\textwidth]{../Grafiken/Spektrum_Block_1_Messung_5_0_350_histogram.pdf}
+	\caption{Ein aufgenommenes Energiespektrum von $\gamma$-Strahlung, nach Absorption durch eine Probe.}\label{fig:EnergieSpektrum}
+\end{figure}
+Wenn Strahlung auf Materie trifft, gibt es verschiedene Effekte wie sie miteinander wechselwirken. 
+In diesem Versuch wird dabei mit $\gamma$-Strahlung gearbeitet.\\
+Wenn $\gamma$-Strahlung mit Materie Wechselwirkt, tritt der Compton-, Photo-Effekt und mit genügend auch Paarbildung auf.
+Bei dem Compton-Effekt streut ein Photon an einem Elektron und hat danach eine längere Wellenlänge.
+Wenn ein Photon mit einer Energie, die mindestens so groß ist wie die Bindungsenergie des Elektrons auf ein Elektron trifft, gibt es seine Energie ab und das Elektron löst sich vom Atom.
+Bei noch höheren Energien des Photons kann es, im Kernfeld, in ein Elektron Positron Paar Zerfallen.
 
-\subsection{Tomographie}
+\newpage
+\subsection{Verfahren der Tomographie}
 Bei der Tomographie wird ein Objekt von mehreren Seiten bestrahlt und die Intensität der abgeschwächten Strahlung gemessen.
 Daraus entsteht ein mehrdimensionale Darstellung des bestrahlten Objektes.
-Dies resultiert daraus, dass die Strahlung in unterschiedlichen Materialien unterschiedlich stark abgeschwächt werden, weil sie nicht den selben Absorptionskoeffizienten $\mu$ besitzen.\\
+Dies resultiert daraus, dass die Strahlung in unterschiedlichen Materialien unterschiedlich stark abgeschwächt werden, weil sie nicht den selben Absorptionskoeffizienten $\mu$ besitzen.
 \begin{wrapfigure}[16]{r}{0.5\textwidth}
 	\centering
 	\includegraphics[width=0.5\textwidth]{../Grafiken/Tikz/tikz-Projektionen.pdf}
@@ -24,7 +36,7 @@ Daraus kann für die unterschiedlichen Projektionen $j$ mit den Ausgangsintensit
 Diese Gleichung kann mithilfe von \cref{fig:Projektion} in eine Matrixdarstellung umgeschrieben werden.
 
 \begin{align}
-&d \cdot
+	d \cdot
 	\underbrace{
 	\begin{pmatrix}
 		0 & 0 & 0  & 0 & 0 & \sqrt{2} & 0  & \sqrt{2} & 0\\
@@ -71,10 +83,11 @@ Diese Gleichung kann mithilfe von \cref{fig:Projektion} in eine Matrixdarstellun
 	}_{\vec{N}}\nonumber
 \end{align}
 \begin{align}	
-	\Rightarrow A\cdot\vec{\mu}=\vec{N}
+	\Rightarrow d \cdot A\cdot\vec{\mu}=\vec{N}
 \end{align}
 Weil $A$ eine $12\times 9 $ ist, wird daraus
 \begin{align}
-	\vec{\mu}=\left(A^TA\right)^{-1}\cdot A^T\cdot\vec{N}.
-	\label{eq:KleinsteQuadrate}
+	\vec{\mu}=\frac{1}{d}\left(A^TA\right)^{-1}\cdot A^T\cdot\vec{N},
+		\label{eq:KleinsteQuadrate}
 \end{align}
+dabei ist $d$ die Kantenlänge eines Elementarwürfels.
