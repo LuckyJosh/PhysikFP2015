@@ -90,3 +90,16 @@ Weil $A$ eine $12\times 9 $ ist, wird daraus
 	\vec{\mu}=\frac{1}{d}\left(A^TA\right)^{-1}\cdot A^T\cdot\vec{N},
 \end{align}
 dabei ist $d$ die Kantenlänge eines Elementarwürfels.
+Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben durch
+\begin{align}
+	V[\vec{N}]=
+	\begin{pmatrix}
+		\sigma_{N_1} &  & 0\\
+		 & \ddots & \\
+		0 &  &\sigma_{N_{12}}	
+	\end{pmatrix}.
+\end{align}
+Der Fehler für die $\vec{\mu}$ ergibt sich durch
+\begin{align}
+	V[\vec{\mu}]=\left(A^T\cdot V^{-1}[\vec{N}]\cdot A\right)^{-1}\cdot A^T\cdot V^{-1}[\vec{N}]
+\end{align}
