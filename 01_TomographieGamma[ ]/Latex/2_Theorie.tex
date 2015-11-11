@@ -95,13 +95,17 @@ Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben durch
 \begin{align}
 	V[\vec{N}]=
 	\begin{pmatrix}
-		\sigma_{N_1} &  & 0\\
+		\sigma^2_{N_1} &  & 0\\
 		 & \ddots & \\
-		0 &  &\sigma_{N_{12}}	
+		0 &  &\sigma^2_{N_{12}}	
 	\end{pmatrix}.
 \end{align}
-Der Fehler für die $\vec{\mu}$ ergibt sich durch
+Daraus ergibt sich die Kovarianzmatrix zu
 \begin{align}
-	V[\vec{\mu}]=\left(A^T\cdot V^{-1}[\vec{N}]\cdot A\right)^{-1}\cdot A^T\cdot V^{-1}[\vec{N}]
+	V[\vec{\mu}]=\left(A^TV^{-1}[\vec{N}]A\right)^{-1}
+\end{align}
+und $\vec{\mu}$ muss dann umgeschrieben werden zu
+\begin{align}
+	\vec{\mu}=\frac{1}{d}V[\vec{\mu}]\cdot A^T V^-1[\vec{N}] \vec{N}
 \end{align}
 \newpage
