@@ -1,0 +1,6 @@
+#Photon    Coherent Photoel. Tot. w/  
+#Energy    Scatter. Absorb.  Coherent 
+
+6.617E-01 9.964E-04 8.723E-04 7.348E-02 
+1.173E+00 3.187E-04 2.523E-04 5.525E-02 
+1.333E+00 2.471E-04 2.013E-04 5.180E-02 

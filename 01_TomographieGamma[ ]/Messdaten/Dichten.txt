@@ -1,0 +1,4 @@
+# Temperatur 298 K, [Dichte] = g/cm³
+# Aluminium, Blei (20°C), Delrin, Eisen, Messing
+2.7  11.3  1.4  7.9   8.5
+

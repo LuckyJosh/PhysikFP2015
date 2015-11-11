@@ -1,1 +1,68 @@
 % !TeX root = Protokoll.tex
+
+Für die Untersuchung der Materialien der drei tomographierten Würfel wurden mit Hilfe des Szintillationsdetektors
+und des Multichannel Analyser die Spektren der Gamma-Strahlung nach der Durchdringung des jeweiligen Würfels
+aufgenommen. Eines dieser Spektren ist in \cref{fig:spektrum_block_1_messung_5_0_350_histogram_intervall} dargestellt.
+In dieser Abbildung ist der Bereich des Gesamtenergie-Peaks farblich hervorgehoben. Über diesen Bereich 
+der Kanäle von 250 bis 310 wurden die gemessenen Hits jeder Messreihe integriert. Da die Integration immer über 
+diesen Bereich durchgeführt wird sind die gemessenen Anzahlen proportional zur Intensität der gemessenen Strahlung.
+Diese Werte befinden sich 
+für jede verwendete Projektion in den Tabellen \ref{tab:Messung_I1},\ref{tab:Messung_I2} und \ref{tab:Messung_I3}. 
+Die Werte in \cref{tab:Messung_I0} wurden bei der Messung des holen Aluminiumwürfels aufgenommen, um 
+einen Referenzwert $I_{0}$ bestimmen zu können.
+ 
+\input{../Grafiken/fig_Spektrum_Block_1_Messung_5_0_350_histogram_intervall.tex} 
+
+\input{../Tabellen/Messung_I0.tex}
+
+  
+Durch Mittlung der Messwerte der Referenzmessung ergibt sich eine Referenzanzahl von $I_{0} = \num{29374(171)}$ 
+und eine gemittelte Messzeit von $\overline{t_{0}} = \SI{119.642}{\second}$. Diese Messzeit wird im weiteren dazu
+verwendet, die Referenzmessung jeweils auf die Messzeit der drei folgenden Messreihen zu normieren.
+Diese Normierung auf die Projektion $j$ einer Messreihe erfolgt nach
+\begin{empheq}{equation}
+	I_{0,j} = I_{0} \cdot \frac{t_{j}}{\overline{t_{0}}}.
+\end{empheq}
+
+Die logarithmierten Verhältnisse $N_{j}$ dieser normierten Referenzanzahl und der jeweiligen Anzahlen aus den durchgeführten Messreihen ergeben sich nach 
+\begin{empheq}{equation}
+N_{j} = \ln(\frac{I_{0,j}}{I_j})
+\end{empheq}
+und sind in \cref{tab:Messung_Verhaeltnis} angegeben.
+Über die in \cref{eq:KleinsteQuadrate} dargestellte \enquote{Methode der Kleinsten Quadrate} ergeben sich die in 
+\cref{tab:Absorbtionskoeffizienten} eingetragenen Absorptionskoeffizienten. Die angegebene Fehler wurden 
+entsprechend nach \cref{eq:KleinsteQuadrateFehler} bestimmt.
+
+\FloatBarrier
+\input{../Tabellen/Messung_I1.tex}
+\FloatBarrier
+\input{../Tabellen/Messung_I2.tex}
+\FloatBarrier
+\input{../Tabellen/Messung_I3.tex}
+\FloatBarrier
+\input{../Tabellen/Messung_Verhaeltnis.tex}
+\FloatBarrier
+\input{../Tabellen/Absorbtionskoeffizienten.tex}
+\FloatBarrier
+Da die ersten beiden Messreihen mit Würfeln durchgeführt wurden, die nur aus einem Material bestehen,
+ergeben sich die Absorptionskoeffizienten dieser Materialien durch Mittlung der neun bestimmten Absorptionskoeffizienten zu 
+\begin{empheq}{align}
+\overline{\mu}_{W1} &= \SI{0.505(3)}{\per\centi\metre} \\
+\overline{\mu}_{W2} &= \SI{0.902(3)}{\per\centi\metre} .
+\end{empheq}
+
+
+\input{../Tabellen/Materialien.tex}
+
+Im Vergleich der Messergebnisse mit den Literaturwerten zeigt sich, dass keines der Materialien 
+eindeutig zugeordnet werden kann. Jedoch ist durch die Größenordnung der bestimmten Absorptionskoeffizienten
+anzunehmen, dass es sich bei Würfel 1 um das Material Eisen oder Messing und bei Würfel 2 um Blei handelt.
+Für Würfel 1 ergibt sich damit eine relative Abweichung $\Delta_{\mathrm{rel}}\mu_{1,\mathrm{Fe}} \approx \SI{13}{\percent}$ bzw.
+$\Delta_{\mathrm{rel}}\mu_{1,\mathrm{CuZn}} \approx \SI{18}{\percent}$. 
+Die relative Abweichung des Ergebnisses für den zweiten Würfel
+beträgt in etwa $\Delta_{\mathrm{rel}}\mu_{1,\mathrm{Pb}} \approx \SI{28}{\percent}$.
+Unterzieht man die neun Absorptionskoeffizienten der Elementarwürfel in Würfel 3 dem selben Vergleich,
+so ergibt sich die Zuordnung der Materialien zu den Elementarwürfeln in \cref{tab:Materialien_Block3}.
+
+
+\input{../Tabellen/Material_Block3.tex}
