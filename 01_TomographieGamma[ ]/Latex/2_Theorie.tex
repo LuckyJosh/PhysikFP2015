@@ -88,7 +88,6 @@ Diese Gleichung kann mithilfe von \cref{fig:Projektion} in eine Matrixdarstellun
 Weil $A$ eine $12\times 9 $ ist, wird daraus
 \begin{align}
 	\vec{\mu}=\frac{1}{d}\left(A^TA\right)^{-1}\cdot A^T\cdot\vec{N},
-		\label{eq:KleinsteQuadrate}
 \end{align}
 dabei ist $d$ die Kantenlänge eines Elementarwürfels.
 Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben durch
@@ -103,9 +102,11 @@ Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben durch
 Daraus ergibt sich die Kovarianzmatrix zu
 \begin{align}
 	V[\vec{\mu}]=\left(A^TV^{-1}[\vec{N}]A\right)^{-1}
+	\label{eq:KleinsteQuadrateFehler}
 \end{align}
 und $\vec{\mu}$ muss dann umgeschrieben werden zu
 \begin{align}
 	\vec{\mu}=\frac{1}{d}V[\vec{\mu}]\cdot A^T V^-1[\vec{N}] \vec{N}
+	\label{eq:KleinsteQuadrate}
 \end{align}
 \newpage

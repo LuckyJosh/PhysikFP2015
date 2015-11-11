@@ -28,7 +28,13 @@ Die logarithmierten Verhältnisse $N_{j}$ dieser normierten Referenzanzahl und d
 \begin{empheq}{equation}
 N_{j} = \ln(\frac{I_{0,j}}{I_j})
 \end{empheq}
-und sind in \cref{tab:Messung_Verhaeltnis} angegeben.
+und sind in \cref{tab:Messung_Verhaeltnis} angegeben. Die mit diesen Werten angegebenen Fehler berechnen sich unter
+Verwendung der Gaußschen-Fehlerfortpflanzung \cref{eq:Fehlerforpflanzung} aus der Gleichung
+
+\begin{empheq}{equation}
+\sigma_{N_{j}} = \sqrt{\del{\dfrac{\sigma_{I_{0,j}}}{I_{0,j}}}^2 + \del{\dfrac{\sigma_{I_j}}{I_j}}^2}.
+\end{empheq}
+
 Über die in \cref{eq:KleinsteQuadrate} dargestellte \enquote{Methode der Kleinsten Quadrate} ergeben sich die in 
 \cref{tab:Absorbtionskoeffizienten} eingetragenen Absorptionskoeffizienten. Die angegebene Fehler wurden 
 entsprechend nach \cref{eq:KleinsteQuadrateFehler} bestimmt.
