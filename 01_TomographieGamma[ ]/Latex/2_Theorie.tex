@@ -12,16 +12,14 @@ Bei dem Compton-Effekt streut ein Photon an einem Elektron und hat danach eine l
 Wenn ein Photon mit einer Energie, die mindestens so groß ist wie die Bindungsenergie des Elektrons auf ein Elektron trifft, gibt es seine Energie ab und das Elektron löst sich vom Atom.
 Bei noch höheren Energien des Photons kann es, im Kernfeld, in ein Elektron Positron Paar Zerfallen.
 In \cref{fig:EnergieSpektrum} ist das Spektrum für die Verwendete Quelle dargestellt.  
-\newpage
+
+
 \subsection{Verfahren der Tomographie}
+
 Bei der Tomographie wird ein Objekt von mehreren Seiten bestrahlt und die Intensität der abgeschwächten Strahlung gemessen.
 Daraus entsteht ein mehrdimensionale Darstellung des bestrahlten Objektes.
 Dies resultiert daraus, dass die Strahlung in unterschiedlichen Materialien unterschiedlich stark abgeschwächt werden, weil sie nicht den selben Absorptionskoeffizienten $\mu$ besitzen.
-\begin{wrapfigure}[16]{r}{0.5\textwidth}
-	\centering
-	\includegraphics[width=0.5\textwidth]{../Grafiken/Tikz/tikz-Projektionen.pdf}
-	\caption{Die Darstellung der Verwendeten Projektionen.\label{fig:Projektion}}
-\end{wrapfigure}
+\FloatBarrier
 In diesem Versuch wird dazu ein Würfel benutzt, der aus $3\times3\times3$ Elementarwürfeln besteht.
 Die Intensität die durch verschiedene Stoffen abgeschwächt wird lässt sich dabei schreiben als
 \begin{align}
@@ -32,7 +30,15 @@ Daraus kann für die unterschiedlichen Projektionen $j$ mit den Ausgangsintensit
 \begin{align}
 	\sum \mu_j d_j = -\ln\left(\frac{I_j}{I_0}\right)=:N_j
 \end{align}
-\newpage
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1.75]{../Grafiken/Tikz/tikz-Projektionen.pdf}
+	\caption{Die Darstellung der Verwendeten Projektionen.\label{fig:Projektion}}
+\end{figure}
+\FloatBarrier
+
 Diese Gleichung kann mithilfe von \cref{fig:Projektion} in eine Matrixdarstellung umgeschrieben werden.
 
 \begin{align}
