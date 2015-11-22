@@ -7,18 +7,18 @@
 \end{figure}
 Wenn Strahlung auf Materie trifft, gibt es verschiedene Effekte wie sie miteinander wechselwirken. 
 In diesem Versuch wird dabei mit $\gamma$-Strahlung gearbeitet.\\
-Wenn $\gamma$-Strahlung mit Materie Wechselwirkt, tritt der Compton-, Photo-Effekt und mit genügend auch Paarbildung auf.
+Wenn $\gamma$-Strahlung mit Materie wechselwirkt, tritt der Compton-, Photo-Effekt und mit genügend Energie tritt auch Paarbildung auf.
 Bei dem Compton-Effekt streut ein Photon an einem Elektron und hat danach eine längere Wellenlänge.
 Wenn ein Photon mit einer Energie, die mindestens so groß ist wie die Bindungsenergie des Elektrons auf ein Elektron trifft, gibt es seine Energie ab und das Elektron löst sich vom Atom.
-Bei noch höheren Energien des Photons kann es, im Kernfeld, in ein Elektron Positron Paar Zerfallen.
-In \cref{fig:EnergieSpektrum} ist das Spektrum für die Verwendete Quelle dargestellt.  
+Bei noch höheren Energien des Photons kann es im Kernfeld, in ein Elektron-Positron-Paar zerfallen.
+In \cref{fig:EnergieSpektrum} ist das Spektrum für die verwendete Quelle dargestellt.  
 
 
 \subsection{Verfahren der Tomographie}
 
 Bei der Tomographie wird ein Objekt von mehreren Seiten bestrahlt und die Intensität der abgeschwächten Strahlung gemessen.
-Daraus entsteht ein mehrdimensionale Darstellung des bestrahlten Objektes.
-Dies resultiert daraus, dass die Strahlung in unterschiedlichen Materialien unterschiedlich stark abgeschwächt werden, weil sie nicht den selben Absorptionskoeffizienten $\mu$ besitzen.
+Daraus entsteht eine mehrdimensionale Darstellung des bestrahlten Objektes.
+Dies resultiert daraus, dass die Strahlung in unterschiedlichen Materialien unterschiedlich stark abgeschwächt wird, weil sie nicht den selben Absorptionskoeffizienten $\mu$ besitzen.
 \FloatBarrier
 In diesem Versuch wird dazu ein Würfel benutzt, der aus $3\times3\times3$ Elementarwürfeln besteht.
 Die Intensität die durch verschiedene Stoffen abgeschwächt wird lässt sich dabei schreiben als
@@ -84,19 +84,19 @@ Diese Gleichung kann mithilfe von \cref{fig:Projektion} in eine Matrixdarstellun
 		N_6\\
 		N_7\\
 		N_8\\
-		N_9		
+		N_9		 
 	\end{pmatrix}
 	}_{\vec{N}}\nonumber
 \end{align}
 \begin{align}	
 	\Rightarrow d \cdot A\cdot\vec{\mu}=\vec{N}
 \end{align}
-Weil $A$ eine $12\times 9 $ ist, wird daraus
+Weil $A$ eine $m\times n $-Matrix ist, mit $m\not= n$, wird daraus
 \begin{align}
 	\vec{\mu}=\frac{1}{d}\left(A^TA\right)^{-1}\cdot A^T\cdot\vec{N},
 \end{align}
 dabei ist $d$ die Kantenlänge eines Elementarwürfels.
-Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben durch
+Der Fehler des $\vec{N}$ ist dabei durch eine Matrix gegeben
 \begin{align}
 	V[\vec{N}]=
 	\begin{pmatrix}
