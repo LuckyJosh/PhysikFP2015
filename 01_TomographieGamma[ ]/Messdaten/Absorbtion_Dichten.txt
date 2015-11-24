@@ -1,5 +1,5 @@
 # Temperatur 298 K, [Dichte] = g/cm³
-Aluminium, Eisen, Blei (20°C), Messing, Delrin, Luft		
+Aluminium, Eisen, Blei (20C), Messing, Delrin, Luft		
 2,70, 7.874, 11.342, 8.4, 1.42, 0.001
 
 #Aluminium
