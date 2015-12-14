@@ -136,21 +136,23 @@ autolang=hyphen, % load hyphenation rules for if language of bibentry is not
 \begin{document}
 	\beginpgfgraphicnamed{tikz-Frequenzspektrum}
 		\begin{tikzpicture}
-		\draw[color=white] (0,0) rectangle (5,5);
+		\draw[color=white] (0,0) rectangle (5,5*3/4);
 		
-			\node[blue] at (0,4)[left]{\small$\hat U_T$};
-			\node[red] at (0,1.5)[left]{\small$\frac{1}{2}m\hat U_T$};
+			\node[blue] at (0,4*3/4)[left]{\small$\hat U_T$};
+			\node[red] at (0,1.5*3/4)[left]{\small$\frac{1}{2}m\hat U_T$};
 			\node at(1.25,0)[below]{\scriptsize$\omega_T-\omega_M$};
 			\node at(2.5,0)[below]{\scriptsize$\omega_T$};
 			\node at(3.75,0)[below]{\scriptsize$\omega_T+\omega_M$};
-				
-			\draw[very thick](2.5,0)--(2.5,4);
-			\draw[very thick](1.25,0)--(1.25,1.5);
-			\draw[very thick](3.75,0)--(3.75,1.5);
-			\draw[->, very thick](0,0) -- (0,5) node[left]{$U$};
-			\draw[dashed,red,thick](0,1.5)--(3.75,1.5);
-			\draw[dashed,blue,thick](0,4)--(2.5,4);
+			
+			\draw[very thick](2.5,0)--(2.5,4*3/4);
+			\draw[very thick](1.25,0)--(1.25,1.5*3/4);
+			\draw[very thick](3.75,0)--(3.75,1.5*3/4);
+			\draw[->, very thick](0,0) -- (0,5*3/4) node[left]{$U$};
+			\draw[dashed,red,thick](0,1.5*3/4)--(3.75,1.5*3/4);
+			\draw[dashed,blue,thick](0,4*3/4)--(2.5,4*3/4);
 			\draw[->, very thick](0,0) -- (5,0) node[below]{$\omega$};
+			\draw[very thick](0,4*3/4) -- (0.2,4*3/4);
+			\draw[very thick](0,2*3/4) -- (0.2,2*3/4);
 	
 		\end{tikzpicture}
 	\endpgfgraphicnamed
