@@ -21,6 +21,7 @@ ist in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} dargestellt. Für 
 wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $\omega$ der Träger- und Modulationsspannung
 eingestellt.
 \begin{empheq}{alignat=2}
+	\label{eq:ausgangswerte_ohne_traeger}
 	\hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
 	\omega_{\text{T}} &= \SI{1.0}{\mega\hertz} \\
 	\hat{U}_{\text{M}} &= \SI{301}{\milli\volt} \quad \notag
@@ -51,11 +52,11 @@ lieferte die in \cref{fig:amplituden_modulierte_spannung_mit_traeger} gezeigte S
 Für die Erzeugung wurden die folgenden Werte der Ausgangsspannungen verwendet.
 
 \begin{empheq}{alignat=2}
+\label{eq:ausgangswerte_mit_traeger}
 \hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
 \omega_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
 \hat{U}_{\text{M}} &= \SI{100}{\milli\volt} \quad \notag
 \omega_{\text{M}} &= \SI{93.8}{\kilo\hertz}
-\label{eq:ausgangswerte_mit_traeger}
 \end{empheq} 
 
 
@@ -118,8 +119,8 @@ m = \frac{2\cdot\hat{U}_{\text{T$\pm$M}}}{\hat{U}_{\text{T}}}= \num{0.178}.
 Diese Berechnung kann durchgeführt werden, da die Proportionalitätskonstante für die Spannungen jeweils
 die gleiche ist, sodass diese sich bei der Division der Spannungen kürzt.   
 
-Wird die Berechnung nach \cref{eq:modulationsgrad_frequenz} mit den Ausgangswerten 
-\cref{eq:ausgangswerte_mit_traeger} durchgeführt so ergibt sich ein Modulationsgrad von 
+Wird die Berechnung nach \cref{eq:modulationsgrad_frequenz} mit den Einstellungen 
+\eqref{eq:ausgangswerte_mit_traeger} durchgeführt so ergibt sich ein Modulationsgrad von 
 $m = \num{0.213}$, welcher in der gleichen Größenordnung wie die zuvor bestimmten Werte liegt. 
 
 %Spannung(Träger): 0.0527229861423 V
@@ -150,17 +151,31 @@ aufgetragen. Die Ausgleichsrechnung ergab die Parameter
 
 \input{../Grafiken/fig_Phasenempfindlicher_Gleichrichter.tex}
 
+Die Demodulation einer amplitudenmodulierten Spannung\footnote{Unter Verwendung der Einstellungen 
+\eqref{eq:ausgangswerte_ohne_traeger} erzeugt.} mit der Ringmodulatorschaltung
+liefert die in \cref{fig:amplituden_modulation_ring_demodulation} dargestellte Spannung.
+Zum Vergleich ist zusätzlich die ursprüngliche Modulationsspannung dargestellt. 
+Es zeigt sich, dass die beiden Spannungen in ihrer Zeitabhängigkeit sehr ähnlich sind, jedoch tritt zwischen 
+Modulationsspannung und der demodulierter Spannung eine Phase auf. Diese lässt sich durch die unterschiedlichen
+Laufzeiten der Spannungen in den verwendeten Kabeln erklären, die sowohl von der Frequenz der Spannung als auch 
+von der Länge der Kabel selbst abhängt. 
+
 \input{../Grafiken/fig_Amplituden_Modulation_Ring_Demodulation.tex}
+
+
+
+
 \input{../Grafiken/fig_Amplituden_Modulation_Diode_Demodulation_Gleichrichter.tex}
 \input{../Grafiken/fig_Amplituden_Modulation_Diode_Demodulation_Tiefpass.tex}
 
 
 
 \subsection{Frequenzmodulation von Spannungen}
+
 \input{../Grafiken/fig_Frequenz_Modulierte_Spannung.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_0.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_1.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_2.tex}
+
+\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert.tex}
+
 
 \subsection{Demodulation von frequenzmodulierten Spannungen}
 \input{../Grafiken/fig_Frequenz_Moduliert_Demodulation_Amplitude.tex}
