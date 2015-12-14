@@ -1,0 +1,159 @@
+
+\RequirePackage{fixltx2e}  % load patch for LaTeX2ε
+\documentclass{scrbook}
+
+
+% Warning, if another latex run is needed
+\usepackage[aux]{rerunfilecheck}
+
+% just list chapters and sections in the toc, not subsections or smaller
+\setcounter{tocdepth}{2}
+
+%------------------------------------------------------------------------------
+%------------------------------ Sprache und Schrift: --------------------------
+%------------------------------------------------------------------------------
+
+% german language
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+
+% for english abstract and english titles in the toc
+\setotherlanguages{english}
+
+% intelligent quotation marks, language and nesting sensitive
+\usepackage[autostyle]{csquotes}
+
+% microtypographical features, makes the text look nicer on the small scale
+\usepackage{microtype}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
+
+%------------------------------------------------------------------------------
+%------------------------ Für die Matheumgebung--------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Enable Unicode-Math and follow the ISO-Standards for typesetting math
+\usepackage[
+math-style=ISO,
+bold-style=ISO,
+sans-style=italic,
+nabla=upright,
+partial=upright,
+]{unicode-math}
+
+\usepackage{empheq}
+\usepackage{physics}
+\usepackage{commath}
+
+% nice, small fracs for the text with \sfrac{}{}
+\usepackage{xfrac}  
+
+
+%------------------------------------------------------------------------------
+%---------------------------- Numbers and Units -------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+locale=DE,
+separate-uncertainty=true,
+per-mode=symbol-or-fraction,
+]{siunitx}
+\sisetup{math-micro=\text{µ},text-micro=µ}
+
+%------------------------------------------------------------------------------
+%-------------------------------- tables  -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{booktabs}       % stellt \toprule, \midrule, \bottomrule
+
+%------------------------------------------------------------------------------
+%-------------------------------- graphics -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{grffile}
+
+% allow figures to be placed in the running text by default:
+\usepackage{scrhack}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+% keep figures and tables in the section
+\usepackage[section, below]{placeins}
+
+
+%------------------------------------------------------------------------------
+%---------------------- customize list environments ---------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{enumitem}
+
+%------------------------------------------------------------------------------
+%------------------------------ Bibliographie ---------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+sorting=none,
+backend=biber,   % use modern biber backend
+autolang=hyphen, % load hyphenation rules for if language of bibentry is not
+% german, has to be loaded with \setotherlanguages
+]{biblatex}
+
+\DefineBibliographyStrings{ngerman}{andothers = {et\,al\adddot}} 
+\addbibresource{references.bib}  % die Bibliographie einbinden
+
+
+%------------------------------------------------------------------------------
+%------------------------------ Sonstiges: ------------------------------------
+%------------------------------------------------------------------------------
+
+%\usepackage[pdfusetitle,unicode,linkbordercolor=tugreen]{hyperref}
+\usepackage{bookmark}
+\usepackage[shortcuts]{extdash}
+\usepackage[german,noabbrev,]{cleveref}
+\usepackage{lineno}
+
+\usepackage{multirow}
+\usepackage{tikz}
+\pgfrealjobname{tikz}
+
+% Konfusionsmatrix einträge
+\newcommand{\rp}{\text{rp}}
+\newcommand{\fn}{\text{fn}}
+\newcommand{\fp}{\text{fp}}
+\newcommand{\rn}{\text{rn}}
+
+% Schnittstellen
+% [ 0.8   0.95  0.95  0.9   0.9   0.6   0.35] [ 0.  1.  2.  3.  4.  5.  6.]
+%         10.7
+\begin{document}
+	\beginpgfgraphicnamed{tikz-Frequenzspektrum}
+		\begin{tikzpicture}
+		\draw[color=white] (0,0) rectangle (5,5);
+		
+			\node[blue] at (0,4)[left]{\small$\hat U_T$};
+			\node[red] at (0,1.5)[left]{\small$\frac{1}{2}m\hat U_T$};
+			\node at(1.25,0)[below]{\scriptsize$\omega_T-\omega_M$};
+			\node at(2.5,0)[below]{\scriptsize$\omega_T$};
+			\node at(3.75,0)[below]{\scriptsize$\omega_T+\omega_M$};
+				
+			\draw[very thick](2.5,0)--(2.5,4);
+			\draw[very thick](1.25,0)--(1.25,1.5);
+			\draw[very thick](3.75,0)--(3.75,1.5);
+			\draw[->, very thick](0,0) -- (0,5) node[left]{$U$};
+			\draw[dashed,red,thick](0,1.5)--(3.75,1.5);
+			\draw[dashed,blue,thick](0,4)--(2.5,4);
+			\draw[->, very thick](0,0) -- (5,0) node[below]{$\omega$};
+	
+		\end{tikzpicture}
+	\endpgfgraphicnamed
+	
+\end{document}
+
