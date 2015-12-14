@@ -17,7 +17,7 @@ def texFileText(filename):
     label = r"\label{{{}}}".format("fig:"+filename.split(".")[0].lower())
     figure_env[3] = r"\caption{{{}}}".format(label)+"\n"
     figure_env[4] = r"\end{figure}"
-    return "".join(["\n\\FloatBarrier"]+figure_env+["\n\\FloatBarrier"])
+    return "".join(["\\FloatBarrier\n"]+figure_env+["\n\\FloatBarrier"])
 
 
 def makeTexFile(filename, content, overwrite=False):

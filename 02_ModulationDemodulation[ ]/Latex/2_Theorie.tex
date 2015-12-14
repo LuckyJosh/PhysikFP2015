@@ -3,7 +3,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.75\textwidth]{../Grafiken/Frequenzbaender.pdf}
-	\caption{Beispiel für eine Amplitudenmodulierte Spannung.\cite{V59}}
+	\caption{Beispiel für eine Amplitudenmodulierte Spannung.\label{fig:modulationsgrad_amplitude}\cite{V59}}
 \end{figure}
 In einer Schaltung ist eine hochfrequente Trägerspannung $U_T$, die geschrieben werden kann als
 \begin{align}
@@ -24,7 +24,7 @@ mit dem Modulationsgrad $m$, der definiert ist als
 	m = \gamma \hat U_M
 \end{align}
 mit der Proportionalitätskonstante $\gamma$ mit der Dimension $\frac{1}{V}$.
-Das $m$ liegt zwischen 0 und 1.\\
+Das $m$ liegt zwischen 0 und 1.
 Die Spannung $U_3$ kann umgeschrieben werden in
 \begin{align}
 	U_3(t)=\hat U_T\left[\cos\omega_Tt+\frac{1}{2}m\cos\left(\omega_T+\omega_M\right)t+\frac{1}{2}\cos\left(\omega_t-\omega_M\right)t\right]
@@ -50,6 +50,7 @@ Daraus folgt für die modulierte Spannung am Punkt R
 wobei eine Proportionalitätkonstante ist. Unter Berücksichtigung, dass die Spannung $U_M$ und $U_T$ um eine Phase $\phi$ verschieden Schwingen können, folgt
 \begin{align}
 	U_R(t)=\Gamma\cdot \frac{\hat U_T\cdot\hat U_M}{2}\left[ \left(\cos\left(\omega_T+\omega_M\right)t+\phi\right) +\cos\left(\left(\omega_T-\omega_M\right)t-\phi\right) \right].
+	\label{eq:amplituden_moduliert_ohne_traeger}
 \end{align}
 Daraus lässt sich erkennen das nur noch die beiden Äußeren Frequenzen auftreten.
 

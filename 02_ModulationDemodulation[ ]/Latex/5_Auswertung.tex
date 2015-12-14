@@ -1,23 +1,152 @@
 % !TeX root = Protokoll.tex
+
+Für die durchgeführten Modulationen und Demodulationen wurde jeweils ein Spannungsgenerator für 
+die Träger- und die Modulationsspannung verwendet. Das Frequenzspektrum dieser Generatoren bei einer 
+festgelegten Grundfrequenz ist für die Trägerspannung in \cref{fig:traegerspannungoberwellen} und für 
+die Modulationsspannung in \cref{fig:modulationsspannungoberwellen} dargestellt. Hervor gehoben sind 
+jeweils die festgelegte Grundschwingung und eine der zusätzlich im Spektrum vorhandenen Oberschwingungen.  
+
+\input{../Grafiken/fig_TraegerspannungOberwellen.tex}
+
+\input{../Grafiken/fig_ModulationsspannungOberwellen.tex}
+
+An diesen Spektren ist zu erkennen, dass bereits die von den Generatoren erzeugten Spannungen mehr 
+als nur eine Frequenz enthalten. Es ist somit davon auszugehen, dass durch diese Störterme verursacht
+werden, die die Qualität der durchgeführten Modulationen negativ beeinflussen. 
+
 \subsection{Amplitudenmodulation von Spannungen}
+
+Die unter Verwendung des Ringmodulators erzeugte, amplitudenmodulierte Spannung mit Trägerunterdrückung 
+ist in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} dargestellt. Für die Erzeugung dieser Spannung
+wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $\omega$ der Träger- und Modulationsspannung
+eingestellt.
+\begin{empheq}{alignat=2}
+	\hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
+	\omega_{\text{T}} &= \SI{1.0}{\mega\hertz} \\
+	\hat{U}_{\text{M}} &= \SI{301}{\milli\volt} \quad \notag
+	\omega_{\text{M}} &= \SI{43.4}{\kilo\hertz}
+\end{empheq}
+ 
+Nach \cref{eq:amplituden_moduliert_ohne_traeger} hat eine auf diese Art modulierte Spannung die Gestalt einer
+Schwebung, welche in der angegebene Abbildung zu erkennen ist.
 
 \input{../Grafiken/fig_Amplituden_Modulierte_Spannung_ohne_Traeger.tex}
 
-\input{../Grafiken/fig_Frequenzspektrum_b_AmpModuliertTraegerunterdrueckung_0.tex}
+In der \cref{fig:frequenzspektrum_b_ampmodulierttraegerunterdrueckung} ist das Spektrum dieser
+amplitudenmodulierten Spannung dargestellt. In \cref{fig:frequenzspektrum_b_ampmodulierttraegerunterdrueckung_0}
+ist die trotz Trägerunterdrückung vorhandene Trägerspannung und in 
+\cref{fig:frequenzspektrum_b_ampmodulierttraegerunterdrueckung_1} der Frequenzunterschied der ersten beiden 
+Seitenbänder hervorgehoben. 
 
-\input{../Grafiken/fig_Frequenzspektrum_b_AmpModuliertTraegerunterdrueckung_1.tex}
+\input{../Grafiken/fig_Frequenzspektrum_b_AmpModuliertTraegerunterdrueckung.tex}
+
+Das Auftreten der stark gedämpften Trägerfrequenz ist dabei auf eine nicht 
+ideale Multiplikation der Spannungen durch den Ringmodulator zurückzuführen. 
+Anhand des dargestellten Frequenzunterschieds zeigt sich, dass die beiden Seitenbänder bei den erwarteten 
+Frequenzen $\omega_{\text{T}} \pm \omega_{\text{M}}$ liegen.
+
+
+Die Amplitudenmodulation mit Trägerabstrahlung, die mit Hilfe einer Germanium-Diode durchgeführt wurde 
+lieferte die in \cref{fig:amplituden_modulierte_spannung_mit_traeger} gezeigte Spannung.
+Für die Erzeugung wurden die folgenden Werte der Ausgangsspannungen verwendet.
+
+\begin{empheq}{alignat=2}
+\hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
+\omega_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
+\hat{U}_{\text{M}} &= \SI{100}{\milli\volt} \quad \notag
+\omega_{\text{M}} &= \SI{93.8}{\kilo\hertz}
+\label{eq:ausgangswerte_mit_traeger}
+\end{empheq} 
+
 
 \input{../Grafiken/fig_Amplituden_Modulierte_Spannung_mit_Traeger.tex}
 
+Die Verwendung einer Diode führt dazu, dass die unteren Halbwellen der Spannung abgeschnitten werden, 
+sodass die Modulation nur noch an der Variation der Amplitude der oberen Halbwellen erkennbar ist.
+Für die Bestimmung des Modulationsgrades $m$ aus der Zeitabhängigkeit der modulierten Spannung
+wurden diese Amplituden in \cref{fig:amplituden_modulierte_spannung_mit_traeger_modulationsgrad}
+einzeln dargestellt. Ferner wurden jeweils die lokalen Extrema der Amplitude hervorgehoben und
+aus diesen Werten jeweils der Mittelwert für Minimum und Maximum zu
+\begin{empheq}{align*}
+	\mean{\hat{U}_{\text{min}}} &= \SI{0.083(1)}{\volt}\\
+	\mean{\hat{U}_{\text{max}}} &= \SI{0.1154(4)}{\volt},
+\end{empheq}
+bestimmt. Nach den in \cref{fig:modulationsgrad_amplitude}
+dargestellten Gleichungen und den hier bestimmten Werten folgt für den Modulationsgrad
+\begin{empheq}{equation}
+	m = \frac{\mean{\hat{U}_{\text{max}}} - \mean{\hat{U}_{\text{min}}}}{\mean{\hat{U}_{\text{max}}} + \mean{\hat{U}_{\text{min}}}} = \num{0.164(6)}.
+\end{empheq}  
+
+
+%U_min = 0.0829+/-0.0010
+%U_max = 0.1154+/-0.0004ein
+%m = 0.164+/-0.006
+
 \input{../Grafiken/fig_Amplituden_Modulierte_Spannung_mit_Traeger_Modulationsgrad.tex}
 
+Das Frequenzspektrum der modulierten Spannung ist in \cref{fig:frequenzspektrum_c_ampmodulierttraeger}
+gezeigt. Aus \cref{fig:frequenzspektrum_c_ampmodulierttraeger_differenz} ist erkennbar, dass die 
+Seitenbänder der Modulation wie zuvor bei den erwarteten Frequenzen 
+$\omega_{\text{T}} \pm \omega_{\text{M}}$ liegen. Aus den Abbildungen \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_0}  und \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_1} wird ersichtlich, dass wegen 
+der nicht linearen Kennlinie der Diode mit der die Modulation durchgeführt wurde Oberschwingungen 
+der Trägerfrequenz auftreten. Ein zusätzlicher Beitrag stammt von den Oberschwingungen die bereits in den 
+Ausgangsspannungen vorhanden waren.  
+ 
 \input{../Grafiken/fig_Frequenzspektrum_c_AmpModuliertTraeger.tex}
 
-\input{../Grafiken/fig_Frequenzspektrum_c_AmpModuliertTraeger_Oberwellen_0.tex}
+Für die Bestimmung des Modulationsgrad aus dem Spektrum werden die Amplituden der Grundschwingung \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_0} und die Amplitude der Seitenbänder 
+\ref{fig:frequenzspektrum_c_ampmodulierttraeger} benötigt. 
+Der Leistungspegel der Grundschwingung ist mit $L_{\text{P,T}}= \SI{-25.56}{dBm}$ angeben. Aus der Einteilung der
+$y$-Richtung des Frequenzanalysators (\SI{13}{dB/}) lässt sich der Leistungspegel der Seitenbänder 
+durch nachmessen auf $L_{\text{P,T$\pm$M}}= \SI{-46.56}{dBm}$ bestimmen.
+Der Leistungspegel gibt das logarithmierte Verhältnis der Leistung zu $P_{0} = \SI{1}{\milli\watt}$ an.
+Damit folgt für die Leistung,
+\begin{empheq}{equation}
+	P = \exp(\frac{L_{p}}{10}) \cdot P_{0}.
+\end{empheq}
+Die Leistung ist nun proportional zum Quadrat der Amplitude der Spannung, sodass
+sich für die gesuchten Amplituden,
+\begin{empheq}{align*}
+\hat{U}_{\text{T}} &\propto \SI{0.053}{\volt}\\
+\hat{U}_{\text{T$\pm$M}} &\propto \SI{0.005}{\volt},
+\end{empheq}
+ergibt. Aus der \cref{fig:Frequenzspektrum} und den berechneten Werten folgt für den Modulationsgrad
+\begin{empheq}{equation}
+m = \frac{2\cdot\hat{U}_{\text{T$\pm$M}}}{\hat{U}_{\text{T}}}= \num{0.178}.
+\label{eq:modulationsgrad_frequenz}
+\end{empheq} 
+Diese Berechnung kann durchgeführt werden, da die Proportionalitätskonstante für die Spannungen jeweils
+die gleiche ist, sodass diese sich bei der Division der Spannungen kürzt.   
 
-\input{../Grafiken/fig_Frequenzspektrum_c_AmpModuliertTraeger_Oberwellen_1.tex}
+Wird die Berechnung nach \cref{eq:modulationsgrad_frequenz} mit den Ausgangswerten 
+\cref{eq:ausgangswerte_mit_traeger} durchgeführt so ergibt sich ein Modulationsgrad von 
+$m = \num{0.213}$, welcher in der gleichen Größenordnung wie die zuvor bestimmten Werte liegt. 
+
+%Spannung(Träger): 0.0527229861423 V
+%Spannung(Modulation): 0.00469894108605 V
+%Modulationsgrad: 0.178250187627
 
 \subsection{Demodulation von Amplitudenmodulierten Spannungen}
+
+Vor der Verwendung des Ringmodulators für die Demodulation einer amplitudenmodulierten Spannung.
+soll zunächst die Abhängigkeit der Gleichspannung am Ausgang X des Ringmodulators von der Phase
+$\varphi$ zwischen den Wechselspannungen an den Eingängen R und L betrachtet werden. Die 
+zu diesem Zweck aufgenommenen Messwerte sind in \cref{fig:phasenempfindlicher_gleichrichter} 
+mit entsprechender Ausgleichskurve der Gestalt
+\begin{empheq}{equation}
+	U(\varphi) = a \cdot cos(\varphi + b), 
+\end{empheq}
+aufgetragen. Die Ausgleichsrechnung ergab die Parameter
+\addtocounter{equation}{-1}
+\begin{subequations}
+\begin{empheq}{align}
+	a &= \SI{89(2)}{\milli\volt}\\
+	b &= \SI{0.05(2)}{rad} = \SI{3(1)}{\degree}.
+\end{empheq}
+\end{subequations}
+
+%Amplitude: 89.1+/-1.6
+%Phase: 0.048+/-0.018 2.8+/-1.0
 
 \input{../Grafiken/fig_Phasenempfindlicher_Gleichrichter.tex}
 
