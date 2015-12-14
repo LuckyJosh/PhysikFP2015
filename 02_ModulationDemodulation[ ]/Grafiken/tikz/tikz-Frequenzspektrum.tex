@@ -1,5 +1,5 @@
 
-\RequirePackage{fixltx2e}  % load patch for LaTeX2?
+\RequirePackage{fixltx2e}  % load patch for LaTeX2Îµ
 \documentclass{scrbook}
 
 
@@ -30,7 +30,7 @@
 \defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
 
 %------------------------------------------------------------------------------
-%------------------------ Für die Matheumgebung--------------------------------
+%------------------------ FÃ¼r die Matheumgebung--------------------------------
 %------------------------------------------------------------------------------
 
 \usepackage{amsmath}
@@ -63,7 +63,7 @@ locale=DE,
 separate-uncertainty=true,
 per-mode=symbol-or-fraction,
 ]{siunitx}
-\sisetup{math-micro=\text{µ},text-micro=µ}
+\sisetup{math-micro=\text{Âµ},text-micro=Âµ}
 
 %------------------------------------------------------------------------------
 %-------------------------------- tables  -------------------------------------
@@ -124,7 +124,7 @@ autolang=hyphen, % load hyphenation rules for if language of bibentry is not
 \usepackage{tikz}
 \pgfrealjobname{tikz}
 
-% Konfusionsmatrix einträge
+% Konfusionsmatrix eintrÃ¤ge
 \newcommand{\rp}{\text{rp}}
 \newcommand{\fn}{\text{fn}}
 \newcommand{\fp}{\text{fp}}
@@ -134,27 +134,28 @@ autolang=hyphen, % load hyphenation rules for if language of bibentry is not
 % [ 0.8   0.95  0.95  0.9   0.9   0.6   0.35] [ 0.  1.  2.  3.  4.  5.  6.]
 %         10.7
 \begin{document}
-	\beginpgfgraphicnamed{tikz-Energieschema}
+	\beginpgfgraphicnamed{tikz-Frequenzspektrum}
 		\begin{tikzpicture}
-		\draw[color=white] (0,0) rectangle (5,5);
-
-	
-		\draw[blue, ->, >=stealth] (1.25,4)--(3,2.5) 
-		node[midway,right] {\tiny $\beta^{-}$-Zerfall}; 
-%		max($E_{\beta^{-}})=\SI{0.512}{\mega\electronvolt}$};
-		\draw[blue, ->, >=stealth] (1.25,4)--(3,1.0)
-		node[midway,left] {\tiny $\beta^{-}$-Zerfall}; %max($E_{\beta^{-}})=\SI{1.174}{\mega\electronvolt}$};
-		\draw[red, ->, >=stealth] (3.25,2.5)--(3.25,1.0) node[midway,right] {\tiny  $E_{\gamma}=\SI{0.6617}{\mega\electronvolt}$};
-	
-			\draw[very thick] (0.5,4) -- (2,4) node[midway,above] {\small  
-				${}^{137}_{\;\, 55}$Cs};
+		\draw[color=white] (0,0) rectangle (5,5*3/4);
+		
+			\node[blue] at (0,4*3/4)[left]{\small$\hat U_T$};
+			\node[red] at (0,1.5*3/4)[left]{\small$\frac{1}{2}m\hat U_T$};
+			\node at(1.25,0)[below]{\scriptsize$\omega_T-\omega_M$};
+			\node at(2.5,0)[below]{\scriptsize$\omega_T$};
+			\node at(3.75,0)[below]{\scriptsize$\omega_T+\omega_M$};
 			
-			\draw[very thick] (3,2.5) -- (4.5,2.5) node[midway,above] {\small  
-				${}^{137\text{m}}_{\;\, 56}$Ba};
-			
-			\draw[very thick] (3,1.0) -- (4.5,1.0) node[midway,above] {\small  
-				${}^{137}_{\;\, 56}$Ba};
+			\draw[very thick](2.5,0)--(2.5,4*3/4);
+			\draw[very thick](1.25,0)--(1.25,1.5*3/4);
+			\draw[very thick](3.75,0)--(3.75,1.5*3/4);
+			\draw[->, very thick](0,0) -- (0,5*3/4) node[left]{$U$};
+			\draw[dashed,red,thick](0,1.5*3/4)--(3.75,1.5*3/4);
+			\draw[dashed,blue,thick](0,4*3/4)--(2.5,4*3/4);
+			\draw[->, very thick](0,0) -- (5,0) node[below]{$\omega$};
+			\draw[very thick](0,4*3/4) -- (0.2,4*3/4);
+			\draw[very thick](0,2*3/4) -- (0.2,2*3/4);
+	
 		\end{tikzpicture}
 	\endpgfgraphicnamed
 	
 \end{document}
+
