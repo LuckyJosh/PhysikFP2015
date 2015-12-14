@@ -30,6 +30,13 @@ Die Spannung $U_3$ kann umgeschrieben werden in
 	U_3(t)=\hat U_T\left[\cos\omega_Tt+\frac{1}{2}m\cos\left(\omega_T+\omega_M\right)t+\frac{1}{2}\cos\left(\omega_t-\omega_M\right)t\right]
 \end{align}
 Daraus lässt sich das Frequenzspektrum ablesen, dieses ist in \cref{fig:Frequenzspektrum} dargestellt.
+Der einfachste Amplitudenmodulator ist die Diode, weil sie das eine nicht Lineare Kennlinie besitzt.
+Durch das anlegen zweier Spannungen, ensteht das Produkt zweier Spannungen. 
+\begin{align}
+	I(U_T+U_M)=a_0+a_1(U_T+U_M)+a_2\left(U_T^2+U_M 2\right)+2a_2U_MU_T
+\end{align}
+Allerdings treten in der Reihenentwicklung der Diode auch unerwünschte Terme auf, wie zum Beispiel $U_T$, $U_M^2$ und $U_T^2$.
+
 \begin{figure}
 	\centering
 	\includegraphics[width =\textwidth/2]{../Grafiken/tikz/tikz-Frequenzspektrum.pdf}
@@ -41,7 +48,7 @@ Daraus lässt sich das Frequenzspektrum ablesen, dieses ist in \cref{fig:Frequen
 	\includegraphics[width = 0.75\textwidth]{../Grafiken/Ringmodulator.pdf}
 	\caption{Eine Skizze eines Ringmodulators.\cite{V59}\label{fig:Ringmodulator}}
 \end{figure}
-Die Amplitudenmodulation wird in diesem Versuch mithilfe eines Ringmodulators durchgeführt, die besteht aus 4 im Ring angeordneten Dioden, wie in \cref{fig:Ringmodulator} dargestellt.
+Um dies zu umgehen wird ein Ringmodulator verwendet, die besteht aus 4 im Ring angeordneten Dioden, wie in \cref{fig:Ringmodulator} dargestellt.
 Am Punkt L liegt die Trägerspannung an und am Punkt X die Modulationsspannung.
 Daraus folgt für die modulierte Spannung am Punkt R
 \begin{align}
@@ -101,3 +108,4 @@ Dieses Problem besteht nicht, wenn mithilfe einer Diode und eines Tiefpasses dem
 Allerdings ist aufgrund der Kennlinie der Diode eine Verzerrung der Modulationsspannung zu erwarten.
 Dies kann verhindert werden, indem eine Gegentaktschaltung verwendet wird.\\
 Die Demudulation einer frequenzmodellierten Schwingung, geschieht mithilfe eines LC-Schwingkreises. Dafür wird die Resonanzfrequenz des Schwingkreises so eingestellt, so dass die Trägerfrequenz $\omega_T$ auf der Steilen Flanke der Resonanzkurve liegt. Dieses Verfahren macht aus der frequenzmodellierten eine Amplitudenmodellierte Spannung.
+\newpage
