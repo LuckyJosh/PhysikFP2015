@@ -21,10 +21,11 @@ ist in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} dargestellt. Für 
 wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $\omega$ der Träger- und Modulationsspannung
 eingestellt.
 \begin{empheq}{alignat=2}
-	\hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
-	\omega_{\text{T}} &= \SI{1.0}{\mega\hertz} \\
+	\label{eq:ausgangswerte_ohne_traeger}
+	\hat{U}_{\text{T}} &= \SI{968}{\milli\volt} \quad
+	\omega_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
 	\hat{U}_{\text{M}} &= \SI{301}{\milli\volt} \quad \notag
-	\omega_{\text{M}} &= \SI{43.4}{\kilo\hertz}
+	\omega_{\text{M}} &= \SI{43}{\kilo\hertz}
 \end{empheq}
  
 Nach \cref{eq:amplituden_moduliert_ohne_traeger} hat eine auf diese Art modulierte Spannung die Gestalt einer
@@ -51,11 +52,11 @@ lieferte die in \cref{fig:amplituden_modulierte_spannung_mit_traeger} gezeigte S
 Für die Erzeugung wurden die folgenden Werte der Ausgangsspannungen verwendet.
 
 \begin{empheq}{alignat=2}
+\label{eq:ausgangswerte_mit_traeger}
 \hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
 \omega_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
 \hat{U}_{\text{M}} &= \SI{100}{\milli\volt} \quad \notag
 \omega_{\text{M}} &= \SI{93.8}{\kilo\hertz}
-\label{eq:ausgangswerte_mit_traeger}
 \end{empheq} 
 
 
@@ -118,8 +119,8 @@ m = \frac{2\cdot\hat{U}_{\text{T$\pm$M}}}{\hat{U}_{\text{T}}}= \num{0.178}.
 Diese Berechnung kann durchgeführt werden, da die Proportionalitätskonstante für die Spannungen jeweils
 die gleiche ist, sodass diese sich bei der Division der Spannungen kürzt.   
 
-Wird die Berechnung nach \cref{eq:modulationsgrad_frequenz} mit den Ausgangswerten 
-\cref{eq:ausgangswerte_mit_traeger} durchgeführt so ergibt sich ein Modulationsgrad von 
+Wird die Berechnung nach \cref{eq:modulationsgrad_frequenz} mit den Einstellungen 
+\eqref{eq:ausgangswerte_mit_traeger} durchgeführt so ergibt sich ein Modulationsgrad von 
 $m = \num{0.213}$, welcher in der gleichen Größenordnung wie die zuvor bestimmten Werte liegt. 
 
 %Spannung(Träger): 0.0527229861423 V
@@ -150,18 +151,121 @@ aufgetragen. Die Ausgleichsrechnung ergab die Parameter
 
 \input{../Grafiken/fig_Phasenempfindlicher_Gleichrichter.tex}
 
+Die Demodulation einer amplitudenmodulierten Spannung\footnote{Unter Verwendung der Einstellungen 
+\eqref{eq:ausgangswerte_ohne_traeger} erzeugt.} mit der Ringmodulatorschaltung
+liefert die in \cref{fig:amplituden_modulation_ring_demodulation} dargestellte Spannung.
+Zum Vergleich ist zusätzlich die ursprüngliche Modulationsspannung dargestellt. 
+Es zeigt sich, dass die beiden Spannungen in ihrer Zeitabhängigkeit sehr ähnlich sind, jedoch tritt zwischen 
+Modulationsspannung und der demodulierter Spannung eine Phase auf. Diese lässt sich durch die unterschiedlichen
+Laufzeiten der Spannungen in den verwendeten Kabeln erklären, die sowohl von der Frequenz der Spannung als auch 
+von der Länge der Kabel selbst abhängt. 
+
 \input{../Grafiken/fig_Amplituden_Modulation_Ring_Demodulation.tex}
+
+Die Demodulation der amplitudenmodulierten Spannung\footnote{Unter Verwendung der Einstellungen 
+	\eqref{eq:ausgangswerte_ohne_traeger} erzeugt.} mit einer Diode liefert
+nach der Diode die in \cref{fig:amplituden_modulation_diode_demodulation_gleichrichter}
+dargestellte Spannung. Die Spannung an dem nachgeschalteten Tiefpass kann in 
+\cref{fig:amplituden_modulation_diode_demodulation_tiefpass} betrachtet werden.
+Der Spannungsverlauf nach der Diode zeigt, wie zu erwarten ist, dass die unteren Halbwellen 
+durch die Diode unterdrückt werden. Im Vergleich zur Modulationsspannung zeigt sich
+ferner, dass die Amplitude der übrigen Halbwellen mit der Modulationsfrequenz variiert.
+Der nachgeschaltete Tiefpass wird nun dazu verwendet,
+die Frequenzen oberhalb der Modulationsfrequenz zu unterdrücken, sodass man diese 
+lediglich Phasenverschoben und in diesem Fall stark abgeschwächt zurückerhält.
+Die Abschwächung ist dabei auf die Widerstände in den verwendeten Schaltungen zurückzuführen.
+
 \input{../Grafiken/fig_Amplituden_Modulation_Diode_Demodulation_Gleichrichter.tex}
+
 \input{../Grafiken/fig_Amplituden_Modulation_Diode_Demodulation_Tiefpass.tex}
 
 
 
-\subsection{Frequenzmodulation von Spannungen}
+\subsection{Frequenzmodulation von Spannungen}\label{sec:Frequenzmodulation}
+
+Für die Frequenzmodulation der Trägerspannung werden die beiden Seitenbänder einer 
+Amplitudenmodulation (mit einem Ringmodulator) und die 
+um $\tfrac{\pi}{2}$ phasenverschobene Trägerspannung benötigt.
+Für die Spannungen wurden die folgenden Einstellungen verwendet.
+\begin{empheq}{alignat=2}
+\label{eq:ausgangswerte_frequenz}
+\hat{U}_{\text{T}} &= \SI{969}{\milli\volt} \quad
+\omega_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
+\hat{U}_{\text{M}} &= \SI{580}{\milli\volt} \quad \notag
+\omega_{\text{M}} &= \SI{43}{\kilo\hertz}
+\end{empheq} 
+
+In \cref{fig:frequenz_modulierte_spannung} ist die entsprechende Ergebnisspannung 
+dargestellt. Die Frequenzvariation ist, trotz des geringen Maßes, an den Abständen 
+der Nulldurchgänge der Spannung zu erkennen. Desweiteren lässt sich ebenfalls eine 
+geringe Variation in der Amplitude feststellen. Dies lässt darauf schließen, dass 
+die Phasenverschiebung nicht exakt um $\tfrac{\pi}{2}$ durchgeführt wurde.
+Dies führt aufgrund des trigonometrischen Additionstheorems
+\begin{empheq}{equation}
+	\cos(\omega t \pm \varphi) = \cos(\omega t)\cos(\varphi) \mp \sin(\omega t)\sin(\varphi)
+\end{empheq}
+zu nicht verschwindenden Kosinusanteilen und damit zu einem geringen Maß an Amplitudenmodulation.
+
 \input{../Grafiken/fig_Frequenz_Modulierte_Spannung.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_0.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_1.tex}
-\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert_2.tex}
+
+In \cref{fig:frequenzspektrum_d_freqmoduliert} ist das Frequenzspektrum dieser
+frequenzmodulierten Spannung dargestellt. In \cref{fig:frequenzspektrum_d_freqmoduliert_0}
+ist die Trägerfrequenz hervorgehoben, während die Abbildungen \ref{fig:frequenzspektrum_d_freqmoduliert_1}
+und \ref{fig:frequenzspektrum_d_freqmoduliert_2} die Frequenzunterschiede der ersten und zweiten Seitenbänder 
+aufzeigen. Aus diesen Abbildungen ist ersichtlich, dass die Seitenbänder bei den erwarteten Frequenzen
+$\omega_{\text{T}} \pm n\omega_{\text{M}}$ liegen. Da nicht nur die erste Ordnung an Seitenbändern auftritt,
+ist außerdem festzustellen, dass die Frequenzmodulation keinen geringen Frequenzhub besitzt. Neben dieser
+Ursache tragen auch die Oberschwingungen in den verwendeten Eingangsspannungen zum Auftreten dieser Frequenzen
+bei.   
+\input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert.tex}
+
+Aus der in \cref{fig:frequenz_modulation_d_phasenvariation} dargestellten periodischen Phasenvariation
+kann die maximale Frequenzvariation als Breite der abgebildeten "Verschmierung" bestimmt werden.
+
+\input{../Grafiken/fig_Frequenz_Modulation_d_Phasenvariation.tex}
+
+Mit einer Kante im Ursprung und der anderen auf der ersten Einteilung in x-Richtung ergibt sich die 
+Breite der Kurve aus der dargestellten Achseneinteilung zu 
+\begin{empheq}{equation}
+  \Delta t = \SI{360}{\nano\second}.
+\end{empheq}
+
+
+
+Entsprechend folgt durch bilden des Kehrbruches die maximale Frequenzvariation und damit der Frequenzhub
+\begin{empheq}{equation}
+\Delta f = \frac{1}{\Delta t} = \SI{2.778}{\mega\hertz}.
+\end{empheq}
+
+Aus \cref{eq:frequenzhub} folgt damit der Modulationsgrad dieser frequenzmodulierten Spannung,
+\begin{empheq}{equation}
+	m = \num{2.778}.
+\end{empheq}
+Wie bereits das Frequenzspektrum \cref{fig:frequenzspektrum_d_freqmoduliert} vermuten ließ,
+ist der Modulationsgrad dieser Spannung nicht gering im Sinne der Ungleichung $m\tfrac{\omega_{\text{T}}}{\omega_{\text{M}}} << 1$.
+
+
+
 
 \subsection{Demodulation von frequenzmodulierten Spannungen}
+
+Die Demodulation der frequenzmodulierten Spannung aus \cref{sec:Frequenzmodulation} erfolgt
+unter Verwendung eines Schwingkreises, der diese in eine Amplitudenmodulation überführt, und eines
+Tiefpasses. Die Spannung die sich nach der Umwandlung in eine Amplitudenmodulation ergibt ist in 
+\cref{fig:frequenz_moduliert_demodulation_amplitude} gezeigt. Die Spannung die an dem nachgeschalteten 
+Tiefpass abgegriffen wird ist in \cref{fig:frequenz_moduliert_demodulation} dargestellt.
+
+
 \input{../Grafiken/fig_Frequenz_Moduliert_Demodulation_Amplitude.tex}
 \input{../Grafiken/fig_Frequenz_Moduliert_Demodulation.tex}
+
+Der Verlauf der Amplitudenmodulation zeigt Abweichungen von dem einer Schwebung, der hier 
+wie in \cref{eq:amplituden_moduliert_ohne_traeger} zu erwarten ist. Dies lässt auf eine ungenaue 
+Einstellung des Schwingkreises schließen, wodurch weitere Frequenzen in der Amplitudenmodulation auftreten.
+Die Spannung nach dem Tiefpass hat im Vergleich zur ursprünglichen Modulationsspannung eine sehr stark verringerte
+Amplitude und die doppelte Frequenz. Die starke Dämpfung der Spannung ist auf die Widerstände der verwendeten 
+Schaltung zurückzuführen. Der Unterschied in der Frequenz ist dadurch zu begründen, dass mit dem verwendeten 
+Tiefpass alle Frequenzen über der doppelten Modulationsfrequenz unterdrückt wurden, deren auftreten wiederum durch 
+die ungenaue Amplitudenmodulation begründet werden kann. Durch eine weitere Verringerung der Grenzfrequenz des
+Tiefpasses konnte keine demodulierte Spannung mehr gemessen werden, da deren Amplitude mit diesen Einstellungen 
+zu stark verringert wurde.
