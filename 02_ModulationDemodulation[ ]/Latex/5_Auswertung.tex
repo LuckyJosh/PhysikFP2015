@@ -18,14 +18,14 @@ werden, die die Qualität der durchgeführten Modulationen negativ beeinflussen.
 
 Die unter Verwendung des Ringmodulators erzeugte, amplitudenmodulierte Spannung mit Trägerunterdrückung 
 ist in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} dargestellt. Für die Erzeugung dieser Spannung
-wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $\omega$ der Träger- und Modulationsspannung
+wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $f$ der Träger- und Modulationsspannung
 eingestellt.
 \begin{empheq}{alignat=2}
 	\label{eq:ausgangswerte_ohne_traeger}
 	\hat{U}_{\text{T}} &= \SI{968}{\milli\volt} \quad
-	\omega_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
+	f_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
 	\hat{U}_{\text{M}} &= \SI{301}{\milli\volt} \quad \notag
-	\omega_{\text{M}} &= \SI{43}{\kilo\hertz}
+	f_{\text{M}} &= \SI{43}{\kilo\hertz}
 \end{empheq}
  
 Nach \cref{eq:amplituden_moduliert_ohne_traeger} hat eine auf diese Art modulierte Spannung die Gestalt einer
@@ -44,7 +44,7 @@ Seitenbänder hervorgehoben.
 Das Auftreten der stark gedämpften Trägerfrequenz ist dabei auf eine nicht 
 ideale Multiplikation der Spannungen durch den Ringmodulator zurückzuführen. 
 Anhand des dargestellten Frequenzunterschieds zeigt sich, dass die beiden Seitenbänder bei den erwarteten 
-Frequenzen $\omega_{\text{T}} \pm \omega_{\text{M}}$ liegen.
+Frequenzen $f_{\text{T}} \pm f_{\text{M}}$ liegen.
 
 
 Die Amplitudenmodulation mit Trägerabstrahlung, die mit Hilfe einer Germanium-Diode durchgeführt wurde 
@@ -54,9 +54,9 @@ Für die Erzeugung wurden die folgenden Werte der Ausgangsspannungen verwendet.
 \begin{empheq}{alignat=2}
 \label{eq:ausgangswerte_mit_traeger}
 \hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
-\omega_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
+f_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
 \hat{U}_{\text{M}} &= \SI{100}{\milli\volt} \quad \notag
-\omega_{\text{M}} &= \SI{93.8}{\kilo\hertz}
+f_{\text{M}} &= \SI{93.8}{\kilo\hertz}
 \end{empheq} 
 
 
@@ -88,7 +88,7 @@ dargestellten Gleichungen und den hier bestimmten Werten folgt für den Modulati
 Das Frequenzspektrum der modulierten Spannung ist in \cref{fig:frequenzspektrum_c_ampmodulierttraeger}
 gezeigt. Aus \cref{fig:frequenzspektrum_c_ampmodulierttraeger_differenz} ist erkennbar, dass die 
 Seitenbänder der Modulation wie zuvor bei den erwarteten Frequenzen 
-$\omega_{\text{T}} \pm \omega_{\text{M}}$ liegen. Aus den Abbildungen \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_0}  und \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_1} wird ersichtlich, dass wegen 
+$f_{\text{T}} \pm f_{\text{M}}$ liegen. Aus den Abbildungen \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_0}  und \ref{fig:frequenzspektrum_c_ampmodulierttraeger_oberwellen_1} wird ersichtlich, dass wegen 
 der nicht linearen Kennlinie der Diode mit der die Modulation durchgeführt wurde Oberschwingungen 
 der Trägerfrequenz auftreten. Ein zusätzlicher Beitrag stammt von den Oberschwingungen die bereits in den 
 Ausgangsspannungen vorhanden waren.  
@@ -146,6 +146,10 @@ aufgetragen. Die Ausgleichsrechnung ergab die Parameter
 \end{empheq}
 \end{subequations}
 
+Die Abbildung und die geringe Phasenverschiebung der Ausgleichskurve, 
+zeigt eine Übereinstimmung mit dem erwarteten Zusammenhang, mit nur 
+geringen Abweichungen. 
+
 %Amplitude: 89.1+/-1.6
 %Phase: 0.048+/-0.018 2.8+/-1.0
 
@@ -183,16 +187,17 @@ Die Abschwächung ist dabei auf die Widerstände in den verwendeten Schaltungen 
 
 \subsection{Frequenzmodulation von Spannungen}\label{sec:Frequenzmodulation}
 
-Für die Frequenzmodulation der Trägerspannung werden die beiden Seitenbänder einer 
+Für die Frequenzmodulation der Trägerspannung werden nach \cref{eq:} die beiden Seitenbänder einer 
 Amplitudenmodulation (mit einem Ringmodulator) und die 
 um $\tfrac{\pi}{2}$ phasenverschobene Trägerspannung benötigt.
 Für die Spannungen wurden die folgenden Einstellungen verwendet.
 \begin{empheq}{alignat=2}
 \label{eq:ausgangswerte_frequenz}
 \hat{U}_{\text{T}} &= \SI{969}{\milli\volt} \quad
-\omega_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
-\hat{U}_{\text{M}} &= \SI{580}{\milli\volt} \quad \notag
-\omega_{\text{M}} &= \SI{43}{\kilo\hertz}
+f_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
+ \notag
+\hat{U}_{\text{M}} &= \SI{580}{\milli\volt} \quad
+f_{\text{M}} &= \SI{43}{\kilo\hertz}
 \end{empheq} 
 
 In \cref{fig:frequenz_modulierte_spannung} ist die entsprechende Ergebnisspannung 
@@ -213,14 +218,14 @@ frequenzmodulierten Spannung dargestellt. In \cref{fig:frequenzspektrum_d_freqmo
 ist die Trägerfrequenz hervorgehoben, während die Abbildungen \ref{fig:frequenzspektrum_d_freqmoduliert_1}
 und \ref{fig:frequenzspektrum_d_freqmoduliert_2} die Frequenzunterschiede der ersten und zweiten Seitenbänder 
 aufzeigen. Aus diesen Abbildungen ist ersichtlich, dass die Seitenbänder bei den erwarteten Frequenzen
-$\omega_{\text{T}} \pm n\omega_{\text{M}}$ liegen. Da nicht nur die erste Ordnung an Seitenbändern auftritt,
+$f_{\text{T}} \pm nf_{\text{M}}$ liegen. Da nicht nur die erste Ordnung an Seitenbändern auftritt,
 ist außerdem festzustellen, dass die Frequenzmodulation keinen geringen Frequenzhub besitzt. Neben dieser
 Ursache tragen auch die Oberschwingungen in den verwendeten Eingangsspannungen zum Auftreten dieser Frequenzen
 bei.   
 \input{../Grafiken/fig_Frequenzspektrum_d_FreqModuliert.tex}
 
 Aus der in \cref{fig:frequenz_modulation_d_phasenvariation} dargestellten periodischen Phasenvariation
-kann die maximale Frequenzvariation als Breite der abgebildeten "Verschmierung" bestimmt werden.
+kann die maximale Frequenzvariation als Breite der abgebildeten \enquote{Verschmierung} bestimmt werden.
 
 \input{../Grafiken/fig_Frequenz_Modulation_d_Phasenvariation.tex}
 
@@ -260,7 +265,7 @@ Tiefpass abgegriffen wird ist in \cref{fig:frequenz_moduliert_demodulation} darg
 \input{../Grafiken/fig_Frequenz_Moduliert_Demodulation.tex}
 
 Der Verlauf der Amplitudenmodulation zeigt Abweichungen von dem einer Schwebung, der hier 
-wie in \cref{eq:amplituden_moduliert_ohne_traeger} zu erwarten ist. Dies lässt auf eine ungenaue 
+wie in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} zu erwarten ist. Dies lässt auf eine ungenaue 
 Einstellung des Schwingkreises schließen, wodurch weitere Frequenzen in der Amplitudenmodulation auftreten.
 Die Spannung nach dem Tiefpass hat im Vergleich zur ursprünglichen Modulationsspannung eine sehr stark verringerte
 Amplitude und die doppelte Frequenz. Die starke Dämpfung der Spannung ist auf die Widerstände der verwendeten 
