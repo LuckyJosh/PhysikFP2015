@@ -132,7 +132,8 @@ $m = \num{0.213}$, welcher in der gleichen Größenordnung wie die zuvor bestimm
 Vor der Verwendung des Ringmodulators für die Demodulation einer amplitudenmodulierten Spannung.
 soll zunächst die Abhängigkeit der Gleichspannung am Ausgang X des Ringmodulators von der Phase
 $\varphi$ zwischen den Wechselspannungen an den Eingängen R und L betrachtet werden. Die 
-zu diesem Zweck aufgenommenen Messwerte sind in \cref{fig:phasenempfindlicher_gleichrichter} 
+zu diesem Zweck aufgenommenen Messwerte sind \cref{tab:messwerte_phasenempfindlicher_gleichrichter} 
+abzulesen und in \cref{fig:phasenempfindlicher_gleichrichter} 
 mit entsprechender Ausgleichskurve der Gestalt
 \begin{empheq}{equation}
 	U(\varphi) = a \cdot cos(\varphi + b), 
@@ -145,6 +146,8 @@ aufgetragen. Die Ausgleichsrechnung ergab die Parameter
 	b &= \SI{0.05(2)}{rad} = \SI{3(1)}{\degree}.
 \end{empheq}
 \end{subequations}
+
+\input{../Tabellen/Messwerte_Phasenempfindlicher_Gleichrichter.tex}
 
 Die Abbildung und die geringe Phasenverschiebung der Ausgleichskurve, 
 zeigt eine Übereinstimmung mit dem erwarteten Zusammenhang, mit nur 
@@ -166,8 +169,9 @@ von der Länge der Kabel selbst abhängt.
 
 \input{../Grafiken/fig_Amplituden_Modulation_Ring_Demodulation.tex}
 
-Die Demodulation der amplitudenmodulierten Spannung\footnote{Unter Verwendung der Einstellungen 
-	\eqref{eq:ausgangswerte_ohne_traeger} erzeugt.} mit einer Diode liefert
+Die Demodulation der amplitudenmodulierten Spannung\footnotemark[1] %\footnote{Unter Verwendung der Einstellungen 
+%	\eqref{eq:ausgangswerte_ohne_traeger} erzeugt.} 
+mit einer Diode liefert
 nach der Diode die in \cref{fig:amplituden_modulation_diode_demodulation_gleichrichter}
 dargestellte Spannung. Die Spannung an dem nachgeschalteten Tiefpass kann in 
 \cref{fig:amplituden_modulation_diode_demodulation_tiefpass} betrachtet werden.
