@@ -20,12 +20,12 @@ Die unter Verwendung des Ringmodulators erzeugte, amplitudenmodulierte Spannung 
 ist in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} dargestellt. Für die Erzeugung dieser Spannung
 wurden die folgenden Werte für Amplitude $\hat{U}$ und Frequenz $f$ der Träger- und Modulationsspannung
 eingestellt.
-\begin{empheq}{alignat=2}
+\begin{empheq}{alignat=3}
 	\label{eq:ausgangswerte_ohne_traeger}
-	\hat{U}_{\text{T}} &= \SI{968}{\milli\volt} \quad
-	f_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
-	\hat{U}_{\text{M}} &= \SI{301}{\milli\volt} \quad \notag
-	f_{\text{M}} &= \SI{43}{\kilo\hertz}
+	\hat{U}_{\text{T}} &= \SI{968(1)}{\milli\volt} \quad
+	f_{\text{T}} \,&= \, &\SI{1.000(1)}{\mega\hertz} \\
+	\hat{U}_{\text{M}} &= \SI{301(1)}{\milli\volt} \quad \notag
+	f_{\text{M}} \,&=\, &\SI{43(1)}{\kilo\hertz}
 \end{empheq}
  
 Nach \cref{eq:amplituden_moduliert_ohne_traeger} hat eine auf diese Art modulierte Spannung die Gestalt einer
@@ -51,12 +51,12 @@ Die Amplitudenmodulation mit Trägerabstrahlung, die mit Hilfe einer Germanium-D
 lieferte die in \cref{fig:amplituden_modulierte_spannung_mit_traeger} gezeigte Spannung.
 Für die Erzeugung wurden die folgenden Werte der Ausgangsspannungen verwendet.
 
-\begin{empheq}{alignat=2}
+\begin{empheq}{alignat=3}
 \label{eq:ausgangswerte_mit_traeger}
-\hat{U}_{\text{T}} &= \SI{938}{\milli\volt} \quad
-f_{\text{T}} &= \SI{1.988}{\mega\hertz} \\
-\hat{U}_{\text{M}} &= \SI{100}{\milli\volt} \quad \notag
-f_{\text{M}} &= \SI{93.8}{\kilo\hertz}
+\hat{U}_{\text{T}} &= \SI{938(1)}{\milli\volt} \quad
+f_{\text{T}} \,&=\, &\SI{1.988(1)}{\mega\hertz} \\
+\hat{U}_{\text{M}} &= \SI{100(1)}{\milli\volt} \notag \quad 
+f_{\text{M}} \,&=\, &\SI{94(1)}{\kilo\hertz}
 \end{empheq} 
 
 
@@ -103,7 +103,7 @@ durch nachmessen auf $L_{\text{P,T$\pm$M}}= \SI{-46.56}{dBm}$ bestimmen.
 Der Leistungspegel gibt das logarithmierte Verhältnis der Leistung zu $P_{0} = \SI{1}{\milli\watt}$ an.
 Damit folgt für die Leistung,
 \begin{empheq}{equation}
-	P = \exp(\frac{L_{p}}{10}) \cdot P_{0}.
+	P = 10^{\frac{L_{p}}{10}} \cdot P_{0}.
 \end{empheq}
 Die Leistung ist nun proportional zum Quadrat der Amplitude der Spannung, sodass
 sich für die gesuchten Amplituden,
@@ -195,13 +195,13 @@ Für die Frequenzmodulation der Trägerspannung werden nach \cref{eq:frequenzmod
 Amplitudenmodulation (mit einem Ringmodulator) und die 
 um $\tfrac{\pi}{2}$ phasenverschobene Trägerspannung benötigt.
 Für die Spannungen wurden die folgenden Einstellungen verwendet.
-\begin{empheq}{alignat=2}
+\begin{empheq}{alignat=3}
 \label{eq:ausgangswerte_frequenz}
-\hat{U}_{\text{T}} &= \SI{969}{\milli\volt} \quad
-f_{\text{T}} &= \SI{1.000}{\mega\hertz} \\
+\hat{U}_{\text{T}} &= \SI{969(1)}{\milli\volt} \quad
+f_{\text{T}} \,&=\, &\SI{1.000(1)}{\mega\hertz} \\
  \notag
-\hat{U}_{\text{M}} &= \SI{580}{\milli\volt} \quad
-f_{\text{M}} &= \SI{43}{\kilo\hertz}
+\hat{U}_{\text{M}} &= \SI{580(1)}{\milli\volt} \quad
+f_{\text{M}} \,&=\, &\SI{43(1)}{\kilo\hertz}
 \end{empheq} 
 
 In \cref{fig:frequenz_modulierte_spannung} ist die entsprechende Ergebnisspannung 
@@ -236,22 +236,52 @@ kann die maximale Frequenzvariation als Breite der abgebildeten \enquote{Verschm
 Mit einer Kante im Ursprung und der anderen auf der ersten Einteilung in x-Richtung ergibt sich die 
 Breite der Kurve aus der dargestellten Achseneinteilung zu 
 \begin{empheq}{equation}
-  \Delta t = \SI{360}{\nano\second}.
+  \Delta x = \SI{360(10)}{\nano\second}.
 \end{empheq}
+Der angegebene Fehler stellt die geschätzte Ablesegenauigkeit aus der \cref{fig:frequenz_modulation_d_phasenvariation} dar.
 
-
-
-Entsprechend folgt durch bilden des Kehrbruches die maximale Frequenzvariation und damit der Frequenzhub
+Eine Periodendauer kann sowohl aus der selben Abbildung abgelesen werden
+entspricht jedoch auch der Periodendauer der Trägerspannung 
 \begin{empheq}{equation}
-\Delta f = \frac{1}{\Delta t} = \SI{2.778}{\mega\hertz}.
+T_{\text{T}} = \SI{1000(1)}{ns}
+\end{empheq}
+mit der in \cref{eq:ausgangswerte_frequenz} angegebenen Frequenz $f_{\text{T}}$.
+Aus dem Verhältnis der maximalen Verbreiterung $\Delta x$ und der Periodendauer ergibt sich nach 
+Skalierung mit $2\pi$ der maximale Phasenhub
+\begin{empheq}{equation}
+ \Delta \varphi = 2\pi \cdot \frac{\Delta x}{T_{\text{T}}} = \SI{2.26(6)}{rad}.
 \end{empheq}
 
-Aus \cref{eq:frequenzhub} folgt damit der Modulationsgrad dieser frequenzmodulierten Spannung,
+Aus der formalen Darstellung einer frequenzmodulierten Spannung in \cref{eq:Frequenzmoduliert} 
+ergibt sich der maximale Phasenhub für den Fall das $\cos\omega_\text{M}t = 1$ zu 
 \begin{empheq}{equation}
-	m = \num{2.778}.
+\Delta \varphi = m \frac{f_{\text{T}}}{f_{\text{M}}}.
 \end{empheq}
+
+Damit und mit dem für den maximalen Phasenhub bestimmten Wert lässt sich der Modulationsgrad 
+zu 
+\begin{empheq}{equation}
+m  = \num{0.097(4)}
+\end{empheq}
+berechnen. Aus diesem folgt über die \cref{eq:frequenzhub} der maximale Frequenzhub
+\begin{empheq}{equation}
+\Delta f = \SI{970(40)}{\kilo\hertz}.
+\end{empheq}
+
 Wie bereits das Frequenzspektrum \cref{fig:frequenzspektrum_d_freqmoduliert} vermuten ließ,
-ist der Modulationsgrad dieser Spannung nicht gering im Sinne der Ungleichung $m\tfrac{\omega_{\text{T}}}{\omega_{\text{M}}} << 1$.
+ist der Modulationsgrad dieser Spannung zwar kleiner eins, ist jedoch nicht gering im Sinne der Ungleichung $m\tfrac{\omega_{\text{T}}}{\omega_{\text{M}}} << 1$.
+
+%Entsprechend folgt durch bilden des Kehrbruches die maximale Frequenzvariation und damit der Frequenzhub
+%\begin{empheq}{equation}
+%\Delta f = \frac{1}{\Delta t} = \SI{2.778}{\mega\hertz}.
+%\end{empheq}
+%
+%Aus \cref{eq:frequenzhub} folgt damit der Modulationsgrad dieser frequenzmodulierten Spannung,
+%\begin{empheq}{equation}
+%	m = \num{2.778}.
+%\end{empheq}
+%Wie bereits das Frequenzspektrum \cref{fig:frequenzspektrum_d_freqmoduliert} vermuten ließ,
+%ist der Modulationsgrad dieser Spannung nicht gering im Sinne der Ungleichung $m\tfrac{\omega_{\text{T}}}{\omega_{\text{M}}} << 1$.
 
 
 
@@ -273,7 +303,8 @@ wie in \cref{fig:amplituden_modulierte_spannung_ohne_traeger} zu erwarten ist. D
 Einstellung des Schwingkreises schließen, wodurch weitere Frequenzen in der Amplitudenmodulation auftreten.
 Die Spannung nach dem Tiefpass hat im Vergleich zur ursprünglichen Modulationsspannung eine sehr stark verringerte
 Amplitude und die doppelte Frequenz. Die starke Dämpfung der Spannung ist auf die Widerstände der verwendeten 
-Schaltung zurückzuführen. Der Unterschied in der Frequenz ist dadurch zu begründen, dass mit dem verwendeten 
+Schaltung und die verwendete Bauteile, wie beispielsweise den Dioden im Ringmodulator, zurückzuführen. Der 
+Unterschied in der Frequenz ist dadurch zu begründen, dass mit dem verwendeten 
 Tiefpass alle Frequenzen über der doppelten Modulationsfrequenz unterdrückt wurden, deren auftreten wiederum durch 
 die ungenaue Amplitudenmodulation begründet werden kann. Durch eine weitere Verringerung der Grenzfrequenz des
 Tiefpasses konnte keine demodulierte Spannung mehr gemessen werden, da deren Amplitude mit diesen Einstellungen 
