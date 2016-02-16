@@ -1,2 +1,194 @@
 % !TeX root = Protokoll.tex
-test
+ 
+In \cref{fig:signalbild_rf100khz} ist ein typisches Signalbild dargestellt, welches bei einer Frequenz
+von \SI{100}{\kilo\hertz} aufgenommen wurde. Die $x$-Achse der Abbildung ist proportional zum angelegten Magnetfeld $B$ und die $y$-Achse ist proportional zur Transparenz des Rubidiumdampfes für das eingestrahlte $\sigma_{+}$-Licht. Zu sehen sind drei Minima, diese entsprechen 
+von links nach rechts dem Nulldurchgang, der Resonanzstelle des ersten Isotops und der Resonanzstelle des
+zweiten Isotops. Das Nulldurchgang-Minimum ist das größte, da an diesem Punkt kein Magnetfeld anliegt
+und somit keine Zeeman-Aufspaltung auftritt und die Transparenz gegen Null geht, da kein optisches Pumpen möglich ist. Die Minima der beiden Rubidium-Isotope werden im Folgenden der Reihenfolge nach als 1 und 2 bezeichnet,
+da erst nach Bestimmung des Kernspins eine Identifikation des jeweiligen Isotops möglich ist.  
+
+
+\input{../Grafiken/fig_Signalbild_RF100kHz.tex}
+
+
+Die eingestellten Spulenstromstärken der Sweep-Spule und der Horizontalfeld-Spule sind
+in \cref{tab:resonanzstellen} in Abhängigkeit der eingestellten Frequenz für die Resonanzstellen
+beider Isotope angegeben. Das Gesamtmagnetfeld in horizontaler Richtung, welches aus
+den Stromstärken und den gegebenen Abmessungen der Spule \cref{eq:spulen_geometrie} berechnet wurde
+ist ebenfalls angegeben. 
+
+\input{../Tabellen/Resonanzstellen.tex}
+
+Die berechneten Magnetfeld für beide Isotope sind in \cref{fig:resonanzstellen} gegen die jeweiligen
+Frequenzen aufgetragen.
+
+\input{../Grafiken/fig_Resonanzstellen.tex}
+
+Die Ausgleichsgraden sind Funktionen der Form
+\begin{empheq}{equation}
+	B(f) = a\cdot f + b
+\end{empheq}
+und die entsprechenden Parameter für beide Geraden ergeben sich zu:
+
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{alignat=4}
+		a_{1} &=& \input{../Ergebnisse/Fitparameter_a_Rubidium_87.tex}\qquad
+		a_{2} &=& \input{../Ergebnisse/Fitparameter_a_Rubidium_85.tex} \\
+		b_{1} &=& \input{../Ergebnisse/Fitparameter_b_Rubidium_87.tex}\qquad
+		b_{2} &=& \input{../Ergebnisse/Fitparameter_b_Rubidium_85.tex}
+	\end{empheq}
+\end{subequations}
+
+Die theoretische Funktion dieser Geraden entspricht \cref{eq:gerade_magnetfeld_frequenz}. 
+Da der Versuchsaufbau parallel respektive antiparallel zum Erdmagnetfeld ausgerichtet wurde, führt 
+dieses zu einem Verschiebung entlang der $y$-Achse. Die theoretische Gerade besitzt eine $y$-Achsenabschnitt bei
+Null, sodass daraus geschlossen werden, dass die berechneten Parameter $b_i$ der horizontalen Komponente 
+Erdmagnetfeld entsprechen. Einen Mittlung der beiden Werte ergibt
+\begin{empheq}{equation}
+	\input{../Ergebnisse/Erdmagnetfeld_Horizontal.tex}.
+\end{empheq}
+
+Die Steigung der Geraden ist inversproportional zum gesuchten Lande-Faktor $g_{F}$ der beiden Isotope.
+Durch Division des konstanten Ausdrucks $\tfrac{h}{\mu_{\mathrm{B}}}$ durch die bestimmten Steigungen $a_{i}$
+ergibt sich $g_{F}$ für jedes der Isotope zu
+\begin{empheq}{align}
+	g_{F,1} &= \input{../Ergebnisse/Lande_Faktor_Rubidium_87.tex}\\
+	g_{F,2} &= \input{../Ergebnisse/Lande_Faktor_Rubidium_85.tex}
+\end{empheq}  
+
+Mit der Kenntnis der Lande-Faktors kann der Kernspin $I$ er beiden Isotope aus \cref{eq:lande_faktor_gf}
+bestimmte werden. Für die Berechnung werden zusätzlich der Lande-Faktor des Elektrons $g_{J}$ benötigt.
+Dieser lässt sich unter Kenntnis der Quantenzahlen $S$, $L$ und $J$ aus Gleichung \cref{eq:lande_faktor_gj}
+bestimmen. Für die Quantenzahlen ergeben sich für diesen Versuch die folgenden Werte.
+\begin{empheq}{equation}
+	S = \frac{1}{2},\quad L = 0,\quad J = \frac{1}{2},\quad F = I + J
+\end{empheq} 
+Für $F$ kommt nur der höchst mögliche Wert in Frage, da nur für das Niveau mit dem höchst möglichen $m_F$
+kein Übergang mit $\Delta m_{f}$ mehr möglich ist. Einsetzen dieser Werte und Gleichungen in \cref{eq:lande_faktor_gf} liefert die Gleichung 
+
+\begin{empheq}{equation}
+	I = \frac{1}{2}\del{\frac{g_J}{g_F}-1}
+\end{empheq}
+
+für den Kernspin. Die Kernspins der beiden Isotope ergeben sich damit zu
+\begin{empheq}{align}
+	I_{1} &= \input{../Ergebnisse/Kernspin_Rubidium_87.tex}\\
+	I_{2} &= \input{../Ergebnisse/Kernspin_Rubidium_85.tex}
+\end{empheq}
+
+Ein Vergleich mit den Literatur-Werten für die Kernspins der Rubidium-Isotope \\$I_{\mathrm{Rb85},\mathrm{lit}} = \sfrac{5}{2}$ und $I_{\mathrm{Rb87},\mathrm{lit}} = \sfrac{3}{2}$ lieferte die Zuordung der untersuchten Isotope
+\begin{empheq}{equation}
+I_{1} = I_{\mathrm{Rb87}},\quad I_{2} = I_{\mathrm{Rb85}}.
+\notag
+\end{empheq} 
+
+Die Anteile der beiden Isotope $P_{\mathrm{Rb85}}$ und $P_{\mathrm{Rb87}}$ am gesamten können aus dem 
+Verhältnis der Größen der beiden Minima in \cref{fig:signalbild_rf100khz} und der Bedingung  
+$P_{\mathrm{Rb85}} + P_{\mathrm{Rb87}} = 1$ berechnet werden.
+Durch Ausmessen der Pixel beider Minima ergibt sich das Verhältnis der Größen zu
+\begin{empheq}{equation}
+	R = \input{../Ergebnisse/Anteil_Rubidium_Ratio.tex}.
+\end{empheq}
+Dieses Verhältnis $R$ entspricht dem Verhältnis $\tfrac{P_{\mathrm{Rb87}}}{P_{\mathrm{Rb85}}}$ woraus,
+\begin{empheq}{align}
+P_{\mathrm{Rb87}} &= \frac{R}{1+R} = \input{../Ergebnisse/Anteil_Rubidium_87.tex}\\
+P_{\mathrm{Rb85}} &= 1-P_{\mathrm{Rb87}} = \input{../Ergebnisse/Anteil_Rubidium_85.tex}
+\end{empheq}
+folgt.\\
+
+
+In der zweite Messung wurden durch Modulation der RF-Spannung zunächst exponentiell Ansteigende und anschließend relaxierende Kurven beobachte. In \cref{fig:exponentieller_anstieg_5v_rubidium_87}  und \cref{fig:exponentieller_anstieg_v6_rubidium_85} ist für jedes der Isotope jeweils ein exponentieller 
+Anstieg für eine eingestellte Spannung zusammen mit einer entsprechenden Ausgleichskurve dargestellt.  
+
+\input{../Grafiken/fig_Exponentieller_Anstieg_5V_Rubidium_87.tex} 
+\input{../Grafiken/fig_Exponentieller_Anstieg_V6_Rubidium_85.tex}
+
+Die abgebildeten Ausgleichskurven haben die Form
+\begin{empheq}{equation}
+	U(t) = a\cdot\del{1-\exp(-b\cdot t)} + c
+\end{empheq}
+
+Die Parameter der beiden Ausgleichskurven ergeben sich zu:
+
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{alignat=4}
+	a_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_3_a.tex}\qquad
+	a_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_3_a.tex} \\
+	b_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_3_b.tex}\qquad 
+	b_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_3_b.tex}\\
+	c_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_3_c.tex}\qquad
+	c_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_3_c.tex}
+	\end{empheq}
+\end{subequations}
+
+Für die Relaxationen wurden in Abhängigkeit der RF-Spannung die Periodendauer der 
+dargestellten gedämpften Schwingung bestimmt. Die dafür aufgenommenen Messwerte,
+die Zeitdifferenz und Anzahl der Perioden sind in \cref{tab:periodendauern} für beide 
+Isotope angegeben.  
+
+\input{../Tabellen/Periodendauern.tex}
+
+Die bestimmten Periodendauern sind in \cref{fig:transienteneffekt_rubidium_87} und 
+\cref{fig:transienteneffekt_rubidium_85} gegen die RF-Spannung aufgetragen dargestellt.
+Zusätzlich zu den Messwerten sind noch die hyperbolischen Ausgleichsgeraden abgebildet.
+
+\input{../Grafiken/fig_Transienteneffekt_Rubidium_87.tex} 
+
+\input{../Grafiken/fig_Transienteneffekt_Rubidium_85.tex}
+
+Für die Ausgleichskurve wurde eine Funktion der Form
+\begin{empheq}{equation}
+	T(U) = a + \frac{b}{U-c}
+\end{empheq} 
+verwendet.
+
+Die Parameter für die beiden dargestellten Ausgleichskurven ergeben sich zu:
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{alignat=4}
+	a_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_2_a.tex}\qquad
+	a_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_2_a.tex} \\
+	b_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_2_b.tex}\qquad 
+	b_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_2_b.tex}\\
+	c_{\mathrm{Rb87}} &=& \input{../Ergebnisse/Rubidium_87_Fit_2_c.tex}\qquad
+	c_{\mathrm{Rb85}} &=& \input{../Ergebnisse/Rubidium_85_Fit_2_c.tex}
+	\end{empheq}
+\end{subequations}
+
+
+Der Fehlerbereich der Ausgleichskurve für die Messwerte des Isotops ${}^{85}\!$Rb
+zeigt sehr große Ungenauigkeiten der Ausgleichskurve. Dies Beobachtung wird auch 
+durch die Fehler der Parameter selbst bestätigt. Der Fehler jedes Parameters ist
+dabei größer als der bestimmte Parameter selbst. 
+Der Grund für diese großen Ungenauigkeiten lässt sich im Verglich mit der anderen 
+Ausgleichskurve oder mit einer allgemeinen hyperbolischen Funktion ausfindig machen.
+Der Messwert $T(\SI{1}{\volt})$ liegt unter dem $T(\SI{2}{\volt})$, obwohl dieser
+wesentlich größer sein müsste, um einen hyperbolischen Verlauf der Messwerte 
+darzustellen. Diese Vermutung lässt sich bestätigen indem eine weiterer Ausgleichskurve
+an die Messwerte angelegt wird, diesmal wird jedoch der Messwert $T(\SI{1}{\volt})$
+nicht berücksichtigt. Die sich so ergebene Ausgleichskurve ist in \cref{fig:transienteneffekt_ausgelassen_rubidium_85} dargestellt.
+
+\input{../Grafiken/fig_Transienteneffekt_ausgelassen_Rubidium_85.tex}
+
+Die Parameter der dritten Ausgleichskurve ergeben sich zu:
+\addtocounter{equation}{-1}
+\begin{subequations}
+	\begin{empheq}{align}
+	a^{\prime}_{\mathrm{Rb85}} &= \input{../Ergebnisse/Rubidium_85_Fit_2_Ausgelassen_a.tex} \\
+	b^{\prime}_{\mathrm{Rb85}} &= \input{../Ergebnisse/Rubidium_85_Fit_2_Ausgelassen_b.tex}\\
+	c^{\prime}_{\mathrm{Rb85}} &= \input{../Ergebnisse/Rubidium_85_Fit_2_Ausgelassen_c.tex}
+	\end{empheq}
+\end{subequations}
+
+Auch an den Parametern und dem Fehlerbereich dieser Ausgleichskurve sind größere Ungenauigkeiten 
+zu erkennen als bei der Ausgleichskurve für ${}^{87}\!$Rb. Diese sind jedoch wesentlich geringer 
+als die vorherigen Ungenauigkeiten.
+
+Der Quotient $r$ der Parameter $b$ ergibt für beide Ausgleichskurven einzeln:
+\begin{empheq}{align}
+	r &= \frac{b_{\mathrm{Rb85}}}{	b_{\mathrm{Rb87}}} = \input{../Ergebnisse/Verhaelnis_Fit_2_b.tex}\\
+	r^{\prime} &= \frac{b^{\prime}_{\mathrm{Rb85}}}{b_{\mathrm{Rb87}}} = \input{../Ergebnisse/Verhaelnis_Fit_2_Ausgelassen_b.tex}
+\end{empheq} 
+  
