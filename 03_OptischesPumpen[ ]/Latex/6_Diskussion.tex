@@ -1,3 +1,60 @@
 % !TeX root = Protokoll.tex
 
-Quadratischer Zeeman-Effekt
+Die im ersten Versuchsteil beobachteten Signalbilder wie in \cref{fig:signalbild_rf100khz} 
+entsprechen der erwarteten Gestalt. Die aus dem Verhältnis der Größen der Minima bestimmten 
+Anteile der beiden Isotope weichen mit
+\begin{empheq}{equation*}
+P_{\mathrm{Rb87}} = \input{../Ergebnisse/Anteil_Rubidium_87.tex} \qquad P_{\mathrm{Rb85}} = \input{../Ergebnisse/Anteil_Rubidium_85.tex}
+\end{empheq}
+leicht von der natürlich vorkommenden Verteilung 
+\begin{empheq}{equation*}
+P_{\mathrm{Rb87},\mathrm{lit}} = \SI{27.8}{\percent} \qquad P_{\mathrm{Rb85},\mathrm{lit}} = \SI{72.2}{\percent}
+\end{empheq}
+ab. Zu vermuten ist, dass ein größerer Anteil von ${}^{87}\!$Rb vorliegt, um das entsprechenden 
+Minimums im Signal zu vergrößern.
+Die bestimmten Lande-Faktoren  
+\begin{empheq}{equation*}
+g_{F,\mathrm{Rb87}} = \input{../Ergebnisse/Lande_Faktor_Rubidium_87.tex}\qquad g_{F,\mathrm{Rb85}} = \input{../Ergebnisse/Lande_Faktor_Rubidium_85.tex}
+\end{empheq}  
+entsprechen im Rahmen der Messfehler und mit nur geringen Abweichungen den Literaturwerten
+\begin{empheq}{equation*}
+g_{F,\mathrm{Rb87},\mathrm{lit}} = \frac{1}{2} \qquad g_{F,\mathrm{Rb85},\mathrm{lit}} = \frac{1}{3}.
+\end{empheq}
+
+In gleicher Weise sind auch die Abweichungen der bestimmten Kernspins 
+\begin{empheq}{equation*}
+I_{\mathrm{Rb87}} = \input{../Ergebnisse/Kernspin_Rubidium_87.tex}\qquad
+I_{\mathrm{Rb85}} = \input{../Ergebnisse/Kernspin_Rubidium_85.tex}
+\end{empheq}
+von den Literaturwerten nur sehr gering
+\begin{empheq}{equation*}
+I_{\mathrm{Rb87},\mathrm{lit}} = \frac{3}{2}\qquad
+I_{\mathrm{Rb85},\mathrm{lit}} = \frac{5}{2}
+\end{empheq}
+und es war eine eindeutige Identifikation der Minima im Signalbild mit den Isotopen möglich.
+
+Die Beobachtungen im zweiten Versuchsteil decken sich ebenfalls mit den Erwartungen. 
+Die Anpassung der Ausgleichskurven an den ansteigenden Teil des Signalbildes bestätigt 
+das theoretisch vorhergesagte exponentielle Anwachsen. 
+Der Quotient der Parameter $b_{i}$ der hyperbolischen Ausgleichskurven, die an die Messwerte der Periodendauer in 
+Abhängigkeit der RF-Spannung angepasst wurden liefern für die erste Anpassung bei der alle Messwerte 
+verwendet wurden den Wert $\input{../Ergebnisse/Verhaelnis_Fit_2_b.tex}$ und für die Anpassung 
+in der der erste Messwert ausgelassen wurde den Wert \input{../Ergebnisse/Verhaelnis_Fit_2_Ausgelassen_b.tex}. 
+An diesen Ergebnissen wird noch einmal deutlich, dass der erste Messwert eine Fehlmessung darstellt und
+nur durch aus lassen dieses Messwertes ein Ergebnis erzielt werden kann, welches im Rahmen des 
+Fehlers dem theoretischen Wert \num{1.5} entspricht.\\
+
+Die Größe des quadratischen Zeeman-Effekts lässt sich mit Hilfe von \cref{eq:zeeman_effekt_quadratisch}
+und den in diesem Versuch aufgenommenen Messwerten schätzen. Da der quadratische Zeeman-Effekt für große
+Magnetfelder $B$ relevant wird, wird für die Schätzung der Wert $B = \SI{0.25}{\milli\tesla}$ gewählt,
+welcher größer ist als alle in diesem Versuch erzeugten Magnetfelder, sich jedoch noch in der selben 
+Größenordnung befindet. Für die Lande-Faktoren der beiden Rubidium-Isotope  werden die Literaturwerte 
+verwendet. Für die Quantenzahl $m_{F}$ wird wiederum jeweils das die größtmögliche gewählt,
+$m_{F,\mathrm{Rb85}} = 3$ und $m_{F,\mathrm{Rb87}} = 2$. Die Hyperfein-Aufspaltung ist 
+mit $\Delta E_{\mathrm{Hy},\mathrm{Rb87}} = \SI{4.53e-24}{\joule}$ und $\Delta E_{\mathrm{Hy},
+\mathrm{Rb85}} = \SI{2.01e-24}{\joule}$ angegeben\,\cite{V21}. Aus diesen Werten ergibt sich der quadratische
+Zeeman-Effekt zu $U_{\mathrm{HF},\mathrm{Rb87}}$ = \input{../Ergebnisse/Zeeman_quadratisch_Rubidium_87.tex}
+und $U_{\mathrm{HF},\mathrm{Rb85}}$ = \input{../Ergebnisse/Zeeman_quadratisch_Rubidium_85.tex}.
+Für beide Isotope liegt der quadratische Zeeman-Effekt damit mehr als zwei Größenordnungen unter dem 
+linearen Term und ist damit in diesem Versuch vernachlässigbar. 
+ 
