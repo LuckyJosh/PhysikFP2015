@@ -109,12 +109,16 @@ In dieser Messung wird von \SI{100}{\kilo\hertz} bis \SI{1}{\mega\hertz} , in \S
 Dabei wird für jeden schritt der Strom gemessen an dem die Resonanzstelle des Magnetfeldes liegt, ein mal für das Magnetfeld bei $B=0$ und für die beiden Isotope.
 Die Sweep-Spule wird mithilfe des Schalters Start/Reset auf Reset gestellt, wodurch ein konstantes Magnetfeld in der Apparatur vorliegt.
 Dabei ist der Strom der angelegt wird Proportional zu den Umdrehungen an dem Potentiometer.
-Ab einer Frequenz von 200-300 \SI{}{\kilo\hertz}, muss mithilfe der zusätzlichen Horizontalenspule der Sweep-Bereich auf die Resonanzstelle erweitert werden.
+Ab einer Frequenz von 200-300 \si{\kilo\hertz}, muss mithilfe der zusätzlichen Horizontalenspule der Sweep-Bereich auf die Resonanzstelle erweitert werden.
 \newpage
 \subsection{Relaxation zur Bestimmung des Mischungsverhältnisses}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[angle = 90 , clip , trim = 50mm 50mm 30mm 70mm, width =  0.49\textwidth , height = 0.3\textwidth]{../Grafiken/Resonanz_1_Exp_Anstieg_05V.jpg}	\includegraphics[angle = 90 , clip , trim = 45mm 40mm 30mm 30mm , width = 0.49\textwidth , height = 0.3\textwidth]{../Grafiken/Resonanz_1_Relaxation_4V.jpg}
+	\includegraphics[angle = 90, trim = 0.5cm 1.65cm 0.3cm 0cm, clip]{../Grafiken/Resonanz_1_Exp_Anstieg_05V.jpg}	
+	%\includegraphics[angle = 90]{../Grafiken/Resonanz_1_Exp_Anstieg_05V.jpg}
+	%, trim = 50mm 50mm 30mm 70mm, clip, width =  0.49\textwidth , height = 0.3\textwidth
+	\includegraphics[angle = 90, trim = 0.5cm 1.65cm 0.3cm 0cm, clip]{../Grafiken/Resonanz_1_Relaxation_4V.jpg}
+	%, clip , trim = 45mm 40mm 30mm 30mm, width = 0.49\textwidth , height = 0.3\textwidth
 	\caption{Links: der Fall wo sich das Magnetfeld aufbaut.\\ Rechts: Der Relaxationsfall.} \label{fig:Relaxation}
 \end{figure}
 An den Input RF Modulation-Anschluss des Kontrollgeräts wird der zweite Generator angeschlossen.
@@ -149,4 +153,5 @@ In \cref{tab:Apparatur} sind die Angaben zu den Einzelnen Spulen gegeben.
 Um daraus das nötige herrschende Magnetfeld zu bestimmen wird die Formel für die Herlmholtz-Spule benötigt:
 \begin{align}
 	B=\mu_0\frac{8}{\sqrt{125}}\frac{N\cdot I}{R}
+	\label{eq:helmholz_magnetfeld}
 \end{align}
