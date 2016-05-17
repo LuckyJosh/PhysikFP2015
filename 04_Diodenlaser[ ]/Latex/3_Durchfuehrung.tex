@@ -13,7 +13,7 @@ Die dafür notwendige Besetzungsinversion wird durch den Strom erzeugt der durch
 fließt. Eingestellt werden kann dieser an der Steuereinheit (13) in \cref{fig:diodenlaser_aufbau_nr} und
 kann über einen Widerstand von $R_{I} = \SI{100}{\ohm}$ mit dem Voltmeter (11) nach
 $I = U_{I} \cdot {R_{I}}^{-1}$ abgelesen werden. 
-Der Zustand es Lasers wird mit Hilfe der IR-Sichtkarte (14) überprüft, diese wird in den Strahlengang 
+Der Zustand des Lasers wird mit Hilfe der IR-Sichtkarte (14) überprüft, diese wird in den Strahlengang 
 gestellt und von der Rückseite mit der Kamera (9) aufgenommen und auf dem Monitor (10) beobachtet.
 In \cref{fig:diodenlaser_zustand} sind zwei Aufnahmen gezeigt, die den Unterschied zwischen dem Lasen und der 
 Emission von nicht kohärentem Licht verdeutlichen.
@@ -24,9 +24,9 @@ Um die interne Mode und das Maximum des Gitter-Feedbacks des Diodenlasers auf ei
 geringe Wellenlänge einzustellen ist es notwendig den Strom der durch die Diode fließt so weit 
 wie möglich zu verringern.
 Dies wird in mehreren Schritten erreicht nachdem der Strom so eingestellt wurde, dass 
-der Diodenlaser zu lasen beginnt. In jedem Schritt wir jeweils der Strom soweit verringert,
-dass der Laser gerade zu lasen aufhört. Nachfolgend wird das Gitter über die Stellschrauben 
-am Diodenlaser (1) so eingestellt, dass dieser erneut zu lasen beginnt. Diese Abfolge wird
+der Diodenlaser zu lasen beginnt. In jedem Schritt wird jeweils der Strom soweit verringert,
+dass der Laser gerade zu lasen aufhört. Nachfolgend wird die Güte des äußeren Resonators verbessert,
+indem dieser über die Stellschrauben am Diodenlaser (1) so eingestellt wird, dass dieser erneut zu lasen beginnt. Diese Abfolge wird
 so oft wiederholt wie möglich, um einen möglichst geringen Strom durch die Diode zu leiten. 
 
 \subsection{Einstellung der Absorptionswellenlänge}
@@ -41,9 +41,10 @@ der Strom durch die Diode erhöht wird, um die entsprechende Anregungswellenlän
 \subsection{Einstellung des äußeren Resonators}
 Um mit Hilfe des Gitters über den zu beobachtenden Wellenlängenbereich zu fahren, wird dieses
 mit einem piezoelektrischen Wandler bewegt. Dieser wiederum ist an eine Dreieckspannung angeschlossen,
-um eine gleichförmige Bewegung in beide Richtungen (Vergrößerung und Verkleinerung des Beugungswinkels)
+um eine gleichförmige periodische Bewegung in beide Richtungen (Vergrößerung und Verkleinerung des Beugungswinkels)
 auszuführen. 
-Die Intensität des Laserstrahls wird nun unter Verwendung einer Photodiode (7) in eine Spannung 
+Die Intensität des Laserstrahls hinter der Rubidium-Zelle wird nun unter Verwendung 
+einer Photodiode (7) in eine Spannung 
 umgewandelt, um diese neben der Piezospannung auf dem Oszilloskop anzeigen zu lassen. 
 Da die Möglichkeit der Diode, Photonen aufzunehmen, begrenzt ist ergibt sich bei Einbringen
 der Photodiode in den Strahlengang eines Sättigungsspannung von \SI{-11}{\volt}.
@@ -67,8 +68,8 @@ einer Modulation der Intensität. Diese Abhängigkeit wurde schon in \cref{sec:e
 festgestellt und ist dadurch zu verstehen, dass mit zunehmendem Strom die in der Diode erzeugten 
 Elektronen-Loch-Paare zunehmen und durch deren Rekombination im gleichen Maße mehr Photonen
 emittiert werden. Aus abnehmendem Strom folgt analog eine Verringerung der Photonenzahl. 
-Da die Photodiode eine konstante Größe (Oberfläche) hat, ist die Anzahl der Photonen pro Zeit der
-einzige Parameter für die gemessene Intensität.
+%Die am Oszilloskop aufgezeichnete Spannung der Photodiode ist nun proportional zu der Anzahl der 
+%detektierten Photonen.
 Entsprechend dieser Intensitätsveränderung erhält man den in \cref{fig:strommodulation} dargestellten
 Verlauf der Photodiodenspannung. In dieser Darstellung wurde die Photodiodenspannung invertiert,
 sodass ein Abnehmen der Intensität am Abfallen der Spannung zu erkennen ist.
@@ -86,7 +87,7 @@ Aufnahme des Absorptionsspektrums von Rubidium nicht erwünscht, da in dieser Fo
 beispielsweise die Tiefen der Spitzen nicht nur von der Absorption des Rubidiums,
 sondern auch von der variierenden Intensität des Lasers abhängen. 
 Um die Intensitätsmodulation aus dem Spektrum zu entfernen ohne dabei auf die
-Strommodulation verzichten zu müssen wird vor der Rubidiumkammer ein Strahlteiler (3) 
+Strommodulation verzichten zu müssen, wird vor der Rubidiumkammer ein Strahlteiler (3) 
 installiert, der \SI{50}{\percent} des Lasers durch die Kammer hindurch auf die 
 bereits verwendete Photodiode fallen lässt und die übrigen \SI{50}{\percent} in
 eine zweite Photodiode (8) reflektiert. Mit dieser zweiten Photodiode wird lediglich
@@ -101,6 +102,17 @@ Rubidium zu sehen.
   
 \input{../Grafiken/fig_Absorbtionsspektrum}  
   
+\input{../Grafiken/fig_Absorptionsspektrum_Termschema}
+
+Das aufgenommene Absorptionsspektrum zeigt eine sehr gute Übereinstimmung mit dem theoretisch 
+zu erwartenden Verlauf in \cref{fig:absorptionsspektrum_termschema}.
+Sowohl in diesem als auch in dem aufgenommenen 
+Spektrum sind je zwei Übergänge für die beiden 
+Rubidiumisotope ${}^{85}$Rb und ${}^{87}$Rb deutlich 
+zu erkennen. Aus dieser Übereinstimmung
+ist zu schließen, dass sich der verwendete Diodenlaser
+sehr gut für Spektroskopie von Atomübergängen, im 
+entsprechenden Wellenlängenbereich, eignet.
 
 
 
