@@ -12,6 +12,7 @@ protocol:	Latex/*.tex ../../.global/latex/literatur.bib
 		cd Latex/;\
 		pdflatex Protokoll.tex
 		mv Latex/Protokoll.pdf Protokoll.pdf
+		make clean
 
 
 Messdaten/*.txt: 

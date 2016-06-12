@@ -8,14 +8,14 @@
 Dieser Abschnitt wurde mithilfe von \cite{V61} erstellt.\\
 Grundlegend besteht ein Laser aus drei Komponenten, dem Lasermedium, dem Resonator und einer Pumpquelle.
 Die Pumpquelle regt das Lasermedium an, wodurch das Medium Licht emittiert.
-Mithilfe des Resonators wird das Licht öfters durch das Lasermedium geleitet, wodurch mehr Licht emittiert wird das genau die gleiche Wellenlänge besitzt wie das Licht das es angeregt hat.
-Dies hat zur Konsequenz, dass der Laserstrahl hoher Intensität und  Kohärenz besitzt.
-Um diesen Prozess genauer zu verstehen, wird das Beispiel eines zwei Niveau Lasers betrachtet.
+Mithilfe des Resonators wird das Licht mehrfach durch das Lasermedium geleitet, wodurch mehr Licht emittiert wird das genau die gleiche Wellenlänge besitzt wie das Licht das es angeregt hat.
+Dies hat zur Konsequenz, dass der Laserstrahl hohe Intensität und  Kohärenz besitzt.
+Um diesen Prozess genauer zu verstehen, wird das Beispiel eines Zwei-Niveau-Lasers betrachtet.
 Durch ein Photon, das die Energie des Übergangs besitzt, geht das System vom Grundzustand (1) in den angeregten Zustand (2) über.
 Die Kohärenz wird dabei durch die induzierte Emission erreicht.
 Wenn ein Photon auf das System  trifft, wird ein weiteres Photon heraus gelöst, dieses besitzt die selbe Energie, Phase und Ausbreitungsrichtung wie das auslösende Photon.
 Dies ist der Effekt der induzierten Emission und der Grund warum Laser so kohärent sind.
-Weiter ist es möglich, dass ein Photon durch spontane Emission emittiert wird, diese Photon besitzt eine beliebige Phase und Ausbreitungsrichtung.\\
+Weiter ist es möglich, dass ein Photon durch spontane Emission emittiert wird, dieses Photon besitzt eine beliebige Phase und Ausbreitungsrichtung.\\
 Mithilfe eines Strahlenfeldes $\rho$ lassen sich spontane und induzierte Emission hervorrufen.
 Dadurch lässt sich für die Photonenanzahl im System die Gleichungen
 \begin{align}
@@ -33,9 +33,9 @@ Es lassen sich daraus nun für den Fall, dass die Summe der Besetzungszahlen kon
 aufstellen.
 Damit ein Laser dauerhaft kohärent bleibt, müssen die höheren Niveaus stärker besetzt sein, als das Grundniveau.
 Dies wird Besetzungsinversion genannt. 
-Das hat zur Folge, dass spontane Emission seltener auf tritt als die induzierte  Emission.
+Das hat zur Folge, dass spontane Emission seltener auftritt als die induzierte  Emission.
 Um den Zustand der Besetzungsinversion aufrecht zu erhalten, muss dem System dauerhaft Energie hinzugefügt werden.
-Dies wird mithilfe der Pumpquelle getan.
+Dies wird mithilfe der Pumpquelle gewährleistet.
 \subsection{Diodenlaser}
 \begin{figure}[h!]
 	\centering
@@ -46,9 +46,9 @@ Ein Vorteil des Diodenlasers ist die Bandbreite der abgedeckten Frequenzen $\Del
 Das Lasermedium wird bei einem Diodenlaser mithilfe eines Halbleiters verwirklicht.
 Ein LED-Chip, wie er hier verwendet wird, ist in \cref{fig:Halleiter-Chip} skizziert.
 Der Strom fließt von oben nach unten, wodurch Elektronen-Loch-Paare erzeugt werden und bei der Rekombination werden Photonen emittiert.
-Damit der Chip kohärentes Licht von sich gibt, muss der Betriebsstrom einen gewissen Wert übersteigen, darunter funktioniert der Halbleiter wie eine normale LED.
+Damit der Chip kohärentes Licht emittiert, muss der Betriebsstrom einen gewissen Wert übersteigen, darunter funktioniert der Halbleiter wie eine normale LED.
 Weiter sind die Brechungsindices der aktiven Schicht größer als die der benachbarten Schichten, damit wird der Laserstrahl durch die aktive Schicht geführt.
-Die beiden Flächen durch die der Strahl führt sind verspiegelt, wobei die eine Seite fast alles Licht reflektiert und die andere Seite ist teil durchlässig.
+Die beiden Flächen durch die der Strahl führt sind verspiegelt, wobei die eine Seite fast einfallendes Licht fast vollständig reflektiert und die andere Seite teildurchlässig ist.
 Dies bildet den inneren Resonator (internal cavity) und gibt dem Laser eine bevorzugte Richtung.
 Da der Strahl allerdings sehr divergent ist, wird noch eine Sammellinse eingebaut.
 Nach der Sammellinse wird ein Gitter eingebaut.
@@ -72,20 +72,27 @@ Ebenfalls wird dadurch ermöglicht die Wellenlänge, auf eine bestimmte Wellenl�
 \end{figure}
 Aufgrund der induzierten Emission, emittiert der Laser nur das Licht mit der Wellenlänge, bei der die größte Verstärkung auftritt.
 Die Wellenlänge hängt demnach von verschiedenen Effekten ab.
-Diese Werden im folgenden diskutiert und sind in \cref{fig:Photon_Gain_Wellenlaenge_Beitraege} angedeutet.
+Diese werden im folgenden diskutiert und sind in \cref{fig:Photon_Gain_Wellenlaenge_Beitraege} angedeutet.
 \subsubsection{Materialabhängigkeit}
 Die Wellenlänge des Materials hängt in erster Linie von der Größe der Bandlücke ab.
 Dies ist eine Temperaturabhängige Größe, das heißt sie kann durch erhitzen der Diode eingestellt werden.
 Da die hervorgerufene Materialverstärkung sehr Breit ist, muss sie nicht genau auf das Maximum der gewünschten Wellenlänge eingestellt werden.
 \subsubsection{Innerer Resonator}
 Ein Resonator besitzt verschiedene longitudinale Moden.
-Das bedeutet das im Resonator stehende Wellen vorliegen.
+Das bedeutet das im Resonator stehende Wellen vorliegen. Die Wellenlängen $\lambda$ dieser stehenden Wellen
+erfüllen die Gleichung
+\begin{empheq}{equation}
+	N\lambda = 2L = 2\frac{L^{\prime}}{n}
+\end{empheq}
+mit der optischen Weglänge $L^{\prime}$, welche der Strecke entspricht, die Licht im Vakuum in
+gleicher Zeit zurücklegt, wie Licht, das sich durch ein Medium der Länge $L$ und mit Brechungsindex
+$n$ ausbreitet.
 Die Moden des inneren Resonators, hängen dabei vom Betriebsstrom der Diode ab.
 Zu einem erhitzt der Strom die Diode.
-Dies beeinflusst die Wellenlänge, in dem sich der Resonator ausdehnt.\\
+Dies beeinflusst die Wellenlänge, in dem sich der Resonator ausdehnt und so die Länge $L$ ändert.\\
 Zum anderen ändert sich die emittierte Wellenlänge, dadurch das die Ladungsträgerkonzentration steigt.
-Der Brechungsindex ist von der Ladungsträgerkonzentration abhängig.
-Dies sorgt dafür, dass sich die optische Weglänge erhöht.
+Der Brechungsindex $n$ ist von der Ladungsträgerkonzentration abhängig.
+Dies sorgt dafür, dass sich die optische Weglänge verändert.
 \subsubsection{Das Gitter Feedback}
 Das Experiment verwendet die Littrow-Anordnung.
 Dabei wird das erste Beugungsmaximum zurück in in den Diodenlaser geleitet.
@@ -99,9 +106,9 @@ Die Einflüsse des äußeren Resonators ähneln dem inneren.
 Dadurch das der äußere Resonator so viel größer ist als der innere, liegen die Maxima der longitudinalen Moden enger zusammen.
 Durch ändern der Position des Gitters ändert sich die Länge des äußeren Resonators und somit die Form der Moden.
 \subsection{Modensprünge}
-Modensprünge treten auf wenn einer der Beiden Resonatoren verstellt wird.
-Da allerdings das Ziel des Versuches ist eine kontinuierliche Wellenlänge zu erzeugen, müssen diese verhindert werden.
-Dazu wird erst ein mal der Ursprung verdeutlicht. 
+Modensprünge treten auf wenn einer der beiden Resonatoren verstellt wird.
+Da allerdings das Ziel des Versuches ist eine kontinuierliches Wellenlängenspektrum zu erzeugen, um damit das Absorptionsspektrum von Rubidium untersuchen zu können, müssen diese verhindert werden.
+Dazu wird erst ein mal der Ursprung dieser Modensprünge verdeutlicht. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.75\textwidth, angle = 1]{../Grafiken/Moden_Spruenge.pdf}
@@ -115,6 +122,6 @@ Dies bedeutet, dass in Abbildung b Modensprünge auftreten.
 Das heißt die Mode springt vom Maximum e0 zu Maximum e-1.
 In c springt es von e-1 nach e-2.
 Während der Winkel immer kleiner wird springt in die Mode ins Maximum e3.\\
-Es ist nötig diese Sprünge zu verhindern, um ein vollständiges Frequenzspektrum zu verwirklichen.
+Es ist nötig diese Sprünge zu verhindern, um ein vollständiges Wellenlängenspektrum zu verwirklichen.
 Dies kann verhindert werden in dem ebenfalls der innere Resonator angepasst wird.
 Bedeutet man verstellt den Winkel und den Betriebsstrom der Diode gleichermaßen.
