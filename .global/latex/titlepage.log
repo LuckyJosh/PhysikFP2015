@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.28)  6 APR 2015 22:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.26)  22 JUN 2016 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -77,7 +77,7 @@ Overfull \hbox (51.8914pt too wide) in paragraph at lines 9--9
 ! Undefined control sequence.
 <recently read> \Large 
                        
-l.11 ...praktikum Physik\\ Sommersemester \\ 2015}
+l.11 ...npraktikum Physik\\ Sommersemester \\ 201}
                                                   \\[0.5cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -101,13 +101,13 @@ Overfull \hbox (84.28842pt too wide) in paragraph at lines 11--11
  []
 
 
-Overfull \hbox (22.1109pt too wide) in paragraph at lines 11--11
- []\OT1/cmr/m/sc/10 2015 
+Overfull \hbox (16.58318pt too wide) in paragraph at lines 11--11
+ []\OT1/cmr/m/sc/10 201 
  []
 
 ! Undefined control sequence.
 l.17 { \huge
-             \bfseries \VNr }\\[0.4cm]
+             \bfseries \ENo }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -115,7 +115,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.17 { \huge \bfseries \VNr
+l.17 { \huge \bfseries \ENo
                             }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -130,7 +130,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 { \huge \bfseries \VNr }\\
+l.17 { \huge \bfseries \ENo }\\
                                [0.4cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -138,7 +138,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.18 { \huge
-             \bfseries \VN }\\[0.4cm]
+             \bfseries \EN }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -146,7 +146,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.18 { \huge \bfseries \VN
+l.18 { \huge \bfseries \EN
                            }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -161,7 +161,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 { \huge \bfseries \VN }\\
+l.18 { \huge \bfseries \EN }\\
                               [0.4cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -169,7 +169,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.19 {\large
-             \bfseries \VD }\\[0.4cm]
+             \bfseries \ED }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -177,7 +177,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.19 {\large \bfseries \VD
+l.19 {\large \bfseries \ED
                            }\\[0.4cm]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -192,32 +192,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 {\large \bfseries \VD }\\
+l.19 {\large \bfseries \ED }\\
                               [0.4cm]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.20 \ifdefinde
-               \Version%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.20 \ifdefinde\Version
-                       %
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.21 {\Large
+l.20 {\Large
              \textsc{\Version}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -228,7 +210,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Version 
                          
-l.21 {\Large \textsc{\Version}
+l.20 {\Large \textsc{\Version}
                               }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -236,53 +218,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Extra \else.
-l.22 \else
-          %
-I'm ignoring this; it doesn't match any \if.
-
 ! Undefined control sequence.
-l.23 {\Large
-             \textsc{\textcolor{red}{VERSION}}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \textcolor 
-                           
-l.23 {\Large \textsc{\textcolor{red}{VERSION}}
-                                              }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Extra \fi.
-l.24 \fi
-        
-I'm ignoring this; it doesn't match any \if.
-
-
-Overfull \hbox (21.62212pt too wide) in paragraph at lines 21--25
- \OT1/cmr/m/sc/10 red- 
- []
-
-
-Overfull \hbox (27.33305pt too wide) in paragraph at lines 21--25
- \OT1/cmr/m/sc/10 VER- 
- []
-
-
-Overfull \hbox (26.74971pt too wide) in paragraph at lines 21--25
- \OT1/cmr/m/sc/10 SION 
- []
-
-! Undefined control sequence.
-l.29 \begin{flushleft} \large
+l.25 \begin{flushleft} \large
                              
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -291,7 +228,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.30 \Namen
+l.26 \Names
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -300,11 +237,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
+(Font)              <7> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
+(Font)              <5> on input line 28.
 ! Undefined control sequence.
-l.36 \begin{flushright} \large
+l.32 \begin{flushright} \large
                               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -313,7 +250,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.37 \Emails
+l.33 \Emails
             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -322,12 +259,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (3276.74998pt too wide) in paragraph at lines 28--40
+Overfull \hbox (3276.74998pt too wide) in paragraph at lines 24--36
  []$[]$ 
  []
 
 
-Overfull \hbox (3276.74998pt too wide) in paragraph at lines 28--40
+Overfull \hbox (4095.99998pt too wide) in paragraph at lines 24--36
  []$ 
  []
 
@@ -338,7 +275,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \end{titlepage}
+l.44 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -352,11 +289,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 19 strings out of 493304
- 268 string characters out of 6139871
+ 18 strings out of 493304
+ 259 string characters out of 6139870
  52880 words of memory out of 5000000
- 3576 multiletter control sequences out of 15000+600000
+ 3575 multiletter control sequences out of 15000+600000
  4249 words of font info for 16 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 20i,3n,18p,115b,179s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,3n,18p,114b,179s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
