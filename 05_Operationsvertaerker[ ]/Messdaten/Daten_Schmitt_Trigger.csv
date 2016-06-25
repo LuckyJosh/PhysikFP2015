@@ -1,2 +1,2 @@
-#Rp/kOhm, R1/Ohm, Kippspannung/mV, UApp/V
-10, 4.7, 340, 28.1
+#Rp/Ohm, R1/Ohm, Kippspannung/mV, UApp/V
+10000, 470, 340, 28.1
