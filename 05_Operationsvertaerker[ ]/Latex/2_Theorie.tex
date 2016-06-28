@@ -66,10 +66,124 @@ Weil für einen realen Operationsverstärker die Ausgangsspannung $U_\text{A}$ n
 	U_0:=U_\text{p}-U_\text{N}\text{, wenn gilt }U_\text{A}=0.
 \end{align}
 \subsection{Linearverstärker}
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/Gegengekoppelter_Invertierter_Liniearverstaerker.png}
-	\caption{Hier ist die Schaltung eines gegen gekoppelten invertierter Linearverstärker skizziert. \cite{V51}}
+	\caption{Hier ist die Schaltung eines gegen gekoppelten invertierter Linearverstärker skizziert. \cite{V51}\label{fig:gegen_gekoppelter_invertierter_Linarverstärker}}
 \end{figure}
 Aufgrund der großen Leerlaufverstärkung, kann ein Operationsverstärker nicht direkt als Linearverstärker eingesetzt werden.
-Dies wird umgangen in demein 
+Dies wird umgangen indem die Schaltung nach \cref{fig:gegen_gekoppelter_invertierter_Linarverstärker} verwendet wird.
+Dabei wird ein Teil der Ausgangsspannung, mithilfe eines Gegengenkopplungszweig, auf den invertierenden Eingang zurückgegeben.
+Deswegen wird die Schaltung auch gegen gekoppelter invertierter Linearverstärker genannt.
+Das sorgt dafür das bei größerer Ausgangsspannung die Eingangsspannung abnimmt.
+Die Eingangsspannung des nicht invertierten Eingangs $U_\text{N}$ ist nah zu null.
+Mithilfe der Kirchhoffschen Knotenregel kann gezeigt werden, dass für die Verstärkung $V'$ gilt
+\begin{align}
+	V' = -\frac{R_\text{N}}{R_1}.
+\end{align}
+Dies gilt für einen idealen Operationsverstärker.
+Für einen realen mit endlicher Leerlaufverstärkung gilt 
+\begin{align}
+	\frac{1}{V'}\approx\frac{1}{V}+\frac{R_1}{R_\text{N}}.
+\end{align}
+Es lässt sich erkennen, dass die Verstärkung $V'$ für den idealen und realen Operationsverstärker gleich sind wenn gilt $R_\text{N}/R_1\ll V$.
+Die Gegenkopplung stabilisiert die Verstärkung.
+Der Ausgangswiederstand wird durch den Faktor $g$ verkleinert, aufgrund der Gegenkopplung.
+Dabei ist $g$ definiert als
+\begin{align}
+	g:= \frac{V}{V'}.
+\end{align}
+Ein weiterer Vorteil der Gegenkopplung ist, dass die Schwankung der Leerlaufverstärkung durch den Faktor $g$ vermindert wird.
+\begin{align}
+	\frac{\Delta V'}{V'}=\frac{1}{g}\frac{\Delta V}{V}
+\end{align}
+Zum Schluss wird das Frequenzband durch den Faktor $g$ vergrößert.
+Dies ist in \cref{fig:Frequenzband} dargestellt. Wenn die Kurven nach der Abbildung beschrieben werden, ist das Produnkt aus Bandbreite und Verstärkung $V'$ eine  konstante und wird Transitfrequenz genannt.
+Diese liegt vor, wenn die Verstärkung $V'$ auf den Wert 1 abgesunken ist.
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/Frequenz_Liniearverstaerker.png}
+	\caption{Frequenzband des Linearverstärkers. \cite{V51}\label{fig:Frequenzgang}}
+\end{figure}
+Ein Nachteil des gegen gekoppelten invertierten Linearverstärkers ist der geringe Eingangswiederstand, dies verfälscht die Spannungsmessung an einem hochohmigen Spannungsmessgerät.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/nicht_invertierter_Linearverstaerker.png}
+	\caption{Hier ist die Schaltung eines nicht-invertierender Elektrometerverstärkers dargestellt. \cite{V51}\label{fig:Elektrometerverstärker}}
+\end{figure}
+Deshalb wird dafür eine Schaltung nach \cref{fig:Elektrometerverstärker} verwendet.
+Die wird Elektrometerverstärker genannt.
+Bei dieser schaltung ist der Eingangswiederstand gegeben durch
+\begin{align}
+	r_\text{e}\approx 2r_\text{Gl}\propto \SI{10}{\giga\ohm}.
+\end{align}
+Die Verstärkung $V'$ unter der Voraussetzung eines idealen Operationsverstärkers ist gegeben durch
+\begin{align}
+	V'=\frac{R_\text{N}+R_1}{R_1 }
+\end{align}
+Wenn der Strom gemessen werden soll, muss der Eingangswiderstand klein sein.
+Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/Amperemeter.png}
+	\caption{Hier ist die Schaltung eines Amperemeters dargestellt. \cite{V51}\label{fig:Amperemeter}}
+\end{figure}
+Für die Ausgangsspannung ist dann
+\begin{align}
+	U\text{A}=IR_\text{N},
+\end{align}
+dass bedeutet die Ausgangsspannung ist proportional zum Eingangsstrom.
+Für den Eingangswiederstand gilt\\
+\begin{align*}
+	e_\text{e}=\frac{R_\text{N}}{V}.
+\end{align*}
+\subsection{Umkehr-Integrator und Umkehr-Differenzierer}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../Grafiken/Umkehr_Integrator.png}
+	\caption{Hier ist die Schaltung des Umkehr-Integrators dargestellt. \cite{V51} \label{fig:Umkehr_Integrator}}
+\end{figure}
+Mithilfe eines Operationsverstärkers kann auch ein Signal integriert werden.
+Dazu wird ein Rückkopplungszweig mit Kondensator mit der Kapazität $C$ geschaltet, wie in \cref{fig:Umkehr_Integrator} dargestellt.
+Daraus folgt für die Ausgangsspannung
+\begin{align}
+	U_\text{A}=-\frac{1}{RC}\int U_1(t)dt.
+\end{align}
+Aufgrund des Minuszeichen wird die Schaltung Umkehr-Integrator genannt.
+Wenn eine Sinusspannung $U_1=U_0\sin(\omega Tt)$ angelegt wird folgt für die Ausgangsspannung
+\begin{align}
+	U_\text{A}=\frac{U_0}{\omega RC}\cos(\omega t).
+\end{align}
+Es lässt sich erkennen das die Amplitude invers von der Frequenz $\omega$ abhängig ist.
+Durch vertauschen des Kondensators und dem Widerstand, lässt sich ein Umkehr-Differenzierer bauen, wie in \cref{fig:Umkehr_Diff} dargestellt.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/Umkehr_Differentierer.png}
+	\caption{Hier ist die Schaltung eines Umkehr-Differenzierers skizziert. \cite{V51}\label{fig:Umkehr_Diff}}
+\end{figure}
+Die Ausgangsspannung ist gegeben durch
+\begin{align}
+	U_\text{A}=-RC\frac{dU_1}{dt}.
+\end{align}
+Es lässt sich erkennen, anhand des Beispiels der Sinusspannung, dass das Ausgangssignal linear von der Frequenz $\omega$ abhängig ist.
+\subsection{Schmitt-Trigger}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/Schmitt-Trigger.png}
+	\caption{Hier ist die Schaltung für einen Schmitt-Trigger dargestellt. \cite{V51}\label{fig:Schmitt-Trigger}}
+\end{figure}
+Ein Schmitt-Trigger vergrößert die Verstärkung, so dass die Ausgangsspannung entweder $U_\text{B}$ oder $-U_\text{B}$ sein kann.
+Dies wird erreicht in dem eine Rückkopplung in den nicht-invertierten Eingang des Operationsverstärker stattfindet, wie in \cref{fig:Schmitt-Trigger} dargestellt.
+\newpage
+\subsection{Operationsgenerator als Dreiecksgenerator}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{../Grafiken/Dreieckgenerator.png}
+	\caption{Hier ist die Schaltung eines Dreiecksgenerator dargestellt. \cite{V51} \label{fig:Dreieck}}
+\end{figure}
+Mithilfe mehrerer Operationsverstärker, kann ein Dreieckgenerator gebaut werden.
+Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Integrator und ist in \cref{fig:Dreieck} dargestellt.
+Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.
+Der Schmitt-Trigger liefert eine konstante Spannung, die vom Integrator integriert wird.
+Dadurch das die Spannung ebenfalls auf den Trigger zurück geführt wird, springt der Wert ab einem Bestimmten Punkt von $U_\text{B}$ auf $-U_\text{B}$ und liefert somit eine Rechteckspannung und dadurch das jetzt eine negative Spannung integriert wird fällt das Signal nach dem zweiten Operationsverstärker.
+\newpage
