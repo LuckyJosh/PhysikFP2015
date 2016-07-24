@@ -188,4 +188,55 @@ Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Integr
 Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.
 Der Schmitt-Trigger liefert eine konstante Spannung, die vom Integrator integriert wird.
 Dadurch das die Spannung ebenfalls auf den Trigger zurück geführt wird, springt der Wert ab einem Bestimmten Punkt von $U_\text{B}$ auf $-U_\text{B}$ und liefert somit eine Rechteckspannung und dadurch das jetzt eine negative Spannung integriert wird fällt das Signal nach dem zweiten Operationsverstärker.
+
+Aufgrund des oben geschilderten Verhaltens der beiden Operationsverstärker sind die Frequenzen der erzeugten Rechteck- $f_{\mathrm{R}}$ und Dreiecksspannung $f_{\mathrm{D}}$ gleich, es gilt also $f_{\mathrm{R}} = f_{\mathrm{D}} = f $.
+Um diese theoretisch zu berechnen, wird die Amplitude der Dreiecksspannung als Ausgangsspannung des Integrators 
+betrachtet, der die konstante Ausgangsspannung des Schmitt-Triggers integriert. Dabei wird der Zeitraum von einer
+halben Periodendauer $T$ betrachtet und angenommen, dass die negative und positive Amplitude der Dreiecksspannung\\
+den gleichen Betrag haben.
+\begin{empheq}{align}
+	 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{\mathrm{R}} \dif t - \hat{U}_{\mathrm{D}} \notag\\
+	 2 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{B} \dif t \notag\\
+	\hat{U}_{\mathrm{D}} &= \frac{1}{RC}\frac{T}{4} U_{B} = \frac{1}{4RC}\frac{1}{f} U_{B} 
+\end{empheq}
+Ferner gilt für die Amplitude der Dreieckspannung aufgrund der Eigenschaften des Schmitt-Triggers 
+\begin{empheq}{equation}
+\hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{P}} U_{B}.
+\end{empheq}  
+Durch Elimination der Spannung $\hat{U}_{\mathrm{D}}$ ergibt sich die Frequenz $f$ beider Spannungen zu
+\begin{empheq}{equation}
+f =  \frac{1}{4RC}\frac{1}{f} \frac{R_{1}}{R_{P}}.
+\label{eq:funktionsgenerator_frequenz_ideal}
+\end{empheq}  
+In der Durchführung wurde der Versuchsaufbau um zwei Widerstände $R_0$  und $R^{\prime}_0$ ergänzt, die 
+in Reihe mit dem Widerstand $R$ geschaltet wurden, um die Amplitude der Spannung zu dämpfen, die 
+an den zweiten Operationsverstärker angelegt wird. Daher muss der in \cref{eq:funktionsgenerator_frequenz_ideal}
+verwendete Widerstand $R$ um diese beiden Widerstände zu
+\begin{empheq}{equation}
+f =  \frac{1}{4\del{R + R_0+ R^{\prime}_0 }C}\frac{1}{f} \frac{R_{1}}{R_{P}}.
+\label{eq:funktionsgenerator_frequenz}
+\end{empheq} 
+korrigiert werden.
+
+Die Amplitude der Rechtecks- und Dreiecksspannung werden ebenfalls durch diese beiden Widerstände beeinflusst,
+da der Wert von $\hat{U}_{\mathrm{R}}$ nach diesen beiden Widerständen nicht mehr $U_B$ entspricht. 
+Der Ausgangsstrom $I_{\mathrm{R}}$ ergibt sich nach dem Ohmschen-Gesetz zu
+\begin{empheq}{equation}
+I_{\mathrm{R}} = \frac{U_B}{R + R_0+ R^{\prime}_0}.
+\end{empheq}
+Durch Subtraktion des Spannungsabfalls $\Delta U_{R_0,R^{\prime}_0}$ über die beiden Widerstände
+$R_0$  und $R^{\prime}_0$ von $U_B$ ergibt sich die reale Amplitude der Rechteckspannung $\hat{U}_{\mathrm{R}}$.
+\begin{empheq}{align}
+\hat{U}_{\mathrm{R}} &= U_B -\Delta U_{R_0,R^{\prime}_0}\notag \\
+&=U_B - I_{\mathrm{R}} \cdot \del{R_0+ R^{\prime}_0}\notag\\
+&= \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_B
+\label{eq:funktionsgenerator_rechteck}
+\end{empheq}
+Und damit die reale  Amplitude der Dreiecksspannung zu
+\begin{empheq}{align}
+\hat{U}_{\mathrm{D}} &= \frac{R_{1}}{R_{P}} \hat{U}_{\mathrm{R}} \notag\\
+&= \frac{R_{1}}{R_{P}} \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_B
+\label{eq:funktionsgenerator_dreieck}.
+\end{empheq}
+
 \newpage
