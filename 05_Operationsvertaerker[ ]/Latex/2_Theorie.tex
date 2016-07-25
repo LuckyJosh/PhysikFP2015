@@ -34,11 +34,11 @@ Der Ausgangswiederstand hingegen ist klein, weshalb der ideale als null angenomm
 \end{align}
 Für einen realen Operationsverstärker müssen weitere Kenngrößen eingeführt werden.
 Aufgrund von Asymmetrien in einem realen Operationsverstärker ist die Ausgangsspannung ungleich null, auch wenn zwei gleiche Spannungen an den Eingängen angelegt werden.
-Deshalb ist es hilfreich die Gleichtaktverstärkung zu definieren $V_\text{Gl}$
+Deshalb ist es hilfreich die Gleichtaktverstärkung $V_\text{Gl}$ zu definieren 
 \begin{align}
 	V_\text{Gl}:=\frac{\Delta U_\text{A}}{\Delta U_\text{Gl}}.
 \end{align}
-Weiter treten Eingangsströme $I_\text{N}$ und $I_\text{p}$ auf, aufgrund der endlichen Eingangswiederstände in einem realen Operationsverstärkers.
+Weiter treten Eingangsströme $I_\text{N}$ und $I_\text{p}$ auf, aufgrund der endlichen Eingangswiederstände $r_e$ in einem realen Operationsverstärkers.
 Daraus lässt sich der Eingangsruhestrom $I_\text{B}$ definieren als
 \begin{align}
 	I_\text{B}:=\frac{1}{2}\left( I_\text{p} + I_\text{N} \right)
@@ -60,7 +60,7 @@ genauso wie der Gleichtaktwiderstand $r_\text{Gl}$
 \begin{align}
 	r_\text{Gl}=\frac{\Delta U_\text{Gl}}{I_\text{Gl}}.
 \end{align}
-Wobei gilt, das $U_\text{Gl}=U_\text{p}=\text{N}$ und $I_\text{Gl}=I_\text{p}+I_\text{N}$ ist.
+Wobei gilt, das $U_\text{Gl}=U_\text{p}=U_\text{N}$ und $I_\text{Gl}=I_\text{p}+I_\text{N}$ ist.
 Weil für einen realen Operationsverstärker die Ausgangsspannung $U_\text{A}$ nicht null ist, wenn $U_\text{N}=U_\text{p}$ ist, wird die Offsetspannung $U_0$ eingeführt:
 \begin{align}
 	U_0:=U_\text{p}-U_\text{N}\text{, wenn gilt }U_\text{A}=0.
@@ -130,11 +130,11 @@ Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/Amperemeter.png}
 	\caption{Hier ist die Schaltung eines Amperemeters dargestellt. \cite{V51}\label{fig:Amperemeter}}
 \end{figure}
-Für die Ausgangsspannung ist dann
+Für die Ausgangsspannung $U_\text{A}$ ist dann
 \begin{align}
 	U_\text{A}=IR_\text{N},
 \end{align}
-dass bedeutet die Ausgangsspannung ist proportional zum Eingangsstrom.
+dass bedeutet, die Ausgangsspannung $U_\text{A}$ ist proportional zum Eingangsstrom $I$.
 Für den Eingangswiederstand gilt\\
 \begin{align*}
 	r_\text{e}=\frac{R_\text{N}}{V}.
@@ -152,7 +152,7 @@ Daraus folgt für die Ausgangsspannung
 	U_\text{A}=-\frac{1}{RC}\int U_1(t)dt.
 \end{align}
 Aufgrund des Minuszeichen wird die Schaltung Umkehr-Integrator genannt.
-Wenn eine Sinusspannung $U_1=U_0\sin(\omega Tt)$ angelegt wird folgt für die Ausgangsspannung
+Wenn eine Sinusspannung $U_1=U_0\sin(\omega t)$ angelegt wird folgt für die Ausgangsspannung
 \begin{align}
 	U_\text{A}=\frac{U_0}{\omega RC}\cos(\omega t).
 \end{align}
@@ -174,7 +174,7 @@ Es lässt sich erkennen, anhand des Beispiels der Sinusspannung, dass das Ausgan
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/Schmitt-Trigger.png}
 	\caption{Hier ist die Schaltung für einen Schmitt-Trigger dargestellt. \cite{V51}\label{fig:Schmitt-Trigger}}
 \end{figure}
-Ein Schmitt-Trigger vergrößert die Verstärkung, so dass die Ausgangsspannung entweder $U_\text{B}$ oder $-U_\text{B}$ sein kann.
+Ein Schmitt-Trigger vergrößert die Verstärkung $V'$, so dass die Ausgangsspannung entweder $U_\text{B}$ oder $-U_\text{B}$ sein kann.
 Dies wird erreicht in dem eine Rückkopplung in den nicht-invertierten Eingang des Operationsverstärker stattfindet, wie in \cref{fig:Schmitt-Trigger} dargestellt.
 Die Ausgangsspannung springt nach
 \begin{align}
@@ -184,6 +184,7 @@ Die Ausgangsspannung springt nach
 		-U_\text{B}\text{, wenn } U_1 < -\frac{R_1}{R_\text{P}}U_\text{B}
 	\end{cases}
 \end{align}
+zwischen der Spannungen $U_\text{B}$ und $-U_\text{B}$.
 \newpage
 \subsection{Operationsgenerator als Dreiecksgenerator}
 \begin{figure}[h!]
