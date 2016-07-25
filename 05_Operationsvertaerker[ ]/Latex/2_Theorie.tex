@@ -100,7 +100,7 @@ Ein weiterer Vorteil der Gegenkopplung ist, dass die Schwankung der Leerlaufvers
 	\frac{\Delta V'}{V'}=\frac{1}{g}\frac{\Delta V}{V}
 \end{align}
 Zum Schluss wird das Frequenzband durch den Faktor $g$ vergrößert.
-Dies ist in \cref{fig:Frequenzband} dargestellt. Wenn die Kurven nach der Abbildung beschrieben werden, ist das Produnkt aus Bandbreite und Verstärkung $V'$ eine  konstante und wird Transitfrequenz genannt.
+Dies ist in \cref{fig:Frequenzgang} dargestellt. Wenn die Kurven nach der Abbildung beschrieben werden, ist das Produnkt aus Bandbreite und Verstärkung $V'$ eine  konstante und wird Transitfrequenz genannt.
 Diese liegt vor, wenn die Verstärkung $V'$ auf den Wert 1 abgesunken ist.
 \begin{figure}
 	\centering
@@ -132,12 +132,12 @@ Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
 \end{figure}
 Für die Ausgangsspannung ist dann
 \begin{align}
-	U\text{A}=IR_\text{N},
+	U_\text{A}=IR_\text{N},
 \end{align}
 dass bedeutet die Ausgangsspannung ist proportional zum Eingangsstrom.
 Für den Eingangswiederstand gilt\\
 \begin{align*}
-	e_\text{e}=\frac{R_\text{N}}{V}.
+	r_\text{e}=\frac{R_\text{N}}{V}.
 \end{align*}
 \subsection{Umkehr-Integrator und Umkehr-Differenzierer}
 \begin{figure}[h!]
@@ -176,6 +176,14 @@ Es lässt sich erkennen, anhand des Beispiels der Sinusspannung, dass das Ausgan
 \end{figure}
 Ein Schmitt-Trigger vergrößert die Verstärkung, so dass die Ausgangsspannung entweder $U_\text{B}$ oder $-U_\text{B}$ sein kann.
 Dies wird erreicht in dem eine Rückkopplung in den nicht-invertierten Eingang des Operationsverstärker stattfindet, wie in \cref{fig:Schmitt-Trigger} dargestellt.
+Die Ausgangsspannung springt nach
+\begin{align}
+	U_\text{A}=
+	\begin{cases}
+		+U_\text{B}\text{, wenn } U_1 > +\frac{R_1}{R_\text{P}}U_\text{B} \\
+		-U_\text{B}\text{, wenn } U_1 < -\frac{R_1}{R_\text{P}}U_\text{B}
+	\end{cases}
+\end{align}
 \newpage
 \subsection{Operationsgenerator als Dreiecksgenerator}
 \begin{figure}[h!]
