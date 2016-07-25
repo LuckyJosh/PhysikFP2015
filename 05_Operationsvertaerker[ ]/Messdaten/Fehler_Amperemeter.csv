@@ -1,2 +1,2 @@
-# Frequenz/%,  Ugpp/mV,  Uepp/mV,  UApp/mV, Impedanzen/%
-0.01, 1, 2, 0.1, 0.01 
+# Frequenz/%,  Ugpp/V,  Uepp/V,  UApp/V, Impedanzen/%
+0.01, 1e-3, 2e-3, 0.1, 0.01 

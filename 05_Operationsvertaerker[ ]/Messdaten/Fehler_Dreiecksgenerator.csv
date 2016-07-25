@@ -1,2 +1,2 @@
-#Impedanzen/%,Upp/mV, f/Hz
-0.01, 1, 1
+#Impedanzen/%,Upp/V, f/Hz
+0.01, 1e-3, 1
