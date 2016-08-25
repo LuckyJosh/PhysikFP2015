@@ -14,42 +14,41 @@ $R_{N}$ und  $R_{1}$ in \cref{tab:gegengekoppelt_widerstaende} verwendet.
 Die unterschiedlichen Schaltungen werden der Reihenfolge in dieser Tabelle nach
 (von oben nach unten) im Folgenden als erste bis vierte Schaltung bezeichnet.
 Neben den jeweiligen Werten der Widerstände ist auch das Verhältnis 
-$\sfrac{R_N}{R_1}$
+$\sfrac{R_N}{R_1} =: V^{\prime}_{\mathrm{theo}}$
 angegeben welches nach \cref{eq:gegengekoppelt_verstaerkung} den Betrag der Verstärkung
-der Schaltung angibt.
+der Schaltung angibt. Für jede der vier Schaltungen wurde eine Eingangsspannung von 
+$U_{e} = \SI{70(1)}{\milli\volt}$ verwendet.
 
 \input{../Tabellen/Gegengekoppelter_Verstaerker_Widerstaende}
 
 In den folgenden Tabellen \ref{tab:gegengekoppelter_verstaerker_1} -- \ref{tab:gegengekoppelter_verstaerker_4}
 und den zugehörigen Abbildungen \ref{fig:gegengekoppelter_verstaerker_1} -- \ref{fig:gegengekoppelter_verstaerker_4}
 ist jeweils die Verstärkung der vier Schaltungen in Abhängigkeit der Frequenz dargestellt.
-Die Abbildungen erlauben den Vergleich der theoretischen Verstärkung, die dem 
-Widerstandsverhältnis $\sfrac{R_{\mathrm{N}}}{R_1}$ entspricht mit dem gemessenen Werte 
-der 
-mittleren maximalen Verstärkung. 
+Die Abbildungen erlauben den Vergleich der theoretischen Verstärkung 
+$\sfrac{R_N}{R_1} =: V^{\prime}_{\mathrm{theo}}$ mit den gemessenen Werten der mittleren maximalen Verstärkung. 
 
-Es ist zu erkennen, dass für 
-Widerstandsverhältnisse $ \geq 1$ der theoretische Wert gut mit dem gemittelten 
-Wert übereinstimmt. Die relativen Abweichungen der Messwerte von den 
-theoretischen Werten sind in einzeln in
-\cref{tab:gegengekoppelter_verstaerker_max_verstaerkung} aufgeführt.
-Bei den Widerstandsverhältnissen  $ < 1$ zeigt sich eine deutlich größere 
-Abweichung der gemessenen Werte, welche aufgrund der doppellogarithmischen 
-Darstellung jedoch größer zu seien scheint als diese in Wirklichkeit ist. 
-
-Die Parameter der Ausgleichsrechnungen der Form
-\begin{empheq}{equation}
-	V^{\prime}(f) = f^{a} \cdot 10^{b}  
-	\label{eq:fit}
-\end{empheq}
-der abfallenden Verstärkung sind zusammen mit der Grenzfrequenzen und dem 
-Verstärkung-Bandbreiten-Produkten 
-in \cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
-In doppellogarithmischer Darstellung haben die Parameter $a$ und $b$ die 
-Bedeutung der Steigung respektive des $y$-Achsenabschnittes der Geraden.
-Des Weiteren wurde auch die Leerlaufspannung $V$ mittels 
-\cref{eq:leerlauf_verstaerkung} abgeschätzt und in 
-\cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
+%Es ist zu erkennen, dass für 
+%Widerstandsverhältnisse $ \geq 1$ der theoretische Wert gut mit dem gemittelten 
+%Wert übereinstimmt. Die relativen Abweichungen der Messwerte von den 
+%theoretischen Werten sind in einzeln in
+%\cref{tab:gegengekoppelter_verstaerker_max_verstaerkung} aufgeführt.
+%Bei den Widerstandsverhältnissen  $ < 1$ zeigt sich eine deutlich größere 
+%Abweichung der gemessenen Werte, welche aufgrund der doppellogarithmischen 
+%Darstellung jedoch größer zu seien scheint als diese in Wirklichkeit ist. 
+%
+%Die Parameter der Ausgleichsrechnungen der Form
+%\begin{empheq}{equation}
+%	V^{\prime}(f) = f^{a} \cdot 10^{b}  
+%	\label{eq:fit}
+%\end{empheq}
+%der abfallenden Verstärkung sind zusammen mit der Grenzfrequenzen und dem 
+%Verstärkung-Bandbreiten-Produkten 
+%in \cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
+%In doppellogarithmischer Darstellung haben die Parameter $a$ und $b$ die 
+%Bedeutung der Steigung respektive des $y$-Achsenabschnittes der Geraden.
+%Des Weiteren wurde auch die Leerlaufspannung $V$ mittels 
+%\cref{eq:leerlauf_verstaerkung} abgeschätzt und in 
+%\cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
 
 \input{../Tabellen/Gegengekoppelter_Verstaerker_1.tex}
 \input{../Grafiken/fig_Gegengekoppelter_Verstaerker_1}
@@ -65,6 +64,40 @@ Des Weiteren wurde auch die Leerlaufspannung $V$ mittels
 
 \input{../Tabellen/Gegengekoppelter_Verstaerker_Verstaerkung.tex}
 \input{../Tabellen/Gegengekoppelter_Verstaerker_Parameter.tex}
+\FloatBarrier
+
+Es ist zu erkennen, dass für 
+Widerstandsverhältnisse $ \geq 1$ der theoretische Wert gut mit dem gemittelten 
+Wert übereinstimmt. Die relativen Abweichungen der Messwerte von den 
+theoretischen Werten sind in einzeln in
+\cref{tab:gegengekoppelter_verstaerker_max_verstaerkung} aufgeführt.
+Bei den Widerstandsverhältnissen  $ < 1$ zeigt sich eine deutlich größere 
+Abweichung der gemessenen Werte, welche aufgrund der doppellogarithmischen 
+Darstellung jedoch größer zu seien scheint als diese in Wirklichkeit ist. 
+
+Die Parameter der Ausgleichsrechnungen der Form
+\begin{empheq}{equation}
+V^{\prime}(f) = f^{a} \cdot 10^{b}  
+\label{eq:fit}
+\end{empheq}
+der abfallenden Verstärkung sind zusammen mit der Grenzfrequenzen $f_{\mathrm{g}}$ und dem 
+Verstärk\-ung-Bandbreiten-Produkten $f_{\mathrm{g}}V^{\prime}_{\mathrm{max}}$ 
+in \cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
+Die Grenzfrequenzen wurden dabei nach
+\begin{empheq}{equation}
+	f_{\mathrm{g}} = \del{\frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}\cdot 10^b}}^{\dfrac{1}{a}}
+\end{empheq}
+bestimmt. 
+In doppellogarithmischer Darstellung haben die Parameter $a$ und $b$ die 
+Bedeutung der Steigung respektive des $y$-Achsenabschnittes der Geraden.
+Des Weiteren wurde auch die Leerlaufspannung $V$ abgeschätzt, indem
+\cref{eq:leerlauf_verstaerkung} zu  
+\begin{empheq}{equation}
+	V = \frac{V^{\prime}R_{\mathrm{N}}}{R_{\mathrm{N}} -V^{\prime}R_{1}}
+\end{empheq}
+umgeformt wurde. Die entsprechenden Werte wurden ebenfalls in 
+\cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
+
 
 Der Frequenzgang der Verstärkerschaltung lässt sich mit dem in 
 \cref{fig:ersatzschaltbild} dargestellten Ersatzschaltbild eines idealen 
@@ -76,8 +109,12 @@ mit nachgeschaltetem Tiefpass erklären.
 Die Messwerte des Frequenzgangs der Phasenbeziehung zwischen Ein- und 
 Ausgangsspannung sind in \cref{tab:gegengekoppelter_verstaerker_phase}
 aufgelistet und in \cref{fig:gegengekoppelter_verstaerker_phase} graphisch 
-dargestellt. Für einen Phasenunterschied von \SI{180}{\degree} ergibt sich aus
-der Gegenkopplung der Schaltung eine Mitkopplung.
+dargestellt. In dem Frequenzbereich in dem der gegengekoppelte Verstärker die Verstärkung
+$V^{\prime}_{\mathrm{max}}$ liefert, ist zu erkennen, dass die Ausgangsspannung gegenüber der 
+Eingangsspannung \SI{180}{\degree} phasenverschoben. Mit zunehmender Frequenz nimmt diese 
+Phasenverschiebung ab auch dieses Verhalten ist dem eines Tiefpasses ähnlich.  
+
+
 
 \input{../Tabellen/Gegengekoppelter_Verstaerker_Phase.tex}
 \input{../Grafiken/fig_Gegengekoppelter_Verstaerker_Phase}
@@ -91,7 +128,7 @@ einzusehen, wobei zusätzlich die theoretische Ausgangsspannung
 $U_{A,\mathrm{theo}}$ nach \cref{eq:amperemeter_strom}
 und die relative Abweichung der gemessenen Ausgangsspannung $U_A$ zu dieser 
 bestimmt wurde. Für den Aufbau der Schaltung wurden die Widerstände
-$R_{\mathrm{V}} = \SI{100(1)}{\ohm}$ und $R_{\mathrm{N}} = \SI{10.0(1)}{\kilo\ohm}$ 
+$R_{\mathrm{V}} = \SI{100(1)}{\ohm}$ und $R_{\mathrm{N}}~=~\SI{10.0(1)}{\kilo\ohm}$ 
 In  \cref{tab:amperemeter_2} sind die berechneten Werte für Strom $I$, 
 Innenwiderstand $r_e$ und die Leerlaufverstärkung $V$ angegeben. 
 Die graphischen Darstellungen der letzten beiden Größen in Abhängigkeit der

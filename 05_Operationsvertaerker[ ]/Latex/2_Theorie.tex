@@ -205,15 +205,18 @@ Mithilfe mehrerer Operationsverstärker, kann ein Dreieckgenerator gebaut werden
 Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Umkehr Integrator und ist in \cref{fig:Dreieck} dargestellt.
 (Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.)
 Der Schmitt-Trigger liefert eine konstante Spannung, die vom Umkehr-Integrator integriert wird.
-Das bedeutet nach dem Umkehr-Integrator steigt beziehungsweise fällt die Spannung. 
+Das bedeutet nach dem Umkehr-Integrator steigt beziehungsweise fällt die Spannung linear. 
 Diese Spannung wird als Eingangsspannung auf den Schmitt-Trigger gegeben, der seine Ausgangsspannung nach \cref{eq:kippspannug} ändert.
 Aufgrund des Vorzeichenwechsels ändert sich auch das Vorzeichen bei der Integration.
-Dies hat zur folge das nach dem Schmitt-Trigger eine Rechteckspannung erzeugt wird und nach dem Integrator eine Dreiecksspannung.
+Dies hat zur folge das von dem Schmitt-Trigger eine Rechteckspannung erzeugt wird und von dem Integrator eine Dreiecksspannung.
 
 Aufgrund des oben geschilderten Verhaltens der beiden Operationsverstärker sind die Frequenzen $f_\mathrm{R}$ bzw. $f_\mathrm{D}$ der erzeugten Rechteck- respektive Dreiecksspannung gleich, es gilt also $f_{\mathrm{R}} = f_{\mathrm{D}} =: f $.
 Um diese theoretisch zu berechnen, wird die Amplitude $U_\mathrm{D}$ der Dreiecksspannung  
 betrachtet. Dabei wird der Zeitraum von einer
-halben Periodendauer $T$ betrachtet und der ideal Fall wird angenommen, dass die negative und positive Amplitude der Dreiecksspannung den gleichen Betrag haben.
+halben Periodendauer $T$ betrachtet und der ideal Fall wird angenommen, dass die negative und positive Amplitude der 
+Dreiecksspannung den gleichen Betrag haben. Die Randwerte des betrachten Zeitintervalls $\sbr{0,\sfrac{T}{2}}$ werden
+als $\hat{U}_{\mathrm{D}}(0) = -\hat{U}_{\mathrm{D}}$ und $\hat{U}_{\mathrm{D}}(\sfrac{T}{2}) = +\hat{U}_{\mathrm{D}}$
+angenommen.
 \begin{empheq}{align}
 	 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{\mathrm{R}} \dif t - \hat{U}_{\mathrm{D}} \notag\\
 	 2 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{\mathrm{B}} \dif t \notag\\
@@ -225,7 +228,7 @@ Ferner gilt für die Amplitude der Dreieckspannung aufgrund der Eigenschaften de
 \end{empheq}  
 Durch Elimination der Spannung $\hat{U}_{\mathrm{D}}$ ergibt sich die Frequenz $f$ beider Spannungen zu
 \begin{empheq}{equation}
-f =  \frac{1}{4RC}\frac{1}{f} \frac{R_{1}}{R_{\mathrm{P}}}.
+f =  \frac{1}{4RC} \frac{R_{\mathrm{P}}}{R_{1}}.
 \label{eq:funktionsgenerator_frequenz_ideal}
 \end{empheq}  
 In der Durchführung wurde der Versuchsaufbau um zwei Widerstände $R_0$  und $R^{\prime}_0$ ergänzt, die 
@@ -233,13 +236,12 @@ in Reihe mit dem Widerstand $R$ geschaltet wurden, um die Amplitude der Spannung
 an den zweiten Operationsverstärker angelegt wird. Daher muss der in \cref{eq:funktionsgenerator_frequenz_ideal}
 verwendete Widerstand $R$ um diese beiden Widerstände zu
 \begin{empheq}{equation}
-f =  \frac{1}{4\del{R + R_0+ R^{\prime}_0 }C}\frac{1}{f} \frac{R_{1}}{R_{\mathrm{P}}}.
+f =  \frac{1}{4\del{R + R_0+ R^{\prime}_0 }C}\frac{R_{\mathrm{P}}}{R_{1}}.
 \label{eq:funktionsgenerator_frequenz}
 \end{empheq} 
 korrigiert werden.
 
-Die Amplitude der Rechtecks- und Dreiecksspannung werden ebenfalls durch diese beiden Widerstände beeinflusst,
-da der Wert von $\hat{U}_{\mathrm{R}}$ nach diesen beiden Widerständen nicht mehr $U_B$ entspricht. 
+Die Amplitude der Rechteckspannung wird ebenfalls durch diese beiden Widerstände beeinflusst.
 Der Ausgangsstrom $I_{\mathrm{R}}$ ergibt sich nach dem Ohmschen-Gesetz zu
 \begin{empheq}{equation}
 I_{\mathrm{R}} = \frac{U_B}{R + R_0+ R^{\prime}_0}.
@@ -252,11 +254,11 @@ $R_0$  und $R^{\prime}_0$ von $U_B$ ergibt sich die reale Amplitude der Rechteck
 &= \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
 \label{eq:funktionsgenerator_rechteck}
 \end{empheq}
-Und damit die reale  Amplitude der Dreiecksspannung zu
-\begin{empheq}{align}
-\hat{U}_{\mathrm{D}} &= \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{R}} \notag\\
-&= \frac{R_{1}}{R_{\mathrm{P}}} \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
-\label{eq:funktionsgenerator_dreieck}.
-\end{empheq}
+%Und damit die reale  Amplitude der Dreiecksspannung zu
+%\begin{empheq}{align}
+%\hat{U}_{\mathrm{D}} &= \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{R}} \notag\\
+%&= \frac{R_{1}}{R_{\mathrm{P}}} \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
+%\label{eq:funktionsgenerator_dreieck}.
+%\end{empheq}
 
 \newpage

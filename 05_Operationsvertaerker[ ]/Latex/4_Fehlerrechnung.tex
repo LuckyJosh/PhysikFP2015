@@ -1,29 +1,30 @@
-Im folgenden Abschnitt werden die, für die Auswertung der aufgenommenen Daten
+Im folgenden Abschnitt werden die für die Auswertung der aufgenommenen Daten
 verwendeten Gleichungen aufgezeigt und erläutert.\\
-Der Mittelwert aus mehreren Ergebnissen einer Messung 
+Der Mittelwert $\mean{x}$ aus mehreren Ergebnissen $x_{i}$ einer Messung 
 wurde mit Hilfe von 
 \begin{empheq}{equation}
 	\mean{x} = \frac{1}{n}\sum_{i = 0}^{n}x_i
 	\label{eq:Mittelwert}
 \end{empheq}
 berechnet.
-Für die Berechnung der statistischen Abweichung wurde die folgende Gleichung verwendet:
+Für die Berechnung der statistischen Abweichung $\sigma_{x}$ wurde die folgende Gleichung verwendet:
 \begin{empheq}{equation}
 \sigma_{x} = \sqrt{\frac{1}{n-1}\sum_{i = 0}^{n}(x_i-\mean{x})^2}.
 \label{eq:Mittelwert_Std}
 \end{empheq}
 Für die Ungenauigkeit der aufgenommenen Messwerte wurde im allgemeinen die kleinste Skaleneinheit des verwendeten Messgeräts
 angenommen.
-Für die Fehlerfortpflanzung dieser Unsicherheiten wurde die 
+Für die Fehlerfortpflanzung dieser Unsicherheiten $\sigma_{x_i}$  wurde die 
 gaußsche Fehlerfortpflanzung verwendet.
-Damit berechnet sich der Fehler $\sigma_y$ einer Größe $y = y(\va{x})$, mit den Messgrößen $\dim{\va{x}} = n$, wie folgt:
+Damit berechnet sich der Fehler $\sigma_y$ einer Größe $y = y(\va{x})$, mit den Messgrößen $\dim{\va{x}} =: n$,
+wie folgt:
 \begin{empheq}{equation}
 \sigma_{y} = \sqrt{\sum_{i = 0}^{n}{\qty(\pdv{f}{x_i}\sigma_{x_i})^2}}.
 \label{eq:Fehlerforpflanzung}
 \end{empheq}
 
-Die relative Abweichung eines Messergebnisses $x$ vom gegebenen Theoriewert 
-$x_{\mathrm{theo}}$ wurde mit folgender Gleichung berechnet:
+Die relative Abweichung $\Delta_{\mathrm{rel}}x$ eines Messergebnisses $x$ vom gegebenen 
+Theoriewert~$x_{\mathrm{theo}}$ wurde mit folgender Gleichung berechnet:
 \begin{empheq}{equation}
 \Delta_{\mathrm{rel}}x = \frac{\envert{x - x_{\mathrm{theo}}}}{x_{\mathrm{theo}}}.
 \label{eq:Fehler_relativ}
