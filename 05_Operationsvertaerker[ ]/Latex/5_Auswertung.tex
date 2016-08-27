@@ -84,9 +84,12 @@ der abfallenden Verstärkung sind zusammen mit der Grenzfrequenzen $f_{\mathrm{g
 Verstärk\-ung-Bandbreiten-Produkten $f_{\mathrm{g}}V^{\prime}_{\mathrm{max}}$ 
 in \cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
 Die Grenzfrequenzen wurden dabei nach
-\begin{empheq}{equation}
-	f_{\mathrm{g}} = \del{\frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}\cdot 10^b}}^{\dfrac{1}{a}}
+\begin{empheq}{align}
+V^{\prime}(f_{\mathrm{g}}) &= \frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}} = f_{\mathrm{g}}^{a} \cdot 10^{b}\\
+\Leftrightarrow f_{\mathrm{g}} &= \del{\frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}\cdot 10^b}}^{\dfrac{1}{a}}
 \end{empheq}
+
+
 bestimmt. 
 In doppellogarithmischer Darstellung haben die Parameter $a$ und $b$ die 
 Bedeutung der Steigung respektive des $y$-Achsenabschnittes der Geraden.
@@ -125,27 +128,43 @@ Phasenverschiebung ab auch dieses Verhalten ist dem eines Tiefpasses ähnlich.
 
 Die am Amperemeter aufgenommenen Messwerte sind in \cref{tab:amperemeter_1}
 einzusehen, wobei zusätzlich die theoretische Ausgangsspannung 
-$U_{A,\mathrm{theo}}$ nach \cref{eq:amperemeter_strom}
-und die relative Abweichung der gemessenen Ausgangsspannung $U_A$ zu dieser 
-bestimmt wurde. Für den Aufbau der Schaltung wurden die Widerstände
-$R_{\mathrm{V}} = \SI{100(1)}{\ohm}$ und $R_{\mathrm{N}}~=~\SI{10.0(1)}{\kilo\ohm}$ 
-In  \cref{tab:amperemeter_2} sind die berechneten Werte für Strom $I$, 
+$U_{A,\mathrm{theo}}$ durch Einsetzen des Stroms $I~=~\sfrac{U_{g}}{R_{V}}$ 
+in \cref{eq:amperemeter_strom} nach
+\begin{empheq}{equation}
+	U_\text{A}= \frac{U_{\mathrm{g}}}{R_{\mathrm{V}}} R_\text{N}
+\end{empheq}
+berechnet wurde. Des Weiteren wurde die relative Abweichung der gemessenen Ausgangsspannung $U_A$ von 
+dieser bestimmt. Der Eingangswiderstand $r_{e}$ ergibt sich für diese Schaltung wie angegeben nach
+\begin{empheq}{equation}
+	r_{\mathrm{e}} = \frac{U_{\mathrm{e}}}{I} = \frac{U_{\mathrm{E}}R_{\mathrm{V}}}{U_{\mathrm{g}}}
+\end{empheq}
+Die Lehrlaufverstärkung $V$ der verwendeten Schaltung ergibt sich durch Umformung von 
+\cref{eq:eingangswiderstand} nach
+\begin{empheq}{equation}
+	V = \frac{R_{\mathrm{N}}}{r_{\mathrm{e}}}=\frac{R_{\mathrm{N}}}{R_{\mathrm{V}}} 
+	\frac{U_{\mathrm{g}}}{U_{\mathrm{E}}}.
+\end{empheq}
+Für den Aufbau der Schaltung wurden die Widerstände
+$R_{\mathrm{V}} = \SI{100(1)}{\ohm}$ und\\ $R_{\mathrm{N}} = \SI{10.0(1)}{\kilo\ohm}$ 
+verwendet.
+In  \cref{tab:amperemeter_2} sind die berechneten Werte für den
 Innenwiderstand $r_e$ und die Leerlaufverstärkung $V$ angegeben. 
-Die graphischen Darstellungen der letzten beiden Größen in Abhängigkeit der
-Frequenz sind in 
-\cref{fig:amperemeter_eingangswiderstand} und 
-\cref{fig:amperemeter_leerlaufverstaerkung} gezeigt.
+Die graphischen Darstellungen der dieser beiden Größen in Abhängigkeit der
+Frequenz ist in 
+%\cref{fig:amperemeter_eingangswiderstand} und 
+\cref{fig:amperemeter_leerlaufverstaerkung_eingangswiderstand} gezeigt.
 
 \input{../Tabellen/Amperemeter_1.tex}
 
 \input{../Tabellen/Amperemeter_2.tex}
 
-\input{../Grafiken/fig_Amperemeter_Eingangswiderstand}
-\input{../Grafiken/fig_Amperemeter_Leerlaufverstaerkung}
+%\input{../Grafiken/fig_Amperemeter_Eingangswiderstand}
+%\input{../Grafiken/fig_Amperemeter_Leerlaufverstaerkung}
+\input{../Grafiken/fig_Amperemeter_Leerlaufverstaerkung_Eingangswiderstand}
 
 \subsection{Integrator- und Differentiatorschaltung}
 
-Die von Integrator- und Diffentiatorschaltung aufgenommenen Messwerte
+Die für Integrator- und Diffentiatorschaltungen aufgenommenen Messwerte
 befinden sich in \cref{tab:integrator_differentiator}.
 Die doppellogaritmische Darstellung der Frequenzabhängigkeit der 
 Ausgangsspannung des Integrators ist in \cref{fig:integrator_frequenz}
@@ -153,9 +172,9 @@ und die des Differentiators in \cref{fig:differentiator_frequenz} gezeigt.
 Zusätzlich zu den Messwerte ist auf das Ergebnis einer Ausgleichsrechnung nach
 \cref{eq:fit} abgebildet. Die Parameter der Ausgleichskurven sind:
 \begin{empheq}{alignat=2}
-	a_{\mathrm{int}} &= \num{-0.91(1)} \qquad& b_{\mathrm{diff}} = 
+	a_{\mathrm{int}} &= \num{-0.91(1)} \qquad& a_{\mathrm{diff}} = 
 	\num{0.90(1)}\\
-	a_{\mathrm{int}} &= \num{4.64(2)} \qquad& b_{\mathrm{diff}} = 
+	b_{\mathrm{int}} &= \num{4.64(2)} \qquad& b_{\mathrm{diff}} = 
 	\num{0.31(3)}
 \end{empheq}
 %integrator
@@ -205,15 +224,17 @@ nach \cref{eq:kippspannug} theoretisch bestimmten Wert $U_{\mathrm{K},\mathrm{th
 Für den Aufbau der Schaltung wurden die folgenden Bauteile verwendet:
 \begin{empheq}{alignat*=2}
 R &= \SI{560(6)}{\ohm}  \qquad& C = \SI{1.00(1)}{\micro\farad}\\
-R_1 &= \SI{1000(10)}{\ohm}\qquad& R_0 = \SI{32.0(3)}{\kilo\ohm}\\
+R_1 &= \SI{1.00(1)}{\kilo\ohm}\qquad& R_0 = \SI{32.0(3)}{\kilo\ohm}\\
 R_{\mathrm{P}} &= \SI{100(1)}{\kilo\ohm}\qquad& R^{\prime}_0 = \SI{10.0(1)}{\kilo\ohm}
 \end{empheq}
 Die Schaltung wurde um die zwei Widerstände $R_0$ und $R^{\prime}_0$ ergänzt,
-die sich so ergebene Schaltung ist in \cref{fig:funktionsgenerator_real} 
+die sich so ergebende Schaltung ist in \cref{fig:funktionsgenerator_real} 
 dargestellt.
 
 \input{../Grafiken/fig_Funktionsgenerator_real}
 
+Die Ausgangsspannungen des Funktionsgenerators, die mit Hilfe des Oszilloskops
+aufgenommen wurden sind in \cref{fig:funktionsgenerator} dargestellt.
 Die  Frequenz und Amplitude der Rechteck- respektive Dreiecksspannung 
 ergaben sich zu:
 \begin{empheq}{align*}
@@ -229,16 +250,15 @@ mit der Korrektur durch die beiden Widerstände $R_0$ und $R^{\prime}_0$ zu
 	f_{\mathrm{\mathrm{D},\mathrm{theo}}} =  
 	\SI{587(11)}{\hertz}.
 \end{empheq}
-Die Scheitelwerte der Spannungen ergeben sich ebenfalls nach Korrektur
-durch $R_0$ und $R^{\prime}_0$ aus \cref{eq:funktionsgenerator_rechteck} 
-respektive \cref{eq:funktionsgenerator_dreieck} zu
+Die Scheitelwerte der Spannungen ergeben sich mit der Betriebsspannung $\SI{15.0(1)}{\volt}$ ebenfalls nach Korrektur
+durch $R_0$ und $R^{\prime}_0$ für die Rechteckspannung $U_{\mathrm{A},\mathrm{R},\mathrm{theo}}$
+aus \cref{eq:funktionsgenerator_rechteck} respektive \cref{eq:funktionsgenerator_dreieck} zu
 \begin{empheq}{align}
 U_{\mathrm{A},\mathrm{R},\mathrm{theo}} &= \SI{0.197(3)}{\volt}\\
 U_{\mathrm{A},\mathrm{D},\mathrm{theo}} &=  \SI{0.150(2)}{\volt}.
 \end{empheq}
 
-Die Ausgangsspannungen des Funktionsgenerators, die mit Hilfe des Oszilloskops
-aufgenommen wurden sind in \cref{fig:funktionsgenerator} dargestellt.
+
 
 \input{../Grafiken/fig_Funktionsgenerator}
 

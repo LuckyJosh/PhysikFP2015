@@ -136,6 +136,7 @@ Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/Amperemeter.png}
 	\caption{Hier ist die Schaltung eines Amperemeters dargestellt. \cite{V51}\label{fig:Amperemeter}}
 \end{figure}
+\FloatBarrier
 Für die Ausgangsspannung $U_\text{A}$ ist dann
 \begin{align}
 	U_\text{A}=IR_\text{N}.\label{eq:amperemeter_strom}
@@ -144,6 +145,7 @@ Dass bedeutet, die Ausgangsspannung $U_\text{A}$ ist proportional zum Eingangsst
 Für den Eingangswiederstand gilt\\
 \begin{align*}
 	r_\text{e}=\frac{R_\text{N}}{V}.
+	\label{eq:eingangswiderstand}
 \end{align*}
 \subsection{Umkehr-Integrator und Umkehr-Differenzierer}
 \label{sec:Umkehr-Integrator}
@@ -194,6 +196,9 @@ Die Ausgangsspannung geht in die Sättigung nach:
 		-U_\text{B}\text{, wenn } U_1 < -\frac{R_1}{R_\text{P}}U_\text{B}
 	\end{cases}\label{eq:kippspannug}
 \end{align}
+Für die Beträge der Eingangsspannung $\abs{U_1} < \frac{R_1}{R_\text{P}}U_\text{B}$ hält der Schmitt-Trigger
+die Ausgangsspannung $U_\text{A}$ konstant auf dem entsprechenden Wert. 
+
 \subsection{Operationsgenerator als Dreiecksgenerator}
 \begin{figure}[h!]
 	\centering
@@ -254,11 +259,9 @@ $R_0$  und $R^{\prime}_0$ von $U_B$ ergibt sich die reale Amplitude der Rechteck
 &= \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
 \label{eq:funktionsgenerator_rechteck}
 \end{empheq}
-%Und damit die reale  Amplitude der Dreiecksspannung zu
-%\begin{empheq}{align}
-%\hat{U}_{\mathrm{D}} &= \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{R}} \notag\\
-%&= \frac{R_{1}}{R_{\mathrm{P}}} \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
-%\label{eq:funktionsgenerator_dreieck}.
-%\end{empheq}
-
-\newpage
+Die Amplitude der Dreiecksspannung ergibt sich nach dem Schaltverhalten des Schmitt-Triggers
+\cref{eq:kippspannug} aus
+\begin{empheq}{equation}
+\hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{B}} 
+\label{eq:funktionsgenerator_dreieck}.
+\end{empheq}
