@@ -11,6 +11,7 @@ Ein Operationsverstärker wird durch zwei konstante Betriebsspannungen $U_\text{
 Weiter ist die resultierende Ausgangsspannung $U_\text{A}$ als
 \begin{align}
 	U_\text{A}=V(U_\text{p}-U_\text{N})
+	\label{eq:leerlauf_verstaerkung_opv}
 \end{align}
 gegeben. 
 Dabei ist $U_\text{p}$ die Spannung des nicht-invertierenden Eingangs, $U_\text{N}$ die Spannung des invertierenden Eingangs und $V$ ist die Leerlaufverstärkung.
@@ -39,7 +40,7 @@ Deshalb ist es hilfreich die Gleichtaktverstärkung $V_\text{Gl}$ zu definieren
 \begin{align}
 	V_\text{Gl}:=\frac{\Delta U_\text{A}}{\Delta U_\text{Gl}}.
 \end{align}
-Weiter treten aufgrund der endlichen Eingangswiederstände $r_e$ in einem realen Operationsverstärkers Eingangsströme $I_\text{N}$ und $I_\text{P}$ auf.
+Weiter treten aufgrund der endlichen Eingangswiederstände $r_e$ in einem realen Operationsverstärker Eingangsströme $I_\text{N}$ und $I_\text{P}$ auf.
 Daraus lässt sich der Eingangsruhestrom $I_\text{B}$ definieren als
 \begin{align}
 	I_\text{B}:=\frac{1}{2}\left( I_\text{p} + I_\text{N} \right)
@@ -78,7 +79,13 @@ Dies wird umgangen, indem die Schaltung nach \cref{fig:gegen_gekoppelter_inverti
 Dabei wird ein Teil der Ausgangsspannung mithilfe eines Gegengenkopplungszweig auf den invertierenden Eingang zurückgegeben.
 Deswegen wird die Schaltung auch gegengekoppelter, invertierter Linearverstärker genannt.
 Das sorgt dafür das bei größerer Ausgangsspannung die Eingangsspannung abnimmt.
-Aufgrund der großen Leerlaufverstärkung ist die Eingangsspannung des invertierten Eingangs $U_\text{N}$ nah zu null, genau so wie der Eingangsstrom $I_\text{N}\approx0$ ist.
+Aufgrund der großen Leerlaufverstärkung $V$ ist die Eingangsspannung des invertierten Eingangs $U_\text{N}$ nah zu 
+null, da sich aus \cref{eq:leerlauf_verstaerkung_opv} mit $U_{\mathrm{P}}$ (aus der Schaltung in \cref{fig:gegen_gekoppelter_invertierter_Linarverstärker}) 
+\begin{empheq}{equation}
+	U_\text{N} = - \frac{U_{\mathrm{A}}}{V}
+\end{empheq}
+ergibt.
+Genau so ist auch der Eingangsstrom $I_\text{N}\approx0$, da der Eingangswiderstand ebenfalls sehr groß ist.
 Mithilfe der Kirchhoffschen Knotenregel, angewandt auf Punkt A aus \cref{fig:gegen_gekoppelter_invertierter_Linarverstärker} kann gezeigt werden, dass für die Verstärkung $V'$ gilt
 \begin{align}
 	V' = -\frac{R_\text{N}}{R_1}.
@@ -91,7 +98,9 @@ Für einen realen mit endlichen Widerständen und weiterhin verschwindendem Stro
 	\label{eq:leerlauf_verstaerkung}
 \end{align}
 Es lässt sich erkennen, dass die Verstärkung $V'$ für den idealen und realen Operationsverstärker gleich sind wenn gilt $R_\text{N}/R_1\ll V$.
-Die Gegenkopplung macht die Verstärkung unabhängig der äußeren Einflüsse auf den Operationsverstärker, dass bedeutet die Schaltung wird stabilisiert.
+Da die Eigenschaften der Schaltung hauptsächlich durch die äußere Beschaltung festgelegt werden,
+macht die Gegenkopplung Verstärkung unabhängig von äußeren Einflüsse auf den Operationsverstärker,
+dies bedeutet, dass die Schaltung auf diese Art stabilisiert wird.
 Der Ausgangswiederstand wird aufgrund der Gegenkopplung durch den Faktor $g$ verkleinert.
 Dabei ist $g$ definiert als
 \begin{align}
@@ -101,26 +110,28 @@ Ein weiterer Vorteil der Gegenkopplung ist, dass die Schwankung der Leerlaufvers
 \begin{align}
 	\frac{\Delta V'}{V'}=\frac{1}{g}\frac{\Delta V}{V}
 \end{align}
+
 Zum Schluss wird das Frequenzband durch den Faktor $g$ vergrößert.
-Dies ist in \cref{fig:Frequenzgang} dargestellt. 
-Für die Bandbreite, bei der das Signal unverzerrt verstärkt wird, gilt dass das Produkt der Bandbreite und der Verstärkung $V'$ eine Konstante ist die gleich der Transitfrequenz ist.
-Bei diesen ist die Verstärkung $V'$ auf den Wert 1 abgesunken.
-Die Grenzfrequenz ist definiert als die Frequenz bei der die Verstärkung auf den Wert $ V'/ \sqrt{2} $ gefallen ist, siehe \cref{fig:Frequenzgang}.
+Dies ist in \cref{fig:Frequenzgang} dargestellt. Die Frequenz bis zu der das Signal unverzerrt verstärkt 
+wird (maximale Frequenz des Frequenz im Frequenzband), wird als Grenzfrequenz $f_{\mathrm{g}}$ bezeichnet. 
+Für die Grenzfrequenz $f_{\mathrm{g}} = \sfrac{V'}{\sqrt{2}}$, gilt dass das Produkt aus $f_{\mathrm{g}}$ und der Verstärkung $V'$ eine Konstante ist, die gleich der Transitfrequenz ist.
+Bei dieser ist die Verstärkung $V'$ auf den Wert 1 abgesunken.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/Frequenz_Liniearverstaerker.png}
 	\caption{Frequenzband des Linearverstärkers. \cite{V51}\label{fig:Frequenzgang}}
 \end{figure}\\
+\indent
 Ein Nachteil des gegengekoppelten, invertierten Linearverstärkers ist der geringe Eingangswiederstand.
-Dies verfälscht die Spannungsmessung an einem hochohmigen Spannungsquelle.
+Dies verfälscht die Spannungsmessung an einer hochohmigen Spannungsquelle.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{../Grafiken/nicht_invertierter_Linearverstaerker.png}
 	\caption{Hier ist die Schaltung eines nicht-invertierender Elektrometerverstärkers dargestellt. \cite{V51}\label{fig:Elektrometerverstärker}}
 \end{figure}
-Deshalb wird für solche Messungen eine Schaltung nach \cref{fig:Elektrometerverstärker} verwendet.
+Deshalb wird für eine solche Messung eine Schaltung nach \cref{fig:Elektrometerverstärker} verwendet.
 Dieser Aufbau wird Elektrometerverstärker genannt.
-Bei dieser schaltung ist der Eingangswiederstand gegeben durch
+Bei dieser Schaltung ist der Eingangswiederstand gegeben durch
 \begin{align}
 	r_\text{e}\approx 2r_\text{Gl}\propto \SI{10}{\giga\ohm}.
 \end{align}
@@ -137,7 +148,7 @@ Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
 	\caption{Hier ist die Schaltung eines Amperemeters dargestellt. \cite{V51}\label{fig:Amperemeter}}
 \end{figure}
 \FloatBarrier
-Für die Ausgangsspannung $U_\text{A}$ ist dann
+Die Ausgangsspannung $U_\text{A}$ ist dann
 \begin{align}
 	U_\text{A}=IR_\text{N}.\label{eq:amperemeter_strom}
 \end{align}
@@ -207,7 +218,7 @@ die Ausgangsspannung $U_\text{A}$ konstant auf dem entsprechenden Wert.
 \end{figure}
 \noindent
 Mithilfe mehrerer Operationsverstärker, kann ein Dreieckgenerator gebaut werden.
-Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Umkehr Integrator und ist in \cref{fig:Dreieck} dargestellt.
+Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Umkehr-Integrator und ist in \cref{fig:Dreieck} dargestellt.
 (Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.)
 Der Schmitt-Trigger liefert eine konstante Spannung, die vom Umkehr-Integrator integriert wird.
 Das bedeutet nach dem Umkehr-Integrator steigt beziehungsweise fällt die Spannung linear. 
@@ -227,9 +238,10 @@ angenommen.
 	 2 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{\mathrm{B}} \dif t \notag\\
 	\hat{U}_{\mathrm{D}} &= \frac{1}{RC}\frac{T}{4} U_{\mathrm{B}} = \frac{1}{4RC}\frac{1}{f} U_{\mathrm{B}} 
 \end{empheq}
-Ferner gilt für die Amplitude der Dreieckspannung aufgrund der Eigenschaften des Schmitt-Triggers 
+Ferner gilt für die Amplitude der Dreieckspannung aufgrund des Schaltverhaltens \cref{eq:kippspannug} des Schmitt-Triggers 
 \begin{empheq}{equation}
 \hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{\mathrm{P}}} U_{\mathrm{B}}.
+\label{eq:funktionsgenerator_dreieck}
 \end{empheq}  
 Durch Elimination der Spannung $\hat{U}_{\mathrm{D}}$ ergibt sich die Frequenz $f$ beider Spannungen zu
 \begin{empheq}{equation}
@@ -259,9 +271,9 @@ $R_0$  und $R^{\prime}_0$ von $U_B$ ergibt sich die reale Amplitude der Rechteck
 &= \del{1- \frac{R_0+ R^{\prime}_0}{R + R_0+ R^{\prime}_0}} U_{\mathrm{B}}
 \label{eq:funktionsgenerator_rechteck}
 \end{empheq}
-Die Amplitude der Dreiecksspannung ergibt sich nach dem Schaltverhalten des Schmitt-Triggers
-\cref{eq:kippspannug} aus
-\begin{empheq}{equation}
-\hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{B}} 
-\label{eq:funktionsgenerator_dreieck}.
-\end{empheq}
+%Die Amplitude der Dreiecksspannung ergibt sich nach dem Schaltverhalten des Schmitt-Triggers
+%\cref{eq:kippspannug} aus
+%\begin{empheq}{equation}
+%\hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{\mathrm{P}}} \hat{U}_{\mathrm{B}} 
+%\label{eq:funktionsgenerator_dreieck}.
+%\end{empheq}
