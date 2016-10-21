@@ -1,0 +1,62 @@
+% !TeX root = Protokoll.tex
+Im Folgenden sollen die während des Versuchs aufgenommenen Messwerte und durch 
+die Auswertungen erhaltenen Ergebnisse noch einmal auf abschließend diskutiert 
+und auf Plausibilität hin überprüft werden.
+
+Das aufgenommene Frequenzverhalten der Verstärkung der gegengekoppelten Verstärkerschaltungen 
+kann als plausibel angesehen werden. In allen vier Messreihen ist ein eindeutiges Einbrechen
+der Verstärkung ab einer bestimmten Frequenz zu erkennen. Für die Schaltungen mit 
+einen Widerstandsverhältnis $\geq 1$ weist der Mittelwert der gemessenen maximalen Verstärkung 
+nur sehr geringe Abweichungen  (\SI{7}{\percent} respektive \SI{0.5}{\percent}) zur theoretischen 
+Verstärkung auf. Bei den übrigen Schaltungen mit einem Widerstandsverhältnis~$<1$ weichen dies stark
+ab. Dieses Verhalten ist durch ein gegeneinander Arbeiten der Leerlaufverstärkung und der Dämpfung
+durch das gegeben Widerstandsverhältnis zu begründen.
+Ein ähnliches Verhalten lässt sich bei den berechneten Verstärkung-Bandbreite-Produkten beobachten,
+diese stimmen nicht miteinander überein (obwohl diese konstant sein sollten), liegen jedoch, mit Außnahme
+einer Messung, in der selben Größenordnung.Die Abweichende Messung ist auch hier diejenige mit dem geringsten 
+Widerstandsverhältnis und entsprechend der größten Dämpfung.\\
+Aus den abgeschätzten Leerlaufverstärkungen lässt sich erkennen, dass die vierte Schaltung die
+Bedingung $\sfrac{R_{\mathrm{N}}}{R_1} << V$ am besten erfüllt.
+ 
+Die Amperemeterschaltung lieferte wie zu erwarten ein mit zunehmender Frequenz abnehmende Verstärkung 
+und ein entsprechende Zunahme des Eingangswiderstands. Ferner stimmen die theoretisch  
+berechneten Ausgangsspannungen mit zunächst geringen Fehlern $< \SI{10}{\percent}$ mit der gemessenen überein.
+Für höhere Frequenzen lässt sich eine Zunahme dieser Abweichung beobachten. Der Grund für diese Beobachtung liegt in 
+der mit zu nehmender Frequenz schlechter erfüllten Bedingung $R_{\mathrm{V}} >> r_{\mathrm{e}}$, welche
+erfüllt sein muss, damit $r_{\mathrm{e}}$  nur von dem Strom und der Eingangsspannung abhängt.
+
+Sowohl die Integrator- als auch die Differentiatorschaltung  liefern Ausgangsspannungen, die der Theorie
+entsprechend anti-proportional respektive proportional zur Frequenz der Eingangsspannung sind. Wiederum 
+beider Schaltungen erfüllen ihre Aufgaben vollständig im betrachteten Frequenzbereich.
+Entsprechend sind die jeweiligen Ausgangsspannungen für die drei unterschiedlichen Eingangsspannungen
+(Sinus, Rechteck, Dreieck) mit den zeitlich integrierten respektive differenzieren Verläufen 
+dieser Spannungen zu identifizieren. Lediglich die Differenzierung der Rechteckspannung ist mit realen 
+Schaltungen nur schwerlich zu bewerkstelligen, da die entsprechende Ausgangsspannung einem Delta-Kamm
+entspräche, dessen unendliche Höhe und infinitesimale Breite der Peaks durch reale schaltungen 
+nicht geliefert werden können. In \cref{fig:differentiator_oszilloskop_rechteck} ist jedoch im Ansatz 
+hohe und schmale Peaks zu erkennen, die einem Delta-Kamm ähneln. Ferner lassen sich auch Effekte erkennen,
+die durch die reale Elektronik erzeugt werden so zum Beispiel die Relaxation der Ausgangsspannung von einem 
+Peak zur Null und die Auswirkung des Peaks in der Ausgangsspannung auf die Eingangspannung.
+
+Die Funktionsweise des Schmitt-Triggers konnte in diesem Versuch qualitativ nachgewiesen werden,
+ab einer bestimmten Eingangsspannung, der Kippspannung $U_{\mathrm{K}}$, konnte das Kippen der 
+Ausgangsspannung $U_{\mathrm{A}}$ beobachtet werden. Die gemessene Kippspannung weicht dabei um 
+etwa \SI{70}{\percent} von dem theoretischen Wert ab, liegt jedoch noch in der selben Größenordnung.
+Grund der Abweichung könnten Effekte der realen Schaltung sein, die in die theoretische Berechnung
+nicht eingehen. 
+
+Durch Anwendung der notwendigen Korrekturen durch die beiden zusätzlichen Widerstände ergibt sich,
+dass die gemessenen Frequenzen der erzeugten Spannungen des Funktionsgenerators mit einer ungefähren 
+Abweichung von \SI{3}{\percent} dem theoretischen Wert entsprechen. Und auch die gemessenen Amplituden 
+der Spannungen weisen Abweichungen von \SI{19}{\percent} (Rechteck) und \SI{10}{\percent} (Dreieck)
+auf.
+
+Zusammenfassend lässt sich sagen, dass trotz einiger Problem in der Durchführung des Versuch 
+und im Umgang mit den verwendeten Schaltungen die erhaltenen Ergebnisse als plausibel zu bewerten sind.  
+
+
+
+  
+
+
+ 

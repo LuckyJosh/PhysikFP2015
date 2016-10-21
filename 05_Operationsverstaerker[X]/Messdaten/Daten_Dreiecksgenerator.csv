@@ -1,0 +1,2 @@
+# R/Ohm, R1/Ohm, Rp/Ohm, C/F, R0/Ohm, R0'/Ohm, URecpp/V, Utripp/V, fRec/Hz, fTri/Hz
+560, 1000, 100000, 1e-6, 32000, 10000, 470e-3, 330e-3, 570, 570
