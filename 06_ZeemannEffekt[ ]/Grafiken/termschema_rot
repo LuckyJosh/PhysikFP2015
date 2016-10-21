@@ -1,0 +1,26 @@
+%\fill[fill=white] (0,0) rectangle (8,8);
+
+% divider B = 0 | B =/= 0
+\node[] at (1.25,6.4) (B) {$ B = 0$};
+\node[] at (4.25,6.4) (B) {$ B \neq 0$};
+\draw[dashed, draw=gray] (2.5,6.5) -- (2.5,0.0);
+
+% m column header
+\node[] at (6.9,6.4) (B) {$m$};
+
+% 1D_2 line
+\draw (0.5,5.0) node[left=0.5] {$ {}^1\mathrm{P}_{2} $} -- (2.5,5.0);
+
+\draw[thick] (2.5,5.0) -- (3.0,6.0) -- (6.0,6.0) node[right=0.5] {$+2$} ;
+\draw[thick] (2.5,5.0) -- (3.0,5.5) -- (6.0,5.5) node[right=0.5] {$+1$} ;
+\draw[thick] (2.5,5.0) -- (6.0,5.0) node[right=0.5] {$\phantom{+} 0$};
+\draw[thick] (2.5,5.0) -- (3.0,4.5) -- (6.0,4.5) node[right=0.5] {$-1$} ;
+\draw[thick] (2.5,5.0) -- (3.0,4.0) -- (6.0,4.0) node[right=0.5] {$-2$} ;
+
+
+
+% 1P_1 line
+\draw (0.5,1.5) node[left=0.5] {$ {}^1\mathrm{D}_{2} $} -- (2.5,1.5);
+\draw[thick] (2.5,1.5) -- (3.0,2.0) -- (6.0,2.0)  node[right=0.5] {$+1$};
+\draw[thick] (2.5,1.5) -- (6.0,1.5) node[right=0.5] {$\phantom{+} 0$};
+\draw[thick] (2.5,1.5) -- (3.0,1.0) -- (6.0,1.0)  node[right=0.5] {$-1$};
