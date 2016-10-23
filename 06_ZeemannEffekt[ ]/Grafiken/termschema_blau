@@ -30,7 +30,7 @@
 
 \node at (7.75,2.0) {$ +2 $};
 \node at (7.75,1.5) {$\phantom{+}0$};
-\node at (7.75,1.0) {$-−2$};
+\node at (7.75,1.0) {$−2$};
 
 % transitions
 
