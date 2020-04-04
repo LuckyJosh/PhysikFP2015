@@ -92,14 +92,15 @@ Mithilfe der Kirchhoffschen Knotenregel, angewandt auf Punkt A aus \cref{fig:geg
 	\label{eq:gegengekoppelt_verstaerkung}
 \end{align}
 Dies gilt für einen idealen Operationsverstärker.
-Für einen realen mit endlichen Widerständen und weiterhin verschwindendem Strom $I_\text{N}$ am invertierenden Eingang gilt 
+Für einen realen mit endlichen Widerständen, einer nicht verschwindenden Eingangsspannung
+$U_{\mathrm{N}}$ und weiterhin verschwindendem Strom $I_\text{N}$ am invertierenden Eingang gilt 
 \begin{align}
 	\frac{1}{V'}\approx\frac{1}{V}+\frac{R_1}{R_\text{N}}.
 	\label{eq:leerlauf_verstaerkung}
 \end{align}
 Es lässt sich erkennen, dass die Verstärkung $V'$ für den idealen und realen Operationsverstärker gleich sind wenn gilt $R_\text{N}/R_1\ll V$.
 Da die Eigenschaften der Schaltung hauptsächlich durch die äußere Beschaltung festgelegt werden,
-macht die Gegenkopplung Verstärkung unabhängig von äußeren Einflüsse auf den Operationsverstärker,
+macht die Gegenkopplung die Verstärkung unabhängig von äußeren Einflüsse auf den Operationsverstärker,
 dies bedeutet, dass die Schaltung auf diese Art stabilisiert wird.
 Der Ausgangswiederstand wird aufgrund der Gegenkopplung durch den Faktor $g$ verkleinert.
 Dabei ist $g$ definiert als
@@ -113,8 +114,14 @@ Ein weiterer Vorteil der Gegenkopplung ist, dass die Schwankung der Leerlaufvers
 
 Zum Schluss wird das Frequenzband durch den Faktor $g$ vergrößert.
 Dies ist in \cref{fig:Frequenzgang} dargestellt. Die Frequenz bis zu der das Signal unverzerrt verstärkt 
-wird (maximale Frequenz des Frequenz im Frequenzband), wird als Grenzfrequenz $f_{\mathrm{g}}$ bezeichnet. 
-Für die Grenzfrequenz $f_{\mathrm{g}} = \sfrac{V'}{\sqrt{2}}$, gilt dass das Produkt aus $f_{\mathrm{g}}$ und der Verstärkung $V'$ eine Konstante ist, die gleich der Transitfrequenz ist.
+wird (maximale Frequenz im Frequenzband), wird als Grenzfrequenz $f_{\mathrm{g}}$ bezeichnet.
+Bei dieser Frequenz ist die Verstärkung $V'$ auf den Wert
+\begin{empheq}{equation}
+	V'(f = f_{\mathrm{g}}) = \frac{V'_{\mathrm{max}}}{\sqrt{2}}
+\end{empheq}
+gefallen.
+Für die Grenzfrequenz $f_{\mathrm{g}}$, gilt dass das Produkt aus $f_{\mathrm{g}}$ und der 
+maximalen Verstärkung $V'_{\mathrm{max}}$ eine Konstante ist, die gleich der Transitfrequenz ist.
 Bei dieser ist die Verstärkung $V'$ auf den Wert 1 abgesunken.
 \begin{figure}[h!]
 	\centering
@@ -139,8 +146,9 @@ Die Verstärkung $V'$ unter der Voraussetzung eines idealen Operationsverstärke
 \begin{align}
 	V'=\frac{R_\text{N}+R_1}{R_1 }.
 \end{align}
+\newpage
 \indent
-Wenn kleine Ströme gemessen werden sollen, muss der Eingangswiderstand klein sein.
+Wenn kleine Ströme gemessen werden sollen, muss der Eingangswiderstand $r_\text{e}$ klein sein.
 Um dies zu erreichen wird eine Schaltung nach \cref{fig:Amperemeter} verwendet.
 \begin{figure}[h!]
 	\centering
@@ -158,6 +166,19 @@ Für den Eingangswiederstand gilt\\
 	r_\text{e}=\frac{R_\text{N}}{V}.
 	\label{eq:eingangswiderstand}
 \end{align*}
+
+Zur Durchführung der Messung von Eingangswiderstand $r_{\mathrm{e}}$ der Amperemeter-Schaltung  in 
+\cref{fig:Amperemeter} und der Leerlaufverstärkung $V$ des verbauten Operationsverstärkers wird eine Stromquelle mit 
+Generatorspannung $U_{\mathrm{g}}$ an das Amperemeter angeschlossen. Dieser Aufbau ist in 
+\cref{fig:Messung_Amperemeter} dargestellt.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{../Grafiken/Messung_Amperemeter.png}
+	\caption{Darstellung der gesamten Schaltung für die Messung unter Verwendung der Amperemeter-Schaltung inklusive 
+		der verwendeten Stromquelle. \cite{V51}\label{fig:Messung_Amperemeter}}
+\end{figure}
+
 \subsection{Umkehr-Integrator und Umkehr-Differenzierer}
 \label{sec:Umkehr-Integrator}
 \begin{figure}[h!]
@@ -218,19 +239,38 @@ die Ausgangsspannung $U_\text{A}$ konstant auf dem entsprechenden Wert.
 \end{figure}
 \noindent
 Mithilfe mehrerer Operationsverstärker, kann ein Dreieckgenerator gebaut werden.
-Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Umkehr-Integrator und ist in \cref{fig:Dreieck} dargestellt.
-(Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.)
-Der Schmitt-Trigger liefert eine konstante Spannung, die vom Umkehr-Integrator integriert wird.
-Das bedeutet nach dem Umkehr-Integrator steigt beziehungsweise fällt die Spannung linear. 
-Diese Spannung wird als Eingangsspannung auf den Schmitt-Trigger gegeben, der seine Ausgangsspannung nach \cref{eq:kippspannug} ändert.
-Aufgrund des Vorzeichenwechsels ändert sich auch das Vorzeichen bei der Integration.
-Dies hat zur folge das von dem Schmitt-Trigger eine Rechteckspannung erzeugt wird und von dem Integrator eine Dreiecksspannung.
+Die Schaltung besteht im wesentlichen aus einem Schmitt-Trigger und einem Umkehr-Integrator und ist in \cref{fig:Dreieck} dargestellt. Zur Erläuterung der Funktionsweise dieser Schaltung wird angenommen,
+dass der Schmitt-Trigger zu Beginn die Spannung $+U_{\mathrm{B}}$ liefert. Diese wir an den invertierenden 
+Eingang des Umkehr-Integrators angelegt und von diesem integriert. Die Integration der konstanten Spannung 
+$+U_{\mathrm{B}}$ liefert entsprechend der Arbeitsweise des Umkehr-Integrators eine linear fallende Ausgangsspannung
+$U_{\mathrm{A}}$, welche wiederum an den nicht-invertierenden Eingang des Schmitt-Triggers angelegt wird.
+Entsprechend dem Schaltverhalten des Schmitt-Triggers in \cref{eq:kippspannug}, wechselt dessen Ausgangsspannung 
+das Vorzeichen, wenn die Eingangsspannung $U_{\mathrm{A}}$ den Wert $-\frac{R_1}{R_\text{P}}U_\text{B}$ 
+unterschreitet.
+Durch diese Änderung des Vorzeichens der Ausgangsspannung zu $-U_{\mathrm{B}}$ ergibt sich auch nach der
+Integration nun eine linear steigende Ausgangsspannung $U_{\mathrm{A}}$. Der erneute Vorzeichenwechsel der 
+Ausgangsspannung des 
+Schmitt-Triggers erfolgt, wenn $U_{\mathrm{A}}$ den Wert $\frac{R_1}{R_\text{P}}U_\text{B}$ 
+übersteigt. Nach diesem zweiten Vorzeichenwechsel befindet sich die Schaltung wieder im anfänglichen Zustand
+und der beschriebene Vorgang beginnt von vorn.
+Entsprechend ist die Ausgangsspannung des Schmitt-Triggers eine Rechteckspannung die zwischen den 
+Werten $+U_{\mathrm{B}}$ und $-U_{\mathrm{B}}$ wechselt. Die Ausgangsspannung $U_{\mathrm{A}}$ des 
+Umkehr-Integrators ist ein Dreiecksspannung mit der Amplitude $\frac{R_1}{R_\text{P}}U_\text{B}$. 
+
+%(Dabei werden die beiden Ausgangsspannungen auf den nicht-invertierten Eingang des ersten Operationsverstärkers geleitet.)
+%Der Schmitt-Trigger liefert eine konstante Spannung, die vom Umkehr-Integrator integriert wird.
+%Das bedeutet nach dem Umkehr-Integrator steigt beziehungsweise fällt die Spannung linear. 
+%Diese Spannung wird als Eingangsspannung auf den Schmitt-Trigger gegeben, der seine Ausgangsspannung nach \cref{eq:kippspannug} ändert.
+%Aufgrund des Vorzeichenwechsels ändert sich auch das Vorzeichen bei der Integration.
+%Dies hat zur folge das von dem Schmitt-Trigger eine Rechteckspannung erzeugt wird und von dem Integrator eine Dreiecksspannung.
 
 Aufgrund des oben geschilderten Verhaltens der beiden Operationsverstärker sind die Frequenzen $f_\mathrm{R}$ bzw. $f_\mathrm{D}$ der erzeugten Rechteck- respektive Dreiecksspannung gleich, es gilt also $f_{\mathrm{R}} = f_{\mathrm{D}} =: f $.
 Um diese theoretisch zu berechnen, wird die Amplitude $U_\mathrm{D}$ der Dreiecksspannung  
 betrachtet. Dabei wird der Zeitraum von einer
-halben Periodendauer $T$ betrachtet und der ideal Fall wird angenommen, dass die negative und positive Amplitude der 
-Dreiecksspannung den gleichen Betrag haben. Die Randwerte des betrachten Zeitintervalls $\sbr{0,\sfrac{T}{2}}$ werden
+halben Periodendauer $T$ betrachtet und angenommen, dass die negative und positive Amplitude der 
+Dreiecksspannung den gleichen Betrag haben. Unter realen Umständen sind Abweichungen 
+zwischen den Beträgen der positiven und negativen Amplitude zu erwarten. Diese werden hier nicht betrachtet, 
+da sie als klein angenommen werden können. Die Randwerte des betrachten Zeitintervalls $\sbr{0,\sfrac{T}{2}}$ werden
 als $\hat{U}_{\mathrm{D}}(0) = -\hat{U}_{\mathrm{D}}$ und $\hat{U}_{\mathrm{D}}(\sfrac{T}{2}) = +\hat{U}_{\mathrm{D}}$
 angenommen.
 \begin{empheq}{align}
@@ -238,7 +278,9 @@ angenommen.
 	 2 \hat{U}_{\mathrm{D}} &= \frac{1}{RC} \int_{0}^{\sfrac{T}{2}} U_{\mathrm{B}} \dif t \notag\\
 	\hat{U}_{\mathrm{D}} &= \frac{1}{RC}\frac{T}{4} U_{\mathrm{B}} = \frac{1}{4RC}\frac{1}{f} U_{\mathrm{B}} 
 \end{empheq}
-Ferner gilt für die Amplitude der Dreieckspannung aufgrund des Schaltverhaltens \cref{eq:kippspannug} des Schmitt-Triggers 
+\newpage
+\noindent
+Ferner gilt für die Amplitude der Dreieckspannung wie oben beschrieben nach \cref{eq:kippspannug} 
 \begin{empheq}{equation}
 \hat{U}_{\mathrm{D}} = \frac{R_{1}}{R_{\mathrm{P}}} U_{\mathrm{B}}.
 \label{eq:funktionsgenerator_dreieck}

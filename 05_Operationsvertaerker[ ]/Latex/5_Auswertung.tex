@@ -25,7 +25,7 @@ In den folgenden Tabellen \ref{tab:gegengekoppelter_verstaerker_1} -- \ref{tab:g
 und den zugehörigen Abbildungen \ref{fig:gegengekoppelter_verstaerker_1} -- \ref{fig:gegengekoppelter_verstaerker_4}
 ist jeweils die Verstärkung der vier Schaltungen in Abhängigkeit der Frequenz dargestellt.
 Die Abbildungen erlauben den Vergleich der theoretischen Verstärkung 
-$\sfrac{R_N}{R_1} =: V^{\prime}_{\mathrm{theo}}$ mit den gemessenen Werten der mittleren maximalen Verstärkung. 
+$V^{\prime}_{\mathrm{theo}}$ mit den gemessenen Werten der mittleren maximalen Verstärkung. 
 
 %Es ist zu erkennen, dass für 
 %Widerstandsverhältnisse $ \geq 1$ der theoretische Wert gut mit dem gemittelten 
@@ -88,8 +88,6 @@ Die Grenzfrequenzen wurden dabei nach
 V^{\prime}(f_{\mathrm{g}}) &= \frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}} = f_{\mathrm{g}}^{a} \cdot 10^{b}\\
 \Leftrightarrow f_{\mathrm{g}} &= \del{\frac{V^{\prime}_{\mathrm{max}}}{\sqrt{2}\cdot 10^b}}^{\dfrac{1}{a}}
 \end{empheq}
-
-
 bestimmt. 
 In doppellogarithmischer Darstellung haben die Parameter $a$ und $b$ die 
 Bedeutung der Steigung respektive des $y$-Achsenabschnittes der Geraden.
@@ -100,7 +98,16 @@ Des Weiteren wurde auch die Leerlaufspannung $V$ abgeschätzt, indem
 \end{empheq}
 umgeformt wurde. Die entsprechenden Werte wurden ebenfalls in 
 \cref{tab:gegengekoppleter_verstaerker_parameter} eingetragen.
-
+Auch an diesen Werten ist zu erkennen, dass die Messungen mit  Widerstandsverhältnissen $ < 1$
+wesentlich größere Unsicherheiten aufweisen als die übrigen. Vor allem ist dies bei der zweiten Messung zu sehen,
+bei der zusätzlich zu den großen Unsicherheiten der Wert des Verstärkung-Bandbreite-Produkts 
+$f_{\mathrm{g}}V^{\prime}_{\mathrm{max}}$ wesentlich geringer ist
+als bei den übrigen Messungen. Der Grund für diese Abweichung ist in der Darstellung der Messwerte in 
+\cref{fig:gegengekoppelter_verstaerker_2} zu erkennen. Die Bestimmung des Plateaus und des linear abfallenden Bereichs
+erweist sich bei diesen Messwerten als ungenau, da der zweite Messwert zwischen diesen beiden Bereichen liegt und
+somit keine eindeutige Identifikation der einzelnen Bereiche möglich ist. Der lineare Fit der übrigen Werte ist daher 
+mit größeren Unsicherheiten versehen, aus denen die Unsicherheiten der Grenzfrequenz $f_{\mathrm{g}}$ und die des 
+Verstärkung-Bandbreite-Produkt $f_{\mathrm{g}}V^{\prime}_{\mathrm{max}}$ folgen.
 
 Der Frequenzgang der Verstärkerschaltung lässt sich mit dem in 
 \cref{fig:ersatzschaltbild} dargestellten Ersatzschaltbild eines idealen 
@@ -128,27 +135,34 @@ Phasenverschiebung ab auch dieses Verhalten ist dem eines Tiefpasses ähnlich.
 
 Die am Amperemeter aufgenommenen Messwerte sind in \cref{tab:amperemeter_1}
 einzusehen, wobei zusätzlich die theoretische Ausgangsspannung 
-$U_{A,\mathrm{theo}}$ durch Einsetzen des Stroms $I~=~\sfrac{U_{g}}{R_{V}}$ 
+$U_{\mathrm{A,theo}}$ durch Einsetzen des Stroms $I~=~\sfrac{U_{\mathrm{g}}}{R_{V}}$ 
 in \cref{eq:amperemeter_strom} nach
 \begin{empheq}{equation}
-	U_\text{A}= \frac{U_{\mathrm{g}}}{R_{\mathrm{V}}} R_\text{N}
+	U_\text{A,theo}= \frac{U_{\mathrm{g}}}{R_{\mathrm{V}}} R_\text{N}
 \end{empheq}
 berechnet wurde. Des Weiteren wurde die relative Abweichung der gemessenen Ausgangsspannung $U_A$ von 
-dieser bestimmt. Der Eingangswiderstand $r_{e}$ ergibt sich für diese Schaltung wie angegeben nach
+dieser bestimmt. Der Eingangswiderstand $r_{\mathrm{e}}$ ergibt sich für diese Schaltung wie angegeben nach
 \begin{empheq}{equation}
 	r_{\mathrm{e}} = \frac{U_{\mathrm{e}}}{I} = \frac{U_{\mathrm{E}}R_{\mathrm{V}}}{U_{\mathrm{g}}}
 \end{empheq}
-Die Lehrlaufverstärkung $V$ der verwendeten Schaltung ergibt sich durch Umformung von 
+Die theoretische Leerlaufverstärkung $V_{\mathrm{theo}}$ der verwendeten Schaltung ergibt sich durch Umformung von 
 \cref{eq:eingangswiderstand} nach
 \begin{empheq}{equation}
-	V = \frac{R_{\mathrm{N}}}{r_{\mathrm{e}}}=\frac{R_{\mathrm{N}}}{R_{\mathrm{V}}} 
+	V_{\mathrm{theo}} = \frac{R_{\mathrm{N}}}{r_{\mathrm{e}}}=\frac{R_{\mathrm{N}}}{R_{\mathrm{V}}} 
 	\frac{U_{\mathrm{g}}}{U_{\mathrm{E}}}.
 \end{empheq}
+Die gemessene Leerlaufverstärkung $V$ berechnet sich nach
+\begin{empheq}{equation}
+V = \frac{U_{\mathrm{A}}}{U_{\mathrm{E}}}.
+\end{empheq}
 Für den Aufbau der Schaltung wurden die Widerstände
-$R_{\mathrm{V}} = \SI{100(1)}{\ohm}$ und\\ $R_{\mathrm{N}} = \SI{10.0(1)}{\kilo\ohm}$ 
+\begin{empheq}{align*}
+	R_{\mathrm{V}} &= \SI{100(1)}{\ohm}\,\, \text{und}\\
+	R_{\mathrm{N}} &= \SI{10.0(1)}{\kilo\ohm}
+\end{empheq}
 verwendet.
 In  \cref{tab:amperemeter_2} sind die berechneten Werte für den
-Innenwiderstand $r_e$ und die Leerlaufverstärkung $V$ angegeben. 
+Innenwiderstand $r_{\mathrm{e}}$ und die Leerlaufverstärkung $V$ angegeben. 
 Die graphischen Darstellungen der dieser beiden Größen in Abhängigkeit der
 Frequenz ist in 
 %\cref{fig:amperemeter_eingangswiderstand} und 
